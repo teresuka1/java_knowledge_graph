@@ -1,0 +1,188 @@
+﻿main_entity,entity_type,mention_count,mentions,source_file
+计算机网络,领域实体,1,计算机网络,cn.txt
+网络基础,领域实体,1,网络基础,cn.txt
+网络分层模型,领域实体,1,网络分层模型,cn.txt
+OSI,模型与体系结构实体,6,OSI,cn.txt
+OSI 七层,模型与体系结构实体,1,OSI 七层,cn.txt
+OSI 七层模型,模型与体系结构实体,1,OSI 七层模型,cn.txt
+物理层,层级结构实体,3,物理层,cn.txt
+比特流,报文字段与状态实体,2,比特流,cn.txt
+数据链路层,层级结构实体,3,数据链路层,cn.txt
+帧,报文字段与状态实体,4,帧,cn.txt
+差错纠正,机制与技术实体,1,差错纠正,cn.txt
+物理寻址,机制与技术实体,1,物理寻址,cn.txt
+MAC 地址,地址与标识实体,4,MAC 地址,cn.txt
+网络层,层级结构实体,14,网络层,cn.txt
+路由与寻址,机制与技术实体,2,路由与寻址,cn.txt
+数据包,报文字段与状态实体,5,数据包,cn.txt
+传输层,层级结构实体,12,传输层,cn.txt
+主机,服务器与网络组件实体,4,主机,cn.txt
+会话层,层级结构实体,3,会话层,cn.txt
+表示层,层级结构实体,3,表示层,cn.txt
+加密,概念与特性实体,9,加密,cn.txt
+应用层,层级结构实体,15,应用层,cn.txt
+TCP,协议实体,45,TCP,cn.txt
+TCP/IP 四层,模型与体系结构实体,1,TCP/IP 四层,cn.txt
+TCP/IP 四层模型,模型与体系结构实体,1,TCP/IP 四层模型,cn.txt
+网络接口层,层级结构实体,4,网络接口层,cn.txt
+帧封装,机制与技术实体,1,帧封装,cn.txt
+HTTP,协议实体,39,HTTP,cn.txt
+HTTPS,协议实体,10,HTTPS,cn.txt
+FTP,协议实体,5,FTP,cn.txt
+SMTP,协议实体,5,SMTP,cn.txt
+POP3,协议实体,3,POP3,cn.txt
+IMAP,协议实体,3,IMAP,cn.txt
+Telnet,协议实体,3,Telnet,cn.txt
+SSH,协议实体,3,SSH,cn.txt
+DNS,协议实体,19,DNS,cn.txt
+RTP,协议实体,2,RTP,cn.txt
+RTCP,协议实体,2,RTCP,cn.txt
+DHCP,协议实体,6,DHCP,cn.txt
+SNMP,协议实体,3,SNMP,cn.txt
+NTP,协议实体,3,NTP,cn.txt
+UDP,协议实体,24,UDP,cn.txt
+SCTP,协议实体,1,SCTP,cn.txt
+IPv4,协议实体,7,IPv4,cn.txt
+IPv6,协议实体,8,IPv6,cn.txt
+ARP,协议实体,7,ARP | arp,cn.txt
+ICMP,协议实体,5,ICMP,cn.txt
+IGMP,协议实体,1,IGMP,cn.txt
+NAT,协议实体,8,NAT,cn.txt
+OSPF,协议实体,3,OSPF,cn.txt
+RIP,协议实体,3,RIP,cn.txt
+BGP,协议实体,3,BGP,cn.txt
+以太网,协议实体,1,以太网,cn.txt
+Wi-Fi,协议实体,2,Wi-Fi,cn.txt
+PPP,协议实体,1,PPP,cn.txt
+MAC 协议,协议实体,1,MAC 协议,cn.txt
+面向连接,概念与特性实体,1,面向连接,cn.txt
+三次握手,机制与技术实体,4,三次握手,cn.txt
+四次挥手,机制与技术实体,4,四次挥手,cn.txt
+无连接,概念与特性实体,1,无连接,cn.txt
+可靠传输,概念与特性实体,3,可靠传输,cn.txt
+序列号,机制与技术实体,4,序列号,cn.txt
+确认应答 ACK,机制与技术实体,1,确认应答 ACK,cn.txt
+ACK,报文字段与状态实体,7,ACK,cn.txt
+超时重传,机制与技术实体,3,超时重传,cn.txt
+流量控制,机制与技术实体,3,流量控制,cn.txt
+拥塞控制,机制与技术实体,3,拥塞控制,cn.txt
+不可靠传输,概念与特性实体,1,不可靠传输,cn.txt
+有状态,概念与特性实体,1,有状态,cn.txt
+无状态,概念与特性实体,5,无状态,cn.txt
+面向字节流,报文字段与状态实体,1,面向字节流,cn.txt
+字节流,报文字段与状态实体,2,字节流,cn.txt
+面向报文,报文字段与状态实体,1,面向报文,cn.txt
+报文,报文字段与状态实体,2,报文,cn.txt
+首部,报文字段与状态实体,1,首部,cn.txt
+单播,概念与特性实体,3,单播,cn.txt
+多播,概念与特性实体,1,多播,cn.txt
+广播,概念与特性实体,4,广播,cn.txt
+文件传输,场景与应用实体,4,文件传输,cn.txt
+Web 浏览,场景与应用实体,1,Web 浏览,cn.txt
+邮件收发,场景与应用实体,3,邮件收发,cn.txt
+远程登录,场景与应用实体,3,远程登录,cn.txt
+实时音视频,场景与应用实体,3,实时音视频,cn.txt
+在线游戏,场景与应用实体,3,在线游戏,cn.txt
+视频会议,场景与应用实体,1,视频会议,cn.txt
+直播,场景与应用实体,1,直播,cn.txt
+客户端,服务器与网络组件实体,14,客户端,cn.txt
+IoT 传感器上报,场景与应用实体,1,IoT 传感器上报,cn.txt
+应用层协议,层级结构实体,1,应用层协议,cn.txt
+HTTP/2,协议实体,4,HTTP/2,cn.txt
+HTTP/3,协议实体,3,HTTP/3,cn.txt
+QUIC,协议实体,5,QUIC,cn.txt
+域名,地址与标识实体,8,域名,cn.txt
+域名解析,地址与标识实体,1,域名解析,cn.txt
+网络管理,场景与应用实体,1,网络管理,cn.txt
+时间同步,场景与应用实体,1,时间同步,cn.txt
+服务器,服务器与网络组件实体,31,服务器,cn.txt
+FIN,报文字段与状态实体,2,FIN,cn.txt
+报头简化,报文字段与状态实体,2,报头简化,cn.txt
+无状态地址自动配置,机制与技术实体,1,无状态地址自动配置,cn.txt
+SLAAC,机制与技术实体,1,SLAAC,cn.txt
+公网 IP,地址与标识实体,2,公网 IP,cn.txt
+报头,报文字段与状态实体,1,报头,cn.txt
+ICMPv6,协议实体,1,ICMPv6,cn.txt
+IP 地址,地址与标识实体,3,IP 地址,cn.txt
+IP 地址过滤,地址与标识实体,1,IP 地址过滤,cn.txt
+获取客户端真实 IP,机制与技术实体,1,获取客户端真实 IP,cn.txt
+X-Forwarded-For,机制与技术实体,1,X-Forwarded-For,cn.txt
+TCP Options,机制与技术实体,1,TCP Options,cn.txt
+Proxy Protocol,机制与技术实体,1,Proxy Protocol,cn.txt
+DSR 模式,机制与技术实体,1,DSR 模式,cn.txt
+网络地址转换,机制与技术实体,1,网络地址转换,cn.txt
+私有 IP,地址与标识实体,1,私有 IP,cn.txt
+IPv4 地址,地址与标识实体,1,IPv4 地址,cn.txt
+网卡,服务器与网络组件实体,1,网卡,cn.txt
+广播地址,地址与标识实体,1,广播地址,cn.txt
+PING,工具与命令实体,3,PING,cn.txt
+网络诊断,场景与应用实体,1,网络诊断,cn.txt
+故障排查,场景与应用实体,2,故障排查,cn.txt
+类型 8,版本端口与数值实体,1,类型 8,cn.txt
+类型 0,版本端口与数值实体,1,类型 0,cn.txt
+RTT,版本端口与数值实体,5,RTT,cn.txt
+短连接,概念与特性实体,2,短连接,cn.txt
+自治系统,服务器与网络组件实体,1,自治系统,cn.txt
+HTTP/1.0,协议实体,1,HTTP/1.0,cn.txt
+缓存机制,概念与特性实体,1,缓存机制,cn.txt
+If-Modified-Since,报文字段与状态实体,1,If-Modified-Since,cn.txt
+Expires,报文字段与状态实体,1,Expires,cn.txt
+Host,报文字段与状态实体,4,Host,cn.txt
+虚拟主机,概念与特性实体,2,虚拟主机,cn.txt
+支持断点续传,概念与特性实体,2,支持断点续传,cn.txt
+断点续传,概念与特性实体,2,断点续传,cn.txt
+HTTP/1.1,协议实体,2,HTTP/1.1,cn.txt
+长连接,概念与特性实体,3,长连接,cn.txt
+Keep-Alive,机制与技术实体,1,Keep-Alive,cn.txt
+多路复用,机制与技术实体,2,多路复用,cn.txt
+二进制帧,报文字段与状态实体,2,二进制帧,cn.txt
+ETag,报文字段与状态实体,1,ETag,cn.txt
+If-Match,报文字段与状态实体,1,If-Match,cn.txt
+If-None-Match,报文字段与状态实体,1,If-None-Match,cn.txt
+头部压缩,机制与技术实体,4,头部压缩,cn.txt
+服务器推送,机制与技术实体,3,服务器推送,cn.txt
+Range,报文字段与状态实体,1,Range,cn.txt
+队头阻塞,概念与特性实体,4,队头阻塞,cn.txt
+HPACK,机制与技术实体,2,HPACK,cn.txt
+连接迁移,机制与技术实体,3,连接迁移,cn.txt
+TLS1.3,机制与技术实体,1,TLS1.3,cn.txt
+QPACK,机制与技术实体,1,QPACK,cn.txt
+明文传输,概念与特性实体,1,明文传输,cn.txt
+SSL/TLS,机制与技术实体,1,SSL/TLS,cn.txt
+Connection,报文字段与状态实体,1,Connection,cn.txt
+Content-Type,报文字段与状态实体,1,Content-Type,cn.txt
+Cache-Control,报文字段与状态实体,1,Cache-Control,cn.txt
+Cookie,机制与技术实体,8,Cookie,cn.txt
+User-Agent,报文字段与状态实体,1,User-Agent,cn.txt
+Session,机制与技术实体,8,Session,cn.txt
+URL,地址与标识实体,10,URL,cn.txt
+SessionID,地址与标识实体,5,SessionID | sessionid,cn.txt
+Set-Cookie,机制与技术实体,1,Set-Cookie,cn.txt
+分布式,概念与特性实体,2,分布式,cn.txt
+URL 重写,机制与技术实体,1,URL 重写,cn.txt
+URI,地址与标识实体,5,URI,cn.txt
+Token,机制与技术实体,1,Token,cn.txt
+JWT,机制与技术实体,2,JWT,cn.txt
+微服务,概念与特性实体,1,微服务,cn.txt
+幂等性,概念与特性实体,2,幂等性,cn.txt
+SSE,协议实体,3,SSE,cn.txt
+WebSocket,协议实体,3,WebSocket,cn.txt
+全双工,概念与特性实体,1,全双工,cn.txt
+弹幕,场景与应用实体,1,弹幕,cn.txt
+实时聊天,场景与应用实体,1,实时聊天,cn.txt
+协同编辑,场景与应用实体,1,协同编辑,cn.txt
+根 DNS 服务器,服务器与网络组件实体,1,根 DNS 服务器,cn.txt
+顶级域服务器,服务器与网络组件实体,1,顶级域服务器,cn.txt
+权威 DNS 服务器,服务器与网络组件实体,1,权威 DNS 服务器,cn.txt
+本地 DNS 服务器,服务器与网络组件实体,2,本地 DNS 服务器,cn.txt
+浏览器,服务器与网络组件实体,4,浏览器,cn.txt
+路由器,服务器与网络组件实体,1,路由器,cn.txt
+TLD 服务器,服务器与网络组件实体,1,TLD 服务器,cn.txt
+DNS 劫持,机制与技术实体,1,DNS 劫持,cn.txt
+DoH,机制与技术实体,1,DoH,cn.txt
+DoT,机制与技术实体,1,DoT,cn.txt
+页面展示,场景与应用实体,1,页面展示,cn.txt
+SYN,报文字段与状态实体,1,SYN,cn.txt
+ARP 缓存,机制与技术实体,1,ARP 缓存,cn.txt
+tracert,工具与命令实体,1,tracert,cn.txt
+nslookup,工具与命令实体,1,nslookup,cn.txt
