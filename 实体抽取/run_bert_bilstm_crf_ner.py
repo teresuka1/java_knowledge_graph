@@ -483,7 +483,7 @@ def main():
         lexicon_ents = extract_entities_by_terms(txt, terms)
         ents = model_ents + lexicon_ents
 
-        # Deduplicate by (entity,start,end)
+        # 整合输出
         seen = set()
         rows = []
         for ent, s, e, tp in ents:
