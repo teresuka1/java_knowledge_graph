@@ -1,4 +1,13 @@
-﻿import re
+"""领域 NER 通用模块（BERT + BiLSTM + CRF）。
+
+本模块实现完整的领域实体抽取流水线：
+1. 从原始文本挖掘候选术语，构建弱监督词典。
+2. 基于字符级标签训练 BERT + BiLSTM + CRF 序列标注模型。
+3. 融合模型预测与词典命中结果，进行去重和噪声过滤。
+4. 聚合 mention 到主实体，并输出结构化 CSV 结果。
+"""
+
+import re
 import random
 import math
 from bisect import bisect_right
@@ -23,6 +32,9 @@ ID2LABEL = {i: v for v, i in LABEL2ID.items()}
 
 
 @dataclass
+# 配置对象：集中管理单领域任务的输入、训练参数、筛选阈值和类型规则。
+# 可通过 use_seed_entities / use_regex_entities / use_type_rules 开关
+# 在“规则优先”与“统计增强”两种抽取策略之间切换。
 class DomainConfig:
     domain_name: str
     source_file: str
@@ -81,6 +93,8 @@ def clean_text(text: str) -> str:
     return text
 
 
+# 文本切分：先按段落与标点切分，再以 max_chars 控制最大长度。
+# 目的：降低超长序列带来的截断损失与显存压力。
 def split_sentences(text: str, max_chars: int) -> List[str]:
     chunks: List[str] = []
     for blk in text.split("\n"):
@@ -102,6 +116,8 @@ def split_sentences(text: str, max_chars: int) -> List[str]:
     return chunks
 
 
+# 构建字符词表：以原文字符为主，同时并入 seed_entities 中的字符。
+# 目的：降低先验术语中的 OOV 风险。
 def build_vocab(text: str, seed_entities: List[str]) -> List[str]:
     chars = set(text)
     for e in seed_entities:
@@ -110,6 +126,7 @@ def build_vocab(text: str, seed_entities: List[str]) -> List[str]:
     return SPECIAL_TOKENS + sorted(chars)
 
 
+# 抽取括号别名，如“全称(缩写)”结构；左右两侧都可加入候选词。
 def extract_parentheses_alias(text: str) -> List[str]:
     results = []
     pattern = re.compile(r"([\u4e00-\u9fffA-Za-z0-9_+\-/.]{2,30})[（(]([A-Za-z0-9_+\-/.]{2,20})[）)]")
@@ -123,6 +140,7 @@ def extract_parentheses_alias(text: str) -> List[str]:
     return results
 
 
+# 从编号标题中抽取术语，例如“1. xxx / 一、xxx / (1) xxx”。
 def extract_heading_terms(text: str) -> List[str]:
     terms = []
     for line in text.split("\n"):
@@ -135,6 +153,7 @@ def extract_heading_terms(text: str) -> List[str]:
     return terms
 
 
+# 抽取“术语：定义”结构里冒号前的术语主语。
 def extract_colon_terms(text: str) -> List[str]:
     terms = []
     for m in re.finditer(r"([\u4e00-\u9fffA-Za-z0-9_+\-/.]{2,30})(?:：|:)", text):
@@ -152,6 +171,8 @@ def extract_regex_terms(text: str, patterns: List[str]) -> List[str]:
     return out
 
 
+# 中文 n-gram 候选挖掘：统计频次并过滤停用词、异常长度和重复片段。
+# 该步骤提供高召回候选，后续再由规则与模型进一步筛选。
 def extract_chinese_ngrams(text: str, min_len: int, max_len: int, min_freq: int) -> List[str]:
     zh = re.sub(r"[^\u4e00-\u9fff]", "", text)
     cnt = Counter()
@@ -207,6 +228,9 @@ def _calc_entropy(counter: Counter) -> float:
     return ent
 
 
+# 统计术语抽取（新词发现思想）：
+# 使用 PMI 衡量内部凝固度，左右信息熵衡量边界自由度，
+# 仅保留同时满足阈值的候选词。
 def extract_statistical_terms(
     text: str,
     min_len: int,
@@ -308,6 +332,8 @@ ENTITY_SUFFIXES = (
 BAD_EDGE_CHARS = set("的一是在和及与为于但由将把被其该等较更所向对并而从到给度址")
 
 
+# 实体表面形态判断：结合边界字符、噪声词、长度和出现次数等规则，
+# 过滤“看起来不像实体”的候选。
 def _is_potential_entity_surface(term: str, occ: int) -> bool:
     s = term.strip()
     if not s:
@@ -428,6 +454,11 @@ def _build_candidate_terms_legacy(text: str, cfg: DomainConfig) -> List[str]:
     return keep[: cfg.max_candidate_terms]
 
 
+# - legacy_mode???? seed/regex/type_rules????????
+# - enhanced_mode???????????????????????
+# 候选术语构建总入口：
+# - legacy_mode：偏规则与 seed/regex/type_rules；
+# - enhanced_mode：叠加统计抽取与打分排序。
 def build_candidate_terms(text: str, cfg: DomainConfig) -> List[str]:
     legacy_mode = cfg.use_seed_entities or cfg.use_regex_entities or cfg.use_type_rules
     if legacy_mode:
@@ -531,6 +562,8 @@ def build_candidate_terms(text: str, cfg: DomainConfig) -> List[str]:
     return keep[: cfg.max_candidate_terms]
 
 
+# 弱监督打标：将候选术语命中位置映射为 BIO（B-ENT / I-ENT）标签。
+# 若区间冲突，则保留先到先得的标注。
 def label_sentence_chars(sentence: str, terms: List[str]) -> List[int]:
     labels = [LABEL2ID["O"]] * len(sentence)
     for term in terms:
@@ -548,6 +581,8 @@ def label_sentence_chars(sentence: str, terms: List[str]) -> List[int]:
     return labels
 
 
+# 数据集封装：把字符级标签对齐到 tokenizer 生成的 token 序列。
+# 特殊 token 与无效位置标为 -100，不参与损失计算。
 class CharNERDataset(Dataset):
     def __init__(self, texts: List[str], labels: List[List[int]], tokenizer: BertTokenizerFast, max_len: int):
         self.items = []
@@ -587,6 +622,8 @@ class CharNERDataset(Dataset):
         return self.items[idx]
 
 
+# CRF ???????????????????????
+# 模型结构：BERT 负责上下文编码，BiLSTM 建模时序依赖，CRF 约束标签转移。
 class BertBiLstmCrf(nn.Module):
     def __init__(self, vocab_size: int, num_labels: int):
         super().__init__()
@@ -628,6 +665,7 @@ class BertBiLstmCrf(nn.Module):
         return self.crf.viterbi_decode(emissions, mask=mask)
 
 
+# 标准训练循环：按 batch 执行前向、反向传播与参数更新。
 def train_model(model: nn.Module, loader: DataLoader, epochs: int, lr: float, device: torch.device) -> None:
     model.train()
     opt = torch.optim.AdamW(model.parameters(), lr=lr)
@@ -661,6 +699,7 @@ def extract_entities_from_tags(text: str, tags: List[int]) -> List[Tuple[str, in
     return entities
 
 
+# 推理入口：分句预测 BIO 序列并还原实体 span，再映射回全文绝对坐标。
 def predict_entities(model: nn.Module, tokenizer: BertTokenizerFast, text: str, max_len: int, device: torch.device) -> List[Tuple[str, int, int]]:
     sents = split_sentences(text, max_len - 20)
     out: List[Tuple[str, int, int]] = []
@@ -703,6 +742,7 @@ def lexicon_entities(text: str, terms: List[str]) -> List[Tuple[str, int, int]]:
     return out
 
 
+# 包含关系去重：若短实体完全落在长实体内部，则删除短实体，减少碎片噪声。
 def remove_contained_entities(entities: List[Tuple[str, int, int]]) -> List[Tuple[str, int, int]]:
     if not entities:
         return []
@@ -729,6 +769,8 @@ def normalize_main_key(entity: str) -> str:
     return s
 
 
+# mention ?????????????????????????
+# mention 清洗：去除编号前缀、连接词与定义性尾巴，统一实体表面形式。
 def sanitize_mention(entity: str) -> str:
     s = entity.strip()
     s = re.sub(r"^(?:第?[一二三四五六七八九十百千万\d]+(?:[、.．]|[)）]))\s*", "", s)
@@ -839,6 +881,11 @@ def _type_cues(type_name: str) -> List[str]:
     return [c for c in cues if c]
 
 
+# 1) ??? type_rules?????????/?????
+# 2) ?????????? + ?????????????????
+# 实体类型判定入口：
+# 1) 若启用 type_rules，优先按显式规则命中；
+# 2) 否则结合标题线索和局部上下文进行打分判定。
 def classify_entity(
     entity: str,
     cfg: DomainConfig,
@@ -916,6 +963,8 @@ def normalize_entity_type(entity_type: str, cfg: DomainConfig) -> str:
     return cfg.allowed_entity_types[0]
 
 
+# 主实体聚合：按归一化 key 合并 mention，
+# 累计 mention_count、首出现位置，并执行质量阈值过滤。
 def aggregate_to_main_entities(
     entities: List[Tuple[str, int, int]],
     cfg: DomainConfig,
@@ -1007,6 +1056,8 @@ def aggregate_to_main_entities(
     return df
 
 
+# append-only 合并：在保留历史结果基础上吸收本轮新增实体与 mention，
+# 并尽量保留更早位置与更可靠类型。
 def merge_append_only(existing_df: pd.DataFrame, new_df: pd.DataFrame, cfg: DomainConfig, source_text: str) -> pd.DataFrame:
     required_cols = ["main_entity", "entity_type", "mention_count", "mentions", "source_file", "first_position"]
     if existing_df.empty:
@@ -1111,6 +1162,7 @@ def merge_append_only(existing_df: pd.DataFrame, new_df: pd.DataFrame, cfg: Doma
     return out
 
 
+# 端到端流程：读文本 -> 构建候选词 -> 训练 -> 推理融合 -> 聚合导出。
 def run_bert_bilstm_crf_ner(cfg: DomainConfig) -> None:
     set_seed(cfg.seed)
 
@@ -1219,8 +1271,10 @@ def run_bert_bilstm_crf_ner(cfg: DomainConfig) -> None:
     print(f"[{cfg.domain_name}] saved={out_path} rows={len(result_df)}")
 
 
+# 向后兼容别名：保留历史调用入口 run_domain_ner。
 def run_domain_ner(cfg: DomainConfig) -> None:
     # Backward-compatible alias.
     run_bert_bilstm_crf_ner(cfg)
+
 
 

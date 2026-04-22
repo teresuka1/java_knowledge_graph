@@ -1,4 +1,12 @@
-﻿import os
+"""独立版弱监督 NER 训练脚本（BERT + BiLSTM + CRF）。
+
+脚本流程：
+1. 汇总多领域文本，自动挖掘候选术语并生成伪标签训练数据。
+2. 训练字符级序列标注模型，对原始文本执行分句推理。
+3. 融合模型实体与词典实体，完成规则分类后导出 CSV。
+"""
+
+import os
 import re
 import random
 from collections import Counter
@@ -15,7 +23,7 @@ from transformers import BertConfig, BertModel, BertTokenizerFast
 from TorchCRF import CRF
 
 # ---------------------------
-# Config
+# 配置参数
 # ---------------------------
 SEED = 42
 MAX_LEN = 128
@@ -40,6 +48,8 @@ LABEL2ID = {v: i for i, v in enumerate(LABELS)}
 ID2LABEL = {i: v for v, i in LABEL2ID.items()}
 
 
+# 作用：固定随机种子，减少不同机器和多次运行间的随机波动。
+# 说明：同时设置系统随机库、数值计算库和深度学习库（含显卡后端）的随机状态。
 def set_seed(seed: int = 42):
     random.seed(seed)
     np.random.seed(seed)
@@ -48,6 +58,8 @@ def set_seed(seed: int = 42):
         torch.cuda.manual_seed_all(seed)
 
 
+# 作用：鲁棒读取文本文件，尽量避免编码差异导致的读取失败。
+# 说明：按常见文本编码顺序逐个尝试解码。
 def read_text_robust(path: Path) -> str:
     raw = path.read_bytes()
     for enc in ["utf-8-sig", "utf-8", "gb18030", "gbk"]:
@@ -60,6 +72,8 @@ def read_text_robust(path: Path) -> str:
     return raw.decode("utf-8", errors="ignore")
 
 
+# 作用：统一文本格式，降低后续分句与规则匹配噪声。
+# 说明：处理全角空格、换行符和多余空白。
 def clean_text(t: str) -> str:
     t = t.replace("\u3000", " ")
     t = re.sub(r"\r\n?", "\n", t)
@@ -67,6 +81,8 @@ def clean_text(t: str) -> str:
     return t
 
 
+# 作用：把长文本切成可训练/可推理片段，避免超长序列。
+# 说明：先按标点切分，超长片段再按最大长度参数二次切分。
 def split_sentences(text: str, max_chars: int = 110) -> List[str]:
     chunks = []
     for blk in text.split("\n"):
@@ -88,6 +104,8 @@ def split_sentences(text: str, max_chars: int = 110) -> List[str]:
     return chunks
 
 
+# 作用：构建字符级词表，供分词器使用自定义词表文件。
+# 说明：过滤控制字符，仅保留满足最小频次的字符。
 def build_char_vocab(all_texts: List[str], min_freq: int = 1) -> List[str]:
     cnt = Counter()
     for t in all_texts:
@@ -97,13 +115,15 @@ def build_char_vocab(all_texts: List[str], min_freq: int = 1) -> List[str]:
     return special + sorted(chars)
 
 
+# 作用：挖掘弱监督候选术语（伪标签词典）。
+# 说明：融合英文术语、中文字串片段、标题词、冒号前术语并做筛选。
 def build_candidate_terms(all_texts: List[str]) -> List[str]:
     whole = "\n".join(all_texts)
 
-    # 1) English / acronym terms
+    # 1）英文术语/缩写术语
     eng_terms = re.findall(r"\b[A-Za-z][A-Za-z0-9_+./-]{1,30}\b", whole)
 
-    # 2) Chinese n-grams with frequency
+    # 2）带频次统计的中文字串片段
     only_zh = re.sub(r"[^\u4e00-\u9fff]", "", whole)
     zh_counter = Counter()
     for n in range(2, 7):
@@ -121,14 +141,14 @@ def build_candidate_terms(all_texts: List[str]) -> List[str]:
         if v >= 3 and k not in stop and len(set(k)) > 1
     ]
 
-    # 3) Heading-like terms after numbering
+    # 3）编号标题后的标题术语
     heading_terms = []
     for line in whole.split("\n"):
         m = re.match(r"^\s*[\d一二三四五六七八九十]+(?:\.[\d]+)*\s*([\u4e00-\u9fffA-Za-z0-9_+./-]{2,30})", line.strip())
         if m:
             heading_terms.append(m.group(1))
 
-    # 4) Terms before colon: often concept names in notes
+    # 4）冒号前术语：在学习笔记中通常是概念名称
     colon_terms = re.findall(r"([\u4e00-\u9fff]{2,20})(?:：|:)", whole)
 
     all_terms = eng_terms + zh_terms + heading_terms + colon_terms
@@ -146,7 +166,7 @@ def build_candidate_terms(all_texts: List[str]) -> List[str]:
             if k in heading_set or k in colon_set or v >= 2:
                 terms.append(k)
 
-    # remove highly generic pure Chinese short terms
+    # 去掉过于泛化的中文短词
     filtered = []
     for t in terms:
         if re.fullmatch(r"[\u4e00-\u9fff]+", t):
@@ -164,6 +184,8 @@ def build_candidate_terms(all_texts: List[str]) -> List[str]:
     return filtered[:5000]
 
 
+# 作用：将候选术语命中位置转换为字符级序列标注标签。
+# 说明：标签集合为“外部、实体开头、实体内部”，重叠区域采用先到先得。
 def label_sentence_chars(sentence: str, terms: List[str]) -> List[int]:
     labels = [LABEL2ID["O"]] * len(sentence)
     for term in terms:
@@ -182,11 +204,14 @@ def label_sentence_chars(sentence: str, terms: List[str]) -> List[int]:
 
 
 @dataclass
+# 作用：表示一个训练样本（句子文本 + 字符级标签）。
 class Sample:
     text: str
     labels: List[int]
 
 
+# 作用：数据集封装层，负责分词编码与标签对齐。
+# 说明：特殊标记和无效位置标为 -100，不参与损失计算。
 class NERDataset(Dataset):
     def __init__(self, samples: List[Sample], tokenizer: BertTokenizerFast, max_len: int = MAX_LEN):
         self.samples = samples
@@ -225,6 +250,8 @@ class NERDataset(Dataset):
         return item
 
 
+# 作用：定义命名实体识别主模型（预训练编码器 + 双向循环层 + 条件随机场）。
+# 说明：编码器负责上下文表示，循环层强化时序依赖，随机场层约束标签转移。
 class BertBiLstmCrf(nn.Module):
     def __init__(self, vocab_size: int, num_labels: int):
         super().__init__()
@@ -271,6 +298,8 @@ class BertBiLstmCrf(nn.Module):
         return decoded
 
 
+# 作用：执行训练循环并更新参数。
+# 说明：使用自适应优化器，按全局训练轮数和学习率训练并输出每轮损失。
 def train_model(model, loader, device):
     model.train()
     optim = torch.optim.AdamW(model.parameters(), lr=LR)
@@ -291,6 +320,8 @@ def train_model(model, loader, device):
         print(f"Epoch {ep+1}/{EPOCHS} loss={np.mean(losses):.4f}")
 
 
+# 作用：将预测标签序列解码为实体区间列表。
+# 返回：[(实体文本, 起始位置, 结束位置, 实体类型), ...]
 def extract_entities_from_labels(text: str, pred_labels: List[int]) -> List[Tuple[str, int, int, str]]:
     ents = []
     i = 0
@@ -310,6 +341,7 @@ def extract_entities_from_labels(text: str, pred_labels: List[int]) -> List[Tupl
     return ents
 
 
+# 作用：词典直匹配补充，扫描候选词在全文中的出现位置。
 def extract_entities_by_terms(text: str, terms: List[str]) -> List[Tuple[str, int, int, str]]:
     ents = []
     for term in terms:
@@ -324,6 +356,9 @@ def extract_entities_by_terms(text: str, terms: List[str]) -> List[Tuple[str, in
     return ents
 
 
+# 启发式实体分类器：结合关键词和来源文件线索判定实体类别。
+# 作用：基于规则将实体映射到业务类别。
+# 说明：结合关键词集合与来源文件名做类型判定和回退。
 def classify_entity(entity: str, source_file: str) -> str:
     e = entity.strip()
     up = e.upper()
@@ -385,7 +420,7 @@ def classify_entity(entity: str, source_file: str) -> str:
     if any(k in e for k in concept_keywords):
         return "概念"
 
-    # File-level fallback to keep categories specific instead of collapsing to TERM/概念.
+    # 文件级回退策略：尽量保持类别具体，不统一退化为“术语/概念”。
     if source == "cn.txt":
         return "网络"
     if source == "mysql.txt":
@@ -401,6 +436,8 @@ def classify_entity(entity: str, source_file: str) -> str:
     return "概念"
 
 
+# 作用：执行全文推理并恢复绝对坐标。
+# 说明：按分句预测后，通过偏移量将句内坐标映射回原文。
 def predict_text_entities(model, tokenizer, text: str, device) -> List[Tuple[str, int, int, str]]:
     sentences = split_sentences(text)
     all_ents = []
@@ -436,6 +473,8 @@ def predict_text_entities(model, tokenizer, text: str, device) -> List[Tuple[str
     return all_ents
 
 
+# 作用：脚本主入口。
+# 流程：加载数据 -> 构建词表/候选词 -> 训练 -> 推理融合 -> 导出结果文件。
 def main():
     set_seed(SEED)
     OUT_DIR.mkdir(exist_ok=True)
@@ -483,7 +522,7 @@ def main():
         lexicon_ents = extract_entities_by_terms(txt, terms)
         ents = model_ents + lexicon_ents
 
-        # 整合输出
+        # 按（实体文本，起始位置，结束位置）去重
         seen = set()
         rows = []
         for ent, s, e, tp in ents:
@@ -491,7 +530,7 @@ def main():
             if key in seen:
                 continue
             seen.add(key)
-            # entity is always sliced from original text, preserving Chinese/English exactly as in source.
+            # 实体文本始终从原文切片得到，保留原始中英文写法。
             cat = classify_entity(ent, fn)
             rows.append({
                 "entity": ent,
