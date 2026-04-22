@@ -33,8 +33,7 @@ ID2LABEL = {i: v for v, i in LABEL2ID.items()}
 
 @dataclass
 # 配置对象：集中管理单领域任务的输入、训练参数、筛选阈值和类型规则。
-# 可通过 use_seed_entities / use_regex_entities / use_type_rules 开关
-# 在“规则优先”与“统计增强”两种抽取策略之间切换。
+# 可通过 use_seed_entities / use_regex_entities / use_type_rules 
 class DomainConfig:
     domain_name: str
     source_file: str
