@@ -1,0 +1,7 @@
+﻿main_entity,property_name,merged_values,value_count,evidence,source_file,domain,confidence,disambiguation_method
+MySQL,概念定义,一款开源的关系型数据库管理系统(RDBMS)，使用SQL作为查询语言，支持多线程、高并发，是Java后端开发最常用的数据库,1,1. MySQL是一款开源的关系型数据库管理系统(RDBMS)，使用SQL作为查询语言，支持多线程、高并发，是Java后端开发最常用的数据库,mysql.txt,mysql,0.92,直接保留单值
+char,概念定义,固定长度字符串，查询效率高，会自动补空格,1,7. char与varchar区别：char是固定长度字符串，查询效率高，会自动补空格,mysql.txt,mysql,0.92,直接保留单值
+utf8mb4,概念定义,MySQL推荐字符集，支持存储emoji表情，替代utf8,1,9. 字符集：utf8mb4是MySQL推荐字符集，支持存储emoji表情，替代utf8,mysql.txt,mysql,0.92,直接保留单值
+varchar,概念定义,可变长度字符串，节省存储空间，效率略低,1,varchar是可变长度字符串，节省存储空间，效率略低,mysql.txt,mysql,0.92,直接保留单值
+事务,概念定义,最小单位，不可分割,1,- 原子性(Atomicity)：事务是最小单位，不可分割,mysql.txt,mysql,0.92,直接保留单值
+索引,概念定义,帮助MySQL高效获取数据的**排好序的数据结构**，核心作用是提升查询效率，降低数据库IO成本,1,1. 索引是帮助MySQL高效获取数据的**排好序的数据结构**，核心作用是提升查询效率，降低数据库IO成本,mysql.txt,mysql,0.92,直接保留单值

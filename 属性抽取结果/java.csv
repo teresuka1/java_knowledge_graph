@@ -1,0 +1,5 @@
+﻿entity,property_name,property_value,evidence,pattern_name,confidence,domain,source_file
+对象,概念定义,类的实例,类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例,是,0.92,java,java.txt
+Java,概念定义,单继承，一个类只能有一个直接父类,继承使用extends关键字，Java是单继承，一个类只能有一个直接父类,是,0.92,java,java.txt
+数组,概念定义,引用类型，长度固定，存储同一类型的数据,数组是引用类型，长度固定，存储同一类型的数据,是,0.92,java,java.txt
+Throwable,概念定义,顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,是,0.92,java,java.txt
