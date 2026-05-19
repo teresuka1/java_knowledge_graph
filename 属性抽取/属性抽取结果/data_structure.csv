@@ -1,0 +1,4 @@
+﻿entity,attribute_name,attribute_value,section_title,source_file,evidence,confidence,method,source_relation
+队列,特性,FIFO,全文,data_structure.txt,"队列是一种先进先出(FIFO)的数据结构,常用于任务调度和缓冲区管理",0.862,relation_disambiguation_reclassified,is_a
+二叉树,定义,"一种特殊的树结构,每个节点最多有两个子节点",全文,data_structure.txt,"二叉树是一种特殊的树结构,每个节点最多有两个子节点",0.76,attribute_extraction_definition_pattern,
+数据结构,定义,"计算机科学中的基础领域,主要研究数据的组织、存储和操作方式",全文,data_structure.txt,"数据结构是计算机科学中的基础领域,主要研究数据的组织、存储和操作方式",0.76,attribute_extraction_definition_pattern,

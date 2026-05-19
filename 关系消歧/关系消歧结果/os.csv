@@ -1,0 +1,225 @@
+﻿head,relation,tail,head_type,tail_type,evidence,pattern_name,section_title,source_file,confidence,method
+处理器,alias_of,用户态,资源与硬件实体,核心抽象实体,"操作系统运行离不开两种处理器状态,即用户态和内核态",别名关系,操作系统的结构与运行机制,os.txt,0.946,relation_disambiguation_normalized
+进程,alias_of,Thrashing,核心抽象实体,虚拟内存与页面置换实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",别名关系,内存管理与虚拟内存,os.txt,0.94,relation_disambiguation_normalized
+内存,alias_of,页面置换算法,资源与硬件实体,资源与硬件实体,"与虚拟内存密切相关的是页面置换算法,即当内存已满而仍需调入新页面时,系统应选择哪个旧页面换出",别名关系,内存管理与虚拟内存,os.txt,0.932,relation_disambiguation_normalized
+内核态,alias_of,处理器,资源与硬件实体,领域实体,"操作系统运行离不开两种处理器状态,即用户态和内核态",别名关系,操作系统的结构与运行机制,os.txt,0.922,relation_disambiguation_normalized
+用户态,alias_of,操作系统,核心抽象实体,领域实体,"操作系统运行离不开两种处理器状态,即用户态和内核态",别名关系,操作系统的结构与运行机制,os.txt,0.886,relation_disambiguation_normalized
+内存,alias_of,虚拟内存,资源与硬件实体,核心抽象实体,"与虚拟内存密切相关的是页面置换算法,即当内存已满而仍需调入新页面时,系统应选择哪个旧页面换出",别名关系,内存管理与虚拟内存,os.txt,0.88,relation_disambiguation_normalized
+进程,alias_of,课程中还会讨论抖动,核心抽象实体,虚拟内存与页面置换实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",别名关系,内存管理与虚拟内存,os.txt,0.88,relation_disambiguation_normalized
+Process,is_a,操作系统,进程与线程实体,领域实体,进程(Process)是操作系统课程中最重要的概念之一,上下位关系,进程与线程,os.txt,0.868,relation_disambiguation_normalized
+Virtual Memory,is_a,操作系统,虚拟内存与页面置换实体,领域实体,"虚拟内存(Virtual Memory)是操作系统的一项重要技术,它使程序不必全部装入内存即可运行",上下位关系,内存管理与虚拟内存,os.txt,0.868,relation_disambiguation_normalized
+并发,implements,进程与线程,核心思想与性质实体,核心抽象实体,"它通过进程与线程机制实现并发执行,通过调度算法提高处理器利用率,通过同步与互斥保证共享资源访问正确,通过内存管理和虚拟内存扩展系统能力,通过文件系统组织长期数据,通过设备管理协调各种外设工作,并通过权限控制和安全机制维护系统稳定",实现关系,总结,os.txt,0.866,relation_disambiguation_normalized
+内存,is_a,操作系统,资源与硬件实体,领域实体,内存管理是操作系统中技术性很强的一部分,上下位关系,内存管理与虚拟内存,os.txt,0.862,relation_disambiguation_normalized
+驱动程序,is_a,操作系统,设备管理与I/O实体,领域实体,"驱动程序是连接操作系统与具体硬件的桥梁,它把操作系统的通用 I/O 请求转换为特定设备可识别的控制命令",上下位关系,设备管理与输入输出系统,os.txt,0.862,relation_disambiguation_normalized
+操作系统,depends_on,中断,领域实体,处理器与调度实体,"同时,操作系统依赖中断和异常机制响应外部设备和内部错误",依赖关系,操作系统的结构与运行机制,os.txt,0.858,relation_disambiguation_normalized
+Thread,is_a,进程,进程与线程实体,核心抽象实体,"线程(Thread)则是比进程更轻量的执行单位,通常被称为 CPU 调度的基本单位",上下位关系,进程与线程,os.txt,0.856,relation_disambiguation_normalized
+进程同步,is_a,操作系统,核心抽象实体,领域实体,"因此,进程同步与互斥是操作系统课程中的重点与难点",上下位关系,进程同步、互斥与死锁,os.txt,0.856,relation_disambiguation_normalized
+并发,implements,操作系统,核心思想与性质实体,领域实体,调度是操作系统实现“多任务并发”的核心机制,实现关系,处理器调度与调度算法,os.txt,0.854,relation_disambiguation_normalized
+Deadlock,is_a,进程,死锁相关实体,核心抽象实体,"死锁(Deadlock)是指多个进程因争夺资源而形成相互等待,从而都无法继续执行的状态",上下位关系,进程同步、互斥与死锁,os.txt,0.85,relation_disambiguation_normalized
+OS,is_a,计算机系统,领域实体,领域实体,"操作系统(Operating System,简称 OS)是计算机系统中最核心的系统软件之一,它位于硬件与应用程序之间,承担资源管理、任务调度、服务提供和用户接口等重要职责",上下位关系,操作系统的概念与地位,os.txt,0.848,relation_disambiguation_normalized
+macOS,is_a,计算机系统,系统与平台实体,领域实体,"从课程学习的角度来看,操作系统并不是单纯介绍某一个具体系统,如 Windows、Linux 或 macOS,而是研究“计算机系统如何高效、安全、可靠地运行”的一般规律",上下位关系,操作系统的概念与地位,os.txt,0.844,relation_disambiguation_normalized
+虚拟内存,is_a,页面置换算法,核心抽象实体,资源与硬件实体,"与虚拟内存密切相关的是页面置换算法,即当内存已满而仍需调入新页面时,系统应选择哪个旧页面换出",上下位关系,内存管理与虚拟内存,os.txt,0.844,relation_disambiguation_normalized
+内核态,alias_of,操作系统,领域实体,领域实体,"操作系统运行离不开两种处理器状态,即用户态和内核态",别名关系,操作系统的结构与运行机制,os.txt,0.842,relation_disambiguation_normalized
+系统调用,is_a,内核态,领域实体,领域实体,"系统调用是用户态与内核态交互的主要桥梁,也是课程中的关键知识点",上下位关系,操作系统的主要功能,os.txt,0.83,relation_disambiguation_normalized
+页面置换算法,implements,简单 Shell,资源与硬件实体,课程与方法相关实体,"通过编写简单 Shell、模拟进程调度、实现页面置换算法、观察 Linux 进程与线程、分析文件系统命令输出等方式,能够把理论知识与真实系统联系起来",实现关系,操作系统课程的学习方法,os.txt,0.83,relation_disambiguation_normalized
+文件系统,is_a,操作系统,核心抽象实体,领域实体,文件系统是用户感知最直接的操作系统功能之一,上下位关系,文件系统,os.txt,0.826,relation_disambiguation_normalized
+权限,is_a,稳定性,文件系统实体,核心思想与性质实体,这种权限分离机制是保障系统稳定性和安全性的基础,上下位关系,操作系统的结构与运行机制,os.txt,0.826,relation_disambiguation_normalized
+内存,implements,死锁,资源与硬件实体,同步与互斥实体,"它既关注理论问题,例如进程同步为何会产生死锁,也关注工程实现,例如内存如何分页、磁盘如何调度",实现关系,操作系统的概念与地位,os.txt,0.824,relation_disambiguation_normalized
+安全性判断,is_a,银行家算法,死锁相关实体,死锁相关实体,"避免则是在分配资源前进行安全性判断,典型方法是银行家算法(Banker’s Algorithm)",上下位关系,进程同步、互斥与死锁,os.txt,0.824,relation_disambiguation_normalized
+并发能力,used_for,图形界面程序,进程与线程实体,发展历程实体,"多线程机制有助于提升程序并发能力,尤其适用于图形界面程序、服务器程序和并行计算任务",用途关系,进程与线程,os.txt,0.824,relation_disambiguation_normalized
+CPU,is_a,操作系统,资源与硬件实体,领域实体,"由于 CPU 是极其宝贵的资源,操作系统必须决定“谁先运行、运行多久、何时切换”",上下位关系,操作系统的主要功能,os.txt,0.82,relation_disambiguation_normalized
+内核,is_a,进程调度,领域实体,核心抽象实体,"内核是最核心的部分,负责进程调度、内存管理、中断处理、设备控制等关键操作",上下位关系,操作系统的结构与运行机制,os.txt,0.82,relation_disambiguation_normalized
+进程,is_a,操作系统,核心抽象实体,领域实体,进程(Process)是操作系统课程中最重要的概念之一,上下位关系,进程与线程,os.txt,0.82,relation_disambiguation_normalized
+调度,is_a,并发,处理器与调度实体,核心思想与性质实体,调度是操作系统实现“多任务并发”的核心机制,上下位关系,处理器调度与调度算法,os.txt,0.814,relation_disambiguation_normalized
+Operating System,is_a,计算机系统,领域实体,领域实体,"操作系统(Operating System,简称 OS)是计算机系统中最核心的系统软件之一,它位于硬件与应用程序之间,承担资源管理、任务调度、服务提供和用户接口等重要职责",上下位关系,操作系统的概念与地位,os.txt,0.812,relation_disambiguation_normalized
+绝对路径,is_a,文件,文件系统实体,核心抽象实体,"路径名则用于唯一定位文件,分为绝对路径和相对路径",上位包含关系,文件系统,os.txt,0.812,relation_disambiguation_normalized
+互斥,is_a,进程,同步与互斥实体,核心抽象实体,互斥是指在某一时刻只允许一个进程进入临界区访问共享资源,上下位关系,进程同步、互斥与死锁,os.txt,0.808,relation_disambiguation_normalized
+多道程序设计,is_a,内存,发展历程实体,资源与硬件实体,"所谓多道程序设计,是指将多个程序同时装入内存,在一个程序因输入输出操作而等待时,CPU 可以切换去执行其他程序,从而减少处理器空闲时间,提高系统吞吐量",上下位关系,操作系统的发展历程,os.txt,0.808,relation_disambiguation_normalized
+操作系统,is_a,抽象,领域实体,核心思想与性质实体,"而对于程序员和系统设计者而言,操作系统则是一个复杂的资源控制与抽象平台,它屏蔽了底层硬件的细节,为上层软件提供统一、规范、稳定的运行接口",上下位关系,操作系统的概念与地位,os.txt,0.808,relation_disambiguation_normalized
+先来先服务,is_a,调度,调度算法实体,处理器与调度实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",上位包含关系,处理器调度与调度算法,os.txt,0.806,relation_disambiguation_normalized
+操作系统,is_a,计算机系统,领域实体,领域实体,"总体而言,操作系统课程研究的是如何让计算机系统在多任务、多用户、多资源约束下高效、有序、安全地运行",上下位关系,总结,os.txt,0.806,relation_disambiguation_normalized
+操作系统,depends_on,外部设备,领域实体,资源与硬件实体,"同时,操作系统依赖中断和异常机制响应外部设备和内部错误",依赖关系,操作系统的结构与运行机制,os.txt,0.804,relation_disambiguation_normalized
+权限,is_a,安全性,文件系统实体,核心思想与性质实体,这种权限分离机制是保障系统稳定性和安全性的基础,上下位关系,操作系统的结构与运行机制,os.txt,0.802,relation_disambiguation_normalized
+分页,implements,死锁,资源与硬件实体,同步与互斥实体,"它既关注理论问题,例如进程同步为何会产生死锁,也关注工程实现,例如内存如何分页、磁盘如何调度",实现关系,操作系统的概念与地位,os.txt,0.8,relation_disambiguation_normalized
+路径名,used_for,文件,核心抽象实体,核心抽象实体,"路径名则用于唯一定位文件,分为绝对路径和相对路径",用途关系,文件系统,os.txt,0.798,relation_disambiguation_normalized
+Linux,is_a,计算机系统,系统与平台实体,领域实体,"从课程学习的角度来看,操作系统并不是单纯介绍某一个具体系统,如 Windows、Linux 或 macOS,而是研究“计算机系统如何高效、安全、可靠地运行”的一般规律",上下位关系,操作系统的概念与地位,os.txt,0.796,relation_disambiguation_normalized
+死锁,is_a,进程,同步与互斥实体,核心抽象实体,"死锁(Deadlock)是指多个进程因争夺资源而形成相互等待,从而都无法继续执行的状态",上下位关系,进程同步、互斥与死锁,os.txt,0.796,relation_disambiguation_normalized
+线程,is_a,进程,核心抽象实体,核心抽象实体,"线程(Thread)则是比进程更轻量的执行单位,通常被称为 CPU 调度的基本单位",上下位关系,进程与线程,os.txt,0.794,relation_disambiguation_normalized
+Linux 进程与线程,implements,模拟进程调度,核心抽象实体,核心抽象实体,"通过编写简单 Shell、模拟进程调度、实现页面置换算法、观察 Linux 进程与线程、分析文件系统命令输出等方式,能够把理论知识与真实系统联系起来",实现关系,操作系统课程的学习方法,os.txt,0.792,relation_disambiguation_normalized
+内核,is_a,内存,领域实体,资源与硬件实体,"内核是最核心的部分,负责进程调度、内存管理、中断处理、设备控制等关键操作",上下位关系,操作系统的结构与运行机制,os.txt,0.79,relation_disambiguation_normalized
+虚拟内存,is_a,内存,核心抽象实体,资源与硬件实体,"与虚拟内存密切相关的是页面置换算法,即当内存已满而仍需调入新页面时,系统应选择哪个旧页面换出",上下位关系,内存管理与虚拟内存,os.txt,0.79,relation_disambiguation_normalized
+OS,is_a,系统软件,领域实体,领域实体,"操作系统(Operating System,简称 OS)是计算机系统中最核心的系统软件之一,它位于硬件与应用程序之间,承担资源管理、任务调度、服务提供和用户接口等重要职责",上下位关系,操作系统的概念与地位,os.txt,0.788,relation_disambiguation_normalized
+分页,is_a,非连续分配,资源与硬件实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.788,relation_disambiguation_normalized
+安全性判断,is_a,Banker’s Algorithm,死锁相关实体,死锁相关实体,"避免则是在分配资源前进行安全性判断,典型方法是银行家算法(Banker’s Algorithm)",上下位关系,进程同步、互斥与死锁,os.txt,0.788,relation_disambiguation_normalized
+路径名,used_for,绝对路径,核心抽象实体,文件系统实体,"路径名则用于唯一定位文件,分为绝对路径和相对路径",用途关系,文件系统,os.txt,0.788,relation_disambiguation_normalized
+单级目录,is_a,目录,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",上位包含关系,文件系统,os.txt,0.786,relation_disambiguation_normalized
+调度,has_part,先来先服务,处理器与调度实体,调度算法实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",整体部分关系,处理器调度与调度算法,os.txt,0.786,relation_disambiguation_normalized
+并发能力,used_for,服务器程序,进程与线程实体,系统与平台实体,"多线程机制有助于提升程序并发能力,尤其适用于图形界面程序、服务器程序和并行计算任务",用途关系,进程与线程,os.txt,0.782,relation_disambiguation_normalized
+相对路径,is_a,文件,文件系统实体,核心抽象实体,"路径名则用于唯一定位文件,分为绝对路径和相对路径",上位包含关系,文件系统,os.txt,0.782,relation_disambiguation_normalized
+磁盘,implements,死锁,资源与硬件实体,同步与互斥实体,"它既关注理论问题,例如进程同步为何会产生死锁,也关注工程实现,例如内存如何分页、磁盘如何调度",实现关系,操作系统的概念与地位,os.txt,0.782,relation_disambiguation_normalized
+操作系统,is_a,文件,领域实体,核心抽象实体,"对于普通用户而言,操作系统是“看得见”的使用环境,例如窗口、文件夹、任务栏、终端等",上下位关系,操作系统的概念与地位,os.txt,0.778,relation_disambiguation_normalized
+虚拟内存,is_a,操作系统,核心抽象实体,领域实体,"虚拟内存(Virtual Memory)是操作系统的一项重要技术,它使程序不必全部装入内存即可运行",上下位关系,内存管理与虚拟内存,os.txt,0.778,relation_disambiguation_normalized
+数据结构,part_of,编译原理,课程与方法相关实体,课程与方法相关实体,"操作系统课程通常被视为计算机科学与技术专业的核心课程之一,因为它连接了程序设计、数据结构、计算机组成原理、编译原理、计算机网络等多门课程,是理解计算机整体工作机制的重要桥梁",部分整体关系,操作系统的概念与地位,os.txt,0.776,relation_disambiguation_normalized
+First Come First Served,is_a,调度,调度算法实体,处理器与调度实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",上位包含关系,处理器调度与调度算法,os.txt,0.77,relation_disambiguation_normalized
+假脱机,used_for,共享,设备管理与I/O实体,核心思想与性质实体,"假脱机技术常用于打印系统,使多个任务共享独占型设备",用途关系,设备管理与输入输出系统,os.txt,0.77,relation_disambiguation_normalized
+用户接口,is_a,文件管理,领域实体,核心抽象实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.77,relation_disambiguation_normalized
+设备控制器,is_a,设备管理,资源与硬件实体,功能模块实体,设备管理的基础包括设备分类、设备控制器、驱动程序和中断处理,上位包含关系,设备管理与输入输出系统,os.txt,0.77,relation_disambiguation_normalized
+非连续分配,has_part,分页,内存管理实体,资源与硬件实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.768,relation_disambiguation_normalized
+目录,has_part,单级目录,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",整体部分关系,文件系统,os.txt,0.766,relation_disambiguation_normalized
+互斥,is_a,临界区,同步与互斥实体,同步与互斥实体,互斥是指在某一时刻只允许一个进程进入临界区访问共享资源,上下位关系,进程同步、互斥与死锁,os.txt,0.764,relation_disambiguation_normalized
+进程,used_for,页面调度,核心抽象实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",用途关系,内存管理与虚拟内存,os.txt,0.764,relation_disambiguation_normalized
+Windows,is_a,计算机系统,系统与平台实体,领域实体,"从课程学习的角度来看,操作系统并不是单纯介绍某一个具体系统,如 Windows、Linux 或 macOS,而是研究“计算机系统如何高效、安全、可靠地运行”的一般规律",上下位关系,操作系统的概念与地位,os.txt,0.76,relation_disambiguation_normalized
+内核,is_a,中断处理,领域实体,处理器与调度实体,"内核是最核心的部分,负责进程调度、内存管理、中断处理、设备控制等关键操作",上下位关系,操作系统的结构与运行机制,os.txt,0.76,relation_disambiguation_normalized
+假脱机,used_for,独占型设备,设备管理与I/O实体,核心思想与性质实体,"假脱机技术常用于打印系统,使多个任务共享独占型设备",用途关系,设备管理与输入输出系统,os.txt,0.758,relation_disambiguation_normalized
+磁盘,is_a,内存,资源与硬件实体,资源与硬件实体,"一个程序静态地存放在磁盘上时只是代码和数据,而当它被加载到内存并开始运行时,就成为进程",上下位关系,进程与线程,os.txt,0.758,relation_disambiguation_normalized
+程序计数器,is_a,进程,进程与线程实体,核心抽象实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",上位包含关系,进程与线程,os.txt,0.758,relation_disambiguation_normalized
+绝对路径,is_a,路径名,文件系统实体,核心抽象实体,"路径名则用于唯一定位文件,分为绝对路径和相对路径",上位包含关系,文件系统,os.txt,0.758,relation_disambiguation_normalized
+路径名,used_for,相对路径,核心抽象实体,文件系统实体,"路径名则用于唯一定位文件,分为绝对路径和相对路径",用途关系,文件系统,os.txt,0.758,relation_disambiguation_normalized
+两级目录,is_a,目录,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",上位包含关系,文件系统,os.txt,0.756,relation_disambiguation_normalized
+计算机系统,has_part,抽象,领域实体,核心思想与性质实体,"学习操作系统的价值,不仅在于掌握某些具体算法或概念,更在于理解计算机系统设计中的基本思想:抽象、分层、共享、保护、并发与权衡",枚举结构关系,总结,os.txt,0.756,relation_disambiguation_normalized
+进程,is_a,调度,核心抽象实体,处理器与调度实体,"简单来说,进程是程序的一次执行过程,是系统进行资源分配和调度的基本单位",上下位关系,进程与线程,os.txt,0.754,relation_disambiguation_normalized
+进程,causes,页面调度,核心抽象实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",因果关系,内存管理与虚拟内存,os.txt,0.754,relation_disambiguation_normalized
+Operating System,is_a,系统软件,领域实体,领域实体,"操作系统(Operating System,简称 OS)是计算机系统中最核心的系统软件之一,它位于硬件与应用程序之间,承担资源管理、任务调度、服务提供和用户接口等重要职责",上下位关系,操作系统的概念与地位,os.txt,0.752,relation_disambiguation_normalized
+CPU 利用率,is_a,调度,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,上位包含关系,处理器调度与调度算法,os.txt,0.75,relation_disambiguation_normalized
+Paging,is_a,非连续分配,内存管理实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.75,relation_disambiguation_normalized
+单级目录,is_a,文件,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",上位包含关系,文件系统,os.txt,0.75,relation_disambiguation_normalized
+文件管理,has_part,用户接口,核心抽象实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.75,relation_disambiguation_normalized
+设备管理,has_part,设备控制器,功能模块实体,资源与硬件实体,设备管理的基础包括设备分类、设备控制器、驱动程序和中断处理,整体部分关系,设备管理与输入输出系统,os.txt,0.75,relation_disambiguation_normalized
+调度,has_part,First Come First Served,处理器与调度实体,调度算法实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",整体部分关系,处理器调度与调度算法,os.txt,0.75,relation_disambiguation_normalized
+多线程,used_for,图形界面程序,核心抽象实体,发展历程实体,"多线程机制有助于提升程序并发能力,尤其适用于图形界面程序、服务器程序和并行计算任务",用途关系,进程与线程,os.txt,0.746,relation_disambiguation_normalized
+数据结构,part_of,计算机网络,课程与方法相关实体,课程与方法相关实体,"操作系统课程通常被视为计算机科学与技术专业的核心课程之一,因为它连接了程序设计、数据结构、计算机组成原理、编译原理、计算机网络等多门课程,是理解计算机整体工作机制的重要桥梁",部分整体关系,操作系统的概念与地位,os.txt,0.746,relation_disambiguation_normalized
+程序设计,part_of,编译原理,课程与方法相关实体,课程与方法相关实体,"操作系统课程通常被视为计算机科学与技术专业的核心课程之一,因为它连接了程序设计、数据结构、计算机组成原理、编译原理、计算机网络等多门课程,是理解计算机整体工作机制的重要桥梁",部分整体关系,操作系统的概念与地位,os.txt,0.746,relation_disambiguation_normalized
+页框,is_a,物理内存,资源与硬件实体,资源与硬件实体,"分页将逻辑地址空间和物理内存都划分为固定大小的页和页框,程序运行时通过页表完成地址映射",上位包含关系,内存管理与虚拟内存,os.txt,0.744,relation_disambiguation_normalized
+安全保护,is_a,文件管理,功能模块实体,核心抽象实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.74,relation_disambiguation_normalized
+用户接口,is_a,设备管理,领域实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.74,relation_disambiguation_normalized
+进程,has_part,程序计数器,核心抽象实体,进程与线程实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",整体部分关系,进程与线程,os.txt,0.738,relation_disambiguation_normalized
+Virtual Memory,is_a,内存,虚拟内存与页面置换实体,资源与硬件实体,"虚拟内存(Virtual Memory)是操作系统的一项重要技术,它使程序不必全部装入内存即可运行",上下位关系,内存管理与虚拟内存,os.txt,0.736,relation_disambiguation_normalized
+目录,has_part,两级目录,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",整体部分关系,文件系统,os.txt,0.736,relation_disambiguation_normalized
+互斥,is_a,共享资源,同步与互斥实体,同步与互斥实体,互斥是指在某一时刻只允许一个进程进入临界区访问共享资源,上下位关系,进程同步、互斥与死锁,os.txt,0.734,relation_disambiguation_normalized
+分页,is_a,操作系统,资源与硬件实体,领域实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.734,relation_disambiguation_normalized
+页框,is_a,逻辑地址空间,资源与硬件实体,核心抽象实体,"分页将逻辑地址空间和物理内存都划分为固定大小的页和页框,程序运行时通过页表完成地址映射",上位包含关系,内存管理与虚拟内存,os.txt,0.734,relation_disambiguation_normalized
+驱动程序,is_a,设备管理,设备管理与I/O实体,功能模块实体,设备管理的基础包括设备分类、设备控制器、驱动程序和中断处理,上位包含关系,设备管理与输入输出系统,os.txt,0.734,relation_disambiguation_normalized
+Thread,is_a,调度,进程与线程实体,处理器与调度实体,"线程(Thread)则是比进程更轻量的执行单位,通常被称为 CPU 调度的基本单位",上下位关系,进程与线程,os.txt,0.73,relation_disambiguation_normalized
+文件,has_part,单级目录,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",整体部分关系,文件系统,os.txt,0.73,relation_disambiguation_normalized
+调度,has_part,CPU 利用率,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,整体部分关系,处理器调度与调度算法,os.txt,0.73,relation_disambiguation_normalized
+非连续分配,has_part,Paging,内存管理实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.73,relation_disambiguation_normalized
+相对路径,is_a,路径名,文件系统实体,核心抽象实体,"路径名则用于唯一定位文件,分为绝对路径和相对路径",上位包含关系,文件系统,os.txt,0.728,relation_disambiguation_normalized
+并发能力,used_for,并行计算任务,进程与线程实体,进程与线程实体,"多线程机制有助于提升程序并发能力,尤其适用于图形界面程序、服务器程序和并行计算任务",用途关系,进程与线程,os.txt,0.726,relation_disambiguation_normalized
+树形目录,is_a,目录,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",上位包含关系,文件系统,os.txt,0.726,relation_disambiguation_normalized
+Thrashing,used_for,页面调度,虚拟内存与页面置换实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",用途关系,内存管理与虚拟内存,os.txt,0.722,relation_disambiguation_normalized
+寄存器,is_a,进程,进程与线程实体,核心抽象实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",上位包含关系,进程与线程,os.txt,0.722,relation_disambiguation_normalized
+两级目录,is_a,文件,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",上位包含关系,文件系统,os.txt,0.72,relation_disambiguation_normalized
+文件管理,has_part,安全保护,核心抽象实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.72,relation_disambiguation_normalized
+计算机系统,has_part,共享,领域实体,核心思想与性质实体,"学习操作系统的价值,不仅在于掌握某些具体算法或概念,更在于理解计算机系统设计中的基本思想:抽象、分层、共享、保护、并发与权衡",枚举结构关系,总结,os.txt,0.72,relation_disambiguation_normalized
+设备管理,has_part,用户接口,功能模块实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.72,relation_disambiguation_normalized
+Paging,is_a,操作系统,内存管理实体,领域实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.716,relation_disambiguation_normalized
+程序设计,part_of,计算机网络,课程与方法相关实体,课程与方法相关实体,"操作系统课程通常被视为计算机科学与技术专业的核心课程之一,因为它连接了程序设计、数据结构、计算机组成原理、编译原理、计算机网络等多门课程,是理解计算机整体工作机制的重要桥梁",部分整体关系,操作系统的概念与地位,os.txt,0.716,relation_disambiguation_normalized
+操作系统,has_part,分页,领域实体,资源与硬件实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.714,relation_disambiguation_normalized
+设备管理,has_part,驱动程序,功能模块实体,设备管理与I/O实体,设备管理的基础包括设备分类、设备控制器、驱动程序和中断处理,整体部分关系,设备管理与输入输出系统,os.txt,0.714,relation_disambiguation_normalized
+Thrashing,causes,页面调度,虚拟内存与页面置换实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",因果关系,内存管理与虚拟内存,os.txt,0.712,relation_disambiguation_normalized
+用户接口,is_a,存储管理,领域实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.71,relation_disambiguation_normalized
+网络通信,is_a,文件管理,功能模块实体,核心抽象实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.71,relation_disambiguation_normalized
+内核,is_a,操作系统,领域实体,领域实体,"按照结构设计思想不同,操作系统可以分为整体式结构、层次式结构、微内核结构、模块化结构等",上位包含关系,操作系统的结构与运行机制,os.txt,0.708,relation_disambiguation_normalized
+文件系统命令输出,implements,模拟进程调度,核心抽象实体,核心抽象实体,"通过编写简单 Shell、模拟进程调度、实现页面置换算法、观察 Linux 进程与线程、分析文件系统命令输出等方式,能够把理论知识与真实系统联系起来",实现关系,操作系统课程的学习方法,os.txt,0.708,relation_disambiguation_normalized
+目录,has_part,树形目录,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",整体部分关系,文件系统,os.txt,0.706,relation_disambiguation_normalized
+磁盘,is_a,进程,资源与硬件实体,核心抽象实体,"一个程序静态地存放在磁盘上时只是代码和数据,而当它被加载到内存并开始运行时,就成为进程",上下位关系,进程与线程,os.txt,0.706,relation_disambiguation_normalized
+中断处理,is_a,设备管理,处理器与调度实体,功能模块实体,设备管理的基础包括设备分类、设备控制器、驱动程序和中断处理,上位包含关系,设备管理与输入输出系统,os.txt,0.704,relation_disambiguation_normalized
+多线程,used_for,服务器程序,核心抽象实体,系统与平台实体,"多线程机制有助于提升程序并发能力,尤其适用于图形界面程序、服务器程序和并行计算任务",用途关系,进程与线程,os.txt,0.704,relation_disambiguation_normalized
+驱动程序,is_a,I/O 请求,设备管理与I/O实体,设备管理与I/O实体,"驱动程序是连接操作系统与具体硬件的桥梁,它把操作系统的通用 I/O 请求转换为特定设备可识别的控制命令",上下位关系,设备管理与输入输出系统,os.txt,0.704,relation_disambiguation_normalized
+分段,is_a,非连续分配,内存管理实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.702,relation_disambiguation_normalized
+计算机系统,has_part,保护,领域实体,安全与保护实体,"学习操作系统的价值,不仅在于掌握某些具体算法或概念,更在于理解计算机系统设计中的基本思想:抽象、分层、共享、保护、并发与权衡",枚举结构关系,总结,os.txt,0.702,relation_disambiguation_normalized
+进程,has_part,寄存器,核心抽象实体,进程与线程实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",整体部分关系,进程与线程,os.txt,0.702,relation_disambiguation_normalized
+文件,has_part,两级目录,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",整体部分关系,文件系统,os.txt,0.7,relation_disambiguation_normalized
+单级目录,is_a,操作系统,核心抽象实体,领域实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",上位包含关系,文件系统,os.txt,0.698,relation_disambiguation_normalized
+操作系统,has_part,Paging,领域实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.696,relation_disambiguation_normalized
+存储管理,has_part,用户接口,功能模块实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.69,relation_disambiguation_normalized
+安全保护,is_a,设备管理,功能模块实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.69,relation_disambiguation_normalized
+文件管理,has_part,网络通信,核心抽象实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.69,relation_disambiguation_normalized
+树形目录,is_a,文件,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",上位包含关系,文件系统,os.txt,0.69,relation_disambiguation_normalized
+系统吞吐量,is_a,调度,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,上位包含关系,处理器调度与调度算法,os.txt,0.69,relation_disambiguation_normalized
+线程,is_a,调度,核心抽象实体,处理器与调度实体,"线程(Thread)则是比进程更轻量的执行单位,通常被称为 CPU 调度的基本单位",上下位关系,进程与线程,os.txt,0.688,relation_disambiguation_normalized
+Segmentation,is_a,非连续分配,内存管理实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.684,relation_disambiguation_normalized
+计算机系统,has_part,并发,领域实体,核心思想与性质实体,"学习操作系统的价值,不仅在于掌握某些具体算法或概念,更在于理解计算机系统设计中的基本思想:抽象、分层、共享、保护、并发与权衡",枚举结构关系,总结,os.txt,0.684,relation_disambiguation_normalized
+设备管理,has_part,中断处理,功能模块实体,处理器与调度实体,设备管理的基础包括设备分类、设备控制器、驱动程序和中断处理,整体部分关系,设备管理与输入输出系统,os.txt,0.684,relation_disambiguation_normalized
+页表,is_a,物理内存,资源与硬件实体,资源与硬件实体,"分页将逻辑地址空间和物理内存都划分为固定大小的页和页框,程序运行时通过页表完成地址映射",上位包含关系,内存管理与虚拟内存,os.txt,0.684,relation_disambiguation_normalized
+非连续分配,has_part,分段,内存管理实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.682,relation_disambiguation_normalized
+地址映射,is_a,物理内存,内存管理实体,资源与硬件实体,"分页将逻辑地址空间和物理内存都划分为固定大小的页和页框,程序运行时通过页表完成地址映射",上位包含关系,内存管理与虚拟内存,os.txt,0.68,relation_disambiguation_normalized
+用户接口,is_a,处理器管理,领域实体,资源与硬件实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.68,relation_disambiguation_normalized
+系统调用,is_a,文件管理,领域实体,核心抽象实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.68,relation_disambiguation_normalized
+操作系统,has_part,单级目录,领域实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",整体部分关系,文件系统,os.txt,0.678,relation_disambiguation_normalized
+进程,used_for,内存,核心抽象实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",用途关系,内存管理与虚拟内存,os.txt,0.674,relation_disambiguation_normalized
+页表,is_a,逻辑地址空间,资源与硬件实体,核心抽象实体,"分页将逻辑地址空间和物理内存都划分为固定大小的页和页框,程序运行时通过页表完成地址映射",上位包含关系,内存管理与虚拟内存,os.txt,0.674,relation_disambiguation_normalized
+页框,is_a,分页,资源与硬件实体,资源与硬件实体,"分页将逻辑地址空间和物理内存都划分为固定大小的页和页框,程序运行时通过页表完成地址映射",上位包含关系,内存管理与虚拟内存,os.txt,0.672,relation_disambiguation_normalized
+文件,has_part,树形目录,核心抽象实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",整体部分关系,文件系统,os.txt,0.67,relation_disambiguation_normalized
+设备管理,has_part,安全保护,功能模块实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.67,relation_disambiguation_normalized
+调度,has_part,系统吞吐量,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,整体部分关系,处理器调度与调度算法,os.txt,0.67,relation_disambiguation_normalized
+两级目录,is_a,操作系统,核心抽象实体,领域实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",上位包含关系,文件系统,os.txt,0.668,relation_disambiguation_normalized
+分段,is_a,操作系统,内存管理实体,领域实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.668,relation_disambiguation_normalized
+多线程,used_for,并行计算任务,核心抽象实体,进程与线程实体,"多线程机制有助于提升程序并发能力,尤其适用于图形界面程序、服务器程序和并行计算任务",用途关系,进程与线程,os.txt,0.668,relation_disambiguation_normalized
+地址空间,is_a,进程,核心抽象实体,核心抽象实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",上位包含关系,进程与线程,os.txt,0.666,relation_disambiguation_normalized
+计算机系统,has_part,权衡,领域实体,核心思想与性质实体,"学习操作系统的价值,不仅在于掌握某些具体算法或概念,更在于理解计算机系统设计中的基本思想:抽象、分层、共享、保护、并发与权衡",枚举结构关系,总结,os.txt,0.666,relation_disambiguation_normalized
+进程,causes,内存,核心抽象实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",因果关系,内存管理与虚拟内存,os.txt,0.664,relation_disambiguation_normalized
+非连续分配,has_part,Segmentation,内存管理实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.664,relation_disambiguation_normalized
+课程中还会讨论抖动,used_for,页面调度,虚拟内存与页面置换实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",用途关系,内存管理与虚拟内存,os.txt,0.662,relation_disambiguation_normalized
+OS,is_a,资源管理,领域实体,领域实体,"操作系统(Operating System,简称 OS)是计算机系统中最核心的系统软件之一,它位于硬件与应用程序之间,承担资源管理、任务调度、服务提供和用户接口等重要职责",上下位关系,操作系统的概念与地位,os.txt,0.66,relation_disambiguation_normalized
+Thrashing,used_for,内存,虚拟内存与页面置换实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",用途关系,内存管理与虚拟内存,os.txt,0.66,relation_disambiguation_normalized
+处理器管理,has_part,用户接口,资源与硬件实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.66,relation_disambiguation_normalized
+安全保护,is_a,存储管理,功能模块实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.66,relation_disambiguation_normalized
+操作系统,is_a,系统软件,领域实体,领域实体,"操作系统(Operating System,简称 OS)是计算机系统中最核心的系统软件之一,它位于硬件与应用程序之间,承担资源管理、任务调度、服务提供和用户接口等重要职责",上下位关系,操作系统的概念与地位,os.txt,0.66,relation_disambiguation_normalized
+文件管理,has_part,系统调用,核心抽象实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.66,relation_disambiguation_normalized
+网络通信,is_a,设备管理,功能模块实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.66,relation_disambiguation_normalized
+课程中还会讨论抖动,used_for,内存,虚拟内存与页面置换实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",用途关系,内存管理与虚拟内存,os.txt,0.66,relation_disambiguation_normalized
+课程中还会讨论抖动,causes,页面调度,虚拟内存与页面置换实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",因果关系,内存管理与虚拟内存,os.txt,0.652,relation_disambiguation_normalized
+Segmentation,is_a,操作系统,内存管理实体,领域实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.65,relation_disambiguation_normalized
+Thrashing,causes,内存,虚拟内存与页面置换实体,资源与硬件实体,"课程中还会讨论抖动(Thrashing)现象,即进程频繁换页导致系统大部分时间都用于页面调度而非真正计算,这反映出内存管理与系统性能之间的紧密联系",因果关系,内存管理与虚拟内存,os.txt,0.65,relation_disambiguation_normalized
+地址映射,is_a,逻辑地址空间,内存管理实体,核心抽象实体,"分页将逻辑地址空间和物理内存都划分为固定大小的页和页框,程序运行时通过页表完成地址映射",上位包含关系,内存管理与虚拟内存,os.txt,0.65,relation_disambiguation_normalized
+安全保护,is_a,处理器管理,功能模块实体,资源与硬件实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.65,relation_disambiguation_normalized
+系统调用,is_a,设备管理,领域实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.65,relation_disambiguation_normalized
+操作系统,has_part,两级目录,领域实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",整体部分关系,文件系统,os.txt,0.648,relation_disambiguation_normalized
+操作系统,has_part,分段,领域实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.648,relation_disambiguation_normalized
+进程,has_part,地址空间,核心抽象实体,核心抽象实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",整体部分关系,进程与线程,os.txt,0.646,relation_disambiguation_normalized
+周转时间,is_a,调度,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,上位包含关系,处理器调度与调度算法,os.txt,0.642,relation_disambiguation_normalized
+存储管理,has_part,安全保护,功能模块实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.64,relation_disambiguation_normalized
+设备管理,has_part,网络通信,功能模块实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.64,relation_disambiguation_normalized
+树形目录,is_a,操作系统,核心抽象实体,领域实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",上位包含关系,文件系统,os.txt,0.638,relation_disambiguation_normalized
+打开的文件,is_a,进程,核心抽象实体,核心抽象实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",上位包含关系,进程与线程,os.txt,0.636,relation_disambiguation_normalized
+FCFS,is_a,调度,调度算法实体,处理器与调度实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",上位包含关系,处理器调度与调度算法,os.txt,0.63,relation_disambiguation_normalized
+Paging,is_a,内存,内存管理实体,资源与硬件实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.63,relation_disambiguation_normalized
+Segmentation,is_a,内存,内存管理实体,资源与硬件实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.63,relation_disambiguation_normalized
+Shortest Job First,is_a,调度,调度算法实体,处理器与调度实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",上位包含关系,处理器调度与调度算法,os.txt,0.63,relation_disambiguation_normalized
+分段,is_a,内存,内存管理实体,资源与硬件实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.63,relation_disambiguation_normalized
+地址映射,is_a,分页,内存管理实体,资源与硬件实体,"分页将逻辑地址空间和物理内存都划分为固定大小的页和页框,程序运行时通过页表完成地址映射",上位包含关系,内存管理与虚拟内存,os.txt,0.63,relation_disambiguation_normalized
+处理器管理,has_part,安全保护,资源与硬件实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.63,relation_disambiguation_normalized
+安全保护,is_a,操作系统,功能模块实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.63,relation_disambiguation_normalized
+操作系统,has_part,Segmentation,领域实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.63,relation_disambiguation_normalized
+短作业优先,is_a,调度,调度算法实体,处理器与调度实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",上位包含关系,处理器调度与调度算法,os.txt,0.63,relation_disambiguation_normalized
+系统调用,is_a,处理器管理,领域实体,资源与硬件实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.63,relation_disambiguation_normalized
+系统调用,is_a,存储管理,领域实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.63,relation_disambiguation_normalized
+网络通信,is_a,处理器管理,功能模块实体,资源与硬件实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.63,relation_disambiguation_normalized
+网络通信,is_a,存储管理,功能模块实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.63,relation_disambiguation_normalized
+设备管理,has_part,系统调用,功能模块实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.63,relation_disambiguation_normalized
+运行状态,is_a,进程,进程与线程实体,核心抽象实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",上位包含关系,进程与线程,os.txt,0.63,relation_disambiguation_normalized
+调度,has_part,周转时间,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,整体部分关系,处理器调度与调度算法,os.txt,0.622,relation_disambiguation_normalized
+操作系统,has_part,树形目录,领域实体,核心抽象实体,"操作系统通过目录结构组织大量文件,常见的目录结构包括单级目录、两级目录和树形目录",整体部分关系,文件系统,os.txt,0.618,relation_disambiguation_normalized
+进程,has_part,打开的文件,核心抽象实体,核心抽象实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",整体部分关系,进程与线程,os.txt,0.616,relation_disambiguation_normalized
+分页,is_a,内存,资源与硬件实体,资源与硬件实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",上位包含关系,内存管理与虚拟内存,os.txt,0.612,relation_disambiguation_normalized
+页表,is_a,分页,资源与硬件实体,资源与硬件实体,"分页将逻辑地址空间和物理内存都划分为固定大小的页和页框,程序运行时通过页表完成地址映射",上位包含关系,内存管理与虚拟内存,os.txt,0.612,relation_disambiguation_normalized
+公平性,is_a,调度,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,上位包含关系,处理器调度与调度算法,os.txt,0.61,relation_disambiguation_normalized
+内存,has_part,Paging,资源与硬件实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.61,relation_disambiguation_normalized
+内存,has_part,Segmentation,资源与硬件实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.61,relation_disambiguation_normalized
+内存,has_part,分段,资源与硬件实体,内存管理实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.61,relation_disambiguation_normalized
+响应时间,is_a,调度,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,上位包含关系,处理器调度与调度算法,os.txt,0.61,relation_disambiguation_normalized
+处理器管理,has_part,系统调用,资源与硬件实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.61,relation_disambiguation_normalized
+处理器管理,has_part,网络通信,资源与硬件实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.61,relation_disambiguation_normalized
+存储管理,has_part,系统调用,功能模块实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.61,relation_disambiguation_normalized
+存储管理,has_part,网络通信,功能模块实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.61,relation_disambiguation_normalized
+操作系统,has_part,安全保护,领域实体,功能模块实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.61,relation_disambiguation_normalized
+用户接口,is_a,操作系统,领域实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",上位包含关系,操作系统的主要功能,os.txt,0.61,relation_disambiguation_normalized
+调度,has_part,FCFS,处理器与调度实体,调度算法实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",整体部分关系,处理器调度与调度算法,os.txt,0.61,relation_disambiguation_normalized
+调度,has_part,Shortest Job First,处理器与调度实体,调度算法实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",整体部分关系,处理器调度与调度算法,os.txt,0.61,relation_disambiguation_normalized
+调度,has_part,短作业优先,处理器与调度实体,调度算法实体,"常见的调度算法包括先来先服务(First Come First Served,FCFS)、短作业优先(Shortest Job First,SJF)、时间片轮转(Round Robin,RR)、优先级调度和多级反馈队列(Multilevel Feedback Queue)等",整体部分关系,处理器调度与调度算法,os.txt,0.61,relation_disambiguation_normalized
+进程,has_part,运行状态,核心抽象实体,进程与线程实体,"进程不仅包含程序本身,还包括程序计数器、寄存器内容、地址空间、打开的文件、相关资源和运行状态等信息",整体部分关系,进程与线程,os.txt,0.61,relation_disambiguation_normalized
+内存,has_part,分页,资源与硬件实体,资源与硬件实体,"为了提升内存利用率并简化分配管理,现代操作系统普遍采用非连续分配技术,主要包括分页(Paging)和分段(Segmentation)",整体部分关系,内存管理与虚拟内存,os.txt,0.592,relation_disambiguation_normalized
+操作系统,has_part,用户接口,领域实体,领域实体,"操作系统的功能通常可以归纳为处理器管理、存储管理、设备管理和文件管理四大部分,同时还包括用户接口、安全保护、网络通信和系统调用等内容",整体部分关系,操作系统的主要功能,os.txt,0.59,relation_disambiguation_normalized
+调度,has_part,公平性,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,整体部分关系,处理器调度与调度算法,os.txt,0.59,relation_disambiguation_normalized
+调度,has_part,响应时间,处理器与调度实体,处理器与调度实体,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,整体部分关系,处理器调度与调度算法,os.txt,0.59,relation_disambiguation_normalized

@@ -12,7 +12,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import lombok.RequiredArgsConstructor;
@@ -25,8 +27,10 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class KnowledgeGraphImportService {
 
-  private static final String ENTITY_DIR = "实体抽取结果";
-  private static final String RELATION_FILE = "关系抽取结果/all_relations.csv";
+  private static final String DISAMBIGUATED_ENTITY_DIR = "实体消歧/实体消歧结果";
+  private static final String LEGACY_ENTITY_DIR = "实体抽取结果";
+  private static final String DISAMBIGUATED_RELATION_FILE = "关系消歧/关系消歧结果/all_relations_disambiguated.csv";
+  private static final String LEGACY_RELATION_FILE = "关系抽取结果/all_relations.csv";
 
   private final KnowledgeGraphProperties properties;
   private final KnowledgeGraphNodeRepository nodeRepository;
@@ -39,9 +43,12 @@ public class KnowledgeGraphImportService {
     log.info("Importing knowledge graph: rootPath={}", rootPath);
 
     try {
+      Path entityDir = resolveEntityDir(rootPath);
+      Path relationFile = resolveRelationFile(rootPath);
+
       Map<String, KnowledgeGraphNodeEntity> nodes = new HashMap<>();
-      int skippedCount = importNodes(rootPath.resolve(ENTITY_DIR), nodes);
-      EdgeImportResult edgeImportResult = importEdges(rootPath.resolve(RELATION_FILE), nodes);
+      int skippedCount = importNodes(entityDir, nodes);
+      EdgeImportResult edgeImportResult = importEdges(relationFile, nodes);
       skippedCount += edgeImportResult.skippedCount();
 
       edgeRepository.deleteAllInBatch();
@@ -64,7 +71,7 @@ public class KnowledgeGraphImportService {
     if (!Files.isDirectory(entityDir)) {
       throw new BusinessException(
           ErrorCode.KNOWLEDGE_GRAPH_IMPORT_FAILED,
-          "实体抽取结果目录不存在: " + entityDir
+          "实体结果目录不存在: " + entityDir
       );
     }
 
@@ -72,20 +79,21 @@ public class KnowledgeGraphImportService {
     try (var files = Files.list(entityDir)) {
       for (Path file : files.filter(path -> path.toString().endsWith(".csv")).toList()) {
         String domain = filenameWithoutExtension(file.getFileName().toString());
-        List<String> lines = Files.readAllLines(file, StandardCharsets.UTF_8);
-        for (int i = 1; i < lines.size(); i++) {
-          List<String> row = csvParser.parseLine(lines.get(i));
-          if (row.size() < 5 || isBlank(row.get(0))) {
+        for (Map<String, String> row : readCsvRows(file)) {
+          String name = firstNonBlank(row, "main_entity", "entity", "name");
+          if (isBlank(name)) {
             skippedCount++;
             continue;
           }
-          String name = row.get(0);
+          String type = firstNonBlank(row, "entity_type", "type");
+          String mentions = firstNonBlank(row, "mentions", "aliases", "merged_entities");
+          String sourceFile = firstNonBlank(row, "source_file");
           nodes.put(nodeKey(domain, name), KnowledgeGraphNodeEntity.builder()
               .name(name)
-              .type(row.get(1))
-              .mentionCount(parseInteger(row.get(2)))
-              .mentions(row.get(3))
-              .sourceFile(row.get(4))
+              .type(type)
+              .mentionCount(parseInteger(firstNonBlank(row, "mention_count", "mentionCount")))
+              .mentions(isBlank(mentions) ? name : mentions)
+              .sourceFile(sourceFile)
               .domain(domain)
               .build());
         }
@@ -101,49 +109,79 @@ public class KnowledgeGraphImportService {
     if (!Files.isRegularFile(relationFile)) {
       throw new BusinessException(
           ErrorCode.KNOWLEDGE_GRAPH_IMPORT_FAILED,
-          "关系抽取结果文件不存在: " + relationFile
+          "关系结果文件不存在: " + relationFile
       );
     }
 
     List<KnowledgeGraphEdgeEntity> edges = new ArrayList<>();
     int skippedCount = 0;
-    List<String> lines = Files.readAllLines(relationFile, StandardCharsets.UTF_8);
-    for (int i = 1; i < lines.size(); i++) {
-      List<String> row = csvParser.parseLine(lines.get(i));
-      if (row.size() < 11 || isBlank(row.get(0)) || isBlank(row.get(2))) {
+    for (Map<String, String> row : readCsvRows(relationFile)) {
+      String sourceName = firstNonBlank(row, "head", "sourceName", "source");
+      String targetName = firstNonBlank(row, "tail", "targetName", "target");
+      String relation = firstNonBlank(row, "relation");
+      if (isBlank(sourceName) || isBlank(targetName) || isBlank(relation)) {
         skippedCount++;
         continue;
       }
 
-      String sourceFile = row.get(8);
+      String sourceFile = pickFirstValue(firstNonBlank(row, "source_file", "source_files"));
       String domain = domainFromSourceFile(sourceFile);
-      String sourceName = row.get(0);
-      String targetName = row.get(2);
+      String sourceType = firstNonBlank(row, "head_type", "source_type", "sourceType");
+      String targetType = firstNonBlank(row, "tail_type", "target_type", "targetType");
+
       nodes.putIfAbsent(
           nodeKey(domain, sourceName),
-          fallbackNode(domain, sourceName, row.get(3), sourceFile)
+          fallbackNode(domain, sourceName, sourceType, sourceFile)
       );
       nodes.putIfAbsent(
           nodeKey(domain, targetName),
-          fallbackNode(domain, targetName, row.get(4), sourceFile)
+          fallbackNode(domain, targetName, targetType, sourceFile)
       );
 
       edges.add(KnowledgeGraphEdgeEntity.builder()
           .sourceName(sourceName)
-          .relation(row.get(1))
+          .relation(relation)
           .targetName(targetName)
-          .sourceType(row.get(3))
-          .targetType(row.get(4))
-          .evidence(row.get(5))
-          .patternName(row.get(6))
-          .sectionTitle(row.get(7))
+          .sourceType(sourceType)
+          .targetType(targetType)
+          .evidence(firstNonBlank(row, "evidence"))
+          .patternName(pickFirstValue(firstNonBlank(row, "pattern_name", "pattern_names")))
+          .sectionTitle(pickFirstValue(firstNonBlank(row, "section_title", "section_titles")))
           .sourceFile(sourceFile)
           .domain(domain)
-          .confidence(parseDouble(row.get(9)))
-          .method(row.get(10))
+          .confidence(parseDouble(firstNonBlank(row, "confidence", "disambiguation_score")))
+          .method(firstNonBlank(row, "method", "disambiguation_method"))
           .build());
     }
     return new EdgeImportResult(edges, skippedCount);
+  }
+
+  private Path resolveEntityDir(Path rootPath) {
+    List<Path> candidates = List.of(
+        rootPath.resolve(DISAMBIGUATED_ENTITY_DIR),
+        rootPath.resolve(LEGACY_ENTITY_DIR)
+    );
+    return candidates.stream()
+        .filter(Files::isDirectory)
+        .findFirst()
+        .orElseThrow(() -> new BusinessException(
+            ErrorCode.KNOWLEDGE_GRAPH_IMPORT_FAILED,
+            "未找到实体结果目录: " + candidates
+        ));
+  }
+
+  private Path resolveRelationFile(Path rootPath) {
+    List<Path> candidates = List.of(
+        rootPath.resolve(DISAMBIGUATED_RELATION_FILE),
+        rootPath.resolve(LEGACY_RELATION_FILE)
+    );
+    return candidates.stream()
+        .filter(Files::isRegularFile)
+        .findFirst()
+        .orElseThrow(() -> new BusinessException(
+            ErrorCode.KNOWLEDGE_GRAPH_IMPORT_FAILED,
+            "未找到关系结果文件: " + candidates
+        ));
   }
 
   private Path resolveRootPath() {
@@ -152,17 +190,28 @@ public class KnowledgeGraphImportService {
       candidates.add(Path.of(properties.getRootPath()));
     }
     Path userDir = Path.of(System.getProperty("user.dir"));
-    candidates.add(userDir.resolve("知识图谱"));
-    candidates.add(userDir.resolve("../知识图谱").normalize());
+    candidates.add(userDir);
+    candidates.add(userDir.resolve("graph"));
+    candidates.add(userDir.resolve("../graph").normalize());
+    candidates.add(userDir.resolve("..").normalize());
+    candidates.add(userDir.resolve("../..").normalize());
 
     return candidates.stream()
         .map(Path::toAbsolutePath)
         .filter(Files::isDirectory)
+        .filter(this::containsKnowledgeGraphInputs)
         .findFirst()
         .orElseThrow(() -> new BusinessException(
             ErrorCode.KNOWLEDGE_GRAPH_IMPORT_FAILED,
             "未找到知识图谱目录，请检查 app.knowledge-graph.root-path 配置"
         ));
+  }
+
+  private boolean containsKnowledgeGraphInputs(Path rootPath) {
+    return Files.isDirectory(rootPath.resolve(DISAMBIGUATED_ENTITY_DIR))
+        || Files.isDirectory(rootPath.resolve(LEGACY_ENTITY_DIR))
+        || Files.isRegularFile(rootPath.resolve(DISAMBIGUATED_RELATION_FILE))
+        || Files.isRegularFile(rootPath.resolve(LEGACY_RELATION_FILE));
   }
 
   private KnowledgeGraphNodeEntity fallbackNode(
@@ -195,6 +244,49 @@ public class KnowledgeGraphImportService {
   private String filenameWithoutExtension(String filename) {
     int dotIndex = filename.lastIndexOf('.');
     return dotIndex > 0 ? filename.substring(0, dotIndex) : filename;
+  }
+
+  private List<Map<String, String>> readCsvRows(Path file) throws IOException {
+    List<String> lines = Files.readAllLines(file, StandardCharsets.UTF_8);
+    if (lines.isEmpty()) {
+      return List.of();
+    }
+    List<String> headers = csvParser.parseLine(lines.get(0)).stream()
+        .map(String::trim)
+        .toList();
+    List<Map<String, String>> rows = new ArrayList<>();
+    for (int i = 1; i < lines.size(); i++) {
+      if (lines.get(i) == null || lines.get(i).isBlank()) {
+        continue;
+      }
+      List<String> values = csvParser.parseLine(lines.get(i));
+      Map<String, String> row = new LinkedHashMap<>();
+      for (int col = 0; col < headers.size(); col++) {
+        row.put(headers.get(col), col < values.size() ? values.get(col).trim() : "");
+      }
+      rows.add(row);
+    }
+    return rows;
+  }
+
+  private String firstNonBlank(Map<String, String> row, String... keys) {
+    return Arrays.stream(keys)
+        .map(row::get)
+        .filter(value -> value != null && !value.isBlank())
+        .map(String::trim)
+        .findFirst()
+        .orElse("");
+  }
+
+  private String pickFirstValue(String value) {
+    if (isBlank(value)) {
+      return value;
+    }
+    return Arrays.stream(value.split("\\s*\\|\\s*"))
+        .map(String::trim)
+        .filter(part -> !part.isBlank())
+        .findFirst()
+        .orElse(value.trim());
   }
 
   private Integer parseInteger(String value) {

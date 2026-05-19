@@ -50,9 +50,9 @@ class KnowledgeGraphImportServiceTest {
   class CsvImportTests {
 
     @Test
-    @DisplayName("应从实体和关系 CSV 导入节点与关系")
-    void shouldImportNodesAndEdgesFromCsv() throws IOException {
-      writeCsvFiles();
+    @DisplayName("应从旧版实体和关系 CSV 导入节点与关系")
+    void shouldImportNodesAndEdgesFromLegacyCsv() throws IOException {
+      writeLegacyCsvFiles();
 
       var result = importService.importFromConfiguredPath();
 
@@ -77,9 +77,40 @@ class KnowledgeGraphImportServiceTest {
         assertThat(edge.getEvidence()).isEqualTo("JVM contains heap, stack and runtime areas");
       });
     }
+
+    @Test
+    @DisplayName("应优先导入实体消歧和关系消歧结果")
+    void shouldPreferDisambiguatedCsvOutputs() throws IOException {
+      writeDisambiguatedCsvFiles();
+
+      var result = importService.importFromConfiguredPath();
+
+      ArgumentCaptor<Iterable<KnowledgeGraphNodeEntity>> nodeCaptor =
+          (ArgumentCaptor) ArgumentCaptor.forClass(Iterable.class);
+      ArgumentCaptor<Iterable<KnowledgeGraphEdgeEntity>> edgeCaptor =
+          (ArgumentCaptor) ArgumentCaptor.forClass(Iterable.class);
+      verify(nodeRepository).saveAll(nodeCaptor.capture());
+      verify(edgeRepository).saveAll(edgeCaptor.capture());
+
+      List<KnowledgeGraphNodeEntity> nodes = toList(nodeCaptor.getValue());
+      List<KnowledgeGraphEdgeEntity> edges = toList(edgeCaptor.getValue());
+
+      assertThat(result.nodeCount()).isEqualTo(2);
+      assertThat(result.edgeCount()).isEqualTo(1);
+      assertThat(nodes).extracting(KnowledgeGraphNodeEntity::getName)
+          .containsExactlyInAnyOrder("HashMap", "Map");
+      assertThat(edges).singleElement().satisfies(edge -> {
+        assertThat(edge.getSourceName()).isEqualTo("HashMap");
+        assertThat(edge.getRelation()).isEqualTo("implements");
+        assertThat(edge.getTargetName()).isEqualTo("Map");
+        assertThat(edge.getPatternName()).isEqualTo("实现关系");
+        assertThat(edge.getSectionTitle()).isEqualTo("集合框架");
+        assertThat(edge.getMethod()).contains("duplicate_merge");
+      });
+    }
   }
 
-  private void writeCsvFiles() throws IOException {
+  private void writeLegacyCsvFiles() throws IOException {
     Path entityDir = tempDir.resolve("实体抽取结果");
     Path relationDir = tempDir.resolve("关系抽取结果");
     Files.createDirectories(entityDir);
@@ -102,6 +133,32 @@ class KnowledgeGraphImportServiceTest {
             + "JVM,has_part,Heap,Domain,Memory,"
             + "\"JVM contains heap, stack and runtime areas\","
             + "Part,JVM memory,java.txt,0.91,rule\n",
+        StandardCharsets.UTF_8
+    );
+  }
+
+  private void writeDisambiguatedCsvFiles() throws IOException {
+    Path entityDir = tempDir.resolve("实体消歧").resolve("实体消歧结果");
+    Path relationDir = tempDir.resolve("关系消歧").resolve("关系消歧结果");
+    Files.createDirectories(entityDir);
+    Files.createDirectories(relationDir);
+
+    Files.writeString(
+        entityDir.resolve("java.csv"),
+        """
+        main_entity,entity_type,mention_count,mentions,source_file,normalized_entity,aliases
+        HashMap,集合框架实体,8,HashMap,java.txt,HashMap,HashMap
+        Map,集合框架实体,6,Map,java.txt,Map,Map
+        """,
+        StandardCharsets.UTF_8
+    );
+
+    Files.writeString(
+        relationDir.resolve("all_relations_disambiguated.csv"),
+        """
+        head,relation,tail,head_type,tail_type,confidence,evidence,pattern_names,section_titles,source_files,record_count,source_row_ids,source_relations,conflicting_relations,disambiguation_score,disambiguation_method,disambiguation_basis
+        HashMap,implements,Map,集合框架实体,集合框架实体,0.84,HashMap 是 Map 的常见实现类,实现关系,集合框架,java.txt,1,12,implemented_by,,0.86,relation_taxonomy_normalization + duplicate_merge,score=0.86
+        """,
         StandardCharsets.UTF_8
     );
   }

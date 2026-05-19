@@ -1,0 +1,153 @@
+﻿head,relation,tail,head_type,tail_type,evidence,pattern_name,section_title,source_file,confidence,method
+Runnable,implements,Thread,线程与并发实体,线程与并发实体,创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask),实现关系,线程与并发,java.txt,0.846,relation_disambiguation_normalized
+ArrayList,implements,List,集合框架实体,集合框架实体,"List的实现类:ArrayList(数组结构,查询快增删慢)、LinkedList(链表结构,增删快查询慢)、Vector(线程安全,较少用)",实现关系,集合框架,java.txt,0.84,relation_disambiguation_normalized
+Callable,implements,Runnable,线程与并发实体,线程与并发实体,创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask),实现关系,线程与并发,java.txt,0.84,relation_disambiguation_normalized
+HashMap,implements,Map,集合框架实体,集合框架实体,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",实现关系,集合框架,java.txt,0.84,relation_disambiguation_normalized
+HashSet,implements,Set,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",实现关系,集合框架,java.txt,0.84,relation_disambiguation_normalized
+Runnable,implements,继承,线程与并发实体,面向对象核心实体,创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask),实现关系,线程与并发,java.txt,0.83,relation_disambiguation_normalized
+元注解,used_for,注解,领域实体,领域实体,元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.822,relation_disambiguation_normalized
+接口,implements,抽象类,数据类型实体,数据类型实体,"一个类只能继承一个抽象类,但可以实现多个接口",实现关系,抽象类与接口,java.txt,0.822,relation_disambiguation_normalized
+Object,is_a,对象,面向对象核心实体,面向对象核心实体,"类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例",上下位关系,面向对象基础,java.txt,0.818,relation_disambiguation_normalized
+HashSet,depends_on,HashMap,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",依赖关系,集合框架,java.txt,0.814,relation_disambiguation_normalized
+TreeSet,depends_on,红黑树,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",依赖关系,集合框架,java.txt,0.814,relation_disambiguation_normalized
+多态的表现形式,has_part,父类引用,面向对象核心实体,数据类型实体,多态的表现形式:父类引用指向子类对象、接口引用指向实现类对象,枚举结构关系,继承与多态,java.txt,0.804,relation_disambiguation_normalized
+接口,has_part,List,数据类型实体,集合框架实体,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),枚举结构关系,集合框架,java.txt,0.804,relation_disambiguation_normalized
+接口,has_part,ReentrantLock,数据类型实体,线程与并发实体,"Lock接口:ReentrantLock,提供更灵活的锁操作(tryLock、lockInterruptibly等)",枚举结构关系,线程与并发,java.txt,0.804,relation_disambiguation_normalized
+数组的创建,has_part,new,数据类型实体,关键字与修饰符实体,"数组的创建:new int[10] 或 {1,2,3}",枚举结构关系,数组,java.txt,0.804,relation_disambiguation_normalized
+核心类,has_part,Class,数据类型实体,面向对象核心实体,核心类:Class、Method、Field、Constructor,枚举结构关系,反射,java.txt,0.804,relation_disambiguation_normalized
+注解,has_part,@Override,领域实体,注解实体,内置注解:@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface,枚举结构关系,注解,java.txt,0.804,relation_disambiguation_normalized
+类加载器,has_part,Bootstrap ClassLoader,数据类型实体,JVM 与内存管理实体,"类加载器:Bootstrap ClassLoader、Extension ClassLoader、Application ClassLoader,双亲委派模型",枚举结构关系,JVM基础,java.txt,0.804,relation_disambiguation_normalized
+类加载机制,has_part,加载,数据类型实体,JVM 与内存管理实体,类加载机制:加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.804,relation_disambiguation_normalized
+类型擦除,has_part,泛型,数据类型实体,领域实体,"类型擦除:泛型信息在编译后被移除,运行时没有泛型",枚举结构关系,泛型,java.txt,0.804,relation_disambiguation_normalized
+线程状态,has_part,新建,线程与并发实体,线程状态实体,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.804,relation_disambiguation_normalized
+元注解,used_for,@Retention,领域实体,注解实体,元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.8,relation_disambiguation_normalized
+局部变量,is_a,变量,变量与成员实体,变量与成员实体,变量分为局部变量、成员变量(实例变量)和静态变量(类变量),上位包含关系,变量与运算符,java.txt,0.798,relation_disambiguation_normalized
+注解,has_part,@Retention,领域实体,注解实体,元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited,枚举结构关系,注解,java.txt,0.798,relation_disambiguation_normalized
+byte,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.792,relation_disambiguation_normalized
+对象,has_part,类名.class,面向对象核心实体,数据类型实体,"获取Class对象的方式:类名.class、对象.getClass()、Class.forName(""全限定名"")",枚举结构关系,反射,java.txt,0.786,relation_disambiguation_normalized
+类加载机制,has_part,验证,数据类型实体,JVM 与内存管理实体,类加载机制:加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.786,relation_disambiguation_normalized
+线程状态,has_part,就绪,线程与并发实体,线程状态实体,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.786,relation_disambiguation_normalized
+循环结构,has_part,for,流程控制实体,流程控制实体,循环结构:for、while、do-while,枚举结构关系,流程控制,java.txt,0.784,relation_disambiguation_normalized
+数据类型,has_part,基本数据类型,数据类型实体,数据类型实体,Java有两种数据类型:基本数据类型和引用数据类型,枚举结构关系,数据类型,java.txt,0.784,relation_disambiguation_normalized
+条件分支,has_part,if-else,流程控制实体,流程控制实体,条件分支:if-else、switch-case,枚举结构关系,流程控制,java.txt,0.784,relation_disambiguation_normalized
+线程池,has_part,Executor,线程与并发实体,线程与并发实体,"线程池:Executor框架,常用类ThreadPoolExecutor",枚举结构关系,线程与并发,java.txt,0.784,relation_disambiguation_normalized
+跳转语句,has_part,break,流程控制实体,流程控制实体,跳转语句:break、continue、return,枚举结构关系,流程控制,java.txt,0.784,relation_disambiguation_normalized
+接口,is_a,引用数据类型,数据类型实体,数据类型实体,引用数据类型包括:类、接口、数组、枚举、注解,上位包含关系,数据类型,java.txt,0.78,relation_disambiguation_normalized
+构造方法,used_for,初始化,面向对象核心实体,JVM 与内存管理实体,"构造方法:与类同名,没有返回值,用于初始化对象",用途关系,面向对象基础,java.txt,0.776,relation_disambiguation_normalized
+implements,implements,interface,关键字与修饰符实体,关键字与修饰符实体,"接口使用interface关键字,一个类可以实现多个接口(implements)",实现关系,继承与多态,java.txt,0.774,relation_disambiguation_normalized
+Exception,has_part,Checked Exception,异常处理实体,异常处理实体,"Exception分为:Checked Exception(编译时异常,必须处理)和Unchecked Exception(运行时异常,不强制处理)",枚举结构关系,异常处理,java.txt,0.772,relation_disambiguation_normalized
+基本数据类型,has_part,byte,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.772,relation_disambiguation_normalized
+Callable,implements,Thread,线程与并发实体,线程与并发实体,创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask),实现关系,线程与并发,java.txt,0.768,relation_disambiguation_normalized
+abstract,has_part,抽象方法,关键字与修饰符实体,抽象类与接口实体,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",整体部分关系,抽象类与接口,java.txt,0.768,relation_disambiguation_normalized
+多态的表现形式,has_part,子类对象,面向对象核心实体,数据类型实体,多态的表现形式:父类引用指向子类对象、接口引用指向实现类对象,枚举结构关系,继承与多态,java.txt,0.768,relation_disambiguation_normalized
+成员变量,is_a,变量,变量与成员实体,变量与成员实体,变量分为局部变量、成员变量(实例变量)和静态变量(类变量),上位包含关系,变量与运算符,java.txt,0.768,relation_disambiguation_normalized
+核心类,has_part,Method,数据类型实体,反射实体,核心类:Class、Method、Field、Constructor,枚举结构关系,反射,java.txt,0.768,relation_disambiguation_normalized
+类加载机制,has_part,准备,数据类型实体,JVM 与内存管理实体,类加载机制:加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.768,relation_disambiguation_normalized
+线程状态,has_part,运行,线程与并发实体,线程状态实体,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.768,relation_disambiguation_normalized
+接口,has_part,抽象类,数据类型实体,数据类型实体,"抽象类和接口的区别:抽象类可以有状态(成员变量),接口不能有实例变量",枚举结构关系,抽象类与接口,java.txt,0.766,relation_disambiguation_normalized
+FutureTask,implements,Runnable,线程与并发实体,线程与并发实体,创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask),实现关系,线程与并发,java.txt,0.762,relation_disambiguation_normalized
+HashMap,implements,Set,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",实现关系,集合框架,java.txt,0.762,relation_disambiguation_normalized
+short,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.762,relation_disambiguation_normalized
+数组,is_a,引用数据类型,数据类型实体,数据类型实体,引用数据类型包括:类、接口、数组、枚举、注解,上位包含关系,数据类型,java.txt,0.762,relation_disambiguation_normalized
+HashSet,depends_on,LinkedHashSet,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",依赖关系,集合框架,java.txt,0.76,relation_disambiguation_normalized
+List,has_part,ArrayList,集合框架实体,集合框架实体,"List的实现类:ArrayList(数组结构,查询快增删慢)、LinkedList(链表结构,增删快查询慢)、Vector(线程安全,较少用)",枚举结构关系,集合框架,java.txt,0.76,relation_disambiguation_normalized
+Map,has_part,HashMap,集合框架实体,集合框架实体,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",枚举结构关系,集合框架,java.txt,0.76,relation_disambiguation_normalized
+Set,has_part,HashSet,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",枚举结构关系,集合框架,java.txt,0.76,relation_disambiguation_normalized
+引用数据类型,has_part,接口,数据类型实体,数据类型实体,引用数据类型包括:类、接口、数组、枚举、注解,枚举结构关系,数据类型,java.txt,0.76,relation_disambiguation_normalized
+循环结构,has_part,while,流程控制实体,流程控制实体,循环结构:for、while、do-while,枚举结构关系,流程控制,java.txt,0.76,relation_disambiguation_normalized
+数组的创建,has_part,int,数据类型实体,数据类型实体,"数组的创建:new int[10] 或 {1,2,3}",枚举结构关系,数组,java.txt,0.76,relation_disambiguation_normalized
+volatile,has_part,可见性,线程与并发实体,线程与并发实体,"volatile关键字:保证可见性,禁止指令重排序,但不保证原子性",枚举结构关系,线程与并发,java.txt,0.754,relation_disambiguation_normalized
+Class,is_a,对象,面向对象核心实体,面向对象核心实体,"类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例",上下位关系,面向对象基础,java.txt,0.752,relation_disambiguation_normalized
+类加载机制,has_part,解析,数据类型实体,JVM 与内存管理实体,类加载机制:加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.75,relation_disambiguation_normalized
+线程状态,has_part,阻塞,线程与并发实体,线程状态实体,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.75,relation_disambiguation_normalized
+Object,has_part,对象,面向对象核心实体,面向对象核心实体,"类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例",枚举结构关系,面向对象基础,java.txt,0.748,relation_disambiguation_normalized
+跳转语句,has_part,continue,流程控制实体,流程控制实体,跳转语句:break、continue、return,枚举结构关系,流程控制,java.txt,0.748,relation_disambiguation_normalized
+注解,is_a,引用数据类型,领域实体,数据类型实体,引用数据类型包括:类、接口、数组、枚举、注解,上位包含关系,数据类型,java.txt,0.746,relation_disambiguation_normalized
+synchronized,has_part,静态方法,线程与并发实体,抽象类与接口实体,"synchronized关键字:修饰实例方法、静态方法、代码块,实现互斥锁",枚举结构关系,线程与并发,java.txt,0.744,relation_disambiguation_normalized
+枚举,is_a,引用数据类型,数据类型实体,数据类型实体,引用数据类型包括:类、接口、数组、枚举、注解,上位包含关系,数据类型,java.txt,0.744,relation_disambiguation_normalized
+注解,has_part,@Deprecated,领域实体,注解实体,内置注解:@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface,枚举结构关系,注解,java.txt,0.744,relation_disambiguation_normalized
+LinkedHashSet,depends_on,红黑树,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",依赖关系,集合框架,java.txt,0.742,relation_disambiguation_normalized
+Set,depends_on,HashMap,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",依赖关系,集合框架,java.txt,0.742,relation_disambiguation_normalized
+基本数据类型,has_part,short,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.742,relation_disambiguation_normalized
+引用数据类型,has_part,数组,数据类型实体,数据类型实体,引用数据类型包括:类、接口、数组、枚举、注解,枚举结构关系,数据类型,java.txt,0.742,relation_disambiguation_normalized
+数据类型,has_part,引用数据类型,数据类型实体,数据类型实体,Java有两种数据类型:基本数据类型和引用数据类型,枚举结构关系,数据类型,java.txt,0.742,relation_disambiguation_normalized
+abstract,has_part,具体方法,关键字与修饰符实体,抽象类与接口实体,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",整体部分关系,抽象类与接口,java.txt,0.738,relation_disambiguation_normalized
+互斥锁,implements,synchronized,线程与并发实体,线程与并发实体,"synchronized关键字:修饰实例方法、静态方法、代码块,实现互斥锁",实现关系,线程与并发,java.txt,0.738,relation_disambiguation_normalized
+多态的表现形式,has_part,接口引用,面向对象核心实体,数据类型实体,多态的表现形式:父类引用指向子类对象、接口引用指向实现类对象,枚举结构关系,继承与多态,java.txt,0.738,relation_disambiguation_normalized
+实例变量,is_a,变量,变量与成员实体,变量与成员实体,变量分为局部变量、成员变量(实例变量)和静态变量(类变量),上位包含关系,变量与运算符,java.txt,0.738,relation_disambiguation_normalized
+构造方法,used_for,对象,面向对象核心实体,面向对象核心实体,"构造方法:与类同名,没有返回值,用于初始化对象",用途关系,面向对象基础,java.txt,0.738,relation_disambiguation_normalized
+条件分支,has_part,switch-case,流程控制实体,流程控制实体,条件分支:if-else、switch-case,枚举结构关系,流程控制,java.txt,0.736,relation_disambiguation_normalized
+元注解,used_for,@Target,领域实体,注解实体,元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.734,relation_disambiguation_normalized
+接口,has_part,Set,数据类型实体,集合框架实体,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),枚举结构关系,集合框架,java.txt,0.732,relation_disambiguation_normalized
+接口,has_part,成员变量,数据类型实体,变量与成员实体,"抽象类和接口的区别:抽象类可以有状态(成员变量),接口不能有实例变量",枚举结构关系,抽象类与接口,java.txt,0.732,relation_disambiguation_normalized
+注解,has_part,@Target,领域实体,注解实体,元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited,枚举结构关系,注解,java.txt,0.732,relation_disambiguation_normalized
+类加载机制,has_part,初始化,数据类型实体,JVM 与内存管理实体,类加载机制:加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.732,relation_disambiguation_normalized
+类型擦除,has_part,运行,数据类型实体,线程状态实体,"类型擦除:泛型信息在编译后被移除,运行时没有泛型",枚举结构关系,泛型,java.txt,0.732,relation_disambiguation_normalized
+线程状态,has_part,等待,线程与并发实体,线程状态实体,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.732,relation_disambiguation_normalized
+int,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.726,relation_disambiguation_normalized
+引用数据类型,has_part,注解,数据类型实体,领域实体,引用数据类型包括:类、接口、数组、枚举、注解,枚举结构关系,数据类型,java.txt,0.726,relation_disambiguation_normalized
+核心类,has_part,Field,数据类型实体,反射实体,核心类:Class、Method、Field、Constructor,枚举结构关系,反射,java.txt,0.726,relation_disambiguation_normalized
+引用数据类型,has_part,枚举,数据类型实体,数据类型实体,引用数据类型包括:类、接口、数组、枚举、注解,枚举结构关系,数据类型,java.txt,0.724,relation_disambiguation_normalized
+循环结构,has_part,do-while,流程控制实体,流程控制实体,循环结构:for、while、do-while,枚举结构关系,流程控制,java.txt,0.724,relation_disambiguation_normalized
+抽象方法,is_a,抽象类,抽象类与接口实体,数据类型实体,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",上位包含关系,抽象类与接口,java.txt,0.722,relation_disambiguation_normalized
+List,has_part,数组,集合框架实体,数据类型实体,"List的实现类:ArrayList(数组结构,查询快增删慢)、LinkedList(链表结构,增删快查询慢)、Vector(线程安全,较少用)",枚举结构关系,集合框架,java.txt,0.72,relation_disambiguation_normalized
+Annotation,is_a,解析,注解实体,JVM 与内存管理实体,"注解(Annotation)是一种元数据,不直接影响代码逻辑,但可以被工具或框架解析",上下位关系,注解,java.txt,0.718,relation_disambiguation_normalized
+String,is_a,对象,数组与字符串实体,面向对象核心实体,"String类是不可变的(immutable),任何修改都会产生新对象",上下位关系,字符串,java.txt,0.718,relation_disambiguation_normalized
+volatile,has_part,指令重排序,线程与并发实体,线程与并发实体,"volatile关键字:保证可见性,禁止指令重排序,但不保证原子性",枚举结构关系,线程与并发,java.txt,0.718,relation_disambiguation_normalized
+Hashtable,implements,Map,集合框架实体,集合框架实体,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",实现关系,集合框架,java.txt,0.714,relation_disambiguation_normalized
+对象,has_part,getClass,面向对象核心实体,领域实体,"获取Class对象的方式:类名.class、对象.getClass()、Class.forName(""全限定名"")",枚举结构关系,反射,java.txt,0.714,relation_disambiguation_normalized
+线程状态,has_part,超时等待,线程与并发实体,线程状态实体,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.714,relation_disambiguation_normalized
+finally,is_a,JVM退出,异常处理实体,异常处理实体,"finally块通常用于释放资源,无论是否发生异常都会执行(除非JVM退出)",上下位关系,异常处理,java.txt,0.71,relation_disambiguation_normalized
+LinkedHashSet,implements,Set,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",实现关系,集合框架,java.txt,0.708,relation_disambiguation_normalized
+标记-清除,is_a,垃圾回收,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",上位包含关系,JVM基础,java.txt,0.708,relation_disambiguation_normalized
+GC,has_part,标记-清除,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",枚举结构关系,JVM基础,java.txt,0.706,relation_disambiguation_normalized
+基本数据类型,has_part,int,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.706,relation_disambiguation_normalized
+LinkedList,implements,List,集合框架实体,集合框架实体,"List的实现类:ArrayList(数组结构,查询快增删慢)、LinkedList(链表结构,增删快查询慢)、Vector(线程安全,较少用)",实现关系,集合框架,java.txt,0.702,relation_disambiguation_normalized
+long,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.702,relation_disambiguation_normalized
+多态的表现形式,has_part,实现类对象,面向对象核心实体,数据类型实体,多态的表现形式:父类引用指向子类对象、接口引用指向实现类对象,枚举结构关系,继承与多态,java.txt,0.702,relation_disambiguation_normalized
+抽象类,has_part,抽象方法,数据类型实体,抽象类与接口实体,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",枚举结构关系,抽象类与接口,java.txt,0.702,relation_disambiguation_normalized
+静态变量,is_a,变量,变量与成员实体,变量与成员实体,变量分为局部变量、成员变量(实例变量)和静态变量(类变量),上位包含关系,变量与运算符,java.txt,0.702,relation_disambiguation_normalized
+线程池,has_part,ThreadPoolExecutor,线程与并发实体,线程与并发实体,"线程池:Executor框架,常用类ThreadPoolExecutor",枚举结构关系,线程与并发,java.txt,0.7,relation_disambiguation_normalized
+跳转语句,has_part,return,流程控制实体,流程控制实体,跳转语句:break、continue、return,枚举结构关系,流程控制,java.txt,0.694,relation_disambiguation_normalized
+具体方法,is_a,抽象类,抽象类与接口实体,数据类型实体,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",上位包含关系,抽象类与接口,java.txt,0.692,relation_disambiguation_normalized
+类变量,is_a,变量,数据类型实体,变量与成员实体,变量分为局部变量、成员变量(实例变量)和静态变量(类变量),上位包含关系,变量与运算符,java.txt,0.692,relation_disambiguation_normalized
+FutureTask,implements,Thread,线程与并发实体,线程与并发实体,创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask),实现关系,线程与并发,java.txt,0.69,relation_disambiguation_normalized
+finally,used_for,JVM退出,异常处理实体,异常处理实体,"finally块通常用于释放资源,无论是否发生异常都会执行(除非JVM退出)",用途关系,异常处理,java.txt,0.69,relation_disambiguation_normalized
+核心类,has_part,Constructor,数据类型实体,反射实体,核心类:Class、Method、Field、Constructor,枚举结构关系,反射,java.txt,0.69,relation_disambiguation_normalized
+Set,depends_on,LinkedHashSet,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",依赖关系,集合框架,java.txt,0.688,relation_disambiguation_normalized
+垃圾回收,has_part,标记-清除,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",整体部分关系,JVM基础,java.txt,0.688,relation_disambiguation_normalized
+元注解,used_for,@Documented,领域实体,注解实体,元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.686,relation_disambiguation_normalized
+注解,has_part,@Documented,领域实体,注解实体,元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited,枚举结构关系,注解,java.txt,0.684,relation_disambiguation_normalized
+线程状态,has_part,终止,线程与并发实体,线程状态实体,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.684,relation_disambiguation_normalized
+Set,has_part,HashMap,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",枚举结构关系,集合框架,java.txt,0.682,relation_disambiguation_normalized
+基本数据类型,has_part,long,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.682,relation_disambiguation_normalized
+接口,is_a,默认方法,数据类型实体,抽象类与接口实体,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",上下位关系,抽象类与接口,java.txt,0.68,relation_disambiguation_normalized
+float,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.672,relation_disambiguation_normalized
+复制,is_a,垃圾回收,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",上位包含关系,JVM基础,java.txt,0.672,relation_disambiguation_normalized
+抽象类,has_part,具体方法,数据类型实体,抽象类与接口实体,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",枚举结构关系,抽象类与接口,java.txt,0.672,relation_disambiguation_normalized
+注解,has_part,@SuppressWarnings,领域实体,注解实体,内置注解:@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface,枚举结构关系,注解,java.txt,0.672,relation_disambiguation_normalized
+类加载器,has_part,Extension ClassLoader,数据类型实体,JVM 与内存管理实体,"类加载器:Bootstrap ClassLoader、Extension ClassLoader、Application ClassLoader,双亲委派模型",枚举结构关系,JVM基础,java.txt,0.672,relation_disambiguation_normalized
+GC,has_part,复制,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",枚举结构关系,JVM基础,java.txt,0.67,relation_disambiguation_normalized
+接口,has_part,Java,数据类型实体,领域实体,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",枚举结构关系,抽象类与接口,java.txt,0.666,relation_disambiguation_normalized
+接口,has_part,Queue,数据类型实体,集合框架实体,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),枚举结构关系,集合框架,java.txt,0.666,relation_disambiguation_normalized
+接口,has_part,实例变量,数据类型实体,变量与成员实体,"抽象类和接口的区别:抽象类可以有状态(成员变量),接口不能有实例变量",枚举结构关系,抽象类与接口,java.txt,0.666,relation_disambiguation_normalized
+元注解,used_for,@Inherited,领域实体,注解实体,元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.66,relation_disambiguation_normalized
+synchronized,has_part,互斥锁,线程与并发实体,线程与并发实体,"synchronized关键字:修饰实例方法、静态方法、代码块,实现互斥锁",枚举结构关系,线程与并发,java.txt,0.658,relation_disambiguation_normalized
+volatile,has_part,原子性,线程与并发实体,线程与并发实体,"volatile关键字:保证可见性,禁止指令重排序,但不保证原子性",枚举结构关系,线程与并发,java.txt,0.658,relation_disambiguation_normalized
+标记-整理,is_a,垃圾回收,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",上位包含关系,JVM基础,java.txt,0.654,relation_disambiguation_normalized
+GC,has_part,标记-整理,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",枚举结构关系,JVM基础,java.txt,0.652,relation_disambiguation_normalized
+HashMap,depends_on,红黑树,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",依赖关系,集合框架,java.txt,0.652,relation_disambiguation_normalized
+HashSet,depends_on,TreeSet,集合框架实体,集合框架实体,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",依赖关系,集合框架,java.txt,0.652,relation_disambiguation_normalized
+垃圾回收,has_part,复制,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",整体部分关系,JVM基础,java.txt,0.652,relation_disambiguation_normalized
+基本数据类型,has_part,float,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.652,relation_disambiguation_normalized
+实例,is_a,抽象类,面向对象核心实体,数据类型实体,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",上位包含关系,抽象类与接口,java.txt,0.65,relation_disambiguation_normalized
+double,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.636,relation_disambiguation_normalized
+垃圾回收,has_part,标记-整理,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",整体部分关系,JVM基础,java.txt,0.634,relation_disambiguation_normalized
+分代收集,is_a,垃圾回收,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",上位包含关系,JVM基础,java.txt,0.618,relation_disambiguation_normalized
+GC,has_part,分代收集,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",整体部分关系,JVM基础,java.txt,0.616,relation_disambiguation_normalized
+基本数据类型,has_part,double,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,整体部分关系,数据类型,java.txt,0.616,relation_disambiguation_normalized
+boolean,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.61,relation_disambiguation_normalized
+char,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.61,relation_disambiguation_normalized
+垃圾回收,has_part,分代收集,JVM 与内存管理实体,JVM 与内存管理实体,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",整体部分关系,JVM基础,java.txt,0.598,relation_disambiguation_normalized
+基本数据类型,has_part,boolean,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,整体部分关系,数据类型,java.txt,0.59,relation_disambiguation_normalized
+基本数据类型,has_part,char,数据类型实体,数据类型实体,基本数据类型包括:byte、short、int、long、float、double、char、boolean,整体部分关系,数据类型,java.txt,0.59,relation_disambiguation_normalized

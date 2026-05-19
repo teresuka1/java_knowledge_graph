@@ -1,0 +1,21 @@
+﻿entity,attribute_name,attribute_value,section_title,source_file,evidence,confidence,method
+处理器管理,特性,CPU,操作系统的主要功能,os.txt,处理器管理的核心任务是让 CPU 合理地服务多个程序,0.842,attribute_disambiguation_normalized
+操作系统,特性,Windows,操作系统的概念与地位,os.txt,"从课程学习的角度来看,操作系统并不是单纯介绍某一个具体系统,如 Windows、Linux 或 macOS,而是研究“计算机系统如何高效、安全、可靠地运行”的一般规律",0.808,attribute_disambiguation_normalized
+Thread,特性,CPU,进程与线程,os.txt,"线程(Thread)则是比进程更轻量的执行单位,通常被称为 CPU 调度的基本单位",0.784,attribute_disambiguation_normalized
+操作系统,特性,有序,总结,os.txt,"总体而言,操作系统课程研究的是如何让计算机系统在多任务、多用户、多资源约束下高效、有序、安全地运行",0.78,attribute_disambiguation_normalized
+文件系统,特性,有序,操作系统的主要功能,os.txt,"操作系统通过文件系统将数据组织为文件和目录,并提供创建、删除、读写、共享、权限控制等功能,从而使数据管理变得有序、可控",0.78,attribute_disambiguation_normalized
+CPU,定义,"极其宝贵的资源,操作系统必须决定“谁先运行、运行多久、何时切换",操作系统的主要功能,os.txt,"由于 CPU 是极其宝贵的资源,操作系统必须决定“谁先运行、运行多久、何时切换”",0.76,attribute_disambiguation_normalized
+Deadlock,定义,"指多个进程因争夺资源而形成相互等待,从而都无法继续执行的状态",进程同步、互斥与死锁,os.txt,"死锁(Deadlock)是指多个进程因争夺资源而形成相互等待,从而都无法继续执行的状态",0.76,attribute_disambiguation_normalized
+Process,定义,操作系统课程中最重要的概念之一,进程与线程,os.txt,进程(Process)是操作系统课程中最重要的概念之一,0.76,attribute_disambiguation_normalized
+内存,定义,操作系统中技术性很强的一部分,内存管理与虚拟内存,os.txt,内存管理是操作系统中技术性很强的一部分,0.76,attribute_disambiguation_normalized
+处理器管理,定义,让 CPU 合理地服务多个程序,操作系统的主要功能,os.txt,处理器管理的核心任务是让 CPU 合理地服务多个程序,0.76,attribute_disambiguation_normalized
+操作系统,特性,Linux,操作系统的概念与地位,os.txt,"从课程学习的角度来看,操作系统并不是单纯介绍某一个具体系统,如 Windows、Linux 或 macOS,而是研究“计算机系统如何高效、安全、可靠地运行”的一般规律",0.76,attribute_disambiguation_normalized
+文件系统,定义,用户感知最直接的操作系统功能之一,文件系统,os.txt,文件系统是用户感知最直接的操作系统功能之一,0.76,attribute_disambiguation_normalized
+文件系统,定义,"能存”,还要“易找、易管、可靠、安全",文件系统,os.txt,"文件系统的目标不仅是“能存”,还要“易找、易管、可靠、安全”",0.76,attribute_disambiguation_normalized
+权限,定义,保障系统稳定性和安全性的基础,操作系统的结构与运行机制,os.txt,这种权限分离机制是保障系统稳定性和安全性的基础,0.76,attribute_disambiguation_normalized
+磁盘,定义,"原始二进制块,将极难使用",操作系统的主要功能,os.txt,"磁盘上的信息若只是原始二进制块,将极难使用",0.76,attribute_disambiguation_normalized
+调度,定义,操作系统实现“多任务并发”的核心机制,处理器调度与调度算法,os.txt,调度是操作系统实现“多任务并发”的核心机制,0.76,attribute_disambiguation_normalized
+进程同步,定义,操作系统课程中的重点与难点,进程同步、互斥与死锁,os.txt,"因此,进程同步与互斥是操作系统课程中的重点与难点",0.76,attribute_disambiguation_normalized
+线程,特性,CPU,进程与线程,os.txt,"线程(Thread)则是比进程更轻量的执行单位,通常被称为 CPU 调度的基本单位",0.742,attribute_disambiguation_normalized
+多道程序设计,特性,CPU,操作系统的发展历程,os.txt,"所谓多道程序设计,是指将多个程序同时装入内存,在一个程序因输入输出操作而等待时,CPU 可以切换去执行其他程序,从而减少处理器空闲时间,提高系统吞吐量",0.718,attribute_disambiguation_normalized
+操作系统,特性,macOS,操作系统的概念与地位,os.txt,"从课程学习的角度来看,操作系统并不是单纯介绍某一个具体系统,如 Windows、Linux 或 macOS,而是研究“计算机系统如何高效、安全、可靠地运行”的一般规律",0.712,attribute_disambiguation_normalized
