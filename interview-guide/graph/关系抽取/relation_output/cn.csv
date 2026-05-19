@@ -1,0 +1,18 @@
+﻿head,relation,tail,head_type,tail_type,evidence,pattern_name,source_file,confidence,method
+HTTPS,depends_on,SSL/TLS,协议实体,机制与技术实体,HTTPS 基于 SSL/TLS 加密，防窃听、篡改、冒充,依赖关系,cn.txt,0.846,rule_pattern_sentence_level
+HTTP/3,depends_on,QUIC,协议实体,协议实体,HTTP/3（基于 QUIC）：新一代网页传输,依赖关系,cn.txt,0.826,rule_pattern_sentence_level
+Proxy Protocol,used_for,TCP,机制与技术实体,协议实体,传输层：TCP Options 字段、Proxy Protocol，适用于所有 TCP 协议，需双方改造,用途关系,cn.txt,0.818,rule_pattern_sentence_level
+HTTPS,depends_on,加密,协议实体,概念与特性实体,HTTPS 基于 SSL/TLS 加密，防窃听、篡改、冒充,依赖关系,cn.txt,0.798,rule_pattern_sentence_level
+BGP,used_for,自治系统,协议实体,服务器与网络组件实体,BGP：边界网关协议，用于跨自治系统的路由交换,用途关系,cn.txt,0.794,rule_pattern_sentence_level
+URL,is_a,URI,地址与标识实体,地址与标识实体,URL：统一资源定位符，是 URI 的子集，既标识又定位资源（指明访问路径）,上下位关系,cn.txt,0.794,rule_pattern_sentence_level
+数据包,implemented_by,路由与寻址,报文字段与状态实体,机制与技术实体,网络层：负责路由与寻址，决定数据在网络中的传输路径，实现跨网络的数据包转发,实现关系,cn.txt,0.764,rule_pattern_sentence_level
+X-Forwarded-For,used_for,HTTP,机制与技术实体,协议实体,应用层：X-Forwarded-For 请求头，简单但易伪造，仅适用于 HTTP/SMTP,用途关系,cn.txt,0.758,rule_pattern_sentence_level
+公网 IP,implemented_by,私有 IP,地址与标识实体,地址与标识实体,作用：将内网私有 IP映射为公网公有 IP，实现多设备共享一个公网 IP 上网,实现关系,cn.txt,0.75,rule_pattern_sentence_level
+加密,is_a,表示层,概念与特性实体,层级结构实体,表示层：负责数据处理，包括编解码、加密解密、压缩解压缩，保证数据能被正确识别,上位包含关系,cn.txt,0.746,rule_pattern_sentence_level
+X-Forwarded-For,used_for,SMTP,机制与技术实体,协议实体,应用层：X-Forwarded-For 请求头，简单但易伪造，仅适用于 HTTP/SMTP,用途关系,cn.txt,0.728,rule_pattern_sentence_level
+表示层,has_part,加密,层级结构实体,概念与特性实体,表示层：负责数据处理，包括编解码、加密解密、压缩解压缩，保证数据能被正确识别,整体部分关系,cn.txt,0.726,rule_pattern_sentence_level
+数据包,implemented_by,网络层,报文字段与状态实体,层级结构实体,网络层：负责路由与寻址，决定数据在网络中的传输路径，实现跨网络的数据包转发,实现关系,cn.txt,0.716,rule_pattern_sentence_level
+TCP Options,used_for,TCP,机制与技术实体,协议实体,传输层：TCP Options 字段、Proxy Protocol，适用于所有 TCP 协议，需双方改造,用途关系,cn.txt,0.71,rule_pattern_sentence_level
+应用层,used_for,HTTP,层级结构实体,协议实体,应用层：X-Forwarded-For 请求头，简单但易伪造，仅适用于 HTTP/SMTP,用途关系,cn.txt,0.662,rule_pattern_sentence_level
+传输层,used_for,TCP,层级结构实体,协议实体,传输层：TCP Options 字段、Proxy Protocol，适用于所有 TCP 协议，需双方改造,用途关系,cn.txt,0.66,rule_pattern_sentence_level
+应用层,used_for,SMTP,层级结构实体,协议实体,应用层：X-Forwarded-For 请求头，简单但易伪造，仅适用于 HTTP/SMTP,用途关系,cn.txt,0.66,rule_pattern_sentence_level

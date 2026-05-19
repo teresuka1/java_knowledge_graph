@@ -1,0 +1,95 @@
+﻿head,relation,tail,head_type,tail_type,evidence,pattern_name,source_file,confidence,method
+行锁,is_a,InnoDB,锁机制实体,存储引擎实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,上下位关系,mysql.txt,0.844,rule_pattern_sentence_level
+undo log,used_for,事务,事务与一致性实体,领域实体,9. undo log：用于事务回滚和MVCC版本控制，记录数据修改前的日志,用途关系,mysql.txt,0.842,rule_pattern_sentence_level
+索引,is_a,MySQL,领域实体,领域实体,1. 索引是帮助MySQL高效获取数据的**排好序的数据结构**，核心作用是提升查询效率，降低数据库IO成本,上下位关系,mysql.txt,0.842,rule_pattern_sentence_level
+读写分离,implemented_by,从库,领域实体,主从复制与高可用实体,1. 主从复制：将主库数据同步到从库，实现数据备份、读写分离、故障转移,实现关系,mysql.txt,0.842,rule_pattern_sentence_level
+InnoDB,depends_on,索引,存储引擎实体,领域实体,3. 行锁：锁定单行数据，粒度最小，并发性能最高，仅InnoDB支持，基于索引实现，无索引会升级为表锁,依赖关系,mysql.txt,0.84,rule_pattern_sentence_level
+Sharding-JDBC,implemented_by,读写分离,中间件与工具实体,领域实体,6. 读写分离实现方式：中间件（Sharding-JDBC、MyCat）、代码层手动控制,实现关系,mysql.txt,0.836,rule_pattern_sentence_level
+索引下推,is_a,索引,领域实体,领域实体,12. MySQL索引下推：是一种索引优化技术，在存储引擎层过滤不符合条件的数据，减少回表次数，提升查询效率,上下位关系,mysql.txt,0.836,rule_pattern_sentence_level
+表锁,implemented_by,索引,锁机制实体,领域实体,3. 行锁：锁定单行数据，粒度最小，并发性能最高，仅InnoDB支持，基于索引实现，无索引会升级为表锁,实现关系,mysql.txt,0.83,rule_pattern_sentence_level
+MySQL,is_a,关系型数据库管理系统,领域实体,领域实体,1. MySQL是一款开源的关系型数据库管理系统(RDBMS)，使用SQL作为查询语言，支持多线程、高并发，是Java后端开发最常用的数据库,上下位关系,mysql.txt,0.824,rule_pattern_sentence_level
+WHERE,is_a,DML,SQL分类实体,SQL分类实体,3. DELETE：删除表中数据，语法：DELETE FROM 表名 WHERE 条件，属于DML，可回滚，不会重置自增主键,上下位关系,mysql.txt,0.824,rule_pattern_sentence_level
+索引,implemented_by,InnoDB,领域实体,存储引擎实体,3. 行锁：锁定单行数据，粒度最小，并发性能最高，仅InnoDB支持，基于索引实现，无索引会升级为表锁,实现关系,mysql.txt,0.824,rule_pattern_sentence_level
+Next-Key Lock,is_a,InnoDB,锁机制实体,存储引擎实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,上下位关系,mysql.txt,0.82,rule_pattern_sentence_level
+行锁,used_for,幻读,锁机制实体,事务与一致性实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,用途关系,mysql.txt,0.818,rule_pattern_sentence_level
+MySQL,is_a,索引,领域实体,领域实体,12. MySQL索引下推：是一种索引优化技术，在存储引擎层过滤不符合条件的数据，减少回表次数，提升查询效率,上下位关系,mysql.txt,0.812,rule_pattern_sentence_level
+TRUNCATE,is_a,DDL,SQL分类实体,SQL分类实体,4. TRUNCATE：清空表数据，属于DDL，不可回滚，执行速度比DELETE快，会重置自增主键,上下位关系,mysql.txt,0.806,rule_pattern_sentence_level
+读写分离,implemented_by,主库,领域实体,主从复制与高可用实体,1. 主从复制：将主库数据同步到从库，实现数据备份、读写分离、故障转移,实现关系,mysql.txt,0.8,rule_pattern_sentence_level
+间隙锁,is_a,行锁,锁机制实体,锁机制实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,上下位关系,mysql.txt,0.794,rule_pattern_sentence_level
+undo log,used_for,MVCC,事务与一致性实体,事务与一致性实体,9. undo log：用于事务回滚和MVCC版本控制，记录数据修改前的日志,用途关系,mysql.txt,0.792,rule_pattern_sentence_level
+故障转移,implemented_by,从库,主从复制与高可用实体,主从复制与高可用实体,1. 主从复制：将主库数据同步到从库，实现数据备份、读写分离、故障转移,实现关系,mysql.txt,0.792,rule_pattern_sentence_level
+InnoDB,used_for,幻读,存储引擎实体,事务与一致性实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,用途关系,mysql.txt,0.788,rule_pattern_sentence_level
+二进制日志,used_for,数据恢复,主从复制与高可用实体,运维与安全实体,3. binlog日志：二进制日志，记录数据修改操作，用于数据恢复、主从复制,用途关系,mysql.txt,0.788,rule_pattern_sentence_level
+相关子查询,is_a,SQL,查询与连接实体,领域实体,5. 子查询：嵌套在SQL中的查询，分为相关子查询和非相关子查询，效率较低，优先使用联表查询替代,上位包含关系,mysql.txt,0.788,rule_pattern_sentence_level
+索引下推,is_a,存储引擎层,领域实体,领域实体,12. MySQL索引下推：是一种索引优化技术，在存储引擎层过滤不符合条件的数据，减少回表次数，提升查询效率,上下位关系,mysql.txt,0.788,rule_pattern_sentence_level
+表锁,implemented_by,InnoDB,锁机制实体,存储引擎实体,3. 行锁：锁定单行数据，粒度最小，并发性能最高，仅InnoDB支持，基于索引实现，无索引会升级为表锁,实现关系,mysql.txt,0.788,rule_pattern_sentence_level
+索引,is_a,最左匹配,领域实体,索引相关实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,上位包含关系,mysql.txt,0.776,rule_pattern_sentence_level
+InnoDB,depends_on,表锁,存储引擎实体,锁机制实体,3. 行锁：锁定单行数据，粒度最小，并发性能最高，仅InnoDB支持，基于索引实现，无索引会升级为表锁,依赖关系,mysql.txt,0.768,rule_pattern_sentence_level
+MySQL,is_a,存储引擎层,领域实体,领域实体,12. MySQL索引下推：是一种索引优化技术，在存储引擎层过滤不符合条件的数据，减少回表次数，提升查询效率,上下位关系,mysql.txt,0.764,rule_pattern_sentence_level
+utf8mb4,is_a,emoji,MySQL8.0与扩展特性实体,MySQL8.0与扩展特性实体,9. 字符集：utf8mb4是MySQL推荐字符集，支持存储emoji表情，替代utf8,上下位关系,mysql.txt,0.764,rule_pattern_sentence_level
+服务层,is_a,MySQL,基础架构实体,领域实体,3. MySQL基础架构分为两层：**服务层**（连接管理、SQL解析、优化器、查询缓存、执行器）和**存储引擎层**（负责数据存储和提取，插件式架构）,上位包含关系,mysql.txt,0.764,rule_pattern_sentence_level
+WHERE,is_a,主键,SQL分类实体,数据库设计与规范实体,3. DELETE：删除表中数据，语法：DELETE FROM 表名 WHERE 条件，属于DML，可回滚，不会重置自增主键,上下位关系,mysql.txt,0.76,rule_pattern_sentence_level
+间隙锁,is_a,幻读,锁机制实体,事务与一致性实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,上下位关系,mysql.txt,0.76,rule_pattern_sentence_level
+MySQL,is_a,RDBMS,领域实体,领域实体,1. MySQL是一款开源的关系型数据库管理系统(RDBMS)，使用SQL作为查询语言，支持多线程、高并发，是Java后端开发最常用的数据库,上下位关系,mysql.txt,0.758,rule_pattern_sentence_level
+二进制日志,used_for,主从复制,主从复制与高可用实体,领域实体,3. binlog日志：二进制日志，记录数据修改操作，用于数据恢复、主从复制,用途关系,mysql.txt,0.758,rule_pattern_sentence_level
+最左匹配,has_part,索引,索引相关实体,领域实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,整体部分关系,mysql.txt,0.756,rule_pattern_sentence_level
+读写分离,implemented_by,主从复制,领域实体,领域实体,1. 主从复制：将主库数据同步到从库，实现数据备份、读写分离、故障转移,实现关系,mysql.txt,0.756,rule_pattern_sentence_level
+MyCat,implemented_by,读写分离,中间件与工具实体,领域实体,6. 读写分离实现方式：中间件（Sharding-JDBC、MyCat）、代码层手动控制,实现关系,mysql.txt,0.752,rule_pattern_sentence_level
+非相关子查询,is_a,SQL,查询与连接实体,领域实体,5. 子查询：嵌套在SQL中的查询，分为相关子查询和非相关子查询，效率较低，优先使用联表查询替代,上位包含关系,mysql.txt,0.752,rule_pattern_sentence_level
+故障转移,implemented_by,主库,主从复制与高可用实体,主从复制与高可用实体,1. 主从复制：将主库数据同步到从库，实现数据备份、读写分离、故障转移,实现关系,mysql.txt,0.75,rule_pattern_sentence_level
+Next-Key Lock,is_a,行锁,锁机制实体,锁机制实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,上下位关系,mysql.txt,0.746,rule_pattern_sentence_level
+故障转移,implemented_by,主从复制,主从复制与高可用实体,领域实体,1. 主从复制：将主库数据同步到从库，实现数据备份、读写分离、故障转移,实现关系,mysql.txt,0.746,rule_pattern_sentence_level
+索引,is_a,覆盖索引,领域实体,领域实体,8. 覆盖索引：查询的字段全部包含在索引中，无需回表，是索引优化的重要手段,上位包含关系,mysql.txt,0.744,rule_pattern_sentence_level
+DELETE,is_a,DML,SQL分类实体,SQL分类实体,3. DELETE：删除表中数据，语法：DELETE FROM 表名 WHERE 条件，属于DML，可回滚，不会重置自增主键,上下位关系,mysql.txt,0.74,rule_pattern_sentence_level
+binlog,used_for,数据恢复,主从复制与高可用实体,运维与安全实体,3. binlog日志：二进制日志，记录数据修改操作，用于数据恢复、主从复制,用途关系,mysql.txt,0.74,rule_pattern_sentence_level
+间隙锁,used_for,幻读,锁机制实体,事务与一致性实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,用途关系,mysql.txt,0.74,rule_pattern_sentence_level
+临键锁,is_a,InnoDB,锁机制实体,存储引擎实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,上下位关系,mysql.txt,0.736,rule_pattern_sentence_level
+行锁,is_a,幻读,锁机制实体,事务与一致性实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,上下位关系,mysql.txt,0.736,rule_pattern_sentence_level
+覆盖索引,is_a,索引,领域实体,领域实体,8. 覆盖索引：查询的字段全部包含在索引中，无需回表，是索引优化的重要手段,上下位关系,mysql.txt,0.734,rule_pattern_sentence_level
+回表,is_a,覆盖索引,索引相关实体,领域实体,8. 覆盖索引：查询的字段全部包含在索引中，无需回表，是索引优化的重要手段,上位包含关系,mysql.txt,0.728,rule_pattern_sentence_level
+连接管理,is_a,MySQL,基础架构实体,领域实体,3. MySQL基础架构分为两层：**服务层**（连接管理、SQL解析、优化器、查询缓存、执行器）和**存储引擎层**（负责数据存储和提取，插件式架构）,上位包含关系,mysql.txt,0.728,rule_pattern_sentence_level
+相关子查询,is_a,子查询,查询与连接实体,查询与连接实体,5. 子查询：嵌套在SQL中的查询，分为相关子查询和非相关子查询，效率较低，优先使用联表查询替代,上位包含关系,mysql.txt,0.726,rule_pattern_sentence_level
+覆盖索引,has_part,索引,领域实体,领域实体,8. 覆盖索引：查询的字段全部包含在索引中，无需回表，是索引优化的重要手段,整体部分关系,mysql.txt,0.724,rule_pattern_sentence_level
+TRUNCATE,is_a,DELETE,SQL分类实体,SQL分类实体,4. TRUNCATE：清空表数据，属于DDL，不可回滚，执行速度比DELETE快，会重置自增主键,上下位关系,mysql.txt,0.722,rule_pattern_sentence_level
+意向共享锁,is_a,InnoDB,锁机制实体,存储引擎实体,7. 意向锁：InnoDB自动添加的表级锁，提升加锁效率，分为意向共享锁、意向排他锁,上位包含关系,mysql.txt,0.722,rule_pattern_sentence_level
+数据库三范式,depends_on,主键,领域实体,数据库设计与规范实体,4. 数据库三范式：1NF（列不可再分）、2NF（消除部分函数依赖，主键决定所有非主键字段）、3NF（消除传递函数依赖，非主键字段不依赖其他非主键字段）,依赖关系,mysql.txt,0.72,rule_pattern_sentence_level
+索引,is_a,联合索引,领域实体,领域实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,上位包含关系,mysql.txt,0.72,rule_pattern_sentence_level
+Next-Key Lock,is_a,幻读,锁机制实体,事务与一致性实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,上下位关系,mysql.txt,0.712,rule_pattern_sentence_level
+binlog,used_for,主从复制,主从复制与高可用实体,领域实体,3. binlog日志：二进制日志，记录数据修改操作，用于数据恢复、主从复制,用途关系,mysql.txt,0.71,rule_pattern_sentence_level
+索引,is_a,最左前缀原则,领域实体,索引相关实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,上位包含关系,mysql.txt,0.71,rule_pattern_sentence_level
+索引失效,is_a,最左匹配,领域实体,索引相关实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,上位包含关系,mysql.txt,0.71,rule_pattern_sentence_level
+覆盖索引,has_part,回表,领域实体,索引相关实体,8. 覆盖索引：查询的字段全部包含在索引中，无需回表，是索引优化的重要手段,整体部分关系,mysql.txt,0.708,rule_pattern_sentence_level
+MySQL,is_a,SQL,领域实体,领域实体,1. MySQL是一款开源的关系型数据库管理系统(RDBMS)，使用SQL作为查询语言，支持多线程、高并发，是Java后端开发最常用的数据库,上下位关系,mysql.txt,0.704,rule_pattern_sentence_level
+utf8mb4,is_a,utf8,MySQL8.0与扩展特性实体,MySQL8.0与扩展特性实体,9. 字符集：utf8mb4是MySQL推荐字符集，支持存储emoji表情，替代utf8,上下位关系,mysql.txt,0.704,rule_pattern_sentence_level
+外键,used_for,主键,数据库设计与规范实体,数据库设计与规范实体,11. 外键：用于建立两张表之间的关联关系，参照另一张表的主键，保证数据的参照完整性，实际开发中很少使用物理外键，多用逻辑外键,用途关系,mysql.txt,0.702,rule_pattern_sentence_level
+索引下推,is_a,回表,领域实体,索引相关实体,12. MySQL索引下推：是一种索引优化技术，在存储引擎层过滤不符合条件的数据，减少回表次数，提升查询效率,上下位关系,mysql.txt,0.7,rule_pattern_sentence_level
+联合索引,has_part,索引,领域实体,领域实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,整体部分关系,mysql.txt,0.7,rule_pattern_sentence_level
+SQL解析,is_a,MySQL,基础架构实体,领域实体,3. MySQL基础架构分为两层：**服务层**（连接管理、SQL解析、优化器、查询缓存、执行器）和**存储引擎层**（负责数据存储和提取，插件式架构）,上位包含关系,mysql.txt,0.698,rule_pattern_sentence_level
+Next-Key Lock,used_for,幻读,锁机制实体,事务与一致性实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,用途关系,mysql.txt,0.692,rule_pattern_sentence_level
+最左前缀原则,has_part,索引,索引相关实体,领域实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,整体部分关系,mysql.txt,0.69,rule_pattern_sentence_level
+最左匹配,has_part,索引失效,索引相关实体,领域实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,整体部分关系,mysql.txt,0.69,rule_pattern_sentence_level
+索引,implemented_by,行锁,领域实体,锁机制实体,3. 行锁：锁定单行数据，粒度最小，并发性能最高，仅InnoDB支持，基于索引实现，无索引会升级为表锁,实现关系,mysql.txt,0.69,rule_pattern_sentence_level
+非相关子查询,is_a,子查询,查询与连接实体,查询与连接实体,5. 子查询：嵌套在SQL中的查询，分为相关子查询和非相关子查询，效率较低，优先使用联表查询替代,上位包含关系,mysql.txt,0.69,rule_pattern_sentence_level
+意向排他锁,is_a,InnoDB,锁机制实体,存储引擎实体,7. 意向锁：InnoDB自动添加的表级锁，提升加锁效率，分为意向共享锁、意向排他锁,上位包含关系,mysql.txt,0.686,rule_pattern_sentence_level
+DELETE,is_a,主键,SQL分类实体,数据库设计与规范实体,3. DELETE：删除表中数据，语法：DELETE FROM 表名 WHERE 条件，属于DML，可回滚，不会重置自增主键,上下位关系,mysql.txt,0.68,rule_pattern_sentence_level
+MySQL,is_a,回表,领域实体,索引相关实体,12. MySQL索引下推：是一种索引优化技术，在存储引擎层过滤不符合条件的数据，减少回表次数，提升查询效率,上下位关系,mysql.txt,0.68,rule_pattern_sentence_level
+SQL,is_a,数据库,领域实体,领域实体,1. MySQL是一款开源的关系型数据库管理系统(RDBMS)，使用SQL作为查询语言，支持多线程、高并发，是Java后端开发最常用的数据库,上下位关系,mysql.txt,0.68,rule_pattern_sentence_level
+TRUNCATE,is_a,主键,SQL分类实体,数据库设计与规范实体,4. TRUNCATE：清空表数据，属于DDL，不可回滚，执行速度比DELETE快，会重置自增主键,上下位关系,mysql.txt,0.68,rule_pattern_sentence_level
+行锁,depends_on,索引,锁机制实体,领域实体,3. 行锁：锁定单行数据，粒度最小，并发性能最高，仅InnoDB支持，基于索引实现，无索引会升级为表锁,依赖关系,mysql.txt,0.678,rule_pattern_sentence_level
+LIKE,causes,索引失效,SQL分类实体,领域实体,7. LIKE模糊查询：%匹配任意多个字符，_匹配单个字符，避免前置%导致索引失效,因果关系,mysql.txt,0.67,rule_pattern_sentence_level
+临键锁,is_a,行锁,锁机制实体,锁机制实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,上下位关系,mysql.txt,0.662,rule_pattern_sentence_level
+优化器,is_a,MySQL,基础架构实体,领域实体,3. MySQL基础架构分为两层：**服务层**（连接管理、SQL解析、优化器、查询缓存、执行器）和**存储引擎层**（负责数据存储和提取，插件式架构）,上位包含关系,mysql.txt,0.662,rule_pattern_sentence_level
+MySQL,is_a,数据库,领域实体,领域实体,1. 索引是帮助MySQL高效获取数据的**排好序的数据结构**，核心作用是提升查询效率，降低数据库IO成本,上下位关系,mysql.txt,0.66,rule_pattern_sentence_level
+临键锁,used_for,幻读,锁机制实体,事务与一致性实体,9. 临键锁(Next-Key Lock)：行锁+间隙锁，是InnoDB默认的行锁算法，用于解决幻读,用途关系,mysql.txt,0.66,rule_pattern_sentence_level
+意向共享锁,is_a,意向锁,锁机制实体,锁机制实体,7. 意向锁：InnoDB自动添加的表级锁，提升加锁效率，分为意向共享锁、意向排他锁,上位包含关系,mysql.txt,0.66,rule_pattern_sentence_level
+联表查询,is_a,SQL,数据库设计与规范实体,领域实体,5. 子查询：嵌套在SQL中的查询，分为相关子查询和非相关子查询，效率较低，优先使用联表查询替代,上位包含关系,mysql.txt,0.656,rule_pattern_sentence_level
+外键,used_for,参照完整性,数据库设计与规范实体,数据库设计与规范实体,11. 外键：用于建立两张表之间的关联关系，参照另一张表的主键，保证数据的参照完整性，实际开发中很少使用物理外键，多用逻辑外键,用途关系,mysql.txt,0.654,rule_pattern_sentence_level
+索引失效,is_a,联合索引,领域实体,领域实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,上位包含关系,mysql.txt,0.654,rule_pattern_sentence_level
+索引失效,is_a,最左前缀原则,领域实体,索引相关实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,上位包含关系,mysql.txt,0.644,rule_pattern_sentence_level
+查询缓存,is_a,MySQL,基础架构实体,领域实体,3. MySQL基础架构分为两层：**服务层**（连接管理、SQL解析、优化器、查询缓存、执行器）和**存储引擎层**（负责数据存储和提取，插件式架构）,上位包含关系,mysql.txt,0.638,rule_pattern_sentence_level
+联合索引,has_part,索引失效,领域实体,领域实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,整体部分关系,mysql.txt,0.634,rule_pattern_sentence_level
+执行器,is_a,MySQL,基础架构实体,领域实体,3. MySQL基础架构分为两层：**服务层**（连接管理、SQL解析、优化器、查询缓存、执行器）和**存储引擎层**（负责数据存储和提取，插件式架构）,上位包含关系,mysql.txt,0.63,rule_pattern_sentence_level
+联表查询,is_a,子查询,数据库设计与规范实体,查询与连接实体,5. 子查询：嵌套在SQL中的查询，分为相关子查询和非相关子查询，效率较低，优先使用联表查询替代,上位包含关系,mysql.txt,0.63,rule_pattern_sentence_level
+意向排他锁,is_a,意向锁,锁机制实体,锁机制实体,7. 意向锁：InnoDB自动添加的表级锁，提升加锁效率，分为意向共享锁、意向排他锁,上位包含关系,mysql.txt,0.624,rule_pattern_sentence_level
+最左前缀原则,has_part,索引失效,索引相关实体,领域实体,9. 最左前缀原则：联合索引遵循最左匹配，查询条件必须包含索引的第一个字段，否则索引失效,整体部分关系,mysql.txt,0.624,rule_pattern_sentence_level
+存储引擎层,is_a,MySQL,领域实体,领域实体,3. MySQL基础架构分为两层：**服务层**（连接管理、SQL解析、优化器、查询缓存、执行器）和**存储引擎层**（负责数据存储和提取，插件式架构）,上位包含关系,mysql.txt,0.61,rule_pattern_sentence_level

@@ -1,0 +1,196 @@
+﻿head,relation,tail,head_type,tail_type,evidence,pattern_name,section_title,source_file,confidence,method
+Throwable,is_a,父类,异常处理实体,数据类型实体,Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,上下位关系,异常处理,java.txt,0.862,rule_pattern_sentence_level
+Runnable,implemented_by,Thread,线程与并发实体,线程与并发实体,创建线程的方式：继承Thread类、实现Runnable接口、实现Callable接口（配合FutureTask）,实现关系,线程与并发,java.txt,0.846,rule_pattern_sentence_level
+对象,is_a,实例,面向对象核心实体,面向对象核心实体,类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例,上下位关系,面向对象基础,java.txt,0.842,rule_pattern_sentence_level
+ArrayList,implemented_by,List,集合框架实体,集合框架实体,List的实现类：ArrayList（数组结构，查询快增删慢）、LinkedList（链表结构，增删快查询慢）、Vector（线程安全，较少用）,实现关系,集合框架,java.txt,0.84,rule_pattern_sentence_level
+Callable,implemented_by,Runnable,线程与并发实体,线程与并发实体,创建线程的方式：继承Thread类、实现Runnable接口、实现Callable接口（配合FutureTask）,实现关系,线程与并发,java.txt,0.84,rule_pattern_sentence_level
+HashMap,implemented_by,Map,集合框架实体,集合框架实体,Map的实现类：HashMap（无序，允许null键值）、Hashtable（线程安全，不允许null）、TreeMap（有序）、LinkedHashMap（保持插入顺序）,实现关系,集合框架,java.txt,0.84,rule_pattern_sentence_level
+HashSet,implemented_by,Set,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,实现关系,集合框架,java.txt,0.84,rule_pattern_sentence_level
+接口,is_a,public,数据类型实体,关键字与修饰符实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,上下位关系,抽象类与接口,java.txt,0.832,rule_pattern_sentence_level
+Runnable,implemented_by,继承,线程与并发实体,面向对象核心实体,创建线程的方式：继承Thread类、实现Runnable接口、实现Callable接口（配合FutureTask）,实现关系,线程与并发,java.txt,0.83,rule_pattern_sentence_level
+extends,is_a,单继承,关键字与修饰符实体,面向对象核心实体,继承使用extends关键字，Java是单继承，一个类只能有一个直接父类,上下位关系,继承与多态,java.txt,0.826,rule_pattern_sentence_level
+元注解,used_for,注解,领域实体,领域实体,元注解（用于注解的注解）：@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.822,rule_pattern_sentence_level
+接口,implemented_by,抽象类,数据类型实体,数据类型实体,一个类只能继承一个抽象类，但可以实现多个接口,实现关系,抽象类与接口,java.txt,0.822,rule_pattern_sentence_level
+Object,is_a,对象,面向对象核心实体,面向对象核心实体,类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例,上下位关系,面向对象基础,java.txt,0.818,rule_pattern_sentence_level
+String,is_a,immutable,数组与字符串实体,数组与字符串实体,String类是不可变的（immutable），任何修改都会产生新对象,上下位关系,字符串,java.txt,0.818,rule_pattern_sentence_level
+HashSet,depends_on,HashMap,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,依赖关系,集合框架,java.txt,0.814,rule_pattern_sentence_level
+TreeSet,depends_on,红黑树,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,依赖关系,集合框架,java.txt,0.814,rule_pattern_sentence_level
+多态的表现形式,has_part,父类引用,面向对象核心实体,数据类型实体,多态的表现形式：父类引用指向子类对象、接口引用指向实现类对象,枚举结构关系,继承与多态,java.txt,0.804,rule_pattern_sentence_level
+接口,has_part,List,数据类型实体,集合框架实体,Collection接口的子接口：List（有序可重复）、Set（无序不重复）、Queue（队列）,枚举结构关系,集合框架,java.txt,0.804,rule_pattern_sentence_level
+接口,has_part,ReentrantLock,数据类型实体,线程与并发实体,Lock接口：ReentrantLock，提供更灵活的锁操作（tryLock、lockInterruptibly等）,枚举结构关系,线程与并发,java.txt,0.804,rule_pattern_sentence_level
+数组的创建,has_part,new,数据类型实体,关键字与修饰符实体,"数组的创建：new int[10] 或 {1,2,3}",枚举结构关系,数组,java.txt,0.804,rule_pattern_sentence_level
+核心类,has_part,Class,数据类型实体,面向对象核心实体,核心类：Class、Method、Field、Constructor,枚举结构关系,反射,java.txt,0.804,rule_pattern_sentence_level
+注解,has_part,@Override,领域实体,注解实体,内置注解：@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface,枚举结构关系,注解,java.txt,0.804,rule_pattern_sentence_level
+类加载器,has_part,Bootstrap ClassLoader,数据类型实体,JVM 与内存管理实体,类加载器：Bootstrap ClassLoader、Extension ClassLoader、Application ClassLoader，双亲委派模型,枚举结构关系,JVM基础,java.txt,0.804,rule_pattern_sentence_level
+类加载机制,has_part,加载,数据类型实体,JVM 与内存管理实体,类加载机制：加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.804,rule_pattern_sentence_level
+类型擦除,has_part,泛型,数据类型实体,领域实体,类型擦除：泛型信息在编译后被移除，运行时没有泛型,枚举结构关系,泛型,java.txt,0.804,rule_pattern_sentence_level
+线程状态,has_part,新建,线程与并发实体,线程状态实体,线程状态：新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.804,rule_pattern_sentence_level
+Error,is_a,父类,异常处理实体,数据类型实体,Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,上位包含关系,异常处理,java.txt,0.8,rule_pattern_sentence_level
+Throwable,is_a,Error,异常处理实体,异常处理实体,Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,上下位关系,异常处理,java.txt,0.8,rule_pattern_sentence_level
+元注解,used_for,@Retention,领域实体,注解实体,元注解（用于注解的注解）：@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.8,rule_pattern_sentence_level
+局部变量,is_a,变量,变量与成员实体,变量与成员实体,变量分为局部变量、成员变量（实例变量）和静态变量（类变量）,上位包含关系,变量与运算符,java.txt,0.798,rule_pattern_sentence_level
+注解,has_part,@Retention,领域实体,注解实体,元注解（用于注解的注解）：@Retention、@Target、@Documented、@Inherited,枚举结构关系,注解,java.txt,0.798,rule_pattern_sentence_level
+Checked Exception,is_a,Exception,异常处理实体,异常处理实体,Exception分为：Checked Exception（编译时异常，必须处理）和Unchecked Exception（运行时异常，不强制处理）,上位包含关系,异常处理,java.txt,0.792,rule_pattern_sentence_level
+byte,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.792,rule_pattern_sentence_level
+抽象类,has_part,abstract,数据类型实体,关键字与修饰符实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,枚举结构关系,抽象类与接口,java.txt,0.792,rule_pattern_sentence_level
+Java,is_a,父类,领域实体,数据类型实体,继承使用extends关键字，Java是单继承，一个类只能有一个直接父类,上下位关系,继承与多态,java.txt,0.79,rule_pattern_sentence_level
+接口,is_a,abstract,数据类型实体,关键字与修饰符实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,上下位关系,抽象类与接口,java.txt,0.79,rule_pattern_sentence_level
+抽象方法,is_a,abstract,抽象类与接口实体,关键字与修饰符实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,上位包含关系,抽象类与接口,java.txt,0.788,rule_pattern_sentence_level
+对象,has_part,类名.class,面向对象核心实体,数据类型实体,"获取Class对象的方式：类名.class、对象.getClass()、Class.forName(""全限定名"")",枚举结构关系,反射,java.txt,0.786,rule_pattern_sentence_level
+类加载机制,has_part,验证,数据类型实体,JVM 与内存管理实体,类加载机制：加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.786,rule_pattern_sentence_level
+线程状态,has_part,就绪,线程与并发实体,线程状态实体,线程状态：新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.786,rule_pattern_sentence_level
+循环结构,has_part,for,流程控制实体,流程控制实体,循环结构：for、while、do-while,枚举结构关系,流程控制,java.txt,0.784,rule_pattern_sentence_level
+数据类型,has_part,基本数据类型,数据类型实体,数据类型实体,Java有两种数据类型：基本数据类型和引用数据类型,枚举结构关系,数据类型,java.txt,0.784,rule_pattern_sentence_level
+条件分支,has_part,if-else,流程控制实体,流程控制实体,条件分支：if-else、switch-case,枚举结构关系,流程控制,java.txt,0.784,rule_pattern_sentence_level
+线程池,has_part,Executor,线程与并发实体,线程与并发实体,线程池：Executor框架，常用类ThreadPoolExecutor,枚举结构关系,线程与并发,java.txt,0.784,rule_pattern_sentence_level
+访问控制修饰符,has_part,private,关键字与修饰符实体,关键字与修饰符实体,访问控制修饰符：private、default（无修饰符）、protected、public,枚举结构关系,关键字与修饰符,java.txt,0.784,rule_pattern_sentence_level
+跳转语句,has_part,break,流程控制实体,流程控制实体,跳转语句：break、continue、return,枚举结构关系,流程控制,java.txt,0.784,rule_pattern_sentence_level
+接口,is_a,引用数据类型,数据类型实体,数据类型实体,引用数据类型包括：类、接口、数组、枚举、注解,上位包含关系,数据类型,java.txt,0.78,rule_pattern_sentence_level
+构造方法,used_for,初始化,面向对象核心实体,JVM 与内存管理实体,构造方法：与类同名，没有返回值，用于初始化对象,用途关系,面向对象基础,java.txt,0.776,rule_pattern_sentence_level
+implements,implemented_by,interface,关键字与修饰符实体,关键字与修饰符实体,接口使用interface关键字，一个类可以实现多个接口（implements）,实现关系,继承与多态,java.txt,0.774,rule_pattern_sentence_level
+synchronized,has_part,实例,线程与并发实体,面向对象核心实体,synchronized关键字：修饰实例方法、静态方法、代码块，实现互斥锁,枚举结构关系,线程与并发,java.txt,0.774,rule_pattern_sentence_level
+Exception,has_part,Checked Exception,异常处理实体,异常处理实体,Exception分为：Checked Exception（编译时异常，必须处理）和Unchecked Exception（运行时异常，不强制处理）,枚举结构关系,异常处理,java.txt,0.772,rule_pattern_sentence_level
+基本数据类型,has_part,byte,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.772,rule_pattern_sentence_level
+Callable,implemented_by,Thread,线程与并发实体,线程与并发实体,创建线程的方式：继承Thread类、实现Runnable接口、实现Callable接口（配合FutureTask）,实现关系,线程与并发,java.txt,0.768,rule_pattern_sentence_level
+abstract,has_part,抽象方法,关键字与修饰符实体,抽象类与接口实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,整体部分关系,抽象类与接口,java.txt,0.768,rule_pattern_sentence_level
+多态的表现形式,has_part,子类对象,面向对象核心实体,数据类型实体,多态的表现形式：父类引用指向子类对象、接口引用指向实现类对象,枚举结构关系,继承与多态,java.txt,0.768,rule_pattern_sentence_level
+成员变量,is_a,变量,变量与成员实体,变量与成员实体,变量分为局部变量、成员变量（实例变量）和静态变量（类变量）,上位包含关系,变量与运算符,java.txt,0.768,rule_pattern_sentence_level
+核心类,has_part,Method,数据类型实体,反射实体,核心类：Class、Method、Field、Constructor,枚举结构关系,反射,java.txt,0.768,rule_pattern_sentence_level
+类加载机制,has_part,准备,数据类型实体,JVM 与内存管理实体,类加载机制：加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.768,rule_pattern_sentence_level
+线程状态,has_part,运行,线程与并发实体,线程状态实体,线程状态：新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.768,rule_pattern_sentence_level
+接口,has_part,抽象类,数据类型实体,数据类型实体,抽象类和接口的区别：抽象类可以有状态（成员变量），接口不能有实例变量,枚举结构关系,抽象类与接口,java.txt,0.766,rule_pattern_sentence_level
+FutureTask,implemented_by,Runnable,线程与并发实体,线程与并发实体,创建线程的方式：继承Thread类、实现Runnable接口、实现Callable接口（配合FutureTask）,实现关系,线程与并发,java.txt,0.762,rule_pattern_sentence_level
+HashMap,implemented_by,Set,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,实现关系,集合框架,java.txt,0.762,rule_pattern_sentence_level
+short,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.762,rule_pattern_sentence_level
+接口,has_part,public,数据类型实体,关键字与修饰符实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,枚举结构关系,抽象类与接口,java.txt,0.762,rule_pattern_sentence_level
+数组,is_a,引用数据类型,数据类型实体,数据类型实体,引用数据类型包括：类、接口、数组、枚举、注解,上位包含关系,数据类型,java.txt,0.762,rule_pattern_sentence_level
+HashSet,depends_on,LinkedHashSet,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,依赖关系,集合框架,java.txt,0.76,rule_pattern_sentence_level
+List,has_part,ArrayList,集合框架实体,集合框架实体,List的实现类：ArrayList（数组结构，查询快增删慢）、LinkedList（链表结构，增删快查询慢）、Vector（线程安全，较少用）,枚举结构关系,集合框架,java.txt,0.76,rule_pattern_sentence_level
+Map,has_part,HashMap,集合框架实体,集合框架实体,Map的实现类：HashMap（无序，允许null键值）、Hashtable（线程安全，不允许null）、TreeMap（有序）、LinkedHashMap（保持插入顺序）,枚举结构关系,集合框架,java.txt,0.76,rule_pattern_sentence_level
+Set,has_part,HashSet,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,枚举结构关系,集合框架,java.txt,0.76,rule_pattern_sentence_level
+引用数据类型,has_part,接口,数据类型实体,数据类型实体,引用数据类型包括：类、接口、数组、枚举、注解,枚举结构关系,数据类型,java.txt,0.76,rule_pattern_sentence_level
+循环结构,has_part,while,流程控制实体,流程控制实体,循环结构：for、while、do-while,枚举结构关系,流程控制,java.txt,0.76,rule_pattern_sentence_level
+数组的创建,has_part,int,数据类型实体,数据类型实体,"数组的创建：new int[10] 或 {1,2,3}",枚举结构关系,数组,java.txt,0.76,rule_pattern_sentence_level
+具体方法,is_a,abstract,抽象类与接口实体,关键字与修饰符实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,上位包含关系,抽象类与接口,java.txt,0.758,rule_pattern_sentence_level
+volatile,has_part,可见性,线程与并发实体,线程与并发实体,volatile关键字：保证可见性，禁止指令重排序，但不保证原子性,枚举结构关系,线程与并发,java.txt,0.754,rule_pattern_sentence_level
+Class,is_a,对象,面向对象核心实体,面向对象核心实体,类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例,上下位关系,面向对象基础,java.txt,0.752,rule_pattern_sentence_level
+Object,is_a,实例,面向对象核心实体,面向对象核心实体,类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例,上下位关系,面向对象基础,java.txt,0.752,rule_pattern_sentence_level
+继承,is_a,单继承,面向对象核心实体,面向对象核心实体,继承使用extends关键字，Java是单继承，一个类只能有一个直接父类,上下位关系,继承与多态,java.txt,0.752,rule_pattern_sentence_level
+Error,is_a,Throwable,异常处理实体,异常处理实体,Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,上位包含关系,异常处理,java.txt,0.75,rule_pattern_sentence_level
+类加载机制,has_part,解析,数据类型实体,JVM 与内存管理实体,类加载机制：加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.75,rule_pattern_sentence_level
+线程状态,has_part,阻塞,线程与并发实体,线程状态实体,线程状态：新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.75,rule_pattern_sentence_level
+Java,is_a,public,领域实体,关键字与修饰符实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,上下位关系,抽象类与接口,java.txt,0.748,rule_pattern_sentence_level
+Object,has_part,对象,面向对象核心实体,面向对象核心实体,类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例,枚举结构关系,面向对象基础,java.txt,0.748,rule_pattern_sentence_level
+跳转语句,has_part,continue,流程控制实体,流程控制实体,跳转语句：break、continue、return,枚举结构关系,流程控制,java.txt,0.748,rule_pattern_sentence_level
+注解,is_a,引用数据类型,领域实体,数据类型实体,引用数据类型包括：类、接口、数组、枚举、注解,上位包含关系,数据类型,java.txt,0.746,rule_pattern_sentence_level
+synchronized,has_part,静态方法,线程与并发实体,抽象类与接口实体,synchronized关键字：修饰实例方法、静态方法、代码块，实现互斥锁,枚举结构关系,线程与并发,java.txt,0.744,rule_pattern_sentence_level
+枚举,is_a,引用数据类型,数据类型实体,数据类型实体,引用数据类型包括：类、接口、数组、枚举、注解,上位包含关系,数据类型,java.txt,0.744,rule_pattern_sentence_level
+注解,has_part,@Deprecated,领域实体,注解实体,内置注解：@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface,枚举结构关系,注解,java.txt,0.744,rule_pattern_sentence_level
+LinkedHashSet,depends_on,红黑树,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,依赖关系,集合框架,java.txt,0.742,rule_pattern_sentence_level
+Set,depends_on,HashMap,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,依赖关系,集合框架,java.txt,0.742,rule_pattern_sentence_level
+extends,is_a,父类,关键字与修饰符实体,数据类型实体,继承使用extends关键字，Java是单继承，一个类只能有一个直接父类,上下位关系,继承与多态,java.txt,0.742,rule_pattern_sentence_level
+基本数据类型,has_part,short,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.742,rule_pattern_sentence_level
+引用数据类型,has_part,数组,数据类型实体,数据类型实体,引用数据类型包括：类、接口、数组、枚举、注解,枚举结构关系,数据类型,java.txt,0.742,rule_pattern_sentence_level
+数据类型,has_part,引用数据类型,数据类型实体,数据类型实体,Java有两种数据类型：基本数据类型和引用数据类型,枚举结构关系,数据类型,java.txt,0.742,rule_pattern_sentence_level
+abstract,has_part,具体方法,关键字与修饰符实体,抽象类与接口实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,整体部分关系,抽象类与接口,java.txt,0.738,rule_pattern_sentence_level
+互斥锁,implemented_by,synchronized,线程与并发实体,线程与并发实体,synchronized关键字：修饰实例方法、静态方法、代码块，实现互斥锁,实现关系,线程与并发,java.txt,0.738,rule_pattern_sentence_level
+多态的表现形式,has_part,接口引用,面向对象核心实体,数据类型实体,多态的表现形式：父类引用指向子类对象、接口引用指向实现类对象,枚举结构关系,继承与多态,java.txt,0.738,rule_pattern_sentence_level
+实例变量,is_a,变量,变量与成员实体,变量与成员实体,变量分为局部变量、成员变量（实例变量）和静态变量（类变量）,上位包含关系,变量与运算符,java.txt,0.738,rule_pattern_sentence_level
+构造方法,used_for,对象,面向对象核心实体,面向对象核心实体,构造方法：与类同名，没有返回值，用于初始化对象,用途关系,面向对象基础,java.txt,0.738,rule_pattern_sentence_level
+接口,is_a,Java,数据类型实体,领域实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,上下位关系,抽象类与接口,java.txt,0.736,rule_pattern_sentence_level
+条件分支,has_part,switch-case,流程控制实体,流程控制实体,条件分支：if-else、switch-case,枚举结构关系,流程控制,java.txt,0.736,rule_pattern_sentence_level
+访问控制修饰符,has_part,default,关键字与修饰符实体,关键字与修饰符实体,访问控制修饰符：private、default（无修饰符）、protected、public,枚举结构关系,关键字与修饰符,java.txt,0.736,rule_pattern_sentence_level
+元注解,used_for,@Target,领域实体,注解实体,元注解（用于注解的注解）：@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.734,rule_pattern_sentence_level
+接口,has_part,Set,数据类型实体,集合框架实体,Collection接口的子接口：List（有序可重复）、Set（无序不重复）、Queue（队列）,枚举结构关系,集合框架,java.txt,0.732,rule_pattern_sentence_level
+接口,has_part,成员变量,数据类型实体,变量与成员实体,抽象类和接口的区别：抽象类可以有状态（成员变量），接口不能有实例变量,枚举结构关系,抽象类与接口,java.txt,0.732,rule_pattern_sentence_level
+注解,has_part,@Target,领域实体,注解实体,元注解（用于注解的注解）：@Retention、@Target、@Documented、@Inherited,枚举结构关系,注解,java.txt,0.732,rule_pattern_sentence_level
+类加载机制,has_part,初始化,数据类型实体,JVM 与内存管理实体,类加载机制：加载、验证、准备、解析、初始化,枚举结构关系,JVM基础,java.txt,0.732,rule_pattern_sentence_level
+类型擦除,has_part,运行,数据类型实体,线程状态实体,类型擦除：泛型信息在编译后被移除，运行时没有泛型,枚举结构关系,泛型,java.txt,0.732,rule_pattern_sentence_level
+线程状态,has_part,等待,线程与并发实体,线程状态实体,线程状态：新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.732,rule_pattern_sentence_level
+int,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.726,rule_pattern_sentence_level
+引用数据类型,has_part,注解,数据类型实体,领域实体,引用数据类型包括：类、接口、数组、枚举、注解,枚举结构关系,数据类型,java.txt,0.726,rule_pattern_sentence_level
+标记-清除,is_a,GC,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,上位包含关系,JVM基础,java.txt,0.726,rule_pattern_sentence_level
+核心类,has_part,Field,数据类型实体,反射实体,核心类：Class、Method、Field、Constructor,枚举结构关系,反射,java.txt,0.726,rule_pattern_sentence_level
+引用数据类型,has_part,枚举,数据类型实体,数据类型实体,引用数据类型包括：类、接口、数组、枚举、注解,枚举结构关系,数据类型,java.txt,0.724,rule_pattern_sentence_level
+循环结构,has_part,do-while,流程控制实体,流程控制实体,循环结构：for、while、do-while,枚举结构关系,流程控制,java.txt,0.724,rule_pattern_sentence_level
+抽象方法,is_a,抽象类,抽象类与接口实体,数据类型实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,上位包含关系,抽象类与接口,java.txt,0.722,rule_pattern_sentence_level
+List,has_part,数组,集合框架实体,数据类型实体,List的实现类：ArrayList（数组结构，查询快增删慢）、LinkedList（链表结构，增删快查询慢）、Vector（线程安全，较少用）,枚举结构关系,集合框架,java.txt,0.72,rule_pattern_sentence_level
+接口,has_part,abstract,数据类型实体,关键字与修饰符实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,枚举结构关系,抽象类与接口,java.txt,0.72,rule_pattern_sentence_level
+Annotation,is_a,解析,注解实体,JVM 与内存管理实体,注解（Annotation）是一种元数据，不直接影响代码逻辑，但可以被工具或框架解析,上下位关系,注解,java.txt,0.718,rule_pattern_sentence_level
+String,is_a,对象,数组与字符串实体,面向对象核心实体,String类是不可变的（immutable），任何修改都会产生新对象,上下位关系,字符串,java.txt,0.718,rule_pattern_sentence_level
+volatile,has_part,指令重排序,线程与并发实体,线程与并发实体,volatile关键字：保证可见性，禁止指令重排序，但不保证原子性,枚举结构关系,线程与并发,java.txt,0.718,rule_pattern_sentence_level
+实例,is_a,abstract,面向对象核心实体,关键字与修饰符实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,上位包含关系,抽象类与接口,java.txt,0.716,rule_pattern_sentence_level
+Hashtable,implemented_by,Map,集合框架实体,集合框架实体,Map的实现类：HashMap（无序，允许null键值）、Hashtable（线程安全，不允许null）、TreeMap（有序）、LinkedHashMap（保持插入顺序）,实现关系,集合框架,java.txt,0.714,rule_pattern_sentence_level
+对象,has_part,getClass,面向对象核心实体,领域实体,"获取Class对象的方式：类名.class、对象.getClass()、Class.forName(""全限定名"")",枚举结构关系,反射,java.txt,0.714,rule_pattern_sentence_level
+线程状态,has_part,超时等待,线程与并发实体,线程状态实体,线程状态：新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.714,rule_pattern_sentence_level
+finally,is_a,JVM退出,异常处理实体,异常处理实体,finally块通常用于释放资源，无论是否发生异常都会执行（除非JVM退出）,上下位关系,异常处理,java.txt,0.71,rule_pattern_sentence_level
+LinkedHashSet,implemented_by,Set,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,实现关系,集合框架,java.txt,0.708,rule_pattern_sentence_level
+标记-清除,is_a,垃圾回收,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,上位包含关系,JVM基础,java.txt,0.708,rule_pattern_sentence_level
+GC,has_part,标记-清除,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,枚举结构关系,JVM基础,java.txt,0.706,rule_pattern_sentence_level
+Java,is_a,static,领域实体,关键字与修饰符实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,上下位关系,抽象类与接口,java.txt,0.706,rule_pattern_sentence_level
+基本数据类型,has_part,int,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.706,rule_pattern_sentence_level
+LinkedList,implemented_by,List,集合框架实体,集合框架实体,List的实现类：ArrayList（数组结构，查询快增删慢）、LinkedList（链表结构，增删快查询慢）、Vector（线程安全，较少用）,实现关系,集合框架,java.txt,0.702,rule_pattern_sentence_level
+long,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.702,rule_pattern_sentence_level
+多态的表现形式,has_part,实现类对象,面向对象核心实体,数据类型实体,多态的表现形式：父类引用指向子类对象、接口引用指向实现类对象,枚举结构关系,继承与多态,java.txt,0.702,rule_pattern_sentence_level
+抽象类,has_part,抽象方法,数据类型实体,抽象类与接口实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,枚举结构关系,抽象类与接口,java.txt,0.702,rule_pattern_sentence_level
+静态变量,is_a,变量,变量与成员实体,变量与成员实体,变量分为局部变量、成员变量（实例变量）和静态变量（类变量）,上位包含关系,变量与运算符,java.txt,0.702,rule_pattern_sentence_level
+线程池,has_part,ThreadPoolExecutor,线程与并发实体,线程与并发实体,线程池：Executor框架，常用类ThreadPoolExecutor,枚举结构关系,线程与并发,java.txt,0.7,rule_pattern_sentence_level
+Exception,is_a,父类,异常处理实体,数据类型实体,Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,上位包含关系,异常处理,java.txt,0.698,rule_pattern_sentence_level
+Throwable,is_a,Exception,异常处理实体,异常处理实体,Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,上下位关系,异常处理,java.txt,0.698,rule_pattern_sentence_level
+abstract,is_a,public,关键字与修饰符实体,关键字与修饰符实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,上下位关系,抽象类与接口,java.txt,0.698,rule_pattern_sentence_level
+abstract,has_part,实例,关键字与修饰符实体,面向对象核心实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,整体部分关系,抽象类与接口,java.txt,0.696,rule_pattern_sentence_level
+跳转语句,has_part,return,流程控制实体,流程控制实体,跳转语句：break、continue、return,枚举结构关系,流程控制,java.txt,0.694,rule_pattern_sentence_level
+具体方法,is_a,抽象类,抽象类与接口实体,数据类型实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,上位包含关系,抽象类与接口,java.txt,0.692,rule_pattern_sentence_level
+类变量,is_a,变量,数据类型实体,变量与成员实体,变量分为局部变量、成员变量（实例变量）和静态变量（类变量）,上位包含关系,变量与运算符,java.txt,0.692,rule_pattern_sentence_level
+FutureTask,implemented_by,Thread,线程与并发实体,线程与并发实体,创建线程的方式：继承Thread类、实现Runnable接口、实现Callable接口（配合FutureTask）,实现关系,线程与并发,java.txt,0.69,rule_pattern_sentence_level
+finally,used_for,JVM退出,异常处理实体,异常处理实体,finally块通常用于释放资源，无论是否发生异常都会执行（除非JVM退出）,用途关系,异常处理,java.txt,0.69,rule_pattern_sentence_level
+复制,is_a,GC,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,上位包含关系,JVM基础,java.txt,0.69,rule_pattern_sentence_level
+核心类,has_part,Constructor,数据类型实体,反射实体,核心类：Class、Method、Field、Constructor,枚举结构关系,反射,java.txt,0.69,rule_pattern_sentence_level
+Set,depends_on,LinkedHashSet,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,依赖关系,集合框架,java.txt,0.688,rule_pattern_sentence_level
+垃圾回收,has_part,标记-清除,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,整体部分关系,JVM基础,java.txt,0.688,rule_pattern_sentence_level
+继承,is_a,父类,面向对象核心实体,数据类型实体,继承使用extends关键字，Java是单继承，一个类只能有一个直接父类,上下位关系,继承与多态,java.txt,0.688,rule_pattern_sentence_level
+Class,is_a,实例,面向对象核心实体,面向对象核心实体,类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例,上下位关系,面向对象基础,java.txt,0.686,rule_pattern_sentence_level
+元注解,used_for,@Documented,领域实体,注解实体,元注解（用于注解的注解）：@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.686,rule_pattern_sentence_level
+注解,has_part,@Documented,领域实体,注解实体,元注解（用于注解的注解）：@Retention、@Target、@Documented、@Inherited,枚举结构关系,注解,java.txt,0.684,rule_pattern_sentence_level
+线程状态,has_part,终止,线程与并发实体,线程状态实体,线程状态：新建、就绪、运行、阻塞、等待、超时等待、终止,枚举结构关系,线程与并发,java.txt,0.684,rule_pattern_sentence_level
+Object,has_part,实例,面向对象核心实体,面向对象核心实体,类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例,枚举结构关系,面向对象基础,java.txt,0.682,rule_pattern_sentence_level
+Set,has_part,HashMap,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,枚举结构关系,集合框架,java.txt,0.682,rule_pattern_sentence_level
+基本数据类型,has_part,long,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.682,rule_pattern_sentence_level
+Java,is_a,final,领域实体,关键字与修饰符实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,上下位关系,抽象类与接口,java.txt,0.68,rule_pattern_sentence_level
+接口,is_a,默认方法,数据类型实体,抽象类与接口实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,上下位关系,抽象类与接口,java.txt,0.68,rule_pattern_sentence_level
+float,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.672,rule_pattern_sentence_level
+复制,is_a,垃圾回收,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,上位包含关系,JVM基础,java.txt,0.672,rule_pattern_sentence_level
+抽象类,has_part,具体方法,数据类型实体,抽象类与接口实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,枚举结构关系,抽象类与接口,java.txt,0.672,rule_pattern_sentence_level
+标记-整理,is_a,GC,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,上位包含关系,JVM基础,java.txt,0.672,rule_pattern_sentence_level
+注解,has_part,@SuppressWarnings,领域实体,注解实体,内置注解：@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface,枚举结构关系,注解,java.txt,0.672,rule_pattern_sentence_level
+类加载器,has_part,Extension ClassLoader,数据类型实体,JVM 与内存管理实体,类加载器：Bootstrap ClassLoader、Extension ClassLoader、Application ClassLoader，双亲委派模型,枚举结构关系,JVM基础,java.txt,0.672,rule_pattern_sentence_level
+GC,has_part,复制,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,枚举结构关系,JVM基础,java.txt,0.67,rule_pattern_sentence_level
+接口,has_part,Java,数据类型实体,领域实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,枚举结构关系,抽象类与接口,java.txt,0.666,rule_pattern_sentence_level
+接口,has_part,Queue,数据类型实体,集合框架实体,Collection接口的子接口：List（有序可重复）、Set（无序不重复）、Queue（队列）,枚举结构关系,集合框架,java.txt,0.666,rule_pattern_sentence_level
+接口,has_part,实例变量,数据类型实体,变量与成员实体,抽象类和接口的区别：抽象类可以有状态（成员变量），接口不能有实例变量,枚举结构关系,抽象类与接口,java.txt,0.666,rule_pattern_sentence_level
+abstract,is_a,static,关键字与修饰符实体,关键字与修饰符实体,接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final,上下位关系,抽象类与接口,java.txt,0.66,rule_pattern_sentence_level
+元注解,used_for,@Inherited,领域实体,注解实体,元注解（用于注解的注解）：@Retention、@Target、@Documented、@Inherited,用途关系,注解,java.txt,0.66,rule_pattern_sentence_level
+synchronized,has_part,互斥锁,线程与并发实体,线程与并发实体,synchronized关键字：修饰实例方法、静态方法、代码块，实现互斥锁,枚举结构关系,线程与并发,java.txt,0.658,rule_pattern_sentence_level
+volatile,has_part,原子性,线程与并发实体,线程与并发实体,volatile关键字：保证可见性，禁止指令重排序，但不保证原子性,枚举结构关系,线程与并发,java.txt,0.658,rule_pattern_sentence_level
+标记-整理,is_a,垃圾回收,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,上位包含关系,JVM基础,java.txt,0.654,rule_pattern_sentence_level
+GC,has_part,标记-整理,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,枚举结构关系,JVM基础,java.txt,0.652,rule_pattern_sentence_level
+HashMap,depends_on,红黑树,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,依赖关系,集合框架,java.txt,0.652,rule_pattern_sentence_level
+HashSet,depends_on,TreeSet,集合框架实体,集合框架实体,Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）,依赖关系,集合框架,java.txt,0.652,rule_pattern_sentence_level
+垃圾回收,has_part,复制,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,整体部分关系,JVM基础,java.txt,0.652,rule_pattern_sentence_level
+基本数据类型,has_part,float,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,枚举结构关系,数据类型,java.txt,0.652,rule_pattern_sentence_level
+访问控制修饰符,has_part,protected,关键字与修饰符实体,关键字与修饰符实体,访问控制修饰符：private、default（无修饰符）、protected、public,枚举结构关系,关键字与修饰符,java.txt,0.652,rule_pattern_sentence_level
+实例,is_a,抽象类,面向对象核心实体,数据类型实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,上位包含关系,抽象类与接口,java.txt,0.65,rule_pattern_sentence_level
+Exception,is_a,Throwable,异常处理实体,异常处理实体,Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,上位包含关系,异常处理,java.txt,0.648,rule_pattern_sentence_level
+double,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.636,rule_pattern_sentence_level
+分代收集,is_a,GC,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,上位包含关系,JVM基础,java.txt,0.636,rule_pattern_sentence_level
+垃圾回收,has_part,标记-整理,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,整体部分关系,JVM基础,java.txt,0.634,rule_pattern_sentence_level
+抽象类,has_part,实例,数据类型实体,面向对象核心实体,抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化,整体部分关系,抽象类与接口,java.txt,0.63,rule_pattern_sentence_level
+分代收集,is_a,垃圾回收,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,上位包含关系,JVM基础,java.txt,0.618,rule_pattern_sentence_level
+GC,has_part,分代收集,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,整体部分关系,JVM基础,java.txt,0.616,rule_pattern_sentence_level
+基本数据类型,has_part,double,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,整体部分关系,数据类型,java.txt,0.616,rule_pattern_sentence_level
+Unchecked Exception,is_a,Exception,异常处理实体,异常处理实体,Exception分为：Checked Exception（编译时异常，必须处理）和Unchecked Exception（运行时异常，不强制处理）,上位包含关系,异常处理,java.txt,0.612,rule_pattern_sentence_level
+boolean,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.61,rule_pattern_sentence_level
+char,is_a,基本数据类型,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,上位包含关系,数据类型,java.txt,0.61,rule_pattern_sentence_level
+垃圾回收,has_part,分代收集,JVM 与内存管理实体,JVM 与内存管理实体,垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集,整体部分关系,JVM基础,java.txt,0.598,rule_pattern_sentence_level
+基本数据类型,has_part,boolean,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,整体部分关系,数据类型,java.txt,0.59,rule_pattern_sentence_level
+基本数据类型,has_part,char,数据类型实体,数据类型实体,基本数据类型包括：byte、short、int、long、float、double、char、boolean,整体部分关系,数据类型,java.txt,0.59,rule_pattern_sentence_level

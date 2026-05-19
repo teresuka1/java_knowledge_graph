@@ -1,0 +1,155 @@
+1. 数据类型
+
+Java有两种数据类型：基本数据类型和引用数据类型。
+
+基本数据类型包括：byte、short、int、long、float、double、char、boolean。
+
+引用数据类型包括：类、接口、数组、枚举、注解。
+
+2. 变量与运算符
+
+变量分为局部变量、成员变量（实例变量）和静态变量（类变量）。
+
+运算符包括：算术运算符、关系运算符、逻辑运算符、位运算符、赋值运算符、三元运算符。
+
+3. 流程控制
+
+条件分支：if-else、switch-case。
+
+循环结构：for、while、do-while。
+
+跳转语句：break、continue、return。
+
+4. 面向对象基础
+
+三大特性：封装、继承、多态。
+
+类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例。
+
+构造方法：与类同名，没有返回值，用于初始化对象。
+
+方法重载（Overloading）：同一类中方法名相同，参数列表不同。
+
+方法重写（Overriding）：子类重新定义父类的方法。
+
+5. 关键字与修饰符
+
+访问控制修饰符：private、default（无修饰符）、protected、public。
+
+其他常用关键字：static、final、abstract、interface、extends、implements、this、super、new、instanceof。
+
+6. 继承与多态
+
+继承使用extends关键字，Java是单继承，一个类只能有一个直接父类。
+
+接口使用interface关键字，一个类可以实现多个接口（implements）。
+
+多态的表现形式：父类引用指向子类对象、接口引用指向实现类对象。
+
+向上转型（自动）和向下转型（强制）。
+
+7. 抽象类与接口
+
+抽象类：使用abstract修饰，可以包含抽象方法和具体方法，不能实例化。
+
+接口：所有方法默认是public abstract（Java 8后可以有默认方法和静态方法），字段默认是public static final。
+
+抽象类和接口的区别：抽象类可以有状态（成员变量），接口不能有实例变量；一个类只能继承一个抽象类，但可以实现多个接口。
+
+8. 数组
+
+数组是引用类型，长度固定，存储同一类型的数据。
+
+声明方式：int[] arr 或 int arr[]。
+
+数组的创建：new int[10] 或 {1,2,3}。
+
+多维数组：int[][] matrix。
+
+9. 字符串
+
+String类是不可变的（immutable），任何修改都会产生新对象。
+
+StringBuilder（线程不安全，效率高）和StringBuffer（线程安全，效率较低）。
+
+常用方法：length()、charAt()、substring()、equals()、indexOf()、split()等。
+
+10. 异常处理
+
+Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）。
+
+Exception分为：Checked Exception（编译时异常，必须处理）和Unchecked Exception（运行时异常，不强制处理）。
+
+关键字：try、catch、finally、throw、throws。
+
+finally块通常用于释放资源，无论是否发生异常都会执行（除非JVM退出）。
+
+11. 集合框架
+
+Collection接口的子接口：List（有序可重复）、Set（无序不重复）、Queue（队列）。
+
+Map接口：存储键值对，键不重复，值可重复。
+
+List的实现类：ArrayList（数组结构，查询快增删慢）、LinkedList（链表结构，增删快查询慢）、Vector（线程安全，较少用）。
+
+Set的实现类：HashSet（无序，基于HashMap）、LinkedHashSet（有序）、TreeSet（排序，基于红黑树）。
+
+Map的实现类：HashMap（无序，允许null键值）、Hashtable（线程安全，不允许null）、TreeMap（有序）、LinkedHashMap（保持插入顺序）。
+
+Collections工具类：提供排序、查找、同步化等静态方法。
+
+12. 泛型
+
+泛型提供了编译时的类型安全检查。
+
+泛型类：class Box<T> { ... }
+
+泛型方法：public <T> T getValue(T t) { ... }
+
+通配符：?（未知类型）、? extends T（T或T的子类）、? super T（T或T的父类）。
+
+类型擦除：泛型信息在编译后被移除，运行时没有泛型。
+
+13. 反射
+
+反射允许程序在运行时获取类的完整信息（方法、字段、构造器等）并动态调用。
+
+核心类：Class、Method、Field、Constructor。
+
+获取Class对象的方式：类名.class、对象.getClass()、Class.forName("全限定名")。
+
+反射可以绕过private访问限制（通过setAccessible(true)）。
+
+14. 注解
+
+注解（Annotation）是一种元数据，不直接影响代码逻辑，但可以被工具或框架解析。
+
+内置注解：@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface。
+
+元注解（用于注解的注解）：@Retention、@Target、@Documented、@Inherited。
+
+自定义注解：使用@interface关键字。
+
+15. 线程与并发
+
+创建线程的方式：继承Thread类、实现Runnable接口、实现Callable接口（配合FutureTask）。
+
+线程状态：新建、就绪、运行、阻塞、等待、超时等待、终止。
+
+synchronized关键字：修饰实例方法、静态方法、代码块，实现互斥锁。
+
+Lock接口：ReentrantLock，提供更灵活的锁操作（tryLock、lockInterruptibly等）。
+
+volatile关键字：保证可见性，禁止指令重排序，但不保证原子性。
+
+线程池：Executor框架，常用类ThreadPoolExecutor。
+
+16. JVM基础
+
+内存区域：堆（存放对象实例）、栈（存放局部变量和方法调用）、方法区（存放类信息、常量、静态变量）、程序计数器、本地方法栈。
+
+垃圾回收（GC）：主要回收堆内存，算法包括标记-清除、复制、标记-整理、分代收集。
+
+类加载机制：加载、验证、准备、解析、初始化。
+
+类加载器：Bootstrap ClassLoader、Extension ClassLoader、Application ClassLoader，双亲委派模型。
