@@ -1,0 +1,90 @@
+﻿head,relation,tail,head_type,tail_type,evidence,pattern_name,section_title,source_file,confidence,method
+HTTPS,depends_on,SSL/TLS,协议实体,机制与技术实体,"HTTPS 基于 SSL/TLS 加密,防窃听、篡改、冒充",依赖关系,1.2 HTTP 与 HTTPS 区别,cn.txt,0.846,relation_disambiguation_normalized
+HTTP/3,depends_on,QUIC,协议实体,协议实体,HTTP/3(基于 QUIC):新一代网页传输,依赖关系,3 基于 TCP/UDP 的应用层协议,cn.txt,0.826,relation_disambiguation_normalized
+Proxy Protocol,used_for,TCP,机制与技术实体,协议实体,"传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造",用途关系,2.2 获取客户端真实 IP,cn.txt,0.818,relation_disambiguation_normalized
+DHCP,has_part,客户端,协议实体,服务器与网络组件实体,"DHCP:客户端无 IP,无法建立 TCP 连接,且需广播",枚举结构关系,2 协议选择原则,cn.txt,0.804,relation_disambiguation_normalized
+DNS,has_part,域名解析,协议实体,地址与标识实体,"DNS:域名解析(默认 UDP,大包 / 区域传送用 TCP)",枚举结构关系,3 基于 TCP/UDP 的应用层协议,cn.txt,0.804,relation_disambiguation_normalized
+HTTP/2,has_part,传输层,协议实体,层级结构实体,"HTTP/2:传输层阻塞,TCP 要求按序交付,单个丢包阻塞整个连接的所有流",枚举结构关系,1.3 HTTP 队头阻塞详解,cn.txt,0.804,relation_disambiguation_normalized
+Host,has_part,服务器,报文字段与状态实体,服务器与网络组件实体,Host:服务器域名与端口,枚举结构关系,1.5 HTTP 常见请求头,cn.txt,0.804,relation_disambiguation_normalized
+TCP,has_part,可靠传输,协议实体,概念与特性实体,"TCP:可靠传输,通过序列号、确认应答 ACK、超时重传、流量控制、拥塞控制,保证数据无差错、不丢失、不重复、按序到达",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.804,relation_disambiguation_normalized
+TCP,has_part,有状态,协议实体,概念与特性实体,"TCP:有状态,两端需维护连接状态(序列号、窗口大小、已发送 / 已确认数据等)",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.804,relation_disambiguation_normalized
+TCP,has_part,面向字节流,协议实体,报文字段与状态实体,"TCP:面向字节流,将数据视为无结构字节流,可拆分 / 合并数据",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.804,relation_disambiguation_normalized
+TCP,has_part,面向连接,协议实体,概念与特性实体,"TCP:面向连接,传输前必须通过三次握手建立连接,传输后通过四次挥手释放连接",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.804,relation_disambiguation_normalized
+UDP,has_part,面向报文,协议实体,报文字段与状态实体,"UDP:面向报文,保留应用层数据边界,不拆分、不合并数据块",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.804,relation_disambiguation_normalized
+传输层,has_part,TCP,层级结构实体,协议实体,传输层:TCP、UDP、SCTP,枚举结构关系,2 各层常见协议,cn.txt,0.804,relation_disambiguation_normalized
+传输层,has_part,TCP Options,层级结构实体,机制与技术实体,"传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造",枚举结构关系,2.2 获取客户端真实 IP,cn.txt,0.804,relation_disambiguation_normalized
+应用层,has_part,HTTP,层级结构实体,协议实体,应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP,枚举结构关系,2 各层常见协议,cn.txt,0.804,relation_disambiguation_normalized
+应用层,has_part,X-Forwarded-For,层级结构实体,机制与技术实体,"应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP",枚举结构关系,2.2 获取客户端真实 IP,cn.txt,0.804,relation_disambiguation_normalized
+故障排查,has_part,PING,场景与应用实体,工具与命令实体,网络故障排查:PING 测连通性、tracert 测路由、nslookup 测 DNS、arp 查 MAC等,枚举结构关系,补充高频面试考点,cn.txt,0.804,relation_disambiguation_normalized
+网络层,has_part,IPv4,层级结构实体,协议实体,网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP,枚举结构关系,2 各层常见协议,cn.txt,0.804,relation_disambiguation_normalized
+网络接口层,has_part,以太网,层级结构实体,协议实体,网络接口层:以太网、Wi-Fi、PPP、MAC 协议,枚举结构关系,2 各层常见协议,cn.txt,0.804,relation_disambiguation_normalized
+HTTPS,depends_on,加密,协议实体,概念与特性实体,"HTTPS 基于 SSL/TLS 加密,防窃听、篡改、冒充",依赖关系,1.2 HTTP 与 HTTPS 区别,cn.txt,0.798,relation_disambiguation_normalized
+数据链路层,has_part,比特流,层级结构实体,报文字段与状态实体,"数据链路层:将比特流封装成帧,负责帧编码、差错纠正、物理寻址(MAC 地址),控制相邻节点间的数据传输",枚举结构关系,1.1 OSI 七层模型(国际标准化组织制定,cn.txt,0.798,relation_disambiguation_normalized
+BGP,used_for,自治系统,协议实体,服务器与网络组件实体,"BGP:边界网关协议,用于跨自治系统的路由交换",用途关系,5 常见路由协议,cn.txt,0.794,relation_disambiguation_normalized
+UDP,has_part,单播,协议实体,概念与特性实体,UDP:支持单播、一对多多播、一对所有广播,枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.792,relation_disambiguation_normalized
+传输层,has_part,OSI,层级结构实体,模型与体系结构实体,"传输层:与 OSI 传输层一致,提供端到端传输服务",枚举结构关系,1.2 TCP/IP 四层模型(实际互联网主流模型,cn.txt,0.792,relation_disambiguation_normalized
+四次挥手,has_part,报文,机制与技术实体,报文字段与状态实体,TCP 三次握手 / 四次挥手细节:报文标志位(SYN/ACK/FIN)、状态转换、超时处理、2MSL 等待原因,枚举结构关系,补充高频面试考点,cn.txt,0.792,relation_disambiguation_normalized
+多路复用,has_part,TCP,机制与技术实体,协议实体,"多路复用:单 TCP 连接并发传输多请求,解决应用层队头阻塞",枚举结构关系,1.1 HTTP 各版本演进,cn.txt,0.792,relation_disambiguation_normalized
+网络层,has_part,OSI,层级结构实体,模型与体系结构实体,"网络层:与 OSI 网络层一致,负责路由寻址",枚举结构关系,1.2 TCP/IP 四层模型(实际互联网主流模型,cn.txt,0.792,relation_disambiguation_normalized
+网络层,has_part,路由与寻址,层级结构实体,机制与技术实体,"网络层:负责路由与寻址,决定数据在网络中的传输路径,实现跨网络的数据包转发",枚举结构关系,1.1 OSI 七层模型(国际标准化组织制定,cn.txt,0.792,relation_disambiguation_normalized
+Host,has_part,域名,报文字段与状态实体,地址与标识实体,Host:服务器域名与端口,枚举结构关系,1.5 HTTP 常见请求头,cn.txt,0.786,relation_disambiguation_normalized
+应用层,has_part,OSI,层级结构实体,模型与体系结构实体,"应用层:对应 OSI 的应用层 + 表示层 + 会话层,实现具体的应用功能",枚举结构关系,1.2 TCP/IP 四层模型(实际互联网主流模型,cn.txt,0.786,relation_disambiguation_normalized
+网络接口层,has_part,OSI,层级结构实体,模型与体系结构实体,"网络接口层:对应 OSI 的数据链路层 + 物理层,负责物理传输与帧封装",枚举结构关系,1.2 TCP/IP 四层模型(实际互联网主流模型,cn.txt,0.786,relation_disambiguation_normalized
+头部压缩,has_part,QPACK,机制与技术实体,机制与技术实体,"头部压缩:QPACK 算法,比 HPACK 更高效",枚举结构关系,1.1 HTTP 各版本演进,cn.txt,0.784,relation_disambiguation_normalized
+传输层,has_part,UDP,层级结构实体,协议实体,传输层:TCP、UDP、SCTP,枚举结构关系,2 各层常见协议,cn.txt,0.78,relation_disambiguation_normalized
+网络接口层,has_part,Wi-Fi,层级结构实体,协议实体,网络接口层:以太网、Wi-Fi、PPP、MAC 协议,枚举结构关系,2 各层常见协议,cn.txt,0.78,relation_disambiguation_normalized
+ARP,has_part,广播,协议实体,概念与特性实体,ARP 工作流程:广播请求、单播响应、ARP 缓存,枚举结构关系,补充高频面试考点,cn.txt,0.774,relation_disambiguation_normalized
+应用层,has_part,HTTPS,层级结构实体,协议实体,应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP,枚举结构关系,2 各层常见协议,cn.txt,0.774,relation_disambiguation_normalized
+网络层,has_part,IPv6,层级结构实体,协议实体,网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP,枚举结构关系,2 各层常见协议,cn.txt,0.774,relation_disambiguation_normalized
+缓存机制,has_part,If-Modified-Since,概念与特性实体,报文字段与状态实体,缓存机制简陋:仅支持 If-Modified-Since、Expires,枚举结构关系,1.1 HTTP 各版本演进,cn.txt,0.768,relation_disambiguation_normalized
+TCP,has_part,序列号,协议实体,机制与技术实体,"TCP:可靠传输,通过序列号、确认应答 ACK、超时重传、流量控制、拥塞控制,保证数据无差错、不丢失、不重复、按序到达",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.762,relation_disambiguation_normalized
+UDP,has_part,应用层,协议实体,层级结构实体,"UDP:面向报文,保留应用层数据边界,不拆分、不合并数据块",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.762,relation_disambiguation_normalized
+X-Forwarded-For,used_for,HTTP,机制与技术实体,协议实体,"应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP",用途关系,2.2 获取客户端真实 IP,cn.txt,0.758,relation_disambiguation_normalized
+UDP,has_part,多播,协议实体,概念与特性实体,UDP:支持单播、一对多多播、一对所有广播,枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.756,relation_disambiguation_normalized
+传输层,has_part,SCTP,层级结构实体,协议实体,传输层:TCP、UDP、SCTP,枚举结构关系,2 各层常见协议,cn.txt,0.756,relation_disambiguation_normalized
+四次挥手,has_part,SYN,机制与技术实体,报文字段与状态实体,TCP 三次握手 / 四次挥手细节:报文标志位(SYN/ACK/FIN)、状态转换、超时处理、2MSL 等待原因,枚举结构关系,补充高频面试考点,cn.txt,0.756,relation_disambiguation_normalized
+QUIC,has_part,RTT,协议实体,版本端口与数值实体,QUIC 协议核心优势:0-RTT、连接迁移、流间无阻塞、内置加密,枚举结构关系,补充高频面试考点,cn.txt,0.75,relation_disambiguation_normalized
+公网 IP,implements,私有 IP,地址与标识实体,地址与标识实体,"作用:将内网私有 IP映射为公网公有 IP,实现多设备共享一个公网 IP 上网",实现关系,2.3 NAT(网络地址转换,cn.txt,0.75,relation_disambiguation_normalized
+HTTP/2,has_part,TCP,协议实体,协议实体,"HTTP/2:传输层阻塞,TCP 要求按序交付,单个丢包阻塞整个连接的所有流",枚举结构关系,1.3 HTTP 队头阻塞详解,cn.txt,0.748,relation_disambiguation_normalized
+加密,is_a,表示层,概念与特性实体,层级结构实体,"表示层:负责数据处理,包括编解码、加密解密、压缩解压缩,保证数据能被正确识别",上位包含关系,1.1 OSI 七层模型(国际标准化组织制定,cn.txt,0.746,relation_disambiguation_normalized
+ARP,has_part,单播,协议实体,概念与特性实体,ARP 工作流程:广播请求、单播响应、ARP 缓存,枚举结构关系,补充高频面试考点,cn.txt,0.744,relation_disambiguation_normalized
+故障排查,has_part,tracert,场景与应用实体,工具与命令实体,网络故障排查:PING 测连通性、tracert 测路由、nslookup 测 DNS、arp 查 MAC等,枚举结构关系,补充高频面试考点,cn.txt,0.744,relation_disambiguation_normalized
+网络层,has_part,ARP,层级结构实体,协议实体,网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP,枚举结构关系,2 各层常见协议,cn.txt,0.744,relation_disambiguation_normalized
+网络接口层,has_part,PPP,层级结构实体,协议实体,网络接口层:以太网、Wi-Fi、PPP、MAC 协议,枚举结构关系,2 各层常见协议,cn.txt,0.744,relation_disambiguation_normalized
+TCP,has_part,确认应答 ACK,协议实体,机制与技术实体,"TCP:可靠传输,通过序列号、确认应答 ACK、超时重传、流量控制、拥塞控制,保证数据无差错、不丢失、不重复、按序到达",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.738,relation_disambiguation_normalized
+应用层,has_part,FTP,层级结构实体,协议实体,应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP,枚举结构关系,2 各层常见协议,cn.txt,0.738,relation_disambiguation_normalized
+DNS,has_part,UDP,协议实体,协议实体,"DNS:域名解析(默认 UDP,大包 / 区域传送用 TCP)",枚举结构关系,3 基于 TCP/UDP 的应用层协议,cn.txt,0.736,relation_disambiguation_normalized
+网络接口层,has_part,数据链路层,层级结构实体,层级结构实体,"网络接口层:对应 OSI 的数据链路层 + 物理层,负责物理传输与帧封装",枚举结构关系,1.2 TCP/IP 四层模型(实际互联网主流模型,cn.txt,0.736,relation_disambiguation_normalized
+TCP,has_part,三次握手,协议实体,机制与技术实体,"TCP:面向连接,传输前必须通过三次握手建立连接,传输后通过四次挥手释放连接",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.732,relation_disambiguation_normalized
+四次挥手,has_part,ACK,机制与技术实体,报文字段与状态实体,TCP 三次握手 / 四次挥手细节:报文标志位(SYN/ACK/FIN)、状态转换、超时处理、2MSL 等待原因,枚举结构关系,补充高频面试考点,cn.txt,0.732,relation_disambiguation_normalized
+X-Forwarded-For,used_for,SMTP,机制与技术实体,协议实体,"应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP",用途关系,2.2 获取客户端真实 IP,cn.txt,0.728,relation_disambiguation_normalized
+QUIC,has_part,连接迁移,协议实体,机制与技术实体,QUIC 协议核心优势:0-RTT、连接迁移、流间无阻塞、内置加密,枚举结构关系,补充高频面试考点,cn.txt,0.726,relation_disambiguation_normalized
+表示层,has_part,加密,层级结构实体,概念与特性实体,"表示层:负责数据处理,包括编解码、加密解密、压缩解压缩,保证数据能被正确识别",整体部分关系,1.1 OSI 七层模型(国际标准化组织制定,cn.txt,0.726,relation_disambiguation_normalized
+TCP,has_part,字节流,协议实体,报文字段与状态实体,"TCP:面向字节流,将数据视为无结构字节流,可拆分 / 合并数据",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.72,relation_disambiguation_normalized
+网络层,has_part,ICMP,层级结构实体,协议实体,网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP,枚举结构关系,2 各层常见协议,cn.txt,0.72,relation_disambiguation_normalized
+网络接口层,has_part,MAC 协议,层级结构实体,协议实体,网络接口层:以太网、Wi-Fi、PPP、MAC 协议,枚举结构关系,2 各层常见协议,cn.txt,0.72,relation_disambiguation_normalized
+头部压缩,has_part,HPACK,机制与技术实体,机制与技术实体,"头部压缩:QPACK 算法,比 HPACK 更高效",枚举结构关系,1.1 HTTP 各版本演进,cn.txt,0.718,relation_disambiguation_normalized
+ARP,has_part,ARP 缓存,协议实体,机制与技术实体,ARP 工作流程:广播请求、单播响应、ARP 缓存,枚举结构关系,补充高频面试考点,cn.txt,0.714,relation_disambiguation_normalized
+UDP,has_part,广播,协议实体,概念与特性实体,UDP:支持单播、一对多多播、一对所有广播,枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.714,relation_disambiguation_normalized
+传输层,has_part,Proxy Protocol,层级结构实体,机制与技术实体,"传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造",枚举结构关系,2.2 获取客户端真实 IP,cn.txt,0.714,relation_disambiguation_normalized
+应用层,has_part,SMTP,层级结构实体,协议实体,应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP,枚举结构关系,2 各层常见协议,cn.txt,0.714,relation_disambiguation_normalized
+数据链路层,has_part,差错纠正,层级结构实体,机制与技术实体,"数据链路层:将比特流封装成帧,负责帧编码、差错纠正、物理寻址(MAC 地址),控制相邻节点间的数据传输",枚举结构关系,1.1 OSI 七层模型(国际标准化组织制定,cn.txt,0.714,relation_disambiguation_normalized
+TCP Options,used_for,TCP,机制与技术实体,协议实体,"传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造",用途关系,2.2 获取客户端真实 IP,cn.txt,0.71,relation_disambiguation_normalized
+四次挥手,has_part,FIN,机制与技术实体,报文字段与状态实体,TCP 三次握手 / 四次挥手细节:报文标志位(SYN/ACK/FIN)、状态转换、超时处理、2MSL 等待原因,枚举结构关系,补充高频面试考点,cn.txt,0.708,relation_disambiguation_normalized
+DHCP,has_part,TCP,协议实体,协议实体,"DHCP:客户端无 IP,无法建立 TCP 连接,且需广播",枚举结构关系,2 协议选择原则,cn.txt,0.706,relation_disambiguation_normalized
+应用层,has_part,表示层,层级结构实体,层级结构实体,"应用层:对应 OSI 的应用层 + 表示层 + 会话层,实现具体的应用功能",枚举结构关系,1.2 TCP/IP 四层模型(实际互联网主流模型,cn.txt,0.7,relation_disambiguation_normalized
+多路复用,has_part,应用层,机制与技术实体,层级结构实体,"多路复用:单 TCP 连接并发传输多请求,解决应用层队头阻塞",枚举结构关系,1.1 HTTP 各版本演进,cn.txt,0.696,relation_disambiguation_normalized
+网络层,has_part,IGMP,层级结构实体,协议实体,网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP,枚举结构关系,2 各层常见协议,cn.txt,0.69,relation_disambiguation_normalized
+网络接口层,has_part,物理层,层级结构实体,层级结构实体,"网络接口层:对应 OSI 的数据链路层 + 物理层,负责物理传输与帧封装",枚举结构关系,1.2 TCP/IP 四层模型(实际互联网主流模型,cn.txt,0.688,relation_disambiguation_normalized
+TCP,has_part,超时重传,协议实体,机制与技术实体,"TCP:可靠传输,通过序列号、确认应答 ACK、超时重传、流量控制、拥塞控制,保证数据无差错、不丢失、不重复、按序到达",枚举结构关系,1 TCP 与 UDP 详细区别,cn.txt,0.684,relation_disambiguation_normalized
+应用层,has_part,POP3,层级结构实体,协议实体,应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP,枚举结构关系,2 各层常见协议,cn.txt,0.684,relation_disambiguation_normalized
+数据链路层,has_part,物理寻址,层级结构实体,机制与技术实体,"数据链路层:将比特流封装成帧,负责帧编码、差错纠正、物理寻址(MAC 地址),控制相邻节点间的数据传输",枚举结构关系,1.1 OSI 七层模型(国际标准化组织制定,cn.txt,0.684,relation_disambiguation_normalized
+多路复用,has_part,队头阻塞,机制与技术实体,概念与特性实体,"多路复用:单 TCP 连接并发传输多请求,解决应用层队头阻塞",枚举结构关系,1.1 HTTP 各版本演进,cn.txt,0.678,relation_disambiguation_normalized
+DHCP,has_part,广播,协议实体,概念与特性实体,"DHCP:客户端无 IP,无法建立 TCP 连接,且需广播",枚举结构关系,2 协议选择原则,cn.txt,0.672,relation_disambiguation_normalized
+故障排查,has_part,nslookup,场景与应用实体,工具与命令实体,网络故障排查:PING 测连通性、tracert 测路由、nslookup 测 DNS、arp 查 MAC等,枚举结构关系,补充高频面试考点,cn.txt,0.672,relation_disambiguation_normalized
+应用层,has_part,会话层,层级结构实体,层级结构实体,"应用层:对应 OSI 的应用层 + 表示层 + 会话层,实现具体的应用功能",枚举结构关系,1.2 TCP/IP 四层模型(实际互联网主流模型,cn.txt,0.664,relation_disambiguation_normalized
+应用层,used_for,HTTP,层级结构实体,协议实体,"应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP",用途关系,2.2 获取客户端真实 IP,cn.txt,0.662,relation_disambiguation_normalized
+传输层,used_for,TCP,层级结构实体,协议实体,"传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造",用途关系,2.2 获取客户端真实 IP,cn.txt,0.66,relation_disambiguation_normalized
+应用层,used_for,SMTP,层级结构实体,协议实体,"应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP",用途关系,2.2 获取客户端真实 IP,cn.txt,0.66,relation_disambiguation_normalized
+根 DNS 服务器,has_part,服务器,服务器与网络组件实体,服务器与网络组件实体,"根 DNS 服务器:13 组 IP,对应全球 1700 + 台服务器,提供顶级域服务器 IP",枚举结构关系,5.2 DNS 服务器层级,cn.txt,0.658,relation_disambiguation_normalized
+DNS,has_part,TCP,协议实体,协议实体,"DNS:域名解析(默认 UDP,大包 / 区域传送用 TCP)",枚举结构关系,3 基于 TCP/UDP 的应用层协议,cn.txt,0.646,relation_disambiguation_normalized

@@ -1,0 +1,5 @@
+﻿main_entity,property_name,merged_values,value_count,evidence,source_file,domain,confidence,disambiguation_method
+Java,概念定义,单继承，一个类只能有一个直接父类,1,继承使用extends关键字，Java是单继承，一个类只能有一个直接父类,java.txt,java,0.92,直接保留单值
+Throwable,概念定义,顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,1,Throwable是顶级父类，下面分为Error（严重错误，不可处理）和Exception（可处理）,java.txt,java,0.92,直接保留单值
+对象,概念定义,类的实例,1,类（Class）和对象（Object）的关系：类是对象的模板，对象是类的实例,java.txt,java,0.92,直接保留单值
+数组,概念定义,引用类型，长度固定，存储同一类型的数据,1,数组是引用类型，长度固定，存储同一类型的数据,java.txt,java,0.92,直接保留单值

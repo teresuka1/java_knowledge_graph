@@ -1,0 +1,11 @@
+﻿main_entity,property_name,merged_values,value_count,evidence,source_file,domain,confidence,disambiguation_method
+线性结构,概念定义,指数据元素之间存在一对一关系的结构，主要包括数组、链表、栈和队列,2,线性结构是指数据元素之间存在一对一关系的结构，主要包括数组、链表、栈和队列,data_structure.txt,data_structure,0.92,基于 Jaccard Token Overlap 的贪心融合
+非线性结构,概念定义,指数据元素之间存在一对多关系的结构，主要包括树和图,2,非线性结构是指数据元素之间存在一对多关系的结构，主要包括树和图,data_structure.txt,data_structure,0.92,基于 Jaccard Token Overlap 的贪心融合
+二叉树,概念定义,一种特殊的树结构，每个节点最多有两个子节点,1,二叉树是一种特殊的树结构，每个节点最多有两个子节点,data_structure.txt,data_structure,0.92,直接保留单值
+哈希表,概念定义,一种基于哈希函数的数据结构，用于实现高效的查找操作,1,哈希表是一种基于哈希函数的数据结构，用于实现高效的查找操作,data_structure.txt,data_structure,0.92,直接保留单值
+布隆过滤器,概念定义,一种空间效率较高的概率型数据结构，用于判断元素是否存在于集合中，但存在一定的误判率,1,布隆过滤器是一种空间效率较高的概率型数据结构，用于判断元素是否存在于集合中，但存在一定的误判率,data_structure.txt,data_structure,0.92,直接保留单值
+数据结构,概念定义,计算机科学中的基础领域，主要研究数据的组织、存储和操作方式,1,数据结构是计算机科学中的基础领域，主要研究数据的组织、存储和操作方式,data_structure.txt,data_structure,0.92,直接保留单值
+数据结构,用途作用,不同场景,1,在实际应用中，数据结构常用于不同场景,data_structure.txt,data_structure,0.85,直接保留单值
+数组,概念定义,一种顺序存储结构，其特点是支持随机访问，但插入和删除操作效率较低,1,数组是一种顺序存储结构，其特点是支持随机访问，但插入和删除操作效率较低,data_structure.txt,data_structure,0.92,直接保留单值
+链表,概念定义,一种链式存储结构，每个节点包含数据域和指针域，适合频繁插入和删除的场景,1,链表是一种链式存储结构，每个节点包含数据域和指针域，适合频繁插入和删除的场景,data_structure.txt,data_structure,0.92,直接保留单值
+队列,概念定义,一种先进先出（FIFO）的数据结构，常用于任务调度和缓冲区管理,1,队列是一种先进先出（FIFO）的数据结构，常用于任务调度和缓冲区管理,data_structure.txt,data_structure,0.92,直接保留单值

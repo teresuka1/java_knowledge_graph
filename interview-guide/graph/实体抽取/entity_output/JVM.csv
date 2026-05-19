@@ -1,0 +1,218 @@
+﻿main_entity,entity_type,mention_count,mentions,source_file
+JVM,领域实体,46,JVM | jvm,JVM.txt
+虚拟机栈,内存区域实体,10,虚拟机栈,JVM.txt
+堆,内存区域实体,71,堆,JVM.txt
+元空间,内存区域实体,12,元空间,JVM.txt
+程序计数器,内存区域实体,6,程序计数器,JVM.txt
+本地方法栈,内存区域实体,4,本地方法栈,JVM.txt
+直接内存,内存区域实体,6,直接内存,JVM.txt
+本地内存,内存区域实体,3,本地内存,JVM.txt
+线程,线程与私有性相关实体,62,线程,JVM.txt
+指令地址,线程与私有性相关实体,2,指令地址,JVM.txt
+Native 方法,线程与私有性相关实体,2,Native 方法,JVM.txt
+Java 虚拟机,领域实体,12,Java 虚拟机 | Java虚拟机,JVM.txt
+OutOfMemoryError,异常与错误实体,15,OutOfMemoryError,JVM.txt
+Java 虚拟机栈,领域实体,6,Java 虚拟机栈 | Java虚拟机栈,JVM.txt
+栈帧,栈与栈帧相关实体,18,栈帧,JVM.txt
+局部变量,栈与栈帧相关实体,13,局部变量,JVM.txt
+局部变量表,栈与栈帧相关实体,2,局部变量表,JVM.txt
+操作数栈,栈与栈帧相关实体,4,操作数栈,JVM.txt
+动态链接,栈与栈帧相关实体,2,动态链接,JVM.txt
+方法出口,栈与栈帧相关实体,2,方法出口,JVM.txt
+StackOverFlowError,异常与错误实体,5,StackOverFlowError | StackOverflowError,JVM.txt
+使用,类加载过程实体,60,使用,JVM.txt
+Java 堆,内存区域实体,6,Java 堆 | Java堆,JVM.txt
+线程共享,线程与私有性相关实体,1,线程共享,JVM.txt
+对象实例,对象与字符串相关实体,4,对象实例,JVM.txt
+新生代,堆结构实体,27,新生代,JVM.txt
+老年代,堆结构实体,36,老年代,JVM.txt
+Eden 区,堆结构实体,7,Eden 区 | Eden区,JVM.txt
+Survivor 区,堆结构实体,5,Survivor 区 | Survivor区,JVM.txt
+From Survivor,堆结构实体,1,From Survivor,JVM.txt
+To Survivor,堆结构实体,1,To Survivor,JVM.txt
+方法区,内存区域实体,18,方法区,JVM.txt
+加载,类加载过程实体,146,加载,JVM.txt
+类信息,方法区与元数据相关实体,5,类信息,JVM.txt
+常量,方法区与元数据相关实体,26,常量,JVM.txt
+静态变量,方法区与元数据相关实体,12,静态变量,JVM.txt
+运行时常量池,内存区域实体,4,运行时常量池,JVM.txt
+常量池,方法区与元数据相关实体,14,常量池,JVM.txt
+字面量,对象与字符串相关实体,3,字面量,JVM.txt
+符号引用,方法区与元数据相关实体,12,符号引用,JVM.txt
+NIO,工具与排查实体,2,NIO,JVM.txt
+堆外内存,内存区域实体,2,堆外内存,JVM.txt
+JVM内存模型,领域实体,2,JVM内存模型,JVM.txt
+方法调用,栈与栈帧相关实体,8,方法调用,JVM.txt
+方法返回地址,栈与栈帧相关实体,2,方法返回地址,JVM.txt
+临时数据,栈与栈帧相关实体,1,临时数据,JVM.txt
+数组,对象与字符串相关实体,6,数组,JVM.txt
+垃圾回收,领域实体,58,垃圾回收,JVM.txt
+Garbage Collection,垃圾回收核心概念实体,2,Garbage Collection,JVM.txt
+gc,领域实体,85,GC | gc,JVM.txt
+栈溢出,场景与问题实体,12,栈溢出,JVM.txt
+堆溢出,内存区域实体,7,堆溢出,JVM.txt
+大对象,对象与字符串相关实体,18,大对象,JVM.txt
+指针,栈与栈帧相关实体,3,指针,JVM.txt
+Young Generation,堆结构实体,1,Young Generation,JVM.txt
+Minor GC,垃圾回收核心概念实体,14,Minor GC | minorGC,JVM.txt
+S0,堆结构实体,2,S0,JVM.txt
+S1,堆结构实体,2,S1,JVM.txt
+Old Generation,堆结构实体,2,Old Generation,JVM.txt
+Tenured Generation,堆结构实体,1,Tenured Generation,JVM.txt
+Major GC,垃圾回收核心概念实体,6,Major GC | majorGC,JVM.txt
+Full GC,垃圾回收核心概念实体,8,Full GC,JVM.txt
+存活对象,垃圾回收核心概念实体,14,存活对象,JVM.txt
+Metaspace,异常与错误实体,2,Metaspace,JVM.txt
+类的元数据信息,方法区与元数据相关实体,2,类的元数据信息,JVM.txt
+大对象区,堆结构实体,3,大对象区,JVM.txt
+内存溢出,领域实体,17,内存溢出,JVM.txt
+Humongous Objects,堆结构实体,2,Humongous Objects,JVM.txt
+G1,垃圾回收器实体,32,G1,JVM.txt
+大对象通,对象与字符串相关实体,2,大对象通,JVM.txt
+内存碎片,场景与问题实体,10,内存碎片,JVM.txt
+时间片,线程与私有性相关实体,4,时间片,JVM.txt
+解析方法,类加载过程实体,1,解析方法,JVM.txt
+栈帧创建,栈与栈帧相关实体,2,栈帧创建,JVM.txt
+解析,类加载过程实体,8,解析,JVM.txt
+解析方法调用,栈与栈帧相关实体,1,解析方法调用,JVM.txt
+类型信息,方法区与元数据相关实体,1,类型信息,JVM.txt
+即时编译器编译后的代码缓存,方法区与元数据相关实体,1,即时编译器编译后的代码缓存,JVM.txt
+类初始化,类加载过程实体,3,类初始化,JVM.txt
+初始化,类加载过程实体,20,初始化,JVM.txt
+方法字节码,方法区与元数据相关实体,2,方法字节码,JVM.txt
+常量池缓,方法区与元数据相关实体,1,常量池缓,JVM.txt
+直接引用,方法区与元数据相关实体,8,直接引用,JVM.txt
+类加载,领域实体,63,类加载,JVM.txt
+常量池缓存,方法区与元数据相关实体,1,常量池缓存,JVM.txt
+String,对象与字符串相关实体,16,String,JVM.txt
+字符串常量池,对象与字符串相关实体,3,字符串常量池,JVM.txt
+new 指令,对象与字符串相关实体,3,new 指令 | new指令,JVM.txt
+字符串对象,对象与字符串相关实体,2,字符串对象,JVM.txt
+强引用指,引用类型实体,1,强引用指,JVM.txt
+软引用可,引用类型实体,1,软引用可,JVM.txt
+强引用,引用类型实体,6,强引用,JVM.txt
+弱引用可,引用类型实体,1,弱引用可,JVM.txt
+软引用,引用类型实体,2,软引用,JVM.txt
+SoftReference,引用类型实体,1,SoftReference,JVM.txt
+虚引用也,引用类型实体,1,虚引用也,JVM.txt
+弱引用,引用类型实体,14,弱引用,JVM.txt
+WeakReference,引用类型实体,2,WeakReference,JVM.txt
+虚引用,引用类型实体,3,虚引用,JVM.txt
+幻影引用,引用类型实体,1,幻影引用,JVM.txt
+PhantomReference,引用类型实体,1,PhantomReference,JVM.txt
+ReferenceQueue,引用类型实体,1,ReferenceQueue,JVM.txt
+缓存系统,场景与问题实体,2,缓存系统,JVM.txt
+对象引用,栈与栈帧相关实体,6,对象引用,JVM.txt
+弱引用的使用场景,引用类型实体,1,弱引用的使用场景,JVM.txt
+对象池,场景与问题实体,3,对象池,JVM.txt
+内存泄漏,领域实体,10,内存泄漏,JVM.txt
+静态集合,场景与问题实体,4,静态集合,JVM.txt
+事件监听,场景与问题实体,2,事件监听,JVM.txt
+HashMap,代码与容器实体,1,HashMap,JVM.txt
+ArrayList,代码与容器实体,2,ArrayList,JVM.txt
+List,代码与容器实体,13,List | list,JVM.txt
+堆内存溢,内存区域实体,1,堆内存溢,JVM.txt
+深度递归,场景与问题实体,1,深度递归,JVM.txt
+Java heap space,异常与错误实体,2,Java heap space,JVM.txt
+元空间溢出,内存区域实体,1,元空间溢出,JVM.txt
+JavaNIO,工具与排查实体,1,JavaNIO,JVM.txt
+netty,工具与排查实体,1,netty,JVM.txt
+Direct buffer memory,异常与错误实体,1,Direct buffer memory,JVM.txt
+遇到堆溢,内存区域实体,1,遇到堆溢,JVM.txt
+-XX:+HeapDumpOnOutOfMemoryError,JVM参数与配置实体,1,-XX:+HeapDumpOnOutOfMemoryError,JVM.txt
+HeapDumpOnOutOfMemoryError,工具与排查实体,1,HeapDumpOnOutOfMemoryError,JVM.txt
+-XX:HeapDumpPath,JVM参数与配置实体,1,-XX:HeapDumpPath,JVM.txt
+HeapDumpPath,工具与排查实体,1,HeapDumpPath,JVM.txt
+heapdump.hprof,工具与排查实体,1,heapdump.hprof,JVM.txt
+MAT,工具与排查实体,1,MAT,JVM.txt
+Memory Analyzer Tool,工具与排查实体,1,Memory Analyzer Tool,JVM.txt
+JProfiler,工具与排查实体,1,JProfiler,JVM.txt
+单例,代码与容器实体,2,单例,JVM.txt
+大堆内存,内存区域实体,3,大堆内存,JVM.txt
+-Xms,JVM参数与配置实体,2,-Xms,JVM.txt
+-Xmx,JVM参数与配置实体,2,-Xmx,JVM.txt
+分批处理,场景与问题实体,1,分批处理,JVM.txt
+连接,类加载过程实体,7,连接,JVM.txt
+批量处理任务,场景与问题实体,1,批量处理任务,JVM.txt
+无限递归,场景与问题实体,3,无限递归,JVM.txt
+-Xss,JVM参数与配置实体,2,-Xss,JVM.txt
+优化方法栈帧,栈与栈帧相关实体,1,优化方法栈帧,JVM.txt
+树形结构遍历,场景与问题实体,1,树形结构遍历,JVM.txt
+static,代码与容器实体,7,static,JVM.txt
+ClassLoader,类加载器实体,11,ClassLoader,JVM.txt
+VisualVM,工具与排查实体,1,VisualVM,JVM.txt
+懒加载,类加载过程实体,1,懒加载,JVM.txt
+finally,代码与容器实体,4,finally,JVM.txt
+try-with-resources,代码与容器实体,1,try-with-resources,JVM.txt
+ThreadLocal,代码与容器实体,14,ThreadLocal,JVM.txt
+ThreadLocalMap,代码与容器实体,3,ThreadLocalMap,JVM.txt
+key,代码与容器实体,5,key,JVM.txt
+value,代码与容器实体,6,value,JVM.txt
+Entry,代码与容器实体,4,Entry,JVM.txt
+类加载检查,领域实体,2,类加载检查,JVM.txt
+类加载过程,领域实体,6,类加载过程,JVM.txt
+初始化零值,类加载过程实体,2,初始化零值,JVM.txt
+对象头,对象与字符串相关实体,5,对象头,JVM.txt
+GC 分代年龄,对象与字符串相关实体,1,GC 分代年龄,JVM.txt
+启动类加载器,领域实体,14,启动类加载器,JVM.txt
+扩展类加载器,领域实体,5,扩展类加载器,JVM.txt
+应用程序类加载器,领域实体,2,应用程序类加载器,JVM.txt
+自定义类加载器,领域实体,4,自定义类加载器,JVM.txt
+双亲委派,领域实体,8,双亲委派,JVM.txt
+双亲委派模型,领域实体,4,双亲委派模型,JVM.txt
+类加载机制,领域实体,1,类加载机制,JVM.txt
+Bootstrap ClassLoader,类加载器实体,2,Bootstrap ClassLoader,JVM.txt
+Extension ClassLoader,类加载器实体,2,Extension ClassLoader,JVM.txt
+验证,类加载过程实体,9,验证,JVM.txt
+简化了加载流程,类加载过程实体,1,简化了加载流程,JVM.txt
+卸载,类加载过程实体,8,卸载,JVM.txt
+准备,类加载过程实体,4,准备,JVM.txt
+全限定名,类加载过程实体,1,全限定名,JVM.txt
+.class文件,类加载过程实体,1,.class文件,JVM.txt
+二进制字节流,类加载过程实体,2,二进制字节流,JVM.txt
+静态存储结构,类加载过程实体,1,静态存储结构,JVM.txt
+方法区运行时的数据结构,内存区域实体,1,方法区运行时的数据结构,JVM.txt
+Class 对象,类加载过程实体,7,Class 对象 | Class对象,JVM.txt
+加载该类,类加载过程实体,1,加载该类,JVM.txt
+加载阶段,类加载过程实体,1,加载阶段,JVM.txt
+首先是加载阶段,类加载过程实体,1,首先是加载阶段,JVM.txt
+ClassFormatError,异常与错误实体,1,ClassFormatError,JVM.txt
+VerifyError,异常与错误实体,1,VerifyError,JVM.txt
+最后是初始化阶段,类加载过程实体,1,最后是初始化阶段,JVM.txt
+System.gc,领域实体,2,System.gc,JVM.txt
+引用计数法,垃圾回收核心概念实体,2,引用计数法,JVM.txt
+可达性分析,垃圾回收核心概念实体,6,可达性分析,JVM.txt
+Reachability Analysis,垃圾回收核心概念实体,1,Reachability Analysis,JVM.txt
+GC Roots,垃圾回收核心概念实体,11,GC Roots,JVM.txt
+复制算法,垃圾回收算法实体,16,复制算法,JVM.txt
+Serial,垃圾回收器实体,8,Serial,JVM.txt
+CMS,垃圾回收器实体,17,CMS,JVM.txt
+ZGC,垃圾回收器实体,1,ZGC,JVM.txt
+Shenandoah,垃圾回收器实体,1,Shenandoah,JVM.txt
+标记-清除算法,垃圾回收算法实体,5,标记-清除算法,JVM.txt
+分代回收,垃圾回收核心概念实体,2,分代回收,JVM.txt
+标记-整理算法,垃圾回收算法实体,6,标记-整理算法,JVM.txt
+分代回收算法,垃圾回收核心概念实体,1,分代回收算法,JVM.txt
+-XX:MaxTenuringThreshold,JVM参数与配置实体,1,-XX:MaxTenuringThreshold,JVM.txt
+ParNew,垃圾回收器实体,3,ParNew,JVM.txt
+Parallel Scavenge,垃圾回收器实体,2,Parallel Scavenge,JVM.txt
+Serial Old,垃圾回收器实体,1,Serial Old,JVM.txt
+Parallel Old,垃圾回收器实体,1,Parallel Old,JVM.txt
+Concurrent Mark Sweep,垃圾回收器实体,1,Concurrent Mark Sweep,JVM.txt
+Garbage First,垃圾回收器实体,1,Garbage First,JVM.txt
+标记阶段,垃圾回收算法实体,10,标记阶段,JVM.txt
+转移阶段,垃圾回收算法实体,6,转移阶段,JVM.txt
+初始标记,垃圾回收算法实体,4,初始标记,JVM.txt
+并发标记,垃圾回收算法实体,5,并发标记,JVM.txt
+重定位阶段,垃圾回收算法实体,2,重定位阶段,JVM.txt
+清理阶段,垃圾回收算法实体,5,清理阶段,JVM.txt
+Young GC,垃圾回收核心概念实体,3,Young GC,JVM.txt
+复制阶段,垃圾回收算法实体,2,复制阶段,JVM.txt
+初始标记阶段,垃圾回收算法实体,2,初始标记阶段,JVM.txt
+STW,垃圾回收核心概念实体,8,STW,JVM.txt
+再标记,垃圾回收算法实体,2,再标记,JVM.txt
+再标记阶段,垃圾回收算法实体,1,再标记阶段,JVM.txt
+垃圾对象,垃圾回收核心概念实体,1,垃圾对象,JVM.txt
+Stop The World,垃圾回收核心概念实体,1,Stop The World,JVM.txt
+浮动垃圾,垃圾回收核心概念实体,6,浮动垃圾,JVM.txt
+Concurrent Mode Failure,异常与错误实体,1,Concurrent Mode Failure,JVM.txt

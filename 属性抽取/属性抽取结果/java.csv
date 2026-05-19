@@ -1,0 +1,78 @@
+﻿entity,attribute_name,attribute_value,section_title,source_file,evidence,confidence,method,source_relation
+Throwable,定义,父类,异常处理,java.txt,"Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)",0.892,relation_disambiguation_reclassified,is_a
+对象,定义,实例,面向对象基础,java.txt,"类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例",0.872,relation_disambiguation_reclassified,is_a
+接口,修饰符,public,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.862,relation_disambiguation_reclassified,is_a
+extends,继承特性,单继承,继承与多态,java.txt,"继承使用extends关键字,Java是单继承,一个类只能有一个直接父类",0.856,relation_disambiguation_reclassified,is_a
+String,特性,immutable,字符串,java.txt,"String类是不可变的(immutable),任何修改都会产生新对象",0.848,relation_disambiguation_reclassified,is_a
+Error,定义,父类,异常处理,java.txt,"Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)",0.83,relation_disambiguation_reclassified,is_a
+Throwable,特性,Error,异常处理,java.txt,"Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)",0.83,relation_disambiguation_reclassified,is_a
+Checked Exception,特性,Exception,异常处理,java.txt,"Exception分为:Checked Exception(编译时异常,必须处理)和Unchecked Exception(运行时异常,不强制处理)",0.822,relation_disambiguation_reclassified,is_a
+抽象类,修饰符,abstract,抽象类与接口,java.txt,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",0.822,relation_disambiguation_reclassified,has_part
+Collections,工具类,提供排序、查找、同步化等静态方法,集合框架,java.txt,Collections工具类:提供排序、查找、同步化等静态方法,0.82,attribute_extraction_colon_pattern,
+Java,定义,父类,继承与多态,java.txt,"继承使用extends关键字,Java是单继承,一个类只能有一个直接父类",0.82,relation_disambiguation_reclassified,is_a
+Map,接口,"存储键值对,键不重复,值可重复",集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.82,attribute_extraction_colon_pattern,
+多维数组,属性,int[][] matrix,数组,java.txt,多维数组:int[][] matrix,0.82,attribute_extraction_colon_pattern,
+接口,修饰符,abstract,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.82,relation_disambiguation_reclassified,is_a
+接口,属性,"存储键值对,键不重复,值可重复",集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.82,attribute_extraction_colon_pattern,
+数组的创建,属性,"new int[10] 或 {1,2,3",数组,java.txt,"数组的创建:new int[10] 或 {1,2,3}",0.82,attribute_extraction_colon_pattern,
+方法重载,Overloading,"同一类中方法名相同,参数列表不同",面向对象基础,java.txt,"方法重载(Overloading):同一类中方法名相同,参数列表不同",0.82,attribute_extraction_colon_pattern,
+条件分支,属性,if-else、switch-case,流程控制,java.txt,条件分支:if-else、switch-case,0.82,attribute_extraction_colon_pattern,
+泛型方法,属性,public <T> T getValue(T t){,泛型,java.txt,泛型方法:public <T> T getValue(T t) { ... },0.82,attribute_extraction_colon_pattern,
+泛型类,属性,class Box<T> {,泛型,java.txt,泛型类:class Box<T> { ... },0.82,attribute_extraction_colon_pattern,
+类型擦除,属性,"泛型信息在编译后被移除,运行时没有泛型",泛型,java.txt,"类型擦除:泛型信息在编译后被移除,运行时没有泛型",0.82,attribute_extraction_colon_pattern,
+抽象方法,修饰符,abstract,抽象类与接口,java.txt,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",0.818,relation_disambiguation_reclassified,is_a
+访问控制修饰符,修饰符,private,关键字与修饰符,java.txt,访问控制修饰符:private、default(无修饰符)、protected、public,0.814,relation_disambiguation_reclassified,has_part
+synchronized,定义,实例,线程与并发,java.txt,"synchronized关键字:修饰实例方法、静态方法、代码块,实现互斥锁",0.804,relation_disambiguation_reclassified,has_part
+具体方法,修饰符,abstract,抽象类与接口,java.txt,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",0.788,relation_disambiguation_reclassified,is_a
+Object,定义,实例,面向对象基础,java.txt,"类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例",0.782,relation_disambiguation_reclassified,is_a
+继承,继承特性,单继承,继承与多态,java.txt,"继承使用extends关键字,Java是单继承,一个类只能有一个直接父类",0.782,relation_disambiguation_reclassified,is_a
+Collection,特性,有序,集合框架,java.txt,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),0.78,attribute_extraction_feature_pattern,
+Collection,特性,无序,集合框架,java.txt,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),0.78,attribute_extraction_feature_pattern,
+Collection,特性,可重复,集合框架,java.txt,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),0.78,attribute_extraction_feature_pattern,
+Collection,特性,不重复,集合框架,java.txt,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),0.78,attribute_extraction_feature_pattern,
+Error,特性,Throwable,异常处理,java.txt,"Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)",0.78,relation_disambiguation_reclassified,is_a
+HashMap,特性,线程安全,集合框架,java.txt,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",0.78,attribute_extraction_feature_pattern,
+HashMap,特性,有序,集合框架,java.txt,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",0.78,attribute_extraction_feature_pattern,
+HashMap,特性,无序,集合框架,java.txt,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",0.78,attribute_extraction_feature_pattern,
+HashSet,特性,有序,集合框架,java.txt,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",0.78,attribute_extraction_feature_pattern,
+HashSet,特性,无序,集合框架,java.txt,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",0.78,attribute_extraction_feature_pattern,
+List,特性,线程安全,集合框架,java.txt,"List的实现类:ArrayList(数组结构,查询快增删慢)、LinkedList(链表结构,增删快查询慢)、Vector(线程安全,较少用)",0.78,attribute_extraction_feature_pattern,
+Map,特性,可重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
+Map,特性,不重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
+Map,特性,线程安全,集合框架,java.txt,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",0.78,attribute_extraction_feature_pattern,
+Map,特性,有序,集合框架,java.txt,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",0.78,attribute_extraction_feature_pattern,
+Map,特性,无序,集合框架,java.txt,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",0.78,attribute_extraction_feature_pattern,
+Set,特性,有序,集合框架,java.txt,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",0.78,attribute_extraction_feature_pattern,
+Set,特性,无序,集合框架,java.txt,"Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)",0.78,attribute_extraction_feature_pattern,
+String,特性,不可变,字符串,java.txt,"String类是不可变的(immutable),任何修改都会产生新对象",0.78,attribute_extraction_feature_pattern,
+String,特性,可变,字符串,java.txt,"String类是不可变的(immutable),任何修改都会产生新对象",0.78,attribute_extraction_feature_pattern,
+StringBuilder,特性,线程安全,字符串,java.txt,"StringBuilder(线程不安全,效率高)和StringBuffer(线程安全,效率较低)",0.78,attribute_extraction_feature_pattern,
+接口,特性,可重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
+接口,特性,不重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
+键值对,特性,可重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
+键值对,特性,不重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
+Java,修饰符,public,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.778,relation_disambiguation_reclassified,is_a
+extends,定义,父类,继承与多态,java.txt,"继承使用extends关键字,Java是单继承,一个类只能有一个直接父类",0.772,relation_disambiguation_reclassified,is_a
+接口,特性,Java,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.766,relation_disambiguation_reclassified,is_a
+访问控制修饰符,默认值,default,关键字与修饰符,java.txt,访问控制修饰符:private、default(无修饰符)、protected、public,0.766,relation_disambiguation_reclassified,has_part
+Annotation,定义,"一种元数据,不直接影响代码逻辑,但可以被工具或框架解析",注解,java.txt,"注解(Annotation)是一种元数据,不直接影响代码逻辑,但可以被工具或框架解析",0.76,attribute_extraction_definition_pattern,
+String,定义,"不可变的(immutable),任何修改都会产生新对象",字符串,java.txt,"String类是不可变的(immutable),任何修改都会产生新对象",0.76,attribute_extraction_definition_pattern,
+数组,定义,"引用类型,长度固定,存储同一类型的数据",数组,java.txt,"数组是引用类型,长度固定,存储同一类型的数据",0.76,attribute_extraction_definition_pattern,
+标记-清除,特性,GC,JVM基础,java.txt,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",0.756,relation_disambiguation_reclassified,is_a
+实例,修饰符,abstract,抽象类与接口,java.txt,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",0.746,relation_disambiguation_reclassified,is_a
+Java,修饰符,static,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.736,relation_disambiguation_reclassified,is_a
+Exception,定义,父类,异常处理,java.txt,"Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)",0.728,relation_disambiguation_reclassified,is_a
+Throwable,特性,Exception,异常处理,java.txt,"Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)",0.728,relation_disambiguation_reclassified,is_a
+abstract,修饰符,public,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.728,relation_disambiguation_reclassified,is_a
+abstract,定义,实例,抽象类与接口,java.txt,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",0.726,relation_disambiguation_reclassified,has_part
+复制,特性,GC,JVM基础,java.txt,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",0.72,relation_disambiguation_reclassified,is_a
+继承,定义,父类,继承与多态,java.txt,"继承使用extends关键字,Java是单继承,一个类只能有一个直接父类",0.718,relation_disambiguation_reclassified,is_a
+Class,定义,实例,面向对象基础,java.txt,"类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例",0.716,relation_disambiguation_reclassified,is_a
+Java,修饰符,final,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.71,relation_disambiguation_reclassified,is_a
+标记-整理,特性,GC,JVM基础,java.txt,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",0.702,relation_disambiguation_reclassified,is_a
+abstract,修饰符,static,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.69,relation_disambiguation_reclassified,is_a
+访问控制修饰符,修饰符,protected,关键字与修饰符,java.txt,访问控制修饰符:private、default(无修饰符)、protected、public,0.682,relation_disambiguation_reclassified,has_part
+Exception,特性,Throwable,异常处理,java.txt,"Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)",0.678,relation_disambiguation_reclassified,is_a
+分代收集,特性,GC,JVM基础,java.txt,"垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集",0.666,relation_disambiguation_reclassified,is_a
+抽象类,定义,实例,抽象类与接口,java.txt,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",0.66,relation_disambiguation_reclassified,has_part
+Unchecked Exception,特性,Exception,异常处理,java.txt,"Exception分为:Checked Exception(编译时异常,必须处理)和Unchecked Exception(运行时异常,不强制处理)",0.642,relation_disambiguation_reclassified,is_a

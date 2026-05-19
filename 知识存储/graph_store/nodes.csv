@@ -1,0 +1,1177 @@
+﻿id,name,type,domain,mentionCount,mentions,sourceFile,attributeCount
+JVM:加载,加载,类加载过程实体,JVM,146,加载,JVM.txt,0
+JVM:gc,gc,领域实体,JVM,85,gc | GC,JVM.txt,0
+JVM:堆,堆,内存区域实体,JVM,71,堆,JVM.txt,0
+JVM:类加载,类加载,领域实体,JVM,63,类加载,JVM.txt,0
+JVM:线程,线程,线程与私有性相关实体,JVM,62,线程,JVM.txt,0
+JVM:使用,使用,类加载过程实体,JVM,60,使用,JVM.txt,0
+JVM:垃圾回收,垃圾回收,领域实体,JVM,58,垃圾回收,JVM.txt,0
+JVM:JVM,JVM,领域实体,JVM,46,JVM | jvm,JVM.txt,0
+JVM:老年代,老年代,堆结构实体,JVM,36,老年代,JVM.txt,0
+JVM:G1,G1,垃圾回收器实体,JVM,32,G1,JVM.txt,0
+JVM:新生代,新生代,堆结构实体,JVM,27,新生代,JVM.txt,1
+JVM:常量,常量,方法区与元数据相关实体,JVM,26,常量,JVM.txt,0
+JVM:初始化,初始化,类加载过程实体,JVM,20,初始化,JVM.txt,1
+JVM:大对象,大对象,对象与字符串相关实体,JVM,18,大对象,JVM.txt,1
+JVM:方法区,方法区,内存区域实体,JVM,18,方法区,JVM.txt,1
+JVM:栈帧,栈帧,栈与栈帧相关实体,JVM,18,栈帧,JVM.txt,0
+JVM:CMS,CMS,垃圾回收器实体,JVM,17,CMS,JVM.txt,0
+JVM:内存溢出,内存溢出,领域实体,JVM,17,内存溢出,JVM.txt,1
+JVM:String,String,对象与字符串相关实体,JVM,16,String,JVM.txt,0
+JVM:复制算法,复制算法,垃圾回收算法实体,JVM,16,复制算法,JVM.txt,0
+JVM:OutOfMemoryError,OutOfMemoryError,异常与错误实体,JVM,15,OutOfMemoryError,JVM.txt,0
+JVM:Minor GC,Minor GC,垃圾回收核心概念实体,JVM,14,Minor GC | minorGC,JVM.txt,0
+JVM:ThreadLocal,ThreadLocal,代码与容器实体,JVM,14,ThreadLocal,JVM.txt,0
+JVM:启动类加载器,启动类加载器,领域实体,JVM,14,启动类加载器,JVM.txt,0
+JVM:存活对象,存活对象,垃圾回收核心概念实体,JVM,14,存活对象,JVM.txt,0
+JVM:常量池,常量池,方法区与元数据相关实体,JVM,14,常量池,JVM.txt,0
+JVM:弱引用,弱引用,引用类型实体,JVM,14,弱引用,JVM.txt,2
+JVM:List,List,代码与容器实体,JVM,13,List | list,JVM.txt,0
+JVM:局部变量,局部变量,栈与栈帧相关实体,JVM,13,局部变量,JVM.txt,0
+JVM:Java 虚拟机,Java 虚拟机,领域实体,JVM,12,Java 虚拟机 | Java虚拟机,JVM.txt,0
+JVM:元空间,元空间,内存区域实体,JVM,12,元空间,JVM.txt,0
+JVM:栈溢出,栈溢出,场景与问题实体,JVM,12,栈溢出,JVM.txt,0
+JVM:符号引用,符号引用,方法区与元数据相关实体,JVM,12,符号引用,JVM.txt,1
+JVM:静态变量,静态变量,方法区与元数据相关实体,JVM,12,静态变量,JVM.txt,0
+JVM:ClassLoader,ClassLoader,类加载器实体,JVM,11,ClassLoader,JVM.txt,0
+JVM:GC Roots,GC Roots,垃圾回收核心概念实体,JVM,11,GC Roots,JVM.txt,0
+JVM:内存泄漏,内存泄漏,领域实体,JVM,10,内存泄漏,JVM.txt,1
+JVM:内存碎片,内存碎片,场景与问题实体,JVM,10,内存碎片,JVM.txt,0
+JVM:标记阶段,标记阶段,垃圾回收算法实体,JVM,10,标记阶段,JVM.txt,0
+JVM:虚拟机栈,虚拟机栈,内存区域实体,JVM,10,虚拟机栈,JVM.txt,0
+JVM:验证,验证,类加载过程实体,JVM,9,验证,JVM.txt,0
+JVM:Full GC,Full GC,垃圾回收核心概念实体,JVM,8,Full GC,JVM.txt,0
+JVM:STW,STW,垃圾回收核心概念实体,JVM,8,STW,JVM.txt,0
+JVM:Serial,Serial,垃圾回收器实体,JVM,8,Serial,JVM.txt,0
+JVM:卸载,卸载,类加载过程实体,JVM,8,卸载,JVM.txt,0
+JVM:双亲委派,双亲委派,领域实体,JVM,8,双亲委派,JVM.txt,0
+JVM:方法调用,方法调用,栈与栈帧相关实体,JVM,8,方法调用,JVM.txt,0
+JVM:直接引用,直接引用,方法区与元数据相关实体,JVM,8,直接引用,JVM.txt,0
+JVM:解析,解析,类加载过程实体,JVM,8,解析,JVM.txt,0
+JVM:Class 对象,Class 对象,类加载过程实体,JVM,7,Class 对象 | Class对象,JVM.txt,0
+JVM:Eden 区,Eden 区,堆结构实体,JVM,7,Eden 区 | Eden区,JVM.txt,0
+JVM:static,static,代码与容器实体,JVM,7,static,JVM.txt,0
+JVM:堆溢出,堆溢出,内存区域实体,JVM,7,堆溢出,JVM.txt,0
+JVM:连接,连接,类加载过程实体,JVM,7,连接,JVM.txt,0
+JVM:Java 堆,Java 堆,内存区域实体,JVM,6,Java 堆 | Java堆,JVM.txt,0
+JVM:Java 虚拟机栈,Java 虚拟机栈,领域实体,JVM,6,Java 虚拟机栈 | Java虚拟机栈,JVM.txt,0
+JVM:Major GC,Major GC,垃圾回收核心概念实体,JVM,6,Major GC | majorGC,JVM.txt,0
+JVM:value,value,代码与容器实体,JVM,6,value,JVM.txt,0
+JVM:可达性分析,可达性分析,垃圾回收核心概念实体,JVM,6,可达性分析,JVM.txt,0
+JVM:对象引用,对象引用,栈与栈帧相关实体,JVM,6,对象引用,JVM.txt,0
+JVM:强引用,强引用,引用类型实体,JVM,6,强引用,JVM.txt,0
+JVM:数组,数组,对象与字符串相关实体,JVM,6,数组,JVM.txt,0
+JVM:标记-整理算法,标记-整理算法,垃圾回收算法实体,JVM,6,标记-整理算法,JVM.txt,0
+JVM:浮动垃圾,浮动垃圾,垃圾回收核心概念实体,JVM,6,浮动垃圾,JVM.txt,0
+JVM:直接内存,直接内存,内存区域实体,JVM,6,直接内存,JVM.txt,0
+JVM:程序计数器,程序计数器,内存区域实体,JVM,6,程序计数器,JVM.txt,0
+JVM:类加载过程,类加载过程,领域实体,JVM,6,类加载过程,JVM.txt,0
+JVM:转移阶段,转移阶段,垃圾回收算法实体,JVM,6,转移阶段,JVM.txt,1
+JVM:StackOverFlowError,StackOverFlowError,异常与错误实体,JVM,5,StackOverFlowError | StackOverflowError,JVM.txt,0
+JVM:Survivor 区,Survivor 区,堆结构实体,JVM,5,Survivor 区 | Survivor区,JVM.txt,0
+JVM:key,key,代码与容器实体,JVM,5,key,JVM.txt,1
+JVM:对象头,对象头,对象与字符串相关实体,JVM,5,对象头,JVM.txt,0
+JVM:并发标记,并发标记,垃圾回收算法实体,JVM,5,并发标记,JVM.txt,0
+JVM:扩展类加载器,扩展类加载器,领域实体,JVM,5,扩展类加载器,JVM.txt,0
+JVM:标记-清除算法,标记-清除算法,垃圾回收算法实体,JVM,5,标记-清除算法,JVM.txt,0
+JVM:清理阶段,清理阶段,垃圾回收算法实体,JVM,5,清理阶段,JVM.txt,0
+JVM:类信息,类信息,方法区与元数据相关实体,JVM,5,类信息,JVM.txt,0
+JVM:Entry,Entry,代码与容器实体,JVM,4,Entry,JVM.txt,0
+JVM:finally,finally,代码与容器实体,JVM,4,finally,JVM.txt,0
+JVM:准备,准备,类加载过程实体,JVM,4,准备,JVM.txt,0
+JVM:初始标记,初始标记,垃圾回收算法实体,JVM,4,初始标记,JVM.txt,0
+JVM:双亲委派模型,双亲委派模型,领域实体,JVM,4,双亲委派模型,JVM.txt,0
+JVM:对象实例,对象实例,对象与字符串相关实体,JVM,4,对象实例,JVM.txt,0
+JVM:操作数栈,操作数栈,栈与栈帧相关实体,JVM,4,操作数栈,JVM.txt,0
+JVM:时间片,时间片,线程与私有性相关实体,JVM,4,时间片,JVM.txt,0
+JVM:本地方法栈,本地方法栈,内存区域实体,JVM,4,本地方法栈,JVM.txt,0
+JVM:自定义类加载器,自定义类加载器,领域实体,JVM,4,自定义类加载器,JVM.txt,0
+JVM:运行时常量池,运行时常量池,内存区域实体,JVM,4,运行时常量池,JVM.txt,0
+JVM:静态集合,静态集合,场景与问题实体,JVM,4,静态集合,JVM.txt,0
+JVM:ParNew,ParNew,垃圾回收器实体,JVM,3,ParNew,JVM.txt,1
+JVM:ThreadLocalMap,ThreadLocalMap,代码与容器实体,JVM,3,ThreadLocalMap,JVM.txt,0
+JVM:Young GC,Young GC,垃圾回收核心概念实体,JVM,3,Young GC,JVM.txt,0
+JVM:new 指令,new 指令,对象与字符串相关实体,JVM,3,new 指令 | new指令,JVM.txt,0
+JVM:分代回收,分代回收,垃圾回收核心概念实体,JVM,3,分代回收 | 分代回收算法,JVM.txt,0
+JVM:大堆内存,大堆内存,内存区域实体,JVM,3,大堆内存,JVM.txt,0
+JVM:大对象区,大对象区,堆结构实体,JVM,3,大对象区,JVM.txt,0
+JVM:字符串常量池,字符串常量池,对象与字符串相关实体,JVM,3,字符串常量池,JVM.txt,0
+JVM:字面量,字面量,对象与字符串相关实体,JVM,3,字面量,JVM.txt,0
+JVM:对象池,对象池,场景与问题实体,JVM,3,对象池,JVM.txt,0
+JVM:指针,指针,栈与栈帧相关实体,JVM,3,指针,JVM.txt,0
+JVM:无限递归,无限递归,场景与问题实体,JVM,3,无限递归,JVM.txt,0
+JVM:本地内存,本地内存,内存区域实体,JVM,3,本地内存,JVM.txt,0
+JVM:类初始化,类初始化,类加载过程实体,JVM,3,类初始化,JVM.txt,0
+JVM:虚引用,虚引用,引用类型实体,JVM,3,虚引用,JVM.txt,0
+JVM:-Xms,-Xms,JVM参数与配置实体,JVM,2,-Xms,JVM.txt,0
+JVM:-Xmx,-Xmx,JVM参数与配置实体,JVM,2,-Xmx,JVM.txt,0
+JVM:-Xss,-Xss,JVM参数与配置实体,JVM,2,-Xss,JVM.txt,0
+JVM:ArrayList,ArrayList,代码与容器实体,JVM,2,ArrayList,JVM.txt,0
+JVM:Bootstrap ClassLoader,Bootstrap ClassLoader,类加载器实体,JVM,2,Bootstrap ClassLoader,JVM.txt,0
+JVM:Extension ClassLoader,Extension ClassLoader,类加载器实体,JVM,2,Extension ClassLoader,JVM.txt,0
+JVM:Garbage Collection,Garbage Collection,垃圾回收核心概念实体,JVM,2,Garbage Collection,JVM.txt,0
+JVM:Humongous Objects,Humongous Objects,堆结构实体,JVM,2,Humongous Objects,JVM.txt,0
+JVM:JVM内存模型,JVM内存模型,领域实体,JVM,2,JVM内存模型,JVM.txt,0
+JVM:Java heap space,Java heap space,异常与错误实体,JVM,2,Java heap space,JVM.txt,0
+JVM:Metaspace,Metaspace,异常与错误实体,JVM,2,Metaspace,JVM.txt,0
+JVM:NIO,NIO,工具与排查实体,JVM,2,NIO,JVM.txt,0
+JVM:Native 方法,Native 方法,线程与私有性相关实体,JVM,2,Native 方法,JVM.txt,0
+JVM:Old Generation,Old Generation,堆结构实体,JVM,2,Old Generation,JVM.txt,0
+JVM:Parallel Scavenge,Parallel Scavenge,垃圾回收器实体,JVM,2,Parallel Scavenge,JVM.txt,0
+JVM:S0,S0,堆结构实体,JVM,2,S0,JVM.txt,0
+JVM:S1,S1,堆结构实体,JVM,2,S1,JVM.txt,0
+JVM:System.gc,System.gc,领域实体,JVM,2,System.gc,JVM.txt,0
+JVM:WeakReference,WeakReference,引用类型实体,JVM,2,WeakReference,JVM.txt,0
+JVM:事件监听,事件监听,场景与问题实体,JVM,2,事件监听,JVM.txt,0
+JVM:二进制字节流,二进制字节流,类加载过程实体,JVM,2,二进制字节流,JVM.txt,0
+JVM:再标记,再标记,垃圾回收算法实体,JVM,2,再标记,JVM.txt,0
+JVM:初始化零值,初始化零值,类加载过程实体,JVM,2,初始化零值,JVM.txt,0
+JVM:初始标记阶段,初始标记阶段,垃圾回收算法实体,JVM,2,初始标记阶段,JVM.txt,1
+JVM:动态链接,动态链接,栈与栈帧相关实体,JVM,2,动态链接,JVM.txt,0
+JVM:单例,单例,代码与容器实体,JVM,2,单例,JVM.txt,0
+JVM:堆外内存,堆外内存,内存区域实体,JVM,2,堆外内存,JVM.txt,0
+JVM:复制阶段,复制阶段,垃圾回收算法实体,JVM,2,复制阶段,JVM.txt,0
+JVM:大对象通,大对象通,对象与字符串相关实体,JVM,2,大对象通,JVM.txt,0
+JVM:字符串对象,字符串对象,对象与字符串相关实体,JVM,2,字符串对象,JVM.txt,0
+JVM:局部变量表,局部变量表,栈与栈帧相关实体,JVM,2,局部变量表,JVM.txt,0
+JVM:常量池缓存,常量池缓存,方法区与元数据相关实体,JVM,2,常量池缓 | 常量池缓存,JVM.txt,0
+JVM:应用程序类加载器,应用程序类加载器,领域实体,JVM,2,应用程序类加载器,JVM.txt,0
+JVM:引用计数法,引用计数法,垃圾回收核心概念实体,JVM,2,引用计数法,JVM.txt,0
+JVM:指令地址,指令地址,线程与私有性相关实体,JVM,2,指令地址,JVM.txt,0
+JVM:方法出口,方法出口,栈与栈帧相关实体,JVM,2,方法出口,JVM.txt,0
+JVM:方法字节码,方法字节码,方法区与元数据相关实体,JVM,2,方法字节码,JVM.txt,0
+JVM:方法返回地址,方法返回地址,栈与栈帧相关实体,JVM,2,方法返回地址,JVM.txt,0
+JVM:栈帧创建,栈帧创建,栈与栈帧相关实体,JVM,2,栈帧创建,JVM.txt,0
+JVM:类加载检查,类加载检查,领域实体,JVM,2,类加载检查,JVM.txt,0
+JVM:类的元数据信息,类的元数据信息,方法区与元数据相关实体,JVM,2,类的元数据信息,JVM.txt,0
+JVM:缓存系统,缓存系统,场景与问题实体,JVM,2,缓存系统,JVM.txt,0
+JVM:软引用,软引用,引用类型实体,JVM,2,软引用,JVM.txt,0
+JVM:重定位阶段,重定位阶段,垃圾回收算法实体,JVM,2,重定位阶段,JVM.txt,0
+JVM:-XX:+HeapDumpOnOutOfMemoryError,-XX:+HeapDumpOnOutOfMemoryError,JVM参数与配置实体,JVM,1,-XX:+HeapDumpOnOutOfMemoryError,JVM.txt,0
+JVM:-XX:HeapDumpPath,-XX:HeapDumpPath,JVM参数与配置实体,JVM,1,-XX:HeapDumpPath,JVM.txt,0
+JVM:-XX:MaxTenuringThreshold,-XX:MaxTenuringThreshold,JVM参数与配置实体,JVM,1,-XX:MaxTenuringThreshold,JVM.txt,0
+JVM:ClassFormatError,ClassFormatError,异常与错误实体,JVM,1,ClassFormatError,JVM.txt,0
+JVM:Concurrent Mark Sweep,Concurrent Mark Sweep,垃圾回收器实体,JVM,1,Concurrent Mark Sweep,JVM.txt,0
+JVM:Concurrent Mode Failure,Concurrent Mode Failure,异常与错误实体,JVM,1,Concurrent Mode Failure,JVM.txt,0
+JVM:Direct buffer memory,Direct buffer memory,异常与错误实体,JVM,1,Direct buffer memory,JVM.txt,0
+JVM:From Survivor,From Survivor,堆结构实体,JVM,1,From Survivor,JVM.txt,0
+JVM:GC 分代年龄,GC 分代年龄,对象与字符串相关实体,JVM,1,GC 分代年龄,JVM.txt,0
+JVM:Garbage First,Garbage First,垃圾回收器实体,JVM,1,Garbage First,JVM.txt,0
+JVM:HashMap,HashMap,代码与容器实体,JVM,1,HashMap,JVM.txt,0
+JVM:HeapDumpOnOutOfMemoryError,HeapDumpOnOutOfMemoryError,工具与排查实体,JVM,1,HeapDumpOnOutOfMemoryError,JVM.txt,0
+JVM:HeapDumpPath,HeapDumpPath,工具与排查实体,JVM,1,HeapDumpPath,JVM.txt,0
+JVM:JProfiler,JProfiler,工具与排查实体,JVM,1,JProfiler,JVM.txt,0
+JVM:JavaNIO,JavaNIO,工具与排查实体,JVM,1,JavaNIO,JVM.txt,0
+JVM:MAT,MAT,工具与排查实体,JVM,1,MAT,JVM.txt,0
+JVM:Memory Analyzer Tool,Memory Analyzer Tool,工具与排查实体,JVM,1,Memory Analyzer Tool,JVM.txt,0
+JVM:Parallel Old,Parallel Old,垃圾回收器实体,JVM,1,Parallel Old,JVM.txt,0
+JVM:PhantomReference,PhantomReference,引用类型实体,JVM,1,PhantomReference,JVM.txt,0
+JVM:Reachability Analysis,Reachability Analysis,垃圾回收核心概念实体,JVM,1,Reachability Analysis,JVM.txt,0
+JVM:ReferenceQueue,ReferenceQueue,引用类型实体,JVM,1,ReferenceQueue,JVM.txt,0
+JVM:Serial Old,Serial Old,垃圾回收器实体,JVM,1,Serial Old,JVM.txt,0
+JVM:Shenandoah,Shenandoah,垃圾回收器实体,JVM,1,Shenandoah,JVM.txt,0
+JVM:SoftReference,SoftReference,引用类型实体,JVM,1,SoftReference,JVM.txt,0
+JVM:Stop The World,Stop The World,垃圾回收核心概念实体,JVM,1,Stop The World,JVM.txt,0
+JVM:Tenured Generation,Tenured Generation,堆结构实体,JVM,1,Tenured Generation,JVM.txt,0
+JVM:To Survivor,To Survivor,堆结构实体,JVM,1,To Survivor,JVM.txt,0
+JVM:VerifyError,VerifyError,异常与错误实体,JVM,1,VerifyError,JVM.txt,0
+JVM:VisualVM,VisualVM,工具与排查实体,JVM,1,VisualVM,JVM.txt,0
+JVM:Young Generation,Young Generation,堆结构实体,JVM,1,Young Generation,JVM.txt,0
+JVM:ZGC,ZGC,垃圾回收器实体,JVM,1,ZGC,JVM.txt,0
+JVM:class文件,class文件,类加载过程实体,JVM,1,class文件,JVM.txt,0
+JVM:heapdump.hprof,heapdump.hprof,工具与排查实体,JVM,1,heapdump.hprof,JVM.txt,0
+JVM:netty,netty,工具与排查实体,JVM,1,netty,JVM.txt,0
+JVM:try-with-resources,try-with-resources,代码与容器实体,JVM,1,try-with-resources,JVM.txt,0
+JVM:临时数据,临时数据,栈与栈帧相关实体,JVM,1,临时数据,JVM.txt,0
+JVM:优化方法栈帧,优化方法栈帧,栈与栈帧相关实体,JVM,1,优化方法栈帧,JVM.txt,0
+JVM:元空间溢出,元空间溢出,内存区域实体,JVM,1,元空间溢出,JVM.txt,0
+JVM:全限定名,全限定名,类加载过程实体,JVM,1,全限定名,JVM.txt,0
+JVM:再标记阶段,再标记阶段,垃圾回收算法实体,JVM,1,再标记阶段,JVM.txt,0
+JVM:分批处理,分批处理,场景与问题实体,JVM,1,分批处理,JVM.txt,0
+JVM:加载该类,加载该类,类加载过程实体,JVM,1,加载该类,JVM.txt,0
+JVM:加载阶段,加载阶段,类加载过程实体,JVM,1,加载阶段,JVM.txt,1
+JVM:即时编译器编译后的代码缓存,即时编译器编译后的代码缓存,方法区与元数据相关实体,JVM,1,即时编译器编译后的代码缓存,JVM.txt,0
+JVM:垃圾对象,垃圾对象,垃圾回收核心概念实体,JVM,1,垃圾对象,JVM.txt,0
+JVM:堆内存溢,堆内存溢,内存区域实体,JVM,1,堆内存溢,JVM.txt,0
+JVM:幻影引用,幻影引用,引用类型实体,JVM,1,幻影引用,JVM.txt,0
+JVM:弱引用可,弱引用可,引用类型实体,JVM,1,弱引用可,JVM.txt,0
+JVM:弱引用的使用场景,弱引用的使用场景,引用类型实体,JVM,1,弱引用的使用场景,JVM.txt,0
+JVM:强引用指,强引用指,引用类型实体,JVM,1,强引用指,JVM.txt,0
+JVM:懒加载,懒加载,类加载过程实体,JVM,1,懒加载,JVM.txt,0
+JVM:批量处理任务,批量处理任务,场景与问题实体,JVM,1,批量处理任务,JVM.txt,0
+JVM:方法区运行时的数据结构,方法区运行时的数据结构,内存区域实体,JVM,1,方法区运行时的数据结构,JVM.txt,0
+JVM:最后是初始化阶段,最后是初始化阶段,类加载过程实体,JVM,1,最后是初始化阶段,JVM.txt,0
+JVM:树形结构遍历,树形结构遍历,场景与问题实体,JVM,1,树形结构遍历,JVM.txt,0
+JVM:深度递归,深度递归,场景与问题实体,JVM,1,深度递归,JVM.txt,0
+JVM:简化了加载流程,简化了加载流程,类加载过程实体,JVM,1,简化了加载流程,JVM.txt,0
+JVM:类加载机制,类加载机制,领域实体,JVM,1,类加载机制,JVM.txt,0
+JVM:类型信息,类型信息,方法区与元数据相关实体,JVM,1,类型信息,JVM.txt,0
+JVM:线程共享,线程共享,线程与私有性相关实体,JVM,1,线程共享,JVM.txt,0
+JVM:虚引用也,虚引用也,引用类型实体,JVM,1,虚引用也,JVM.txt,0
+JVM:解析方法,解析方法,类加载过程实体,JVM,1,解析方法,JVM.txt,0
+JVM:解析方法调用,解析方法调用,栈与栈帧相关实体,JVM,1,解析方法调用,JVM.txt,0
+JVM:软引用可,软引用可,引用类型实体,JVM,1,软引用可,JVM.txt,0
+JVM:遇到堆溢,遇到堆溢,内存区域实体,JVM,1,遇到堆溢,JVM.txt,0
+JVM:静态存储结构,静态存储结构,类加载过程实体,JVM,1,静态存储结构,JVM.txt,0
+JVM:首先是加载阶段,首先是加载阶段,类加载过程实体,JVM,1,首先是加载阶段,JVM.txt,0
+cn:TCP,TCP,协议实体,cn,45,TCP,cn.txt,0
+cn:HTTP,HTTP,协议实体,cn,39,HTTP,cn.txt,0
+cn:服务器,服务器,服务器与网络组件实体,cn,31,服务器,cn.txt,0
+cn:UDP,UDP,协议实体,cn,24,UDP,cn.txt,0
+cn:DNS,DNS,协议实体,cn,19,DNS,cn.txt,0
+cn:应用层,应用层,层级结构实体,cn,15,应用层,cn.txt,0
+cn:客户端,客户端,服务器与网络组件实体,cn,14,客户端,cn.txt,0
+cn:网络层,网络层,层级结构实体,cn,14,网络层,cn.txt,0
+cn:传输层,传输层,层级结构实体,cn,12,传输层,cn.txt,0
+cn:HTTPS,HTTPS,协议实体,cn,10,HTTPS,cn.txt,0
+cn:URL,URL,地址与标识实体,cn,10,URL,cn.txt,0
+cn:加密,加密,概念与特性实体,cn,9,加密,cn.txt,0
+cn:Cookie,Cookie,机制与技术实体,cn,8,Cookie,cn.txt,0
+cn:IPv6,IPv6,协议实体,cn,8,IPv6,cn.txt,0
+cn:NAT,NAT,协议实体,cn,8,NAT,cn.txt,0
+cn:Session,Session,机制与技术实体,cn,8,Session,cn.txt,0
+cn:域名,域名,地址与标识实体,cn,8,域名,cn.txt,0
+cn:ACK,ACK,报文字段与状态实体,cn,7,ACK,cn.txt,0
+cn:ARP,ARP,协议实体,cn,7,ARP | arp,cn.txt,0
+cn:IPv4,IPv4,协议实体,cn,7,IPv4,cn.txt,0
+cn:DHCP,DHCP,协议实体,cn,6,DHCP,cn.txt,0
+cn:OSI,OSI,模型与体系结构实体,cn,6,OSI,cn.txt,0
+cn:FTP,FTP,协议实体,cn,5,FTP,cn.txt,0
+cn:ICMP,ICMP,协议实体,cn,5,ICMP,cn.txt,0
+cn:QUIC,QUIC,协议实体,cn,5,QUIC,cn.txt,0
+cn:RTT,RTT,版本端口与数值实体,cn,5,RTT,cn.txt,0
+cn:SMTP,SMTP,协议实体,cn,5,SMTP,cn.txt,0
+cn:SessionID,SessionID,地址与标识实体,cn,5,SessionID | sessionid,cn.txt,0
+cn:URI,URI,地址与标识实体,cn,5,URI,cn.txt,0
+cn:数据包,数据包,报文字段与状态实体,cn,5,数据包,cn.txt,0
+cn:无状态,无状态,概念与特性实体,cn,5,无状态,cn.txt,0
+cn:HTTP/2,HTTP/2,协议实体,cn,4,HTTP/2,cn.txt,0
+cn:Host,Host,报文字段与状态实体,cn,4,Host,cn.txt,0
+cn:MAC 地址,MAC 地址,地址与标识实体,cn,4,MAC 地址,cn.txt,0
+cn:三次握手,三次握手,机制与技术实体,cn,4,三次握手,cn.txt,0
+cn:主机,主机,服务器与网络组件实体,cn,4,主机,cn.txt,0
+cn:四次挥手,四次挥手,机制与技术实体,cn,4,四次挥手,cn.txt,0
+cn:头部压缩,头部压缩,机制与技术实体,cn,4,头部压缩,cn.txt,0
+cn:帧,帧,报文字段与状态实体,cn,4,帧,cn.txt,0
+cn:广播,广播,概念与特性实体,cn,4,广播,cn.txt,0
+cn:序列号,序列号,机制与技术实体,cn,4,序列号,cn.txt,0
+cn:文件传输,文件传输,场景与应用实体,cn,4,文件传输,cn.txt,0
+cn:浏览器,浏览器,服务器与网络组件实体,cn,4,浏览器,cn.txt,0
+cn:网络接口层,网络接口层,层级结构实体,cn,4,网络接口层,cn.txt,0
+cn:队头阻塞,队头阻塞,概念与特性实体,cn,4,队头阻塞,cn.txt,0
+cn:BGP,BGP,协议实体,cn,3,BGP,cn.txt,0
+cn:HTTP/3,HTTP/3,协议实体,cn,3,HTTP/3,cn.txt,0
+cn:IMAP,IMAP,协议实体,cn,3,IMAP,cn.txt,0
+cn:IP 地址,IP 地址,地址与标识实体,cn,3,IP 地址,cn.txt,0
+cn:NTP,NTP,协议实体,cn,3,NTP,cn.txt,0
+cn:OSPF,OSPF,协议实体,cn,3,OSPF,cn.txt,0
+cn:PING,PING,工具与命令实体,cn,3,PING,cn.txt,0
+cn:POP3,POP3,协议实体,cn,3,POP3,cn.txt,0
+cn:RIP,RIP,协议实体,cn,3,RIP,cn.txt,0
+cn:SNMP,SNMP,协议实体,cn,3,SNMP,cn.txt,0
+cn:SSE,SSE,协议实体,cn,3,SSE,cn.txt,0
+cn:SSH,SSH,协议实体,cn,3,SSH,cn.txt,0
+cn:Telnet,Telnet,协议实体,cn,3,Telnet,cn.txt,0
+cn:WebSocket,WebSocket,协议实体,cn,3,WebSocket,cn.txt,0
+cn:会话层,会话层,层级结构实体,cn,3,会话层,cn.txt,0
+cn:单播,单播,概念与特性实体,cn,3,单播,cn.txt,0
+cn:可靠传输,可靠传输,概念与特性实体,cn,3,可靠传输,cn.txt,0
+cn:在线游戏,在线游戏,场景与应用实体,cn,3,在线游戏,cn.txt,0
+cn:实时音视频,实时音视频,场景与应用实体,cn,3,实时音视频,cn.txt,0
+cn:拥塞控制,拥塞控制,机制与技术实体,cn,3,拥塞控制,cn.txt,0
+cn:数据链路层,数据链路层,层级结构实体,cn,3,数据链路层,cn.txt,0
+cn:服务器推送,服务器推送,机制与技术实体,cn,3,服务器推送,cn.txt,0
+cn:流量控制,流量控制,机制与技术实体,cn,3,流量控制,cn.txt,0
+cn:物理层,物理层,层级结构实体,cn,3,物理层,cn.txt,0
+cn:表示层,表示层,层级结构实体,cn,3,表示层,cn.txt,0
+cn:超时重传,超时重传,机制与技术实体,cn,3,超时重传,cn.txt,0
+cn:远程登录,远程登录,场景与应用实体,cn,3,远程登录,cn.txt,0
+cn:连接迁移,连接迁移,机制与技术实体,cn,3,连接迁移,cn.txt,0
+cn:邮件收发,邮件收发,场景与应用实体,cn,3,邮件收发,cn.txt,0
+cn:长连接,长连接,概念与特性实体,cn,3,长连接,cn.txt,0
+cn:FIN,FIN,报文字段与状态实体,cn,2,FIN,cn.txt,0
+cn:HPACK,HPACK,机制与技术实体,cn,2,HPACK,cn.txt,0
+cn:HTTP/1.1,HTTP/1.1,协议实体,cn,2,HTTP/1.1,cn.txt,0
+cn:JWT,JWT,机制与技术实体,cn,2,JWT,cn.txt,0
+cn:RTCP,RTCP,协议实体,cn,2,RTCP,cn.txt,0
+cn:RTP,RTP,协议实体,cn,2,RTP,cn.txt,0
+cn:Wi-Fi,Wi-Fi,协议实体,cn,2,Wi-Fi,cn.txt,0
+cn:二进制帧,二进制帧,报文字段与状态实体,cn,2,二进制帧,cn.txt,0
+cn:公网 IP,公网 IP,地址与标识实体,cn,2,公网 IP,cn.txt,0
+cn:分布式,分布式,概念与特性实体,cn,2,分布式,cn.txt,0
+cn:多路复用,多路复用,机制与技术实体,cn,2,多路复用,cn.txt,0
+cn:字节流,字节流,报文字段与状态实体,cn,2,字节流,cn.txt,0
+cn:幂等性,幂等性,概念与特性实体,cn,2,幂等性,cn.txt,0
+cn:报头简化,报头简化,报文字段与状态实体,cn,2,报头简化,cn.txt,0
+cn:报文,报文,报文字段与状态实体,cn,2,报文,cn.txt,0
+cn:支持断点续传,支持断点续传,概念与特性实体,cn,2,支持断点续传,cn.txt,0
+cn:故障排查,故障排查,场景与应用实体,cn,2,故障排查,cn.txt,0
+cn:断点续传,断点续传,概念与特性实体,cn,2,断点续传,cn.txt,0
+cn:本地 DNS 服务器,本地 DNS 服务器,服务器与网络组件实体,cn,2,本地 DNS 服务器,cn.txt,0
+cn:比特流,比特流,报文字段与状态实体,cn,2,比特流,cn.txt,0
+cn:短连接,短连接,概念与特性实体,cn,2,短连接,cn.txt,0
+cn:虚拟主机,虚拟主机,概念与特性实体,cn,2,虚拟主机,cn.txt,0
+cn:路由与寻址,路由与寻址,机制与技术实体,cn,2,路由与寻址,cn.txt,0
+cn:ARP 缓存,ARP 缓存,机制与技术实体,cn,1,ARP 缓存,cn.txt,0
+cn:Cache-Control,Cache-Control,报文字段与状态实体,cn,1,Cache-Control,cn.txt,0
+cn:Connection,Connection,报文字段与状态实体,cn,1,Connection,cn.txt,0
+cn:Content-Type,Content-Type,报文字段与状态实体,cn,1,Content-Type,cn.txt,0
+cn:DNS 劫持,DNS 劫持,机制与技术实体,cn,1,DNS 劫持,cn.txt,0
+cn:DSR 模式,DSR 模式,机制与技术实体,cn,1,DSR 模式,cn.txt,0
+cn:DoH,DoH,机制与技术实体,cn,1,DoH,cn.txt,0
+cn:DoT,DoT,机制与技术实体,cn,1,DoT,cn.txt,0
+cn:ETag,ETag,报文字段与状态实体,cn,1,ETag,cn.txt,0
+cn:Expires,Expires,报文字段与状态实体,cn,1,Expires,cn.txt,0
+cn:HTTP/1.0,HTTP/1.0,协议实体,cn,1,HTTP/1.0,cn.txt,0
+cn:ICMPv6,ICMPv6,协议实体,cn,1,ICMPv6,cn.txt,0
+cn:IGMP,IGMP,协议实体,cn,1,IGMP,cn.txt,0
+cn:IP 地址过滤,IP 地址过滤,地址与标识实体,cn,1,IP 地址过滤,cn.txt,0
+cn:IPv4 地址,IPv4 地址,地址与标识实体,cn,1,IPv4 地址,cn.txt,0
+cn:If-Match,If-Match,报文字段与状态实体,cn,1,If-Match,cn.txt,0
+cn:If-Modified-Since,If-Modified-Since,报文字段与状态实体,cn,1,If-Modified-Since,cn.txt,0
+cn:If-None-Match,If-None-Match,报文字段与状态实体,cn,1,If-None-Match,cn.txt,0
+cn:IoT 传感器上报,IoT 传感器上报,场景与应用实体,cn,1,IoT 传感器上报,cn.txt,0
+cn:Keep-Alive,Keep-Alive,机制与技术实体,cn,1,Keep-Alive,cn.txt,0
+cn:MAC 协议,MAC 协议,协议实体,cn,1,MAC 协议,cn.txt,0
+cn:OSI 七层,OSI 七层,模型与体系结构实体,cn,1,OSI 七层,cn.txt,0
+cn:OSI 七层模型,OSI 七层模型,模型与体系结构实体,cn,1,OSI 七层模型,cn.txt,0
+cn:PPP,PPP,协议实体,cn,1,PPP,cn.txt,0
+cn:Proxy Protocol,Proxy Protocol,机制与技术实体,cn,1,Proxy Protocol,cn.txt,0
+cn:QPACK,QPACK,机制与技术实体,cn,1,QPACK,cn.txt,0
+cn:Range,Range,报文字段与状态实体,cn,1,Range,cn.txt,0
+cn:SCTP,SCTP,协议实体,cn,1,SCTP,cn.txt,0
+cn:SLAAC,SLAAC,机制与技术实体,cn,1,SLAAC,cn.txt,0
+cn:SSL/TLS,SSL/TLS,机制与技术实体,cn,1,SSL/TLS,cn.txt,0
+cn:SYN,SYN,报文字段与状态实体,cn,1,SYN,cn.txt,0
+cn:Set-Cookie,Set-Cookie,机制与技术实体,cn,1,Set-Cookie,cn.txt,0
+cn:TCP Options,TCP Options,机制与技术实体,cn,1,TCP Options,cn.txt,0
+cn:TCP/IP 四层,TCP/IP 四层,模型与体系结构实体,cn,1,TCP/IP 四层,cn.txt,0
+cn:TCP/IP 四层模型,TCP/IP 四层模型,模型与体系结构实体,cn,1,TCP/IP 四层模型,cn.txt,0
+cn:TLD 服务器,TLD 服务器,服务器与网络组件实体,cn,1,TLD 服务器,cn.txt,0
+cn:TLS1.3,TLS1.3,机制与技术实体,cn,1,TLS1.3,cn.txt,0
+cn:Token,Token,机制与技术实体,cn,1,Token,cn.txt,0
+cn:URL 重写,URL 重写,机制与技术实体,cn,1,URL 重写,cn.txt,0
+cn:User-Agent,User-Agent,报文字段与状态实体,cn,1,User-Agent,cn.txt,0
+cn:Web 浏览,Web 浏览,场景与应用实体,cn,1,Web 浏览,cn.txt,0
+cn:X-Forwarded-For,X-Forwarded-For,机制与技术实体,cn,1,X-Forwarded-For,cn.txt,0
+cn:nslookup,nslookup,工具与命令实体,cn,1,nslookup,cn.txt,0
+cn:tracert,tracert,工具与命令实体,cn,1,tracert,cn.txt,0
+cn:不可靠传输,不可靠传输,概念与特性实体,cn,1,不可靠传输,cn.txt,0
+cn:以太网,以太网,协议实体,cn,1,以太网,cn.txt,0
+cn:全双工,全双工,概念与特性实体,cn,1,全双工,cn.txt,0
+cn:协同编辑,协同编辑,场景与应用实体,cn,1,协同编辑,cn.txt,0
+cn:域名解析,域名解析,地址与标识实体,cn,1,域名解析,cn.txt,0
+cn:多播,多播,概念与特性实体,cn,1,多播,cn.txt,0
+cn:实时聊天,实时聊天,场景与应用实体,cn,1,实时聊天,cn.txt,0
+cn:差错纠正,差错纠正,机制与技术实体,cn,1,差错纠正,cn.txt,0
+cn:帧封装,帧封装,机制与技术实体,cn,1,帧封装,cn.txt,0
+cn:广播地址,广播地址,地址与标识实体,cn,1,广播地址,cn.txt,0
+cn:应用层协议,应用层协议,层级结构实体,cn,1,应用层协议,cn.txt,0
+cn:弹幕,弹幕,场景与应用实体,cn,1,弹幕,cn.txt,0
+cn:微服务,微服务,概念与特性实体,cn,1,微服务,cn.txt,0
+cn:报头,报头,报文字段与状态实体,cn,1,报头,cn.txt,0
+cn:无状态地址自动配置,无状态地址自动配置,机制与技术实体,cn,1,无状态地址自动配置,cn.txt,0
+cn:无连接,无连接,概念与特性实体,cn,1,无连接,cn.txt,0
+cn:时间同步,时间同步,场景与应用实体,cn,1,时间同步,cn.txt,0
+cn:明文传输,明文传输,概念与特性实体,cn,1,明文传输,cn.txt,0
+cn:有状态,有状态,概念与特性实体,cn,1,有状态,cn.txt,0
+cn:权威 DNS 服务器,权威 DNS 服务器,服务器与网络组件实体,cn,1,权威 DNS 服务器,cn.txt,0
+cn:根 DNS 服务器,根 DNS 服务器,服务器与网络组件实体,cn,1,根 DNS 服务器,cn.txt,0
+cn:物理寻址,物理寻址,机制与技术实体,cn,1,物理寻址,cn.txt,0
+cn:直播,直播,场景与应用实体,cn,1,直播,cn.txt,0
+cn:确认应答 ACK,确认应答 ACK,机制与技术实体,cn,1,确认应答 ACK,cn.txt,0
+cn:私有 IP,私有 IP,地址与标识实体,cn,1,私有 IP,cn.txt,0
+cn:类型 0,类型 0,版本端口与数值实体,cn,1,类型 0,cn.txt,0
+cn:类型 8,类型 8,版本端口与数值实体,cn,1,类型 8,cn.txt,0
+cn:缓存机制,缓存机制,概念与特性实体,cn,1,缓存机制,cn.txt,0
+cn:网卡,网卡,服务器与网络组件实体,cn,1,网卡,cn.txt,0
+cn:网络分层模型,网络分层模型,领域实体,cn,1,网络分层模型,cn.txt,0
+cn:网络地址转换,网络地址转换,机制与技术实体,cn,1,网络地址转换,cn.txt,0
+cn:网络基础,网络基础,领域实体,cn,1,网络基础,cn.txt,0
+cn:网络管理,网络管理,场景与应用实体,cn,1,网络管理,cn.txt,0
+cn:网络诊断,网络诊断,场景与应用实体,cn,1,网络诊断,cn.txt,0
+cn:自治系统,自治系统,服务器与网络组件实体,cn,1,自治系统,cn.txt,0
+cn:获取客户端真实 IP,获取客户端真实 IP,机制与技术实体,cn,1,获取客户端真实 IP,cn.txt,0
+cn:视频会议,视频会议,场景与应用实体,cn,1,视频会议,cn.txt,0
+cn:计算机网络,计算机网络,领域实体,cn,1,计算机网络,cn.txt,0
+cn:路由器,路由器,服务器与网络组件实体,cn,1,路由器,cn.txt,0
+cn:面向字节流,面向字节流,报文字段与状态实体,cn,1,面向字节流,cn.txt,0
+cn:面向报文,面向报文,报文字段与状态实体,cn,1,面向报文,cn.txt,0
+cn:面向连接,面向连接,概念与特性实体,cn,1,面向连接,cn.txt,0
+cn:页面展示,页面展示,场景与应用实体,cn,1,页面展示,cn.txt,0
+cn:顶级域服务器,顶级域服务器,服务器与网络组件实体,cn,1,顶级域服务器,cn.txt,0
+cn:首部,首部,报文字段与状态实体,cn,1,首部,cn.txt,0
+data_structure:树,树,具体数据结构实体,data_structure,13,树,data_structure.txt,0
+data_structure:节点,节点,存储与组成相关实体,data_structure,9,节点,data_structure.txt,0
+data_structure:图,图,具体数据结构实体,data_structure,8,图,data_structure.txt,0
+data_structure:数据结构,数据结构,领域实体,data_structure,8,数据结构,data_structure.txt,2
+data_structure:队列,队列,具体数据结构实体,data_structure,6,队列,data_structure.txt,1
+data_structure:删除,删除,算法与操作实体,data_structure,5,删除,data_structure.txt,0
+data_structure:插入,插入,算法与操作实体,data_structure,5,插入,data_structure.txt,0
+data_structure:查找,查找,算法与操作实体,data_structure,5,查找,data_structure.txt,0
+data_structure:线性结构,线性结构,结构分类实体,data_structure,5,线性结构,data_structure.txt,1
+data_structure:二叉树,二叉树,具体数据结构实体,data_structure,4,二叉树,data_structure.txt,1
+data_structure:哈希表,哈希表,具体数据结构实体,data_structure,4,哈希表,data_structure.txt,1
+data_structure:堆,堆,具体数据结构实体,data_structure,4,堆,data_structure.txt,0
+data_structure:数组,数组,具体数据结构实体,data_structure,4,数组,data_structure.txt,1
+data_structure:栈,栈,具体数据结构实体,data_structure,4,栈,data_structure.txt,0
+data_structure:广度优先搜索,广度优先搜索,算法与操作实体,data_structure,3,广度优先搜索,data_structure.txt,0
+data_structure:时间复杂度,时间复杂度,复杂度实体,data_structure,3,时间复杂度,data_structure.txt,0
+data_structure:链表,链表,具体数据结构实体,data_structure,3,链表,data_structure.txt,1
+data_structure:非线性结构,非线性结构,结构分类实体,data_structure,3,非线性结构,data_structure.txt,1
+data_structure:优先队列,优先队列,具体数据结构实体,data_structure,2,优先队列,data_structure.txt,0
+data_structure:平衡二叉树,平衡二叉树,具体数据结构实体,data_structure,2,平衡二叉树,data_structure.txt,0
+data_structure:AVL树,AVL树,具体数据结构实体,data_structure,1,AVL树,data_structure.txt,0
+data_structure:BFS,BFS,算法与操作实体,data_structure,1,BFS,data_structure.txt,0
+data_structure:DFS,DFS,算法与操作实体,data_structure,1,DFS,data_structure.txt,0
+data_structure:Dijkstra算法,Dijkstra算法,算法与操作实体,data_structure,1,Dijkstra算法,data_structure.txt,0
+data_structure:FIFO,FIFO,性质与规则实体,data_structure,1,FIFO,data_structure.txt,0
+data_structure:LIFO,LIFO,性质与规则实体,data_structure,1,LIFO,data_structure.txt,0
+data_structure:一对一关系,一对一关系,性质与规则实体,data_structure,1,一对一关系,data_structure.txt,0
+data_structure:一对多关系,一对多关系,性质与规则实体,data_structure,1,一对多关系,data_structure.txt,0
+data_structure:二叉搜索树,二叉搜索树,具体数据结构实体,data_structure,1,二叉搜索树,data_structure.txt,0
+data_structure:任务调度,任务调度,应用场景实体,data_structure,1,任务调度,data_structure.txt,0
+data_structure:先进先出,先进先出,性质与规则实体,data_structure,1,先进先出,data_structure.txt,0
+data_structure:函数调用,函数调用,应用场景实体,data_structure,1,函数调用,data_structure.txt,0
+data_structure:右子树所有节点大于根节点,右子树所有节点大于根节点,性质与规则实体,data_structure,1,右子树所有节点大于根节点,data_structure.txt,0
+data_structure:后进先出,后进先出,性质与规则实体,data_structure,1,后进先出,data_structure.txt,0
+data_structure:哈希冲突,哈希冲突,存储与组成相关实体,data_structure,1,哈希冲突,data_structure.txt,0
+data_structure:哈希函数,哈希函数,存储与组成相关实体,data_structure,1,哈希函数,data_structure.txt,0
+data_structure:完全二叉树,完全二叉树,性质与规则实体,data_structure,1,完全二叉树,data_structure.txt,0
+data_structure:左子树所有节点小于根节点,左子树所有节点小于根节点,性质与规则实体,data_structure,1,左子树所有节点小于根节点,data_structure.txt,0
+data_structure:布隆过滤器,布隆过滤器,具体数据结构实体,data_structure,1,布隆过滤器,data_structure.txt,1
+data_structure:建模网络关系,建模网络关系,应用场景实体,data_structure,1,建模网络关系,data_structure.txt,0
+data_structure:开放寻址法,开放寻址法,冲突处理方法实体,data_structure,1,开放寻址法,data_structure.txt,0
+data_structure:括号匹配问题,括号匹配问题,应用场景实体,data_structure,1,括号匹配问题,data_structure.txt,0
+data_structure:指针域,指针域,存储与组成相关实体,data_structure,1,指针域,data_structure.txt,0
+data_structure:数据域,数据域,存储与组成相关实体,data_structure,1,数据域,data_structure.txt,0
+data_structure:数组索引,数组索引,存储与组成相关实体,data_structure,1,数组索引,data_structure.txt,0
+data_structure:旋转操作,旋转操作,算法与操作实体,data_structure,1,旋转操作,data_structure.txt,0
+data_structure:无向图,无向图,具体数据结构实体,data_structure,1,无向图,data_structure.txt,0
+data_structure:最大堆,最大堆,具体数据结构实体,data_structure,1,最大堆,data_structure.txt,0
+data_structure:最小堆,最小堆,具体数据结构实体,data_structure,1,最小堆,data_structure.txt,0
+data_structure:最短路径算法,最短路径算法,算法与操作实体,data_structure,1,最短路径算法,data_structure.txt,0
+data_structure:有向图,有向图,具体数据结构实体,data_structure,1,有向图,data_structure.txt,0
+data_structure:概率型数据结构,概率型数据结构,性质与规则实体,data_structure,1,概率型数据结构,data_structure.txt,0
+data_structure:深度优先搜索,深度优先搜索,算法与操作实体,data_structure,1,深度优先搜索,data_structure.txt,0
+data_structure:空间复杂度,空间复杂度,复杂度实体,data_structure,1,空间复杂度,data_structure.txt,0
+data_structure:空间效率较高,空间效率较高,性质与规则实体,data_structure,1,空间效率较高,data_structure.txt,0
+data_structure:缓冲区管理,缓冲区管理,应用场景实体,data_structure,1,缓冲区管理,data_structure.txt,0
+data_structure:缓存系统,缓存系统,应用场景实体,data_structure,1,缓存系统,data_structure.txt,0
+data_structure:表达式求值,表达式求值,应用场景实体,data_structure,1,表达式求值,data_structure.txt,0
+data_structure:计算机科学,计算机科学,领域实体,data_structure,1,计算机科学,data_structure.txt,0
+data_structure:误判率,误判率,性质与规则实体,data_structure,1,误判率,data_structure.txt,0
+data_structure:边,边,存储与组成相关实体,data_structure,1,边,data_structure.txt,0
+data_structure:邻接矩阵,邻接矩阵,存储与组成相关实体,data_structure,1,邻接矩阵,data_structure.txt,0
+data_structure:邻接表,邻接表,存储与组成相关实体,data_structure,1,邻接表,data_structure.txt,0
+data_structure:链地址法,链地址法,冲突处理方法实体,data_structure,1,链地址法,data_structure.txt,0
+data_structure:链式存储结构,链式存储结构,存储与组成相关实体,data_structure,1,链式存储结构,data_structure.txt,0
+data_structure:随机访问,随机访问,算法与操作实体,data_structure,1,随机访问,data_structure.txt,0
+data_structure:顶点,顶点,存储与组成相关实体,data_structure,1,顶点,data_structure.txt,0
+data_structure:顺序存储结构,顺序存储结构,存储与组成相关实体,data_structure,1,顺序存储结构,data_structure.txt,0
+data_structure:高度平衡,高度平衡,性质与规则实体,data_structure,1,高度平衡,data_structure.txt,0
+java:类,类,数据类型实体,java,49,类,java.txt,0
+java:接口,接口,数据类型实体,java,15,接口,java.txt,0
+java:对象,对象,面向对象核心实体,java,12,对象,java.txt,1
+java:变量,变量,变量与成员实体,java,11,变量,java.txt,0
+java:Class,Class,面向对象核心实体,java,10,Class | class,java.txt,0
+java:int,int,数据类型实体,java,8,int,java.txt,0
+java:注解,注解,领域实体,java,8,注解,java.txt,0
+java:线程,线程,线程与并发实体,java,8,线程,java.txt,0
+java:Map,Map,集合框架实体,java,6,Map,java.txt,0
+java:实例,实例,面向对象核心实体,java,6,实例,java.txt,0
+java:数据类型,数据类型,数据类型实体,java,6,数据类型,java.txt,0
+java:数组,数组,数据类型实体,java,6,数组,java.txt,1
+java:泛型,泛型,领域实体,java,6,泛型,java.txt,0
+java:继承,继承,面向对象核心实体,java,6,继承,java.txt,0
+java:Set,Set,集合框架实体,java,5,Set,java.txt,0
+java:抽象类,抽象类,数据类型实体,java,5,抽象类,java.txt,0
+java:父类,父类,数据类型实体,java,5,父类,java.txt,0
+java:Exception,Exception,异常处理实体,java,4,Exception,java.txt,0
+java:List,List,集合框架实体,java,4,List,java.txt,0
+java:final,final,关键字与修饰符实体,java,4,final,java.txt,0
+java:public,public,关键字与修饰符实体,java,4,public,java.txt,0
+java:运行,运行,线程状态实体,java,4,运行,java.txt,0
+java:HashMap,HashMap,集合框架实体,java,3,HashMap,java.txt,0
+java:Java,Java,领域实体,java,3,Java,java.txt,1
+java:Lock,Lock,线程与并发实体,java,3,Lock,java.txt,0
+java:String,String,数组与字符串实体,java,3,String,java.txt,0
+java:abstract,abstract,关键字与修饰符实体,java,3,abstract,java.txt,0
+java:extends,extends,关键字与修饰符实体,java,3,extends,java.txt,0
+java:interface,interface,关键字与修饰符实体,java,3,interface,java.txt,0
+java:加载,加载,JVM 与内存管理实体,java,3,加载,java.txt,0
+java:反射,反射,领域实体,java,3,反射,java.txt,0
+java:多态,多态,面向对象核心实体,java,3,多态,java.txt,0
+java:子类,子类,数据类型实体,java,3,子类,java.txt,0
+java:静态方法,静态方法,抽象类与接口实体,java,3,静态方法,java.txt,0
+java:Collection,Collection,集合框架实体,java,2,Collection,java.txt,0
+java:Executor,Executor,线程与并发实体,java,2,Executor,java.txt,0
+java:HashSet,HashSet,集合框架实体,java,2,HashSet,java.txt,0
+java:JVM,JVM,领域实体,java,2,JVM,java.txt,0
+java:Thread,Thread,线程与并发实体,java,2,Thread,java.txt,0
+java:char,char,数据类型实体,java,2,char,java.txt,0
+java:finally,finally,异常处理实体,java,2,finally,java.txt,0
+java:for,for,流程控制实体,java,2,for,java.txt,0
+java:implements,implements,关键字与修饰符实体,java,2,implements,java.txt,0
+java:new,new,关键字与修饰符实体,java,2,new,java.txt,0
+java:private,private,关键字与修饰符实体,java,2,private,java.txt,0
+java:static,static,关键字与修饰符实体,java,2,static,java.txt,0
+java:super,super,关键字与修饰符实体,java,2,super,java.txt,0
+java:throw,throw,异常处理实体,java,2,throw,java.txt,0
+java:try,try,异常处理实体,java,2,try,java.txt,0
+java:while,while,流程控制实体,java,2,while,java.txt,0
+java:初始化,初始化,JVM 与内存管理实体,java,2,初始化,java.txt,0
+java:基本数据类型,基本数据类型,数据类型实体,java,2,基本数据类型,java.txt,0
+java:堆,堆,JVM 与内存管理实体,java,2,堆,java.txt,0
+java:实例变量,实例变量,变量与成员实体,java,2,实例变量,java.txt,0
+java:局部变量,局部变量,变量与成员实体,java,2,局部变量,java.txt,0
+java:引用数据类型,引用数据类型,数据类型实体,java,2,引用数据类型,java.txt,0
+java:成员变量,成员变量,变量与成员实体,java,2,成员变量,java.txt,0
+java:栈,栈,JVM 与内存管理实体,java,2,栈,java.txt,0
+java:等待,等待,线程状态实体,java,2,等待,java.txt,0
+java:解析,解析,JVM 与内存管理实体,java,2,解析,java.txt,0
+java:静态变量,静态变量,变量与成员实体,java,2,静态变量,java.txt,0
+java:@Deprecated,@Deprecated,注解实体,java,1,@Deprecated,java.txt,0
+java:@Documented,@Documented,注解实体,java,1,@Documented,java.txt,0
+java:@FunctionalInterface,@FunctionalInterface,注解实体,java,1,@FunctionalInterface,java.txt,0
+java:@Inherited,@Inherited,注解实体,java,1,@Inherited,java.txt,0
+java:@Override,@Override,注解实体,java,1,@Override,java.txt,0
+java:@Retention,@Retention,注解实体,java,1,@Retention,java.txt,0
+java:@SuppressWarnings,@SuppressWarnings,注解实体,java,1,@SuppressWarnings,java.txt,0
+java:@Target,@Target,注解实体,java,1,@Target,java.txt,0
+java:@interface,@interface,注解实体,java,1,@interface,java.txt,0
+java:Annotation,Annotation,注解实体,java,1,Annotation,java.txt,0
+java:Application ClassLoader,Application ClassLoader,JVM 与内存管理实体,java,1,Application ClassLoader,java.txt,0
+java:ArrayList,ArrayList,集合框架实体,java,1,ArrayList,java.txt,0
+java:Bootstrap ClassLoader,Bootstrap ClassLoader,JVM 与内存管理实体,java,1,Bootstrap ClassLoader,java.txt,0
+java:Box<T,Box<T,泛型实体,java,1,Box<T,java.txt,0
+java:Callable,Callable,线程与并发实体,java,1,Callable,java.txt,0
+java:Checked Exception,Checked Exception,异常处理实体,java,1,Checked Exception,java.txt,0
+java:Class.forName,Class.forName,领域实体,java,1,Class.forName,java.txt,0
+java:Collections,Collections,集合框架实体,java,1,Collections,java.txt,0
+java:Constructor,Constructor,反射实体,java,1,Constructor,java.txt,0
+java:Error,Error,异常处理实体,java,1,Error,java.txt,0
+java:Extension ClassLoader,Extension ClassLoader,JVM 与内存管理实体,java,1,Extension ClassLoader,java.txt,0
+java:Field,Field,反射实体,java,1,Field,java.txt,0
+java:FutureTask,FutureTask,线程与并发实体,java,1,FutureTask,java.txt,0
+java:GC,GC,JVM 与内存管理实体,java,1,GC,java.txt,0
+java:Hashtable,Hashtable,集合框架实体,java,1,Hashtable,java.txt,0
+java:JVM退出,JVM退出,异常处理实体,java,1,JVM退出,java.txt,0
+java:LinkedHashMap,LinkedHashMap,集合框架实体,java,1,LinkedHashMap,java.txt,0
+java:LinkedHashSet,LinkedHashSet,集合框架实体,java,1,LinkedHashSet,java.txt,0
+java:LinkedList,LinkedList,集合框架实体,java,1,LinkedList,java.txt,0
+java:Method,Method,反射实体,java,1,Method,java.txt,0
+java:Object,Object,面向对象核心实体,java,1,Object,java.txt,0
+java:Overloading,Overloading,面向对象核心实体,java,1,Overloading,java.txt,0
+java:Overriding,Overriding,面向对象核心实体,java,1,Overriding,java.txt,0
+java:Queue,Queue,集合框架实体,java,1,Queue,java.txt,0
+java:ReentrantLock,ReentrantLock,线程与并发实体,java,1,ReentrantLock,java.txt,0
+java:Runnable,Runnable,线程与并发实体,java,1,Runnable,java.txt,0
+java:StringBuffer,StringBuffer,数组与字符串实体,java,1,StringBuffer,java.txt,0
+java:StringBuilder,StringBuilder,数组与字符串实体,java,1,StringBuilder,java.txt,0
+java:ThreadPoolExecutor,ThreadPoolExecutor,线程与并发实体,java,1,ThreadPoolExecutor,java.txt,0
+java:Throwable,Throwable,异常处理实体,java,1,Throwable,java.txt,1
+java:TreeMap,TreeMap,集合框架实体,java,1,TreeMap,java.txt,0
+java:TreeSet,TreeSet,集合框架实体,java,1,TreeSet,java.txt,0
+java:Unchecked Exception,Unchecked Exception,异常处理实体,java,1,Unchecked Exception,java.txt,0
+java:Vector,Vector,集合框架实体,java,1,Vector,java.txt,0
+java:boolean,boolean,数据类型实体,java,1,boolean,java.txt,0
+java:break,break,流程控制实体,java,1,break,java.txt,0
+java:byte,byte,数据类型实体,java,1,byte,java.txt,0
+java:catch,catch,异常处理实体,java,1,catch,java.txt,0
+java:charAt,charAt,领域实体,java,1,charAt,java.txt,0
+java:continue,continue,流程控制实体,java,1,continue,java.txt,0
+java:default,default,关键字与修饰符实体,java,1,default,java.txt,0
+java:do-while,do-while,流程控制实体,java,1,do-while,java.txt,0
+java:double,double,数据类型实体,java,1,double,java.txt,0
+java:equals,equals,领域实体,java,1,equals,java.txt,0
+java:float,float,数据类型实体,java,1,float,java.txt,0
+java:getClass,getClass,领域实体,java,1,getClass,java.txt,0
+java:if-else,if-else,流程控制实体,java,1,if-else,java.txt,0
+java:immutable,immutable,数组与字符串实体,java,1,immutable,java.txt,0
+java:indexOf,indexOf,领域实体,java,1,indexOf,java.txt,0
+java:instanceof,instanceof,关键字与修饰符实体,java,1,instanceof,java.txt,0
+java:int[] arr,int[] arr,数组与字符串实体,java,1,int[] arr,java.txt,0
+java:int[][] matrix,int[][] matrix,数组与字符串实体,java,1,int[][] matrix,java.txt,0
+java:length,length,领域实体,java,1,length,java.txt,0
+java:lockInterruptibly,lockInterruptibly,线程与并发实体,java,1,lockInterruptibly,java.txt,0
+java:long,long,数据类型实体,java,1,long,java.txt,0
+java:protected,protected,关键字与修饰符实体,java,1,protected,java.txt,0
+java:return,return,流程控制实体,java,1,return,java.txt,0
+java:short,short,数据类型实体,java,1,short,java.txt,0
+java:substring,substring,领域实体,java,1,substring,java.txt,0
+java:switch-case,switch-case,流程控制实体,java,1,switch-case,java.txt,0
+java:synchronized,synchronized,线程与并发实体,java,1,synchronized,java.txt,0
+java:this,this,关键字与修饰符实体,java,1,this,java.txt,0
+java:throws,throws,异常处理实体,java,1,throws,java.txt,0
+java:tryLock,tryLock,线程与并发实体,java,1,tryLock,java.txt,0
+java:volatile,volatile,线程与并发实体,java,1,volatile,java.txt,0
+java:三元运算符,三元运算符,运算符实体,java,1,三元运算符,java.txt,0
+java:互斥锁,互斥锁,线程与并发实体,java,1,互斥锁,java.txt,0
+java:位运算符,位运算符,运算符实体,java,1,位运算符,java.txt,0
+java:元注解,元注解,领域实体,java,1,元注解,java.txt,0
+java:全限定名,全限定名,反射实体,java,1,全限定名,java.txt,0
+java:关系运算符,关系运算符,运算符实体,java,1,关系运算符,java.txt,0
+java:具体方法,具体方法,抽象类与接口实体,java,1,具体方法,java.txt,0
+java:准备,准备,JVM 与内存管理实体,java,1,准备,java.txt,0
+java:分代收集,分代收集,JVM 与内存管理实体,java,1,分代收集,java.txt,0
+java:创建线程的方式,创建线程的方式,线程与并发实体,java,1,创建线程的方式,java.txt,0
+java:单继承,单继承,面向对象核心实体,java,1,单继承,java.txt,0
+java:原子性,原子性,线程与并发实体,java,1,原子性,java.txt,0
+java:双亲委派模型,双亲委派模型,JVM 与内存管理实体,java,1,双亲委派模型,java.txt,0
+java:可见性,可见性,线程与并发实体,java,1,可见性,java.txt,0
+java:向上转型,向上转型,继承与类型转换实体,java,1,向上转型,java.txt,0
+java:向下转型,向下转型,继承与类型转换实体,java,1,向下转型,java.txt,0
+java:垃圾回收,垃圾回收,JVM 与内存管理实体,java,1,垃圾回收,java.txt,0
+java:复制,复制,JVM 与内存管理实体,java,1,复制,java.txt,0
+java:多态的表现形式,多态的表现形式,面向对象核心实体,java,1,多态的表现形式,java.txt,0
+java:多维数组,多维数组,数据类型实体,java,1,多维数组,java.txt,0
+java:子类对象,子类对象,数据类型实体,java,1,子类对象,java.txt,0
+java:实现类对象,实现类对象,数据类型实体,java,1,实现类对象,java.txt,0
+java:封装,封装,面向对象核心实体,java,1,封装,java.txt,0
+java:就绪,就绪,线程状态实体,java,1,就绪,java.txt,0
+java:并发,并发,线程与并发实体,java,1,并发,java.txt,0
+java:异常处理,异常处理,领域实体,java,1,异常处理,java.txt,0
+java:循环结构,循环结构,流程控制实体,java,1,循环结构,java.txt,0
+java:抽象方法,抽象方法,抽象类与接口实体,java,1,抽象方法,java.txt,0
+java:抽象类与接口,抽象类与接口,数据类型实体,java,1,抽象类与接口,java.txt,0
+java:指令重排序,指令重排序,线程与并发实体,java,1,指令重排序,java.txt,0
+java:接口引用,接口引用,数据类型实体,java,1,接口引用,java.txt,0
+java:插入顺序,插入顺序,集合框架实体,java,1,插入顺序,java.txt,0
+java:数组的创建,数组的创建,数据类型实体,java,1,数组的创建,java.txt,0
+java:新建,新建,线程状态实体,java,1,新建,java.txt,0
+java:方法区,方法区,JVM 与内存管理实体,java,1,方法区,java.txt,0
+java:方法重写,方法重写,面向对象核心实体,java,1,方法重写,java.txt,0
+java:方法重载,方法重载,面向对象核心实体,java,1,方法重载,java.txt,0
+java:本地方法栈,本地方法栈,JVM 与内存管理实体,java,1,本地方法栈,java.txt,0
+java:条件分支,条件分支,流程控制实体,java,1,条件分支,java.txt,0
+java:构造方法,构造方法,面向对象核心实体,java,1,构造方法,java.txt,0
+java:枚举,枚举,数据类型实体,java,1,枚举,java.txt,0
+java:标记-整理,标记-整理,JVM 与内存管理实体,java,1,标记-整理,java.txt,0
+java:标记-清除,标记-清除,JVM 与内存管理实体,java,1,标记-清除,java.txt,0
+java:核心类,核心类,数据类型实体,java,1,核心类,java.txt,0
+java:泛型方法,泛型方法,领域实体,java,1,泛型方法,java.txt,0
+java:泛型类,泛型类,领域实体,java,1,泛型类,java.txt,0
+java:父类引用,父类引用,数据类型实体,java,1,父类引用,java.txt,0
+java:程序计数器,程序计数器,JVM 与内存管理实体,java,1,程序计数器,java.txt,0
+java:算术运算符,算术运算符,运算符实体,java,1,算术运算符,java.txt,0
+java:类加载器,类加载器,数据类型实体,java,1,类加载器,java.txt,0
+java:类加载机制,类加载机制,数据类型实体,java,1,类加载机制,java.txt,0
+java:类变量,类变量,数据类型实体,java,1,类变量,java.txt,0
+java:类名.class,类名.class,数据类型实体,java,1,类名.class,java.txt,0
+java:类型擦除,类型擦除,数据类型实体,java,1,类型擦除,java.txt,0
+java:红黑树,红黑树,集合框架实体,java,1,红黑树,java.txt,0
+java:线程与并发,线程与并发,领域实体,java,1,线程与并发,java.txt,0
+java:线程池,线程池,线程与并发实体,java,1,线程池,java.txt,0
+java:线程状态,线程状态,线程与并发实体,java,1,线程状态,java.txt,0
+java:终止,终止,线程状态实体,java,1,终止,java.txt,0
+java:自定义注解,自定义注解,领域实体,java,1,自定义注解,java.txt,0
+java:访问控制修饰符,访问控制修饰符,关键字与修饰符实体,java,1,访问控制修饰符,java.txt,0
+java:赋值运算符,赋值运算符,运算符实体,java,1,赋值运算符,java.txt,0
+java:超时等待,超时等待,线程状态实体,java,1,超时等待,java.txt,0
+java:跳转语句,跳转语句,流程控制实体,java,1,跳转语句,java.txt,0
+java:通配符,通配符,泛型实体,java,1,通配符,java.txt,0
+java:逻辑运算符,逻辑运算符,运算符实体,java,1,逻辑运算符,java.txt,0
+java:键值对,键值对,集合框架实体,java,1,键值对,java.txt,0
+java:阻塞,阻塞,线程状态实体,java,1,阻塞,java.txt,0
+java:集合框架,集合框架,领域实体,java,1,集合框架,java.txt,0
+java:面向对象,面向对象,领域实体,java,1,面向对象,java.txt,0
+java:验证,验证,JVM 与内存管理实体,java,1,验证,java.txt,0
+java:默认方法,默认方法,抽象类与接口实体,java,1,默认方法,java.txt,0
+mysql:索引,索引,领域实体,mysql,56,索引,mysql.txt,1
+mysql:SQL,SQL,领域实体,mysql,43,SQL,mysql.txt,0
+mysql:事务,事务,领域实体,mysql,34,事务,mysql.txt,1
+mysql:MySQL,MySQL,领域实体,mysql,21,MySQL,mysql.txt,1
+mysql:主键,主键,数据库设计与规范实体,mysql,17,主键,mysql.txt,0
+mysql:数据库,数据库,领域实体,mysql,17,数据库,mysql.txt,0
+mysql:InnoDB,InnoDB,存储引擎实体,mysql,9,InnoDB,mysql.txt,0
+mysql:SELECT,SELECT,SQL分类实体,mysql,8,SELECT,mysql.txt,0
+mysql:排序,排序,查询与连接实体,mysql,8,排序,mysql.txt,0
+mysql:联表查询,联表查询,数据库设计与规范实体,mysql,8,联表查询,mysql.txt,0
+mysql:主从复制,主从复制,领域实体,mysql,7,主从复制,mysql.txt,0
+mysql:LIMIT,LIMIT,SQL分类实体,mysql,6,LIMIT,mysql.txt,0
+mysql:WHERE,WHERE,SQL分类实体,mysql,6,WHERE,mysql.txt,0
+mysql:char,char,数据类型实体,mysql,6,char,mysql.txt,1
+mysql:id,id,执行计划与调优实体,mysql,6,id,mysql.txt,0
+mysql:分库分表,分库分表,领域实体,mysql,6,分库分表,mysql.txt,0
+mysql:子查询,子查询,查询与连接实体,mysql,6,子查询,mysql.txt,0
+mysql:幻读,幻读,事务与一致性实体,mysql,6,幻读,mysql.txt,0
+mysql:行锁,行锁,锁机制实体,mysql,6,行锁,mysql.txt,0
+mysql:读写分离,读写分离,领域实体,mysql,6,读写分离,mysql.txt,0
+mysql:DELETE,DELETE,SQL分类实体,mysql,5,DELETE,mysql.txt,0
+mysql:UNION,UNION,查询与连接实体,mysql,5,UNION,mysql.txt,0
+mysql:UPDATE,UPDATE,SQL分类实体,mysql,5,UPDATE,mysql.txt,0
+mysql:从库,从库,主从复制与高可用实体,mysql,5,从库,mysql.txt,0
+mysql:回表,回表,索引相关实体,mysql,5,回表,mysql.txt,0
+mysql:聚簇索引,聚簇索引,领域实体,mysql,5,聚簇索引,mysql.txt,0
+mysql:表锁,表锁,锁机制实体,mysql,5,表锁,mysql.txt,0
+mysql:INSERT,INSERT,SQL分类实体,mysql,4,INSERT,mysql.txt,0
+mysql:SQL优化,SQL优化,领域实体,mysql,4,SQL优化,mysql.txt,0
+mysql:date,date,数据类型实体,mysql,4,date,mysql.txt,0
+mysql:redo log,redo log,事务与一致性实体,mysql,4,redo log,mysql.txt,0
+mysql:undo log,undo log,事务与一致性实体,mysql,4,undo log,mysql.txt,0
+mysql:不可重复读,不可重复读,事务与一致性实体,mysql,4,不可重复读,mysql.txt,0
+mysql:主库,主库,主从复制与高可用实体,mysql,4,主库,mysql.txt,0
+mysql:共享锁,共享锁,锁机制实体,mysql,4,共享锁,mysql.txt,0
+mysql:外键,外键,数据库设计与规范实体,mysql,4,外键,mysql.txt,0
+mysql:排他锁,排他锁,锁机制实体,mysql,4,排他锁,mysql.txt,0
+mysql:索引失效,索引失效,领域实体,mysql,4,索引失效,mysql.txt,0
+mysql:脏读,脏读,事务与一致性实体,mysql,4,脏读,mysql.txt,0
+mysql:视图,视图,MySQL8.0与扩展特性实体,mysql,4,视图,mysql.txt,0
+mysql:COMMIT,COMMIT,事务与一致性实体,mysql,3,COMMIT,mysql.txt,0
+mysql:COUNT,COUNT,领域实体,mysql,3,COUNT,mysql.txt,0
+mysql:DISTINCT,DISTINCT,SQL分类实体,mysql,3,DISTINCT,mysql.txt,0
+mysql:MVCC,MVCC,事务与一致性实体,mysql,3,MVCC,mysql.txt,0
+mysql:UNION ALL,UNION ALL,查询与连接实体,mysql,3,UNION ALL,mysql.txt,0
+mysql:binlog,binlog,主从复制与高可用实体,mysql,3,binlog,mysql.txt,0
+mysql:datetime,datetime,数据类型实体,mysql,3,datetime,mysql.txt,0
+mysql:timestamp,timestamp,数据类型实体,mysql,3,timestamp,mysql.txt,0
+mysql:type,type,执行计划与调优实体,mysql,3,type,mysql.txt,0
+mysql:utf8,utf8,MySQL8.0与扩展特性实体,mysql,3,utf8,mysql.txt,0
+mysql:varchar,varchar,数据类型实体,mysql,3,varchar,mysql.txt,1
+mysql:唯一键,唯一键,数据库设计与规范实体,mysql,3,唯一键,mysql.txt,0
+mysql:存储引擎,存储引擎,领域实体,mysql,3,存储引擎,mysql.txt,0
+mysql:执行计划,执行计划,执行计划与调优实体,mysql,3,执行计划,mysql.txt,0
+mysql:数据库三范式,数据库三范式,领域实体,mysql,3,数据库三范式,mysql.txt,0
+mysql:数据恢复,数据恢复,运维与安全实体,mysql,3,数据恢复,mysql.txt,0
+mysql:最左前缀原则,最左前缀原则,索引相关实体,mysql,3,最左前缀原则,mysql.txt,0
+mysql:查询缓存,查询缓存,基础架构实体,mysql,3,查询缓存,mysql.txt,0
+mysql:死锁,死锁,锁机制实体,mysql,3,死锁,mysql.txt,0
+mysql:水平分表,水平分表,表设计与拆分实体,mysql,3,水平分表,mysql.txt,0
+mysql:联合索引,联合索引,领域实体,mysql,3,联合索引,mysql.txt,0
+mysql:聚合函数,聚合函数,函数实体,mysql,3,聚合函数,mysql.txt,0
+mysql:覆盖索引,覆盖索引,领域实体,mysql,3,覆盖索引,mysql.txt,0
+mysql:ACID,ACID,事务与一致性实体,mysql,2,ACID,mysql.txt,0
+mysql:ALTER,ALTER,SQL分类实体,mysql,2,ALTER,mysql.txt,0
+mysql:B+树,B+树,索引相关实体,mysql,2,B+树,mysql.txt,0
+mysql:B树,B树,索引相关实体,mysql,2,B树,mysql.txt,0
+mysql:CREATE,CREATE,SQL分类实体,mysql,2,CREATE,mysql.txt,0
+mysql:DDL,DDL,SQL分类实体,mysql,2,DDL,mysql.txt,0
+mysql:DML,DML,SQL分类实体,mysql,2,DML,mysql.txt,0
+mysql:DROP,DROP,SQL分类实体,mysql,2,DROP,mysql.txt,0
+mysql:EXPLAIN,EXPLAIN,执行计划与调优实体,mysql,2,EXPLAIN,mysql.txt,0
+mysql:Extra,Extra,执行计划与调优实体,mysql,2,Extra,mysql.txt,0
+mysql:GROUP BY,GROUP BY,SQL分类实体,mysql,2,GROUP BY,mysql.txt,0
+mysql:INNER JOIN,INNER JOIN,查询与连接实体,mysql,2,INNER JOIN,mysql.txt,0
+mysql:LIKE,LIKE,SQL分类实体,mysql,2,LIKE,mysql.txt,0
+mysql:MyCat,MyCat,中间件与工具实体,mysql,2,MyCat,mysql.txt,0
+mysql:MyISAM,MyISAM,存储引擎实体,mysql,2,MyISAM,mysql.txt,0
+mysql:MySQL8.0,MySQL8.0,MySQL8.0与扩展特性实体,mysql,2,MySQL8.0,mysql.txt,0
+mysql:ORDER BY,ORDER BY,SQL分类实体,mysql,2,ORDER BY,mysql.txt,0
+mysql:Sharding-JDBC,Sharding-JDBC,中间件与工具实体,mysql,2,Sharding-JDBC,mysql.txt,0
+mysql:TRUNCATE,TRUNCATE,SQL分类实体,mysql,2,TRUNCATE,mysql.txt,0
+mysql:int,int,数据类型实体,mysql,2,int,mysql.txt,0
+mysql:key,key,执行计划与调优实体,mysql,2,key,mysql.txt,0
+mysql:relay log,relay log,主从复制与高可用实体,mysql,2,relay log,mysql.txt,0
+mysql:rows,rows,执行计划与调优实体,mysql,2,rows,mysql.txt,0
+mysql:select_type,select_type,执行计划与调优实体,mysql,2,select_type,mysql.txt,0
+mysql:table,table,执行计划与调优实体,mysql,2,table,mysql.txt,0
+mysql:utf8mb4,utf8mb4,MySQL8.0与扩展特性实体,mysql,2,utf8mb4,mysql.txt,1
+mysql:主从延迟问题,主从延迟问题,主从复制与高可用实体,mysql,2,主从延迟问题,mysql.txt,0
+mysql:主键索引,主键索引,领域实体,mysql,2,主键索引,mysql.txt,0
+mysql:二级索引,二级索引,领域实体,mysql,2,二级索引,mysql.txt,0
+mysql:二进制日志,二进制日志,主从复制与高可用实体,mysql,2,二进制日志,mysql.txt,0
+mysql:优化器,优化器,基础架构实体,mysql,2,优化器,mysql.txt,0
+mysql:优化联表查询,优化联表查询,数据库设计与规范实体,mysql,2,优化联表查询,mysql.txt,0
+mysql:分布式ID,分布式ID,分库分表与分布式实体,mysql,2,分布式ID,mysql.txt,0
+mysql:分组查询,分组查询,查询与连接实体,mysql,2,分组查询,mysql.txt,0
+mysql:半同步复制,半同步复制,主从复制与高可用实体,mysql,2,半同步复制,mysql.txt,0
+mysql:单列索引,单列索引,领域实体,mysql,2,单列索引,mysql.txt,0
+mysql:反范式,反范式,数据库设计与规范实体,mysql,2,反范式,mysql.txt,0
+mysql:垂直分库,垂直分库,表设计与拆分实体,mysql,2,垂直分库,mysql.txt,0
+mysql:垂直分表,垂直分表,表设计与拆分实体,mysql,2,垂直分表,mysql.txt,0
+mysql:大表优化方案,大表优化方案,表设计与拆分实体,mysql,2,大表优化方案,mysql.txt,0
+mysql:字符串函数,字符串函数,函数实体,mysql,2,字符串函数,mysql.txt,0
+mysql:存储引擎层,存储引擎层,领域实体,mysql,2,存储引擎层,mysql.txt,0
+mysql:存储过程,存储过程,MySQL8.0与扩展特性实体,mysql,2,存储过程,mysql.txt,0
+mysql:意向锁,意向锁,锁机制实体,mysql,2,意向锁,mysql.txt,0
+mysql:批量插入替代单条插入,批量插入替代单条插入,执行计划与调优实体,mysql,2,批量插入替代单条插入,mysql.txt,0
+mysql:数学函数,数学函数,函数实体,mysql,2,数学函数,mysql.txt,0
+mysql:日期函数,日期函数,函数实体,mysql,2,日期函数,mysql.txt,0
+mysql:死锁解决方式,死锁解决方式,锁机制实体,mysql,2,死锁解决方式,mysql.txt,0
+mysql:水平分表分片规则,水平分表分片规则,表设计与拆分实体,mysql,2,水平分表分片规则,mysql.txt,0
+mysql:热点字段,热点字段,表设计与拆分实体,mysql,2,热点字段,mysql.txt,0
+mysql:相关子查询,相关子查询,查询与连接实体,mysql,2,相关子查询,mysql.txt,0
+mysql:触发器,触发器,MySQL8.0与扩展特性实体,mysql,2,触发器,mysql.txt,0
+mysql:负载均衡,负载均衡,主从复制与高可用实体,mysql,2,负载均衡,mysql.txt,0
+mysql:适度反范式设计,适度反范式设计,数据库设计与规范实体,mysql,2,适度反范式设计,mysql.txt,0
+mysql:避免使用子查询,避免使用子查询,查询与连接实体,mysql,2,避免使用子查询,mysql.txt,0
+mysql:间隙锁,间隙锁,锁机制实体,mysql,2,间隙锁,mysql.txt,0
+mysql:非聚簇索引,非聚簇索引,领域实体,mysql,2,非聚簇索引,mysql.txt,0
+mysql:AVG,AVG,领域实体,mysql,1,AVG,mysql.txt,0
+mysql:Atomicity,Atomicity,事务与一致性实体,mysql,1,Atomicity,mysql.txt,0
+mysql:CEIL,CEIL,领域实体,mysql,1,CEIL,mysql.txt,0
+mysql:CTE,CTE,MySQL8.0与扩展特性实体,mysql,1,CTE,mysql.txt,0
+mysql:Consistency,Consistency,事务与一致性实体,mysql,1,Consistency,mysql.txt,0
+mysql:DQL,DQL,SQL分类实体,mysql,1,DQL,mysql.txt,0
+mysql:Druid,Druid,中间件与工具实体,mysql,1,Druid,mysql.txt,0
+mysql:Durability,Durability,事务与一致性实体,mysql,1,Durability,mysql.txt,0
+mysql:FLOOR,FLOOR,领域实体,mysql,1,FLOOR,mysql.txt,0
+mysql:FULL JOIN,FULL JOIN,查询与连接实体,mysql,1,FULL JOIN,mysql.txt,0
+mysql:Gap Lock,Gap Lock,锁机制实体,mysql,1,Gap Lock,mysql.txt,0
+mysql:HAVING,HAVING,SQL分类实体,mysql,1,HAVING,mysql.txt,0
+mysql:HikariCP,HikariCP,中间件与工具实体,mysql,1,HikariCP,mysql.txt,0
+mysql:IO线程,IO线程,主从复制与高可用实体,mysql,1,IO线程,mysql.txt,0
+mysql:Isolation,Isolation,事务与一致性实体,mysql,1,Isolation,mysql.txt,0
+mysql:LEFT JOIN,LEFT JOIN,查询与连接实体,mysql,1,LEFT JOIN,mysql.txt,0
+mysql:MAX,MAX,领域实体,mysql,1,MAX,mysql.txt,0
+mysql:MIN,MIN,领域实体,mysql,1,MIN,mysql.txt,0
+mysql:NOT NULL,NOT NULL,表设计与拆分实体,mysql,1,NOT NULL,mysql.txt,0
+mysql:NOW,NOW,领域实体,mysql,1,NOW,mysql.txt,0
+mysql:Next-Key Lock,Next-Key Lock,锁机制实体,mysql,1,Next-Key Lock,mysql.txt,0
+mysql:PreparedStatement,PreparedStatement,中间件与工具实体,mysql,1,PreparedStatement,mysql.txt,0
+mysql:RDBMS,RDBMS,领域实体,mysql,1,RDBMS,mysql.txt,0
+mysql:READ COMMITTED,READ COMMITTED,事务与一致性实体,mysql,1,READ COMMITTED,mysql.txt,0
+mysql:READ UNCOMMITTED,READ UNCOMMITTED,事务与一致性实体,mysql,1,READ UNCOMMITTED,mysql.txt,0
+mysql:REPEATABLE READ,REPEATABLE READ,事务与一致性实体,mysql,1,REPEATABLE READ,mysql.txt,0
+mysql:RIGHT JOIN,RIGHT JOIN,查询与连接实体,mysql,1,RIGHT JOIN,mysql.txt,0
+mysql:ROLLBACK,ROLLBACK,事务与一致性实体,mysql,1,ROLLBACK,mysql.txt,0
+mysql:ROUND,ROUND,领域实体,mysql,1,ROUND,mysql.txt,0
+mysql:Redis自增,Redis自增,分库分表与分布式实体,mysql,1,Redis自增,mysql.txt,0
+mysql:SAVEPOINT,SAVEPOINT,事务与一致性实体,mysql,1,SAVEPOINT,mysql.txt,0
+mysql:SERIALIZABLE,SERIALIZABLE,事务与一致性实体,mysql,1,SERIALIZABLE,mysql.txt,0
+mysql:SQL注入,SQL注入,运维与安全实体,mysql,1,SQL注入,mysql.txt,0
+mysql:SQL线程,SQL线程,主从复制与高可用实体,mysql,1,SQL线程,mysql.txt,0
+mysql:SQL解析,SQL解析,基础架构实体,mysql,1,SQL解析,mysql.txt,0
+mysql:START TRANSACTION,START TRANSACTION,事务与一致性实体,mysql,1,START TRANSACTION,mysql.txt,0
+mysql:SUM,SUM,领域实体,mysql,1,SUM,mysql.txt,0
+mysql:Snowflake,Snowflake,分库分表与分布式实体,mysql,1,Snowflake,mysql.txt,0
+mysql:SpringBoot,SpringBoot,中间件与工具实体,mysql,1,SpringBoot,mysql.txt,0
+mysql:UUID,UUID,分库分表与分布式实体,mysql,1,UUID,mysql.txt,0
+mysql:Using filesort,Using filesort,执行计划与调优实体,mysql,1,Using filesort,mysql.txt,0
+mysql:Using index,Using index,执行计划与调优实体,mysql,1,Using index,mysql.txt,0
+mysql:autocommit,autocommit,事务与一致性实体,mysql,1,autocommit,mysql.txt,0
+mysql:bigint,bigint,数据类型实体,mysql,1,bigint,mysql.txt,0
+mysql:decimal,decimal,数据类型实体,mysql,1,decimal,mysql.txt,0
+mysql:double,double,数据类型实体,mysql,1,double,mysql.txt,0
+mysql:emoji,emoji,MySQL8.0与扩展特性实体,mysql,1,emoji,mysql.txt,0
+mysql:innodb_buffer_pool_size,innodb_buffer_pool_size,服务器参数与配置实体,mysql,1,innodb_buffer_pool_size,mysql.txt,0
+mysql:innodb_log_file_size,innodb_log_file_size,服务器参数与配置实体,mysql,1,innodb_log_file_size,mysql.txt,0
+mysql:long_query_time,long_query_time,执行计划与调优实体,mysql,1,long_query_time,mysql.txt,0
+mysql:max_connections,max_connections,服务器参数与配置实体,mysql,1,max_connections,mysql.txt,0
+mysql:mysqldump,mysqldump,中间件与工具实体,mysql,1,mysqldump,mysql.txt,0
+mysql:read view,read view,事务与一致性实体,mysql,1,read view,mysql.txt,0
+mysql:text,text,数据类型实体,mysql,1,text,mysql.txt,0
+mysql:一致性哈希,一致性哈希,分库分表与分布式实体,mysql,1,一致性哈希,mysql.txt,0
+mysql:临键锁,临键锁,锁机制实体,mysql,1,临键锁,mysql.txt,0
+mysql:主从延迟,主从延迟,主从复制与高可用实体,mysql,1,主从延迟,mysql.txt,0
+mysql:主键id分页,主键id分页,数据库设计与规范实体,mysql,1,主键id分页,mysql.txt,0
+mysql:二叉树,二叉树,索引相关实体,mysql,1,二叉树,mysql.txt,0
+mysql:全文索引,全文索引,领域实体,mysql,1,全文索引,mysql.txt,0
+mysql:全表扫描,全表扫描,索引相关实体,mysql,1,全表扫描,mysql.txt,0
+mysql:公用表表达式,公用表表达式,MySQL8.0与扩展特性实体,mysql,1,公用表表达式,mysql.txt,0
+mysql:关系型数据库管理系统,关系型数据库管理系统,领域实体,mysql,1,关系型数据库管理系统,mysql.txt,0
+mysql:冗余字段,冗余字段,数据库设计与规范实体,mysql,1,冗余字段,mysql.txt,0
+mysql:写锁,写锁,锁机制实体,mysql,1,写锁,mysql.txt,0
+mysql:分区表,分区表,表设计与拆分实体,mysql,1,分区表,mysql.txt,0
+mysql:分页查询,分页查询,查询与连接实体,mysql,1,分页查询,mysql.txt,0
+mysql:参照完整性,参照完整性,数据库设计与规范实体,mysql,1,参照完整性,mysql.txt,0
+mysql:哈希分片,哈希分片,分库分表与分布式实体,mysql,1,哈希分片,mysql.txt,0
+mysql:哈希表,哈希表,索引相关实体,mysql,1,哈希表,mysql.txt,0
+mysql:唯一索引,唯一索引,领域实体,mysql,1,唯一索引,mysql.txt,0
+mysql:垂直拆分,垂直拆分,表设计与拆分实体,mysql,1,垂直拆分,mysql.txt,0
+mysql:增强索引,增强索引,领域实体,mysql,1,增强索引,mysql.txt,0
+mysql:复合索引,复合索引,领域实体,mysql,1,复合索引,mysql.txt,0
+mysql:多版本并发控制,多版本并发控制,事务与一致性实体,mysql,1,多版本并发控制,mysql.txt,0
+mysql:大分页,大分页,执行计划与调优实体,mysql,1,大分页,mysql.txt,0
+mysql:大表优化,大表优化,表设计与拆分实体,mysql,1,大表优化,mysql.txt,0
+mysql:字符串型,字符串型,数据类型实体,mysql,1,字符串型,mysql.txt,0
+mysql:小表驱动大表,小表驱动大表,执行计划与调优实体,mysql,1,小表驱动大表,mysql.txt,0
+mysql:崩溃恢复,崩溃恢复,运维与安全实体,mysql,1,崩溃恢复,mysql.txt,0
+mysql:开启查询缓存,开启查询缓存,基础架构实体,mysql,1,开启查询缓存,mysql.txt,0
+mysql:异步复制,异步复制,主从复制与高可用实体,mysql,1,异步复制,mysql.txt,0
+mysql:性能调优,性能调优,领域实体,mysql,1,性能调优,mysql.txt,0
+mysql:意向共享锁,意向共享锁,锁机制实体,mysql,1,意向共享锁,mysql.txt,0
+mysql:意向排他锁,意向排他锁,锁机制实体,mysql,1,意向排他锁,mysql.txt,0
+mysql:慢查询日志,慢查询日志,执行计划与调优实体,mysql,1,慢查询日志,mysql.txt,0
+mysql:执行器,执行器,基础架构实体,mysql,1,执行器,mysql.txt,0
+mysql:批量插入,批量插入,执行计划与调优实体,mysql,1,批量插入,mysql.txt,0
+mysql:插件式架构,插件式架构,基础架构实体,mysql,1,插件式架构,mysql.txt,0
+mysql:故障转移,故障转移,主从复制与高可用实体,mysql,1,故障转移,mysql.txt,0
+mysql:数值型,数值型,数据类型实体,mysql,1,数值型,mysql.txt,0
+mysql:数据库自增,数据库自增,领域实体,mysql,1,数据库自增,mysql.txt,0
+mysql:日期型,日期型,数据类型实体,mysql,1,日期型,mysql.txt,0
+mysql:普通索引,普通索引,领域实体,mysql,1,普通索引,mysql.txt,0
+mysql:最左匹配,最左匹配,索引相关实体,mysql,1,最左匹配,mysql.txt,0
+mysql:服务层,服务层,基础架构实体,mysql,1,服务层,mysql.txt,0
+mysql:条件查询,条件查询,查询与连接实体,mysql,1,条件查询,mysql.txt,0
+mysql:水平拆分,水平拆分,表设计与拆分实体,mysql,1,水平拆分,mysql.txt,0
+mysql:版本链,版本链,事务与一致性实体,mysql,1,版本链,mysql.txt,0
+mysql:物理内存,物理内存,服务器参数与配置实体,mysql,1,物理内存,mysql.txt,0
+mysql:物理备份,物理备份,运维与安全实体,mysql,1,物理备份,mysql.txt,0
+mysql:窗口函数,窗口函数,MySQL8.0与扩展特性实体,mysql,1,窗口函数,mysql.txt,0
+mysql:索引下推,索引下推,领域实体,mysql,1,索引下推,mysql.txt,0
+mysql:组复制,组复制,主从复制与高可用实体,mysql,1,组复制,mysql.txt,0
+mysql:范围分片,范围分片,分库分表与分布式实体,mysql,1,范围分片,mysql.txt,0
+mysql:读视图,读视图,事务与一致性实体,mysql,1,读视图,mysql.txt,0
+mysql:读锁,读锁,锁机制实体,mysql,1,读锁,mysql.txt,0
+mysql:跨库事务,跨库事务,领域实体,mysql,1,跨库事务,mysql.txt,0
+mysql:跨库分页,跨库分页,分库分表与分布式实体,mysql,1,跨库分页,mysql.txt,0
+mysql:跨库联表查询,跨库联表查询,数据库设计与规范实体,mysql,1,跨库联表查询,mysql.txt,0
+mysql:连接管理,连接管理,基础架构实体,mysql,1,连接管理,mysql.txt,0
+mysql:逻辑备份,逻辑备份,运维与安全实体,mysql,1,逻辑备份,mysql.txt,0
+mysql:逻辑外键,逻辑外键,数据库设计与规范实体,mysql,1,逻辑外键,mysql.txt,0
+mysql:锁机制,锁机制,领域实体,mysql,1,锁机制,mysql.txt,0
+mysql:锁等待超时时间,锁等待超时时间,锁机制实体,mysql,1,锁等待超时时间,mysql.txt,0
+mysql:雪花算法,雪花算法,分库分表与分布式实体,mysql,1,雪花算法,mysql.txt,0
+mysql:非热点字段,非热点字段,表设计与拆分实体,mysql,1,非热点字段,mysql.txt,0
+mysql:非相关子查询,非相关子查询,查询与连接实体,mysql,1,非相关子查询,mysql.txt,0
+mysql:页锁,页锁,锁机制实体,mysql,1,页锁,mysql.txt,0
+mysql:预编译SQL,预编译SQL,运维与安全实体,mysql,1,预编译SQL,mysql.txt,0
+mysql:默认值,默认值,表设计与拆分实体,mysql,1,默认值,mysql.txt,0
+os:操作系统,操作系统,领域实体,os,56,操作系统,os.txt,1
+os:进程,进程,核心抽象实体,os,41,进程,os.txt,1
+os:文件,文件,核心抽象实体,os,33,文件,os.txt,0
+os:内存,内存,资源与硬件实体,os,31,内存,os.txt,0
+os:调度,调度,处理器与调度实体,os,26,调度,os.txt,1
+os:页,页,资源与硬件实体,os,21,页,os.txt,0
+os:文件系统,文件系统,核心抽象实体,os,13,文件系统,os.txt,1
+os:磁盘,磁盘,资源与硬件实体,os,13,磁盘,os.txt,0
+os:处理器,处理器,资源与硬件实体,os,11,处理器,os.txt,0
+os:锁,锁,同步与互斥实体,os,11,锁,os.txt,0
+os:CPU,CPU,资源与硬件实体,os,10,CPU,os.txt,0
+os:共享,共享,核心思想与性质实体,os,10,共享,os.txt,0
+os:死锁,死锁,同步与互斥实体,os,10,死锁,os.txt,0
+os:中断,中断,处理器与调度实体,os,9,中断,os.txt,0
+os:线程,线程,核心抽象实体,os,9,线程,os.txt,0
+os:内核,内核,领域实体,os,8,内核,os.txt,1
+os:地址空间,地址空间,核心抽象实体,os,8,地址空间,os.txt,0
+os:抽象,抽象,核心思想与性质实体,os,8,抽象,os.txt,0
+os:权限,权限,文件系统实体,os,8,权限,os.txt,0
+os:目录,目录,核心抽象实体,os,8,目录,os.txt,0
+os:保护,保护,安全与保护实体,os,7,保护,os.txt,0
+os:分页,分页,资源与硬件实体,os,7,分页,os.txt,0
+os:并发,并发,核心思想与性质实体,os,7,并发,os.txt,0
+os:缓冲,缓冲,设备管理与I/O实体,os,6,缓冲,os.txt,0
+os:互斥,互斥,同步与互斥实体,os,5,互斥,os.txt,1
+os:系统调用,系统调用,领域实体,os,5,系统调用,os.txt,1
+os:虚拟内存,虚拟内存,核心抽象实体,os,5,虚拟内存,os.txt,0
+os:设备管理,设备管理,功能模块实体,os,5,设备管理,os.txt,0
+os:连续分配,连续分配,内存管理实体,os,5,连续分配,os.txt,0
+os:I/O,I/O,设备管理与I/O实体,os,4,I/O,os.txt,0
+os:分段,分段,内存管理实体,os,4,分段,os.txt,0
+os:抢占式调度,抢占式调度,处理器与调度实体,os,4,抢占式调度,os.txt,0
+os:用户态,用户态,核心抽象实体,os,4,用户态,os.txt,0
+os:缓冲区,缓冲区,经典同步问题实体,os,4,缓冲区,os.txt,0
+os:进程调度,进程调度,核心抽象实体,os,4,进程调度,os.txt,0
+os:驱动程序,驱动程序,设备管理与I/O实体,os,4,驱动程序,os.txt,1
+os:Process,Process,进程与线程实体,os,3,Process,os.txt,0
+os:先来先服务,先来先服务,调度算法实体,os,3,先来先服务,os.txt,0
+os:共享资源,共享资源,同步与互斥实体,os,3,共享资源,os.txt,0
+os:内核态,内核态,领域实体,os,3,内核态,os.txt,0
+os:外部设备,外部设备,资源与硬件实体,os,3,外部设备,os.txt,0
+os:存储管理,存储管理,功能模块实体,os,3,存储管理,os.txt,0
+os:安全性,安全性,核心思想与性质实体,os,3,安全性,os.txt,0
+os:文件管理,文件管理,核心抽象实体,os,3,文件管理,os.txt,0
+os:时间片,时间片,处理器与调度实体,os,3,时间片,os.txt,0
+os:最佳置换,最佳置换,虚拟内存与页面置换实体,os,3,最佳置换,os.txt,0
+os:程序设计,程序设计,课程与方法相关实体,os,3,程序设计,os.txt,0
+os:缓存,缓存,设备管理与I/O实体,os,3,缓存,os.txt,0
+os:访问控制,访问控制,安全与保护实体,os,3,访问控制,os.txt,0
+os:资源管理,资源管理,领域实体,os,3,资源管理,os.txt,0
+os:进程与线程,进程与线程,核心抽象实体,os,3,进程与线程,os.txt,0
+os:进程同步,进程同步,核心抽象实体,os,3,进程同步,os.txt,0
+os:DMA,DMA,设备管理与I/O实体,os,2,DMA,os.txt,0
+os:LRU,LRU,虚拟内存与页面置换实体,os,2,LRU,os.txt,0
+os:Linux,Linux,系统与平台实体,os,2,Linux,os.txt,0
+os:OS,OS,领域实体,os,2,OS,os.txt,0
+os:PCB,PCB,进程与线程实体,os,2,PCB,os.txt,0
+os:SCAN,SCAN,磁盘调度实体,os,2,SCAN,os.txt,0
+os:中断处理,中断处理,处理器与调度实体,os,2,中断处理,os.txt,0
+os:交互式系统,交互式系统,处理器与调度实体,os,2,交互式系统,os.txt,0
+os:优先级调度,优先级调度,处理器与调度实体,os,2,优先级调度,os.txt,0
+os:信号量,信号量,同步与互斥实体,os,2,信号量,os.txt,0
+os:假脱机,假脱机,设备管理与I/O实体,os,2,假脱机,os.txt,0
+os:内存保护,内存保护,资源与硬件实体,os,2,内存保护,os.txt,0
+os:内部碎片,内部碎片,内存管理实体,os,2,内部碎片,os.txt,0
+os:可靠性,可靠性,核心思想与性质实体,os,2,可靠性,os.txt,0
+os:周转时间,周转时间,处理器与调度实体,os,2,周转时间,os.txt,0
+os:图形界面,图形界面,发展历程实体,os,2,图形界面,os.txt,0
+os:地址映射,地址映射,内存管理实体,os,2,地址映射,os.txt,0
+os:处理器管理,处理器管理,资源与硬件实体,os,2,处理器管理,os.txt,0
+os:外存,外存,资源与硬件实体,os,2,外存,os.txt,0
+os:外部碎片,外部碎片,内存管理实体,os,2,外部碎片,os.txt,0
+os:多级反馈队列,多级反馈队列,调度算法实体,os,2,多级反馈队列,os.txt,0
+os:多道程序设计,多道程序设计,发展历程实体,os,2,多道程序设计,os.txt,0
+os:寄存器,寄存器,进程与线程实体,os,2,寄存器,os.txt,0
+os:循环扫描算法,循环扫描算法,磁盘调度实体,os,2,循环扫描算法,os.txt,0
+os:扩展性,扩展性,核心思想与性质实体,os,2,扩展性,os.txt,0
+os:扫描算法,扫描算法,磁盘调度实体,os,2,扫描算法,os.txt,0
+os:批处理系统,批处理系统,发展历程实体,os,2,批处理系统,os.txt,0
+os:时间片轮转,时间片轮转,处理器与调度实体,os,2,时间片轮转,os.txt,0
+os:服务器,服务器,系统与平台实体,os,2,服务器,os.txt,0
+os:权限控制,权限控制,文件系统实体,os,2,权限控制,os.txt,0
+os:栈,栈,进程与线程实体,os,2,栈,os.txt,0
+os:树形目录,树形目录,核心抽象实体,os,2,树形目录,os.txt,0
+os:物理内存,物理内存,资源与硬件实体,os,2,物理内存,os.txt,0
+os:生产者—消费者问题,生产者—消费者问题,经典同步问题实体,os,2,生产者—消费者问题,os.txt,0
+os:用户接口,用户接口,领域实体,os,2,用户接口,os.txt,0
+os:短作业优先,短作业优先,调度算法实体,os,2,短作业优先,os.txt,0
+os:磁盘块,磁盘块,资源与硬件实体,os,2,磁盘块,os.txt,0
+os:程序计数器,程序计数器,进程与线程实体,os,2,程序计数器,os.txt,0
+os:系统吞吐量,系统吞吐量,处理器与调度实体,os,2,系统吞吐量,os.txt,0
+os:索引分配,索引分配,文件系统实体,os,2,索引分配,os.txt,0
+os:计算机系统,计算机系统,领域实体,os,2,计算机系统,os.txt,0
+os:运行状态,运行状态,进程与线程实体,os,2,运行状态,os.txt,0
+os:链接分配,链接分配,文件系统实体,os,2,链接分配,os.txt,0
+os:键盘,键盘,资源与硬件实体,os,2,键盘,os.txt,0
+os:非抢占式调度,非抢占式调度,处理器与调度实体,os,2,非抢占式调度,os.txt,0
+os:页面置换算法,页面置换算法,资源与硬件实体,os,2,页面置换算法,os.txt,0
+os:Banker’s Algorithm,Banker’s Algorithm,死锁相关实体,os,1,Banker’s Algorithm,os.txt,0
+os:Batch Processing System,Batch Processing System,发展历程实体,os,1,Batch Processing System,os.txt,0
+os:C-SCAN,C-SCAN,磁盘调度实体,os,1,C-SCAN,os.txt,0
+os:CPU 利用率,CPU 利用率,处理器与调度实体,os,1,CPU 利用率,os.txt,0
+os:Deadlock,Deadlock,死锁相关实体,os,1,Deadlock,os.txt,0
+os:Direct Memory Access,Direct Memory Access,设备管理与I/O实体,os,1,Direct Memory Access,os.txt,0
+os:FCFS,FCFS,调度算法实体,os,1,FCFS,os.txt,0
+os:FIFO,FIFO,虚拟内存与页面置换实体,os,1,FIFO,os.txt,0
+os:First Come First Served,First Come First Served,调度算法实体,os,1,First Come First Served,os.txt,0
+os:I/O 请求,I/O 请求,设备管理与I/O实体,os,1,I/O 请求,os.txt,0
+os:Journaling File System,Journaling File System,文件系统实体,os,1,Journaling File System,os.txt,0
+os:Least Recently Used,Least Recently Used,虚拟内存与页面置换实体,os,1,Least Recently Used,os.txt,0
+os:Linux 进程与线程,Linux 进程与线程,核心抽象实体,os,1,Linux 进程与线程,os.txt,0
+os:Monitor,Monitor,同步与互斥实体,os,1,Monitor,os.txt,0
+os:Multilevel Feedback Queue,Multilevel Feedback Queue,调度算法实体,os,1,Multilevel Feedback Queue,os.txt,0
+os:Multiprogramming,Multiprogramming,发展历程实体,os,1,Multiprogramming,os.txt,0
+os:OPT,OPT,虚拟内存与页面置换实体,os,1,OPT,os.txt,0
+os:Operating System,Operating System,领域实体,os,1,Operating System,os.txt,0
+os:Paging,Paging,内存管理实体,os,1,Paging,os.txt,0
+os:Process Control Block,Process Control Block,进程与线程实体,os,1,Process Control Block,os.txt,0
+os:RR,RR,调度算法实体,os,1,RR,os.txt,0
+os:Round Robin,Round Robin,调度算法实体,os,1,Round Robin,os.txt,0
+os:SJF,SJF,调度算法实体,os,1,SJF,os.txt,0
+os:SSTF,SSTF,磁盘调度实体,os,1,SSTF,os.txt,0
+os:Segmentation,Segmentation,内存管理实体,os,1,Segmentation,os.txt,0
+os:Semaphore,Semaphore,同步与互斥实体,os,1,Semaphore,os.txt,0
+os:Shortest Job First,Shortest Job First,调度算法实体,os,1,Shortest Job First,os.txt,0
+os:Spooling,Spooling,设备管理与I/O实体,os,1,Spooling,os.txt,0
+os:Thrashing,Thrashing,虚拟内存与页面置换实体,os,1,Thrashing,os.txt,0
+os:Thread,Thread,进程与线程实体,os,1,Thread,os.txt,0
+os:Time-Sharing System,Time-Sharing System,发展历程实体,os,1,Time-Sharing System,os.txt,0
+os:Virtual Memory,Virtual Memory,虚拟内存与页面置换实体,os,1,Virtual Memory,os.txt,0
+os:Windows,Windows,系统与平台实体,os,1,Windows,os.txt,0
+os:macOS,macOS,系统与平台实体,os,1,macOS,os.txt,0
+os:一致性维护,一致性维护,文件系统实体,os,1,一致性维护,os.txt,0
+os:上下文切换,上下文切换,处理器与调度实体,os,1,上下文切换,os.txt,0
+os:不剥夺,不剥夺,死锁相关实体,os,1,不剥夺,os.txt,0
+os:两级目录,两级目录,核心抽象实体,os,1,两级目录,os.txt,0
+os:个人计算机,个人计算机,系统与平台实体,os,1,个人计算机,os.txt,0
+os:临界区,临界区,同步与互斥实体,os,1,临界区,os.txt,0
+os:主存,主存,内存管理实体,os,1,主存,os.txt,0
+os:云计算平台,云计算平台,系统与平台实体,os,1,云计算平台,os.txt,0
+os:代码段,代码段,内存管理实体,os,1,代码段,os.txt,0
+os:任务调度,任务调度,领域实体,os,1,任务调度,os.txt,0
+os:位置,位置,文件系统实体,os,1,位置,os.txt,0
+os:作业调度,作业调度,处理器与调度实体,os,1,作业调度,os.txt,0
+os:元数据,元数据,文件系统实体,os,1,元数据,os.txt,0
+os:先进先出,先进先出,虚拟内存与页面置换实体,os,1,先进先出,os.txt,0
+os:公平性,公平性,处理器与调度实体,os,1,公平性,os.txt,0
+os:内存管理与虚拟内存,内存管理与虚拟内存,核心抽象实体,os,1,内存管理与虚拟内存,os.txt,0
+os:分布式系统,分布式系统,系统与平台实体,os,1,分布式系统,os.txt,0
+os:分时系统,分时系统,发展历程实体,os,1,分时系统,os.txt,0
+os:动态分区分配,动态分区分配,内存管理实体,os,1,动态分区分配,os.txt,0
+os:单一连续分配,单一连续分配,内存管理实体,os,1,单一连续分配,os.txt,0
+os:单用户多任务操作系统,单用户多任务操作系统,领域实体,os,1,单用户多任务操作系统,os.txt,0
+os:单级目录,单级目录,核心抽象实体,os,1,单级目录,os.txt,0
+os:可移植性,可移植性,核心思想与性质实体,os,1,可移植性,os.txt,0
+os:可维护性,可维护性,核心思想与性质实体,os,1,可维护性,os.txt,0
+os:命令行环境,命令行环境,发展历程实体,os,1,命令行环境,os.txt,0
+os:响应时间,响应时间,处理器与调度实体,os,1,响应时间,os.txt,0
+os:哲学家进餐问题,哲学家进餐问题,经典同步问题实体,os,1,哲学家进餐问题,os.txt,0
+os:固定分区分配,固定分区分配,内存管理实体,os,1,固定分区分配,os.txt,0
+os:图形界面程序,图形界面程序,发展历程实体,os,1,图形界面程序,os.txt,0
+os:地址空间布局随机化,地址空间布局随机化,核心抽象实体,os,1,地址空间布局随机化,os.txt,0
+os:处理器调度与调度算法,处理器调度与调度算法,资源与硬件实体,os,1,处理器调度与调度算法,os.txt,0
+os:多线程,多线程,核心抽象实体,os,1,多线程,os.txt,0
+os:安全保护,安全保护,功能模块实体,os,1,安全保护,os.txt,0
+os:安全性判断,安全性判断,死锁相关实体,os,1,安全性判断,os.txt,0
+os:实时系统,实时系统,处理器与调度实体,os,1,实时系统,os.txt,0
+os:审计日志,审计日志,安全与保护实体,os,1,审计日志,os.txt,0
+os:寄存器环境,寄存器环境,进程与线程实体,os,1,寄存器环境,os.txt,0
+os:就绪状态,就绪状态,进程与线程实体,os,1,就绪状态,os.txt,0
+os:局部性原理,局部性原理,虚拟内存与页面置换实体,os,1,局部性原理,os.txt,0
+os:嵌入式操作系统,嵌入式操作系统,领域实体,os,1,嵌入式操作系统,os.txt,0
+os:工业控制设备,工业控制设备,系统与平台实体,os,1,工业控制设备,os.txt,0
+os:并发能力,并发能力,进程与线程实体,os,1,并发能力,os.txt,0
+os:并行计算任务,并行计算任务,进程与线程实体,os,1,并行计算任务,os.txt,0
+os:强制访问控制,强制访问控制,安全与保护实体,os,1,强制访问控制,os.txt,0
+os:循环等待,循环等待,死锁相关实体,os,1,循环等待,os.txt,0
+os:恶意软件,恶意软件,安全与保护实体,os,1,恶意软件,os.txt,0
+os:手机,手机,系统与平台实体,os,1,手机,os.txt,0
+os:打印机,打印机,资源与硬件实体,os,1,打印机,os.txt,0
+os:打开的文件,打开的文件,核心抽象实体,os,1,打开的文件,os.txt,0
+os:抖动,抖动,虚拟内存与页面置换实体,os,1,抖动,os.txt,0
+os:控制命令,控制命令,设备管理与I/O实体,os,1,控制命令,os.txt,0
+os:提权攻击,提权攻击,安全与保护实体,os,1,提权攻击,os.txt,0
+os:故障恢复,故障恢复,文件系统实体,os,1,故障恢复,os.txt,0
+os:数据段,数据段,内存管理实体,os,1,数据段,os.txt,0
+os:数据泄露,数据泄露,安全与保护实体,os,1,数据泄露,os.txt,0
+os:数据结构,数据结构,课程与方法相关实体,os,1,数据结构,os.txt,0
+os:文件共享,文件共享,核心抽象实体,os,1,文件共享,os.txt,0
+os:文件名,文件名,核心抽象实体,os,1,文件名,os.txt,0
+os:文件系统命令输出,文件系统命令输出,核心抽象实体,os,1,文件系统命令输出,os.txt,0
+os:日志式文件系统,日志式文件系统,核心抽象实体,os,1,日志式文件系统,os.txt,0
+os:时间戳,时间戳,文件系统实体,os,1,时间戳,os.txt,0
+os:显示器,显示器,资源与硬件实体,os,1,显示器,os.txt,0
+os:智能家居,智能家居,系统与平台实体,os,1,智能家居,os.txt,0
+os:最短寻道时间优先,最短寻道时间优先,磁盘调度实体,os,1,最短寻道时间优先,os.txt,0
+os:最近最久未使用,最近最久未使用,虚拟内存与页面置换实体,os,1,最近最久未使用,os.txt,0
+os:服务器程序,服务器程序,系统与平台实体,os,1,服务器程序,os.txt,0
+os:权衡,权衡,核心思想与性质实体,os,1,权衡,os.txt,0
+os:权限位,权限位,文件系统实体,os,1,权限位,os.txt,0
+os:条件变量,条件变量,同步与互斥实体,os,1,条件变量,os.txt,0
+os:栈段,栈段,进程与线程实体,os,1,栈段,os.txt,0
+os:模拟进程调度,模拟进程调度,核心抽象实体,os,1,模拟进程调度,os.txt,0
+os:沙箱机制,沙箱机制,安全与保护实体,os,1,沙箱机制,os.txt,0
+os:特权级划分,特权级划分,安全与保护实体,os,1,特权级划分,os.txt,0
+os:独占型设备,独占型设备,核心思想与性质实体,os,1,独占型设备,os.txt,0
+os:用户权限,用户权限,文件系统实体,os,1,用户权限,os.txt,0
+os:用户账户,用户账户,安全与保护实体,os,1,用户账户,os.txt,0
+os:目录项,目录项,核心抽象实体,os,1,目录项,os.txt,0
+os:相对路径,相对路径,文件系统实体,os,1,相对路径,os.txt,0
+os:磁头移动距离,磁头移动距离,磁盘调度实体,os,1,磁头移动距离,os.txt,0
+os:磁盘访问效率,磁盘访问效率,资源与硬件实体,os,1,磁盘访问效率,os.txt,0
+os:磁盘调度算法,磁盘调度算法,资源与硬件实体,os,1,磁盘调度算法,os.txt,0
+os:移动操作系统,移动操作系统,领域实体,os,1,移动操作系统,os.txt,0
+os:稳定性,稳定性,核心思想与性质实体,os,1,稳定性,os.txt,0
+os:空闲空间管理,空闲空间管理,文件系统实体,os,1,空闲空间管理,os.txt,0
+os:竞争条件,竞争条件,同步与互斥实体,os,1,竞争条件,os.txt,0
+os:简单 Shell,简单 Shell,课程与方法相关实体,os,1,简单 Shell,os.txt,0
+os:管程,管程,同步与互斥实体,os,1,管程,os.txt,0
+os:系统安全,系统安全,安全与保护实体,os,1,系统安全,os.txt,0
+os:系统软件,系统软件,领域实体,os,1,系统软件,os.txt,0
+os:索引块,索引块,文件系统实体,os,1,索引块,os.txt,0
+os:线程调度,线程调度,核心抽象实体,os,1,线程调度,os.txt,0
+os:绝对路径,绝对路径,文件系统实体,os,1,绝对路径,os.txt,0
+os:编译原理,编译原理,课程与方法相关实体,os,1,编译原理,os.txt,0
+os:缺页中断,缺页中断,资源与硬件实体,os,1,缺页中断,os.txt,0
+os:网卡,网卡,资源与硬件实体,os,1,网卡,os.txt,0
+os:网络接口,网络接口,资源与硬件实体,os,1,网络接口,os.txt,0
+os:网络操作系统,网络操作系统,领域实体,os,1,网络操作系统,os.txt,0
+os:网络通信,网络通信,功能模块实体,os,1,网络通信,os.txt,0
+os:虚拟化平台,虚拟化平台,系统与平台实体,os,1,虚拟化平台,os.txt,0
+os:裸机,裸机,核心抽象实体,os,1,裸机,os.txt,0
+os:计算机组成原理,计算机组成原理,课程与方法相关实体,os,1,计算机组成原理,os.txt,0
+os:计算机网络,计算机网络,课程与方法相关实体,os,1,计算机网络,os.txt,0
+os:设备控制器,设备控制器,资源与硬件实体,os,1,设备控制器,os.txt,0
+os:设备管理与输入输出系统,设备管理与输入输出系统,功能模块实体,os,1,设备管理与输入输出系统,os.txt,0
+os:访问控制列表,访问控制列表,安全与保护实体,os,1,访问控制列表,os.txt,0
+os:请求并保持,请求并保持,死锁相关实体,os,1,请求并保持,os.txt,0
+os:读者—写者问题,读者—写者问题,经典同步问题实体,os,1,读者—写者问题,os.txt,0
+os:课程中还会讨论抖动,课程中还会讨论抖动,虚拟内存与页面置换实体,os,1,课程中还会讨论抖动,os.txt,0
+os:路径名,路径名,核心抽象实体,os,1,路径名,os.txt,0
+os:路由器,路由器,系统与平台实体,os,1,路由器,os.txt,0
+os:身份认证,身份认证,安全与保护实体,os,1,身份认证,os.txt,0
+os:输入输出系统,输入输出系统,设备管理与I/O实体,os,1,输入输出系统,os.txt,0
+os:进程控制块,进程控制块,核心抽象实体,os,1,进程控制块,os.txt,0
+os:进程管理,进程管理,核心抽象实体,os,1,进程管理,os.txt,0
+os:进程隔离,进程隔离,核心抽象实体,os,1,进程隔离,os.txt,0
+os:通信开销,通信开销,核心思想与性质实体,os,1,通信开销,os.txt,0
+os:逻辑地址空间,逻辑地址空间,核心抽象实体,os,1,逻辑地址空间,os.txt,0
+os:银行家算法,银行家算法,死锁相关实体,os,1,银行家算法,os.txt,0
+os:阻塞状态,阻塞状态,进程与线程实体,os,1,阻塞状态,os.txt,0
+os:非法入侵,非法入侵,安全与保护实体,os,1,非法入侵,os.txt,0
+os:非连续分配,非连续分配,内存管理实体,os,1,非连续分配,os.txt,0
+os:页框,页框,资源与硬件实体,os,1,页框,os.txt,0
+os:页表,页表,资源与硬件实体,os,1,页表,os.txt,0
+os:页面调度,页面调度,资源与硬件实体,os,1,页面调度,os.txt,0

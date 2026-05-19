@@ -1,0 +1,78 @@
+{
+  "unknown_relation_priority": 0.45,
+  "relations": [
+    {
+      "canonical": "alias_of",
+      "aliases": ["alias_of", "same_as", "synonym_of", "aka", "别名", "同义关系"],
+      "symmetric": true,
+      "priority": 0.95,
+      "cues": ["又称", "也称", "也叫", "亦称", "简称", "缩写", "\\baka\\b", "\\balias\\b", "同义", "别名"],
+      "negative_cues": ["用于", "基于", "依赖", "包含", "包括", "组成", "导致"]
+    },
+    {
+      "canonical": "is_a",
+      "aliases": ["is_a", "isa", "type_of", "kind_of", "instance_of", "subclass_of", "belongs_to", "上下位关系", "属于"],
+      "priority": 0.86,
+      "cues": ["上下位", "属于", "归类为", "可视为", "可看作", "是一种", "是一个", "\\bis a\\b", "\\btype of\\b", "\\bkind of\\b"],
+      "negative_cues": ["用于", "用来", "适用于", "基于", "依赖", "取决于", "组成", "构成", "包含", "包括", "导致", "引起"]
+    },
+    {
+      "canonical": "has_part",
+      "aliases": ["has_part", "contains", "includes", "composed_of", "has_component", "整体部分关系", "包含"],
+      "priority": 0.82,
+      "cues": ["枚举结构", "整体部分", "包含", "包括", "分为", "由.+组成", "由.+构成", "组成", "构成", "\\bcontains\\b", "\\bincludes\\b", "\\bcomposed of\\b"],
+      "negative_cues": ["用于", "用来", "适用于", "依赖", "基于", "导致", "引起"]
+    },
+    {
+      "canonical": "has_part",
+      "aliases": ["part_of", "component_of", "member_of", "部分整体关系", "隶属于"],
+      "swap": true,
+      "priority": 0.80,
+      "cues": ["部分整体", "一部分", "隶属于", "\\bpart of\\b", "\\bcomponent of\\b", "\\bmember of\\b"],
+      "negative_cues": ["用于", "基于", "依赖", "导致"]
+    },
+    {
+      "canonical": "used_for",
+      "aliases": ["used_for", "used_to", "purpose", "application", "用途关系", "用于"],
+      "priority": 0.76,
+      "cues": ["用途", "用于", "用来", "用作", "可用于", "常用于", "适用于", "\\bused for\\b", "\\bused to\\b", "\\bfor\\b"],
+      "negative_cues": ["属于", "包含", "包括", "组成", "构成", "依赖", "基于", "导致"]
+    },
+    {
+      "canonical": "depends_on",
+      "aliases": ["depends_on", "requires", "based_on", "relies_on", "依赖关系", "依赖"],
+      "priority": 0.78,
+      "cues": ["依赖", "基于", "建立在", "取决于", "要求", "\\bdepends on\\b", "\\brequires\\b", "\\bbased on\\b"],
+      "negative_cues": ["用于", "包含", "包括", "组成", "导致"]
+    },
+    {
+      "canonical": "causes",
+      "aliases": ["causes", "leads_to", "results_in", "triggers", "因果关系", "导致"],
+      "priority": 0.80,
+      "cues": ["因果", "导致", "引起", "造成", "使得", "会使", "触发", "\\bcauses\\b", "\\bleads to\\b", "\\bresults in\\b"],
+      "negative_cues": ["用于", "属于", "包含", "依赖", "基于"]
+    },
+    {
+      "canonical": "implemented_by",
+      "aliases": ["implemented_by", "implementation_of", "实现关系", "由.+实现"],
+      "priority": 0.84,
+      "cues": ["实现关系", "由.+实现", "实现类", "\\bimplemented by\\b", "\\bimplementation of\\b"],
+      "negative_cues": ["用于", "包含", "包括", "基于", "导致"]
+    },
+    {
+      "canonical": "implemented_by",
+      "aliases": ["implements", "实现"],
+      "swap": true,
+      "priority": 0.84,
+      "cues": ["实现", "\\bimplements\\b"],
+      "negative_cues": ["用于", "包含", "包括", "基于", "导致"]
+    },
+    {
+      "canonical": "extends",
+      "aliases": ["extends", "inherits_from", "subclass_of_relation", "继承关系", "继承"],
+      "priority": 0.84,
+      "cues": ["继承", "扩展自", "派生自", "\\bextends\\b", "\\binherits from\\b"],
+      "negative_cues": ["用于", "包含", "包括", "基于", "导致"]
+    }
+  ]
+}

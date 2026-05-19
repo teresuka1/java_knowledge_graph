@@ -1,0 +1,209 @@
+﻿main_entity,entity_type,mention_count,mentions,source_file,normalized_entity,aliases,section_titles,merged_entities,disambiguation_confidence,disambiguation_method,disambiguation_basis
+类,数据类型实体,49,类,java.txt,类,类,数据类型 | 变量与运算符 | 面向对象基础 | 继承与多态 | 抽象类与接口 | 数组 | 字符串 | 异常处理 | 集合框架 | 泛型 | 反射 | 线程与并发 | JVM基础,类,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类；章节=数据类型|变量与运算符|面向对象基础|继承与多态|抽象类与接口|数组|字符串|异常处理|集合框架|泛型|反射|线程与并发|JVM基础
+接口,数据类型实体,15,接口,java.txt,接口,接口,数据类型 | 继承与多态 | 抽象类与接口 | 集合框架 | 线程与并发,接口,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=接口；章节=数据类型|继承与多态|抽象类与接口|集合框架|线程与并发
+对象,面向对象核心实体,12,对象,java.txt,对象,对象,面向对象基础 | 继承与多态 | 字符串 | 反射 | JVM基础,对象,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=对象；章节=面向对象基础|继承与多态|字符串|反射|JVM基础
+变量,变量与成员实体,11,变量,java.txt,变量,变量,变量与运算符 | 抽象类与接口 | JVM基础,变量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=变量；章节=变量与运算符|抽象类与接口|JVM基础
+Class,面向对象核心实体,10,Class | class,java.txt,Class,Class | class,面向对象基础 | 泛型 | 反射 | JVM基础,Class,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Class；章节=面向对象基础|泛型|反射|JVM基础
+int,数据类型实体,8,int,java.txt,int,int,数据类型 | 关键字与修饰符 | 继承与多态 | 数组 | 注解,int,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=int；章节=数据类型|关键字与修饰符|继承与多态|数组|注解
+注解,领域实体,8,注解,java.txt,注解,注解,数据类型 | 注解,注解,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=注解；章节=数据类型|注解
+线程,线程与并发实体,8,线程,java.txt,线程,线程,字符串 | 集合框架 | 线程与并发,线程,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=线程；章节=字符串|集合框架|线程与并发
+Map,集合框架实体,6,Map,java.txt,Map,Map,集合框架,Map,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Map；章节=集合框架
+实例,面向对象核心实体,6,实例,java.txt,实例,实例,变量与运算符 | 面向对象基础 | 抽象类与接口 | 线程与并发 | JVM基础,实例,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=实例；章节=变量与运算符|面向对象基础|抽象类与接口|线程与并发|JVM基础
+数据类型,数据类型实体,6,数据类型,java.txt,数据类型,数据类型,数据类型,数据类型,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=数据类型；章节=数据类型
+数组,数据类型实体,6,数组,java.txt,数组,数组,数据类型 | 数组 | 集合框架,数组,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=数组；章节=数据类型|数组|集合框架
+泛型,领域实体,6,泛型,java.txt,泛型,泛型,泛型,泛型,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=泛型；章节=泛型
+继承,面向对象核心实体,6,继承,java.txt,继承,继承,面向对象基础 | 继承与多态 | 抽象类与接口 | 线程与并发,继承,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=继承；章节=面向对象基础|继承与多态|抽象类与接口|线程与并发
+Set,集合框架实体,5,Set,java.txt,Set,Set,集合框架 | 反射,Set,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Set；章节=集合框架|反射
+抽象类,数据类型实体,5,抽象类,java.txt,抽象类,抽象类,抽象类与接口,抽象类,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=抽象类；章节=抽象类与接口
+父类,数据类型实体,5,父类,java.txt,父类,父类,面向对象基础 | 继承与多态 | 异常处理 | 泛型,父类,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=父类；章节=面向对象基础|继承与多态|异常处理|泛型
+Exception,异常处理实体,4,Exception,java.txt,Exception,Exception,异常处理,Exception,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Exception；章节=异常处理
+List,集合框架实体,4,List,java.txt,List,List,集合框架,List,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=List；章节=集合框架
+final,关键字与修饰符实体,4,final,java.txt,final,final,关键字与修饰符 | 抽象类与接口 | 异常处理,final,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=final；章节=关键字与修饰符|抽象类与接口|异常处理
+public,关键字与修饰符实体,4,public,java.txt,public,public,关键字与修饰符 | 抽象类与接口 | 泛型,public,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=public；章节=关键字与修饰符|抽象类与接口|泛型
+运行,线程状态实体,4,运行,java.txt,运行,运行,异常处理 | 泛型 | 反射 | 线程与并发,运行,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=运行；章节=异常处理|泛型|反射|线程与并发
+HashMap,集合框架实体,3,HashMap,java.txt,HashMap,HashMap,集合框架,HashMap,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=HashMap；章节=集合框架
+Java,领域实体,3,Java,java.txt,Java,Java,数据类型 | 继承与多态 | 抽象类与接口,Java,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Java；章节=数据类型|继承与多态|抽象类与接口
+Lock,线程与并发实体,3,Lock,java.txt,Lock,Lock,线程与并发,Lock,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Lock；章节=线程与并发
+String,数组与字符串实体,3,String,java.txt,String,String,字符串,String,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=String；章节=字符串
+abstract,关键字与修饰符实体,3,abstract,java.txt,abstract,abstract,关键字与修饰符 | 抽象类与接口,abstract,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=abstract；章节=关键字与修饰符|抽象类与接口
+extends,关键字与修饰符实体,3,extends,java.txt,extends,extends,关键字与修饰符 | 继承与多态 | 泛型,extends,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=extends；章节=关键字与修饰符|继承与多态|泛型
+interface,关键字与修饰符实体,3,interface,java.txt,interface,interface,关键字与修饰符 | 继承与多态 | 注解,interface,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=interface；章节=关键字与修饰符|继承与多态|注解
+加载,JVM 与内存管理实体,3,加载,java.txt,加载,加载,JVM基础,加载,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=加载；章节=JVM基础
+反射,领域实体,3,反射,java.txt,反射,反射,反射,反射,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=反射；章节=反射
+多态,面向对象核心实体,3,多态,java.txt,多态,多态,面向对象基础 | 继承与多态,多态,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=多态；章节=面向对象基础|继承与多态
+子类,数据类型实体,3,子类,java.txt,子类,子类,面向对象基础 | 继承与多态 | 泛型,子类,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=子类；章节=面向对象基础|继承与多态|泛型
+静态方法,抽象类与接口实体,3,静态方法,java.txt,静态方法,静态方法,抽象类与接口 | 集合框架 | 线程与并发,静态方法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=静态方法；章节=抽象类与接口|集合框架|线程与并发
+Collection,集合框架实体,2,Collection,java.txt,Collection,Collection,集合框架,Collection,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Collection；章节=集合框架
+Executor,线程与并发实体,2,Executor,java.txt,Executor,Executor,线程与并发,Executor,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Executor；章节=线程与并发
+HashSet,集合框架实体,2,HashSet,java.txt,HashSet,HashSet,集合框架,HashSet,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=HashSet；章节=集合框架
+JVM,领域实体,2,JVM,java.txt,JVM,JVM,异常处理,JVM,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=JVM；章节=异常处理
+Thread,线程与并发实体,2,Thread,java.txt,Thread,Thread,线程与并发,Thread,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Thread；章节=线程与并发
+char,数据类型实体,2,char,java.txt,char,char,数据类型 | 字符串,char,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=char；章节=数据类型|字符串
+finally,异常处理实体,2,finally,java.txt,finally,finally,异常处理,finally,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=finally；章节=异常处理
+for,流程控制实体,2,for,java.txt,for,for,流程控制 | 反射,for,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=for；章节=流程控制|反射
+implements,关键字与修饰符实体,2,implements,java.txt,implements,implements,关键字与修饰符 | 继承与多态,implements,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=implements；章节=关键字与修饰符|继承与多态
+new,关键字与修饰符实体,2,new,java.txt,new,new,关键字与修饰符 | 数组,new,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=new；章节=关键字与修饰符|数组
+private,关键字与修饰符实体,2,private,java.txt,private,private,关键字与修饰符 | 反射,private,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=private；章节=关键字与修饰符|反射
+static,关键字与修饰符实体,2,static,java.txt,static,static,关键字与修饰符 | 抽象类与接口,static,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=static；章节=关键字与修饰符|抽象类与接口
+super,关键字与修饰符实体,2,super,java.txt,super,super,关键字与修饰符 | 泛型,super,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=super；章节=关键字与修饰符|泛型
+throw,异常处理实体,2,throw,java.txt,throw,throw,异常处理,throw,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=throw；章节=异常处理
+try,异常处理实体,2,try,java.txt,try,try,异常处理 | 线程与并发,try,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=try；章节=异常处理|线程与并发
+while,流程控制实体,2,while,java.txt,while,while,流程控制,while,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=while；章节=流程控制
+初始化,JVM 与内存管理实体,2,初始化,java.txt,初始化,初始化,面向对象基础 | JVM基础,初始化,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=初始化；章节=面向对象基础|JVM基础
+基本数据类型,数据类型实体,2,基本数据类型,java.txt,基本数据类型,基本数据类型,数据类型,基本数据类型,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=基本数据类型；章节=数据类型
+堆,JVM 与内存管理实体,2,堆,java.txt,堆,堆,JVM基础,堆,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=堆；章节=JVM基础
+实例变量,变量与成员实体,2,实例变量,java.txt,实例变量,实例变量,变量与运算符 | 抽象类与接口,实例变量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=实例变量；章节=变量与运算符|抽象类与接口
+局部变量,变量与成员实体,2,局部变量,java.txt,局部变量,局部变量,变量与运算符 | JVM基础,局部变量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=局部变量；章节=变量与运算符|JVM基础
+引用数据类型,数据类型实体,2,引用数据类型,java.txt,引用数据类型,引用数据类型,数据类型,引用数据类型,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=引用数据类型；章节=数据类型
+成员变量,变量与成员实体,2,成员变量,java.txt,成员变量,成员变量,变量与运算符 | 抽象类与接口,成员变量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=成员变量；章节=变量与运算符|抽象类与接口
+栈,JVM 与内存管理实体,2,栈,java.txt,栈,栈,JVM基础,栈,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=栈；章节=JVM基础
+等待,线程状态实体,2,等待,java.txt,等待,等待,线程与并发,等待,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=等待；章节=线程与并发
+解析,JVM 与内存管理实体,2,解析,java.txt,解析,解析,注解 | JVM基础,解析,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=解析；章节=注解|JVM基础
+静态变量,变量与成员实体,2,静态变量,java.txt,静态变量,静态变量,变量与运算符 | JVM基础,静态变量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=静态变量；章节=变量与运算符|JVM基础
+@Deprecated,注解实体,1,@Deprecated,java.txt,@Deprecated,@Deprecated,注解,@Deprecated,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=@Deprecated；章节=注解
+@Documented,注解实体,1,@Documented,java.txt,@Documented,@Documented,注解,@Documented,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=@Documented；章节=注解
+@FunctionalInterface,注解实体,1,@FunctionalInterface,java.txt,@FunctionalInterface,@FunctionalInterface,注解,@FunctionalInterface,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=@FunctionalInterface；章节=注解
+@Inherited,注解实体,1,@Inherited,java.txt,@Inherited,@Inherited,注解,@Inherited,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=@Inherited；章节=注解
+@Override,注解实体,1,@Override,java.txt,@Override,@Override,注解,@Override,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=@Override；章节=注解
+@Retention,注解实体,1,@Retention,java.txt,@Retention,@Retention,注解,@Retention,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=@Retention；章节=注解
+@SuppressWarnings,注解实体,1,@SuppressWarnings,java.txt,@SuppressWarnings,@SuppressWarnings,注解,@SuppressWarnings,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=@SuppressWarnings；章节=注解
+@Target,注解实体,1,@Target,java.txt,@Target,@Target,注解,@Target,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=@Target；章节=注解
+@interface,注解实体,1,@interface,java.txt,@interface,@interface,注解,@interface,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=@interface；章节=注解
+Annotation,注解实体,1,Annotation,java.txt,Annotation,Annotation,注解,Annotation,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Annotation；章节=注解
+Application ClassLoader,JVM 与内存管理实体,1,Application ClassLoader,java.txt,Application ClassLoader,Application ClassLoader,JVM基础,Application ClassLoader,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Application ClassLoader；章节=JVM基础
+ArrayList,集合框架实体,1,ArrayList,java.txt,ArrayList,ArrayList,集合框架,ArrayList,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ArrayList；章节=集合框架
+Bootstrap ClassLoader,JVM 与内存管理实体,1,Bootstrap ClassLoader,java.txt,Bootstrap ClassLoader,Bootstrap ClassLoader,JVM基础,Bootstrap ClassLoader,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Bootstrap ClassLoader；章节=JVM基础
+Box<T,泛型实体,1,Box<T,java.txt,Box<T,Box<T,泛型,Box<T,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Box<T；章节=泛型
+Callable,线程与并发实体,1,Callable,java.txt,Callable,Callable,线程与并发,Callable,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Callable；章节=线程与并发
+Checked Exception,异常处理实体,1,Checked Exception,java.txt,Checked Exception,Checked Exception,异常处理,Checked Exception,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Checked Exception；章节=异常处理
+Class.forName,领域实体,1,Class.forName,java.txt,Class.forName,Class.forName,反射,Class.forName,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Class.forName；章节=反射
+Collections,集合框架实体,1,Collections,java.txt,Collections,Collections,集合框架,Collections,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Collections；章节=集合框架
+Constructor,反射实体,1,Constructor,java.txt,Constructor,Constructor,反射,Constructor,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Constructor；章节=反射
+Error,异常处理实体,1,Error,java.txt,Error,Error,异常处理,Error,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Error；章节=异常处理
+Extension ClassLoader,JVM 与内存管理实体,1,Extension ClassLoader,java.txt,Extension ClassLoader,Extension ClassLoader,JVM基础,Extension ClassLoader,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Extension ClassLoader；章节=JVM基础
+Field,反射实体,1,Field,java.txt,Field,Field,反射,Field,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Field；章节=反射
+FutureTask,线程与并发实体,1,FutureTask,java.txt,FutureTask,FutureTask,线程与并发,FutureTask,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=FutureTask；章节=线程与并发
+GC,JVM 与内存管理实体,1,GC,java.txt,GC,GC,JVM基础,GC,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=GC；章节=JVM基础
+Hashtable,集合框架实体,1,Hashtable,java.txt,Hashtable,Hashtable,集合框架,Hashtable,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Hashtable；章节=集合框架
+JVM退出,异常处理实体,1,JVM退出,java.txt,JVM退出,JVM退出,异常处理,JVM退出,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=JVM退出；章节=异常处理
+LinkedHashMap,集合框架实体,1,LinkedHashMap,java.txt,LinkedHashMap,LinkedHashMap,集合框架,LinkedHashMap,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=LinkedHashMap；章节=集合框架
+LinkedHashSet,集合框架实体,1,LinkedHashSet,java.txt,LinkedHashSet,LinkedHashSet,集合框架,LinkedHashSet,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=LinkedHashSet；章节=集合框架
+LinkedList,集合框架实体,1,LinkedList,java.txt,LinkedList,LinkedList,集合框架,LinkedList,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=LinkedList；章节=集合框架
+Method,反射实体,1,Method,java.txt,Method,Method,反射,Method,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Method；章节=反射
+Object,面向对象核心实体,1,Object,java.txt,Object,Object,面向对象基础,Object,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Object；章节=面向对象基础
+Overloading,面向对象核心实体,1,Overloading,java.txt,Overloading,Overloading,面向对象基础,Overloading,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Overloading；章节=面向对象基础
+Overriding,面向对象核心实体,1,Overriding,java.txt,Overriding,Overriding,面向对象基础,Overriding,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Overriding；章节=面向对象基础
+Queue,集合框架实体,1,Queue,java.txt,Queue,Queue,集合框架,Queue,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Queue；章节=集合框架
+ReentrantLock,线程与并发实体,1,ReentrantLock,java.txt,ReentrantLock,ReentrantLock,线程与并发,ReentrantLock,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ReentrantLock；章节=线程与并发
+Runnable,线程与并发实体,1,Runnable,java.txt,Runnable,Runnable,线程与并发,Runnable,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Runnable；章节=线程与并发
+StringBuffer,数组与字符串实体,1,StringBuffer,java.txt,StringBuffer,StringBuffer,字符串,StringBuffer,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=StringBuffer；章节=字符串
+StringBuilder,数组与字符串实体,1,StringBuilder,java.txt,StringBuilder,StringBuilder,字符串,StringBuilder,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=StringBuilder；章节=字符串
+ThreadPoolExecutor,线程与并发实体,1,ThreadPoolExecutor,java.txt,ThreadPoolExecutor,ThreadPoolExecutor,线程与并发,ThreadPoolExecutor,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ThreadPoolExecutor；章节=线程与并发
+Throwable,异常处理实体,1,Throwable,java.txt,Throwable,Throwable,异常处理,Throwable,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Throwable；章节=异常处理
+TreeMap,集合框架实体,1,TreeMap,java.txt,TreeMap,TreeMap,集合框架,TreeMap,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=TreeMap；章节=集合框架
+TreeSet,集合框架实体,1,TreeSet,java.txt,TreeSet,TreeSet,集合框架,TreeSet,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=TreeSet；章节=集合框架
+Unchecked Exception,异常处理实体,1,Unchecked Exception,java.txt,Unchecked Exception,Unchecked Exception,异常处理,Unchecked Exception,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Unchecked Exception；章节=异常处理
+Vector,集合框架实体,1,Vector,java.txt,Vector,Vector,集合框架,Vector,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Vector；章节=集合框架
+boolean,数据类型实体,1,boolean,java.txt,boolean,boolean,数据类型,boolean,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=boolean；章节=数据类型
+break,流程控制实体,1,break,java.txt,break,break,流程控制,break,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=break；章节=流程控制
+byte,数据类型实体,1,byte,java.txt,byte,byte,数据类型,byte,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=byte；章节=数据类型
+catch,异常处理实体,1,catch,java.txt,catch,catch,异常处理,catch,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=catch；章节=异常处理
+charAt,领域实体,1,charAt,java.txt,charAt,charAt,字符串,charAt,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=charAt；章节=字符串
+continue,流程控制实体,1,continue,java.txt,continue,continue,流程控制,continue,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=continue；章节=流程控制
+default,关键字与修饰符实体,1,default,java.txt,default,default,关键字与修饰符,default,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=default；章节=关键字与修饰符
+do-while,流程控制实体,1,do-while,java.txt,do-while,do-while,流程控制,do-while,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=do-while；章节=流程控制
+double,数据类型实体,1,double,java.txt,double,double,数据类型,double,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=double；章节=数据类型
+equals,领域实体,1,equals,java.txt,equals,equals,字符串,equals,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=equals；章节=字符串
+float,数据类型实体,1,float,java.txt,float,float,数据类型,float,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=float；章节=数据类型
+getClass,领域实体,1,getClass,java.txt,getClass,getClass,反射,getClass,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=getClass；章节=反射
+if-else,流程控制实体,1,if-else,java.txt,if-else,if-else,流程控制,if-else,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=if-else；章节=流程控制
+immutable,数组与字符串实体,1,immutable,java.txt,immutable,immutable,字符串,immutable,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=immutable；章节=字符串
+indexOf,领域实体,1,indexOf,java.txt,indexOf,indexOf,字符串,indexOf,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=indexOf；章节=字符串
+instanceof,关键字与修饰符实体,1,instanceof,java.txt,instanceof,instanceof,关键字与修饰符,instanceof,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=instanceof；章节=关键字与修饰符
+int[] arr,数组与字符串实体,1,int[] arr,java.txt,int[] arr,int[] arr,数组,int[] arr,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=int[] arr；章节=数组
+int[][] matrix,数组与字符串实体,1,int[][] matrix,java.txt,int[][] matrix,int[][] matrix,数组,int[][] matrix,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=int[][] matrix；章节=数组
+length,领域实体,1,length,java.txt,length,length,字符串,length,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=length；章节=字符串
+lockInterruptibly,线程与并发实体,1,lockInterruptibly,java.txt,lockInterruptibly,lockInterruptibly,线程与并发,lockInterruptibly,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=lockInterruptibly；章节=线程与并发
+long,数据类型实体,1,long,java.txt,long,long,数据类型,long,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=long；章节=数据类型
+protected,关键字与修饰符实体,1,protected,java.txt,protected,protected,关键字与修饰符,protected,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=protected；章节=关键字与修饰符
+return,流程控制实体,1,return,java.txt,return,return,流程控制,return,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=return；章节=流程控制
+short,数据类型实体,1,short,java.txt,short,short,数据类型,short,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=short；章节=数据类型
+substring,领域实体,1,substring,java.txt,substring,substring,字符串,substring,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=substring；章节=字符串
+switch-case,流程控制实体,1,switch-case,java.txt,switch-case,switch-case,流程控制,switch-case,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=switch-case；章节=流程控制
+synchronized,线程与并发实体,1,synchronized,java.txt,synchronized,synchronized,线程与并发,synchronized,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=synchronized；章节=线程与并发
+this,关键字与修饰符实体,1,this,java.txt,this,this,关键字与修饰符,this,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=this；章节=关键字与修饰符
+throws,异常处理实体,1,throws,java.txt,throws,throws,异常处理,throws,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=throws；章节=异常处理
+tryLock,线程与并发实体,1,tryLock,java.txt,tryLock,tryLock,线程与并发,tryLock,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=tryLock；章节=线程与并发
+volatile,线程与并发实体,1,volatile,java.txt,volatile,volatile,线程与并发,volatile,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=volatile；章节=线程与并发
+三元运算符,运算符实体,1,三元运算符,java.txt,三元运算符,三元运算符,变量与运算符,三元运算符,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=三元运算符；章节=变量与运算符
+互斥锁,线程与并发实体,1,互斥锁,java.txt,互斥锁,互斥锁,线程与并发,互斥锁,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=互斥锁；章节=线程与并发
+位运算符,运算符实体,1,位运算符,java.txt,位运算符,位运算符,变量与运算符,位运算符,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=位运算符；章节=变量与运算符
+元注解,领域实体,1,元注解,java.txt,元注解,元注解,注解,元注解,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=元注解；章节=注解
+全限定名,反射实体,1,全限定名,java.txt,全限定名,全限定名,反射,全限定名,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=全限定名；章节=反射
+关系运算符,运算符实体,1,关系运算符,java.txt,关系运算符,关系运算符,变量与运算符,关系运算符,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=关系运算符；章节=变量与运算符
+具体方法,抽象类与接口实体,1,具体方法,java.txt,具体方法,具体方法,抽象类与接口,具体方法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=具体方法；章节=抽象类与接口
+准备,JVM 与内存管理实体,1,准备,java.txt,准备,准备,JVM基础,准备,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=准备；章节=JVM基础
+分代收集,JVM 与内存管理实体,1,分代收集,java.txt,分代收集,分代收集,JVM基础,分代收集,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=分代收集；章节=JVM基础
+创建线程的方式,线程与并发实体,1,创建线程的方式,java.txt,创建线程的方式,创建线程的方式,线程与并发,创建线程的方式,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=创建线程的方式；章节=线程与并发
+单继承,面向对象核心实体,1,单继承,java.txt,单继承,单继承,继承与多态,单继承,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=单继承；章节=继承与多态
+原子性,线程与并发实体,1,原子性,java.txt,原子性,原子性,线程与并发,原子性,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=原子性；章节=线程与并发
+双亲委派模型,JVM 与内存管理实体,1,双亲委派模型,java.txt,双亲委派模型,双亲委派模型,JVM基础,双亲委派模型,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=双亲委派模型；章节=JVM基础
+可见性,线程与并发实体,1,可见性,java.txt,可见性,可见性,线程与并发,可见性,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=可见性；章节=线程与并发
+向上转型,继承与类型转换实体,1,向上转型,java.txt,向上转型,向上转型,继承与多态,向上转型,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=向上转型；章节=继承与多态
+向下转型,继承与类型转换实体,1,向下转型,java.txt,向下转型,向下转型,继承与多态,向下转型,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=向下转型；章节=继承与多态
+垃圾回收,JVM 与内存管理实体,1,垃圾回收,java.txt,垃圾回收,垃圾回收,JVM基础,垃圾回收,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=垃圾回收；章节=JVM基础
+复制,JVM 与内存管理实体,1,复制,java.txt,复制,复制,JVM基础,复制,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=复制；章节=JVM基础
+多态的表现形式,面向对象核心实体,1,多态的表现形式,java.txt,多态的表现形式,多态的表现形式,继承与多态,多态的表现形式,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=多态的表现形式；章节=继承与多态
+多维数组,数据类型实体,1,多维数组,java.txt,多维数组,多维数组,数组,多维数组,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=多维数组；章节=数组
+子类对象,数据类型实体,1,子类对象,java.txt,子类对象,子类对象,继承与多态,子类对象,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=子类对象；章节=继承与多态
+实现类对象,数据类型实体,1,实现类对象,java.txt,实现类对象,实现类对象,继承与多态,实现类对象,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=实现类对象；章节=继承与多态
+封装,面向对象核心实体,1,封装,java.txt,封装,封装,面向对象基础,封装,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=封装；章节=面向对象基础
+就绪,线程状态实体,1,就绪,java.txt,就绪,就绪,线程与并发,就绪,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=就绪；章节=线程与并发
+并发,线程与并发实体,1,并发,java.txt,并发,并发,全文,并发,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=并发；章节=全文
+异常处理,领域实体,1,异常处理,java.txt,异常处理,异常处理,全文,异常处理,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=异常处理；章节=全文
+循环结构,流程控制实体,1,循环结构,java.txt,循环结构,循环结构,流程控制,循环结构,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=循环结构；章节=流程控制
+抽象方法,抽象类与接口实体,1,抽象方法,java.txt,抽象方法,抽象方法,抽象类与接口,抽象方法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=抽象方法；章节=抽象类与接口
+抽象类与接口,数据类型实体,1,抽象类与接口,java.txt,抽象类与接口,抽象类与接口,全文,抽象类与接口,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=抽象类与接口；章节=全文
+指令重排序,线程与并发实体,1,指令重排序,java.txt,指令重排序,指令重排序,线程与并发,指令重排序,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=指令重排序；章节=线程与并发
+接口引用,数据类型实体,1,接口引用,java.txt,接口引用,接口引用,继承与多态,接口引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=接口引用；章节=继承与多态
+插入顺序,集合框架实体,1,插入顺序,java.txt,插入顺序,插入顺序,集合框架,插入顺序,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=插入顺序；章节=集合框架
+数组的创建,数据类型实体,1,数组的创建,java.txt,数组的创建,数组的创建,数组,数组的创建,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=数组的创建；章节=数组
+新建,线程状态实体,1,新建,java.txt,新建,新建,线程与并发,新建,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=新建；章节=线程与并发
+方法区,JVM 与内存管理实体,1,方法区,java.txt,方法区,方法区,JVM基础,方法区,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=方法区；章节=JVM基础
+方法重写,面向对象核心实体,1,方法重写,java.txt,方法重写,方法重写,面向对象基础,方法重写,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=方法重写；章节=面向对象基础
+方法重载,面向对象核心实体,1,方法重载,java.txt,方法重载,方法重载,面向对象基础,方法重载,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=方法重载；章节=面向对象基础
+本地方法栈,JVM 与内存管理实体,1,本地方法栈,java.txt,本地方法栈,本地方法栈,JVM基础,本地方法栈,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=本地方法栈；章节=JVM基础
+条件分支,流程控制实体,1,条件分支,java.txt,条件分支,条件分支,流程控制,条件分支,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=条件分支；章节=流程控制
+构造方法,面向对象核心实体,1,构造方法,java.txt,构造方法,构造方法,面向对象基础,构造方法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=构造方法；章节=面向对象基础
+枚举,数据类型实体,1,枚举,java.txt,枚举,枚举,数据类型,枚举,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=枚举；章节=数据类型
+标记-整理,JVM 与内存管理实体,1,标记-整理,java.txt,标记-整理,标记-整理,JVM基础,标记-整理,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=标记-整理；章节=JVM基础
+标记-清除,JVM 与内存管理实体,1,标记-清除,java.txt,标记-清除,标记-清除,JVM基础,标记-清除,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=标记-清除；章节=JVM基础
+核心类,数据类型实体,1,核心类,java.txt,核心类,核心类,反射,核心类,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=核心类；章节=反射
+泛型方法,领域实体,1,泛型方法,java.txt,泛型方法,泛型方法,泛型,泛型方法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=泛型方法；章节=泛型
+泛型类,领域实体,1,泛型类,java.txt,泛型类,泛型类,泛型,泛型类,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=泛型类；章节=泛型
+父类引用,数据类型实体,1,父类引用,java.txt,父类引用,父类引用,继承与多态,父类引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=父类引用；章节=继承与多态
+程序计数器,JVM 与内存管理实体,1,程序计数器,java.txt,程序计数器,程序计数器,JVM基础,程序计数器,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=程序计数器；章节=JVM基础
+算术运算符,运算符实体,1,算术运算符,java.txt,算术运算符,算术运算符,变量与运算符,算术运算符,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=算术运算符；章节=变量与运算符
+类加载器,数据类型实体,1,类加载器,java.txt,类加载器,类加载器,JVM基础,类加载器,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类加载器；章节=JVM基础
+类加载机制,数据类型实体,1,类加载机制,java.txt,类加载机制,类加载机制,JVM基础,类加载机制,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类加载机制；章节=JVM基础
+类变量,数据类型实体,1,类变量,java.txt,类变量,类变量,变量与运算符,类变量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类变量；章节=变量与运算符
+类名.class,数据类型实体,1,类名.class,java.txt,类名.class,类名.class,反射,类名.class,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类名.class；章节=反射
+类型擦除,数据类型实体,1,类型擦除,java.txt,类型擦除,类型擦除,泛型,类型擦除,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类型擦除；章节=泛型
+红黑树,集合框架实体,1,红黑树,java.txt,红黑树,红黑树,集合框架,红黑树,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=红黑树；章节=集合框架
+线程与并发,领域实体,1,线程与并发,java.txt,线程与并发,线程与并发,全文,线程与并发,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=线程与并发；章节=全文
+线程池,线程与并发实体,1,线程池,java.txt,线程池,线程池,线程与并发,线程池,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=线程池；章节=线程与并发
+线程状态,线程与并发实体,1,线程状态,java.txt,线程状态,线程状态,线程与并发,线程状态,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=线程状态；章节=线程与并发
+终止,线程状态实体,1,终止,java.txt,终止,终止,线程与并发,终止,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=终止；章节=线程与并发
+自定义注解,领域实体,1,自定义注解,java.txt,自定义注解,自定义注解,注解,自定义注解,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=自定义注解；章节=注解
+访问控制修饰符,关键字与修饰符实体,1,访问控制修饰符,java.txt,访问控制修饰符,访问控制修饰符,关键字与修饰符,访问控制修饰符,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=访问控制修饰符；章节=关键字与修饰符
+赋值运算符,运算符实体,1,赋值运算符,java.txt,赋值运算符,赋值运算符,变量与运算符,赋值运算符,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=赋值运算符；章节=变量与运算符
+超时等待,线程状态实体,1,超时等待,java.txt,超时等待,超时等待,线程与并发,超时等待,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=超时等待；章节=线程与并发
+跳转语句,流程控制实体,1,跳转语句,java.txt,跳转语句,跳转语句,流程控制,跳转语句,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=跳转语句；章节=流程控制
+通配符,泛型实体,1,通配符,java.txt,通配符,通配符,泛型,通配符,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=通配符；章节=泛型
+逻辑运算符,运算符实体,1,逻辑运算符,java.txt,逻辑运算符,逻辑运算符,变量与运算符,逻辑运算符,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=逻辑运算符；章节=变量与运算符
+键值对,集合框架实体,1,键值对,java.txt,键值对,键值对,集合框架,键值对,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=键值对；章节=集合框架
+阻塞,线程状态实体,1,阻塞,java.txt,阻塞,阻塞,线程与并发,阻塞,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=阻塞；章节=线程与并发
+集合框架,领域实体,1,集合框架,java.txt,集合框架,集合框架,全文,集合框架,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=集合框架；章节=全文
+面向对象,领域实体,1,面向对象,java.txt,面向对象,面向对象,全文,面向对象,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=面向对象；章节=全文
+验证,JVM 与内存管理实体,1,验证,java.txt,验证,验证,JVM基础,验证,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=验证；章节=JVM基础
+默认方法,抽象类与接口实体,1,默认方法,java.txt,默认方法,默认方法,抽象类与接口,默认方法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=默认方法；章节=抽象类与接口

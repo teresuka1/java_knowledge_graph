@@ -1,0 +1,351 @@
+﻿head,relation,tail,head_type,tail_type,evidence,pattern_name,section_title,source_file,confidence,method
+标记阶段,alias_of,GC Roots,垃圾回收算法实体,垃圾回收核心概念实体,"标记阶段,即从GC Roots集合开始,标记活跃对象",别名关系,使用ThreadLocal,JVM.txt,0.952,relation_disambiguation_normalized
+Full GC,alias_of,Major GC,垃圾回收核心概念实体,垃圾回收核心概念实体,"老年代中的对象生命周期较长,因此Major GC(也称为Full GC,涉及老年代的垃圾回收)发生的频率相对较低,但其执行时间通常比Minor GC长",别名关系,全文,JVM.txt,0.926,relation_disambiguation_normalized
+Minor GC,alias_of,Young GC,垃圾回收核心概念实体,垃圾回收核心概念实体,"根据其作用范围和触发条件的不同,可以将GC分为三种类型:Minor GC(也称为Young GC)、Major GC(有时也称为Old GC)、以及Full GC",别名关系,使用ThreadLocal,JVM.txt,0.926,relation_disambiguation_normalized
+gc,alias_of,Major GC,领域实体,垃圾回收核心概念实体,"根据其作用范围和触发条件的不同,可以将GC分为三种类型:Minor GC(也称为Young GC)、Major GC(有时也称为Old GC)、以及Full GC",别名关系,使用ThreadLocal,JVM.txt,0.91,relation_disambiguation_normalized
+老年代,alias_of,Major GC,堆结构实体,垃圾回收核心概念实体,"老年代中的对象生命周期较长,因此Major GC(也称为Full GC,涉及老年代的垃圾回收)发生的频率相对较低,但其执行时间通常比Minor GC长",别名关系,全文,JVM.txt,0.886,relation_disambiguation_normalized
+加载,is_a,扩展类加载器,类加载过程实体,领域实体,系统类加载器的父加载器是扩展类加载器,上下位关系,使用ThreadLocal,JVM.txt,0.868,relation_disambiguation_normalized
+Major GC,alias_of,Minor GC,垃圾回收核心概念实体,垃圾回收核心概念实体,"根据其作用范围和触发条件的不同,可以将GC分为三种类型:Minor GC(也称为Young GC)、Major GC(有时也称为Old GC)、以及Full GC",别名关系,使用ThreadLocal,JVM.txt,0.866,relation_disambiguation_normalized
+gc,is_a,线程,领域实体,线程与私有性相关实体,"Serial GC 是单线程回收,简单但效率低,适合小内存应用",上下位关系,使用ThreadLocal,JVM.txt,0.862,relation_disambiguation_normalized
+初始化,is_a,类加载过程,类加载过程实体,领域实体,"初始化:初始化是整个类加载过程的最后一个阶段,初始化阶段简单来说就是执行类的构造器方法(() ),要注意的是这里的构造器方法()并不是开发者写的,而是编译器自动生成的",上下位关系,使用ThreadLocal,JVM.txt,0.862,relation_disambiguation_normalized
+加载,is_a,启动类加载器,类加载过程实体,领域实体,"扩展类加载器由启动类加载器加载,并且父加载器就是启动类加载器",上下位关系,使用ThreadLocal,JVM.txt,0.862,relation_disambiguation_normalized
+垃圾回收,alias_of,Major GC,领域实体,垃圾回收核心概念实体,"老年代中的对象生命周期较长,因此Major GC(也称为Full GC,涉及老年代的垃圾回收)发生的频率相对较低,但其执行时间通常比Minor GC长",别名关系,全文,JVM.txt,0.862,relation_disambiguation_normalized
+G1,implements,JVM,垃圾回收器实体,领域实体,"大对象区(Large Object Space / Humongous Objects):在某些JVM实现中(如G1垃圾收集器),为大对象分配了专门的区域,称为大对象区或Humongous Objects区域",实现关系,全文,JVM.txt,0.86,relation_disambiguation_normalized
+CMS,is_a,使用,垃圾回收器实体,类加载过程实体,"CMS收集器是使用“标记-清除”算法进行的垃圾回收,容易产生内存碎片",上下位关系,使用ThreadLocal,JVM.txt,0.856,relation_disambiguation_normalized
+CMS,is_a,老年代,垃圾回收器实体,堆结构实体,"CMS收集器是老年代的收集器,可以配合新生代的Serial和ParNew收集器一起使用",上下位关系,使用ThreadLocal,JVM.txt,0.856,relation_disambiguation_normalized
+Java 堆,is_a,使用,内存区域实体,类加载过程实体,"元空间并不在Java堆中,而是使用本地内存,这解决了永久代容易出现的内存溢出问题",上下位关系,全文,JVM.txt,0.856,relation_disambiguation_normalized
+gc,alias_of,Young GC,领域实体,垃圾回收核心概念实体,"根据其作用范围和触发条件的不同,可以将GC分为三种类型:Minor GC(也称为Young GC)、Major GC(有时也称为Old GC)、以及Full GC",别名关系,使用ThreadLocal,JVM.txt,0.856,relation_disambiguation_normalized
+引用计数法,implements,垃圾回收,垃圾回收核心概念实体,领域实体,"在Java中,判断对象是否为垃圾(即不再被使用,可以被垃圾回收器回收)主要依据两种主流的垃圾回收算法来实现:引用计数法和可达性分析算法",实现关系,使用ThreadLocal,JVM.txt,0.854,relation_disambiguation_normalized
+方法区,is_a,类信息,内存区域实体,方法区与元数据相关实体,方法区(Method Area): 方法区是用于存储类信息、常量、静态变量等数据的区域,上下位关系,使用ThreadLocal,JVM.txt,0.85,relation_disambiguation_normalized
+内存溢出,is_a,Java 虚拟机,领域实体,领域实体,"内存溢出:内存溢出是指Java虚拟机(JVM)在申请内存时,无法找到足够的内存,最终引发OutOfMemoryError",上下位关系,全文,JVM.txt,0.848,relation_disambiguation_normalized
+Java heap space,is_a,堆内存溢,异常与错误实体,内存区域实体,"堆内存溢出:当出现Java.lang.OutOfMemoryError:Java heap space异常时,就是堆内存溢出了",上下位关系,全文,JVM.txt,0.844,relation_disambiguation_normalized
+Serial,is_a,线程,垃圾回收器实体,线程与私有性相关实体,"Serial GC 是单线程回收,简单但效率低,适合小内存应用",上下位关系,使用ThreadLocal,JVM.txt,0.844,relation_disambiguation_normalized
+栈溢出,is_a,方法调用,场景与问题实体,栈与栈帧相关实体,"总的来说,栈溢出的核心原因是方法调用栈深度超过了栈内存限制,解决时应优先从代码逻辑(尤其是递归)入手,而非单纯调大栈内存",上下位关系,全文,JVM.txt,0.844,relation_disambiguation_normalized
+gc,alias_of,JVM,领域实体,领域实体,"直接调用System.gc()或Runtime.getRuntime().gc()方法时,虽然不能保证立即执行,但JVM会尝试执行Full GC",别名关系,使用ThreadLocal,JVM.txt,0.842,relation_disambiguation_normalized
+双亲委派,is_a,类加载机制,领域实体,领域实体,"Java 中的 “双亲委派” 是类加载机制的核心原则,简单说就是 「一个类加载器要加载类时,先让父加载器去尝试加载,只有父加载器加载不了,自己才会去加载」",上下位关系,使用ThreadLocal,JVM.txt,0.842,relation_disambiguation_normalized
+Java 堆,is_a,Java 虚拟机,内存区域实体,领域实体,"Java堆(Heap)是Java虚拟机(JVM)中内存管理的一个重要区域,主要用于存放对象实例和数组",上下位关系,全文,JVM.txt,0.838,relation_disambiguation_normalized
+ParNew,is_a,新生代,垃圾回收器实体,堆结构实体,标记-复制算法应用在CMS新生代(ParNew是CMS默认的新生代垃圾回收器)和G1垃圾回收器中,上下位关系,使用ThreadLocal,JVM.txt,0.838,relation_disambiguation_normalized
+解析,is_a,常量池,类加载过程实体,方法区与元数据相关实体,解析:解析阶段是虚拟机将常量池的「符号引用」直接替换为「直接引用」的过程,上下位关系,使用ThreadLocal,JVM.txt,0.838,relation_disambiguation_normalized
+符号引用,is_a,直接引用,方法区与元数据相关实体,方法区与元数据相关实体,"符号引用:存储类和方法的符号引用,是一种直接引用不同于直接引用的引用类型",上下位关系,全文,JVM.txt,0.836,relation_disambiguation_normalized
+G1,is_a,Java 堆,垃圾回收器实体,内存区域实体,"此外,G1收集器不同于之前的收集器的一个重要特点是:G1回收的范围是整个Java堆(包括新生代,老年代),而前六种收集器回收的范围仅限于新生代或老年代",上下位关系,使用ThreadLocal,JVM.txt,0.832,relation_disambiguation_normalized
+G1,is_a,垃圾回收,垃圾回收器实体,领域实体,"而G1没有浮动垃圾,G1的筛选回收是多个垃圾回收线程并行gc的,没有浮动垃圾的回收,在执行‘并发清理’步骤时,用户线程也会同时产生一部分可回收对象,但是这部分可回收对象只能在下次执行清理是才会被回收",上下位关系,使用ThreadLocal,JVM.txt,0.832,relation_disambiguation_normalized
+G1,is_a,老年代,垃圾回收器实体,堆结构实体,G1收集器收集范围是老年代和新生代,上下位关系,使用ThreadLocal,JVM.txt,0.832,relation_disambiguation_normalized
+NIO,is_a,堆外内存,工具与排查实体,内存区域实体,"直接内存:不属于 JVM 运行时数据区的一部分,通过 NIO 类引入,是一种堆外内存,可以显著提高 I/O 性能",上下位关系,全文,JVM.txt,0.832,relation_disambiguation_normalized
+程序计数器,is_a,线程,内存区域实体,线程与私有性相关实体,"程序计数器:可以看作是当前线程所执行的字节码的行号指示器,用于存储当前线程正在执行的 Java 方法的 JVM 指令地址",上下位关系,全文,JVM.txt,0.832,relation_disambiguation_normalized
+符号引用,is_a,加载,方法区与元数据相关实体,类加载过程实体,"类加载检查:虚拟机遇到一条 new 指令时,首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用,并且检查这个符号引用代表的类是否已被加载过、解析和初始化过",上下位关系,使用ThreadLocal,JVM.txt,0.832,relation_disambiguation_normalized
+常量池缓存,used_for,类加载,方法区与元数据相关实体,领域实体,"常量池缓存:用于提升类加载的效率,将常用的常量缓存起来方便使用",用途关系,全文,JVM.txt,0.83,relation_disambiguation_normalized
+方法区,used_for,类信息,内存区域实体,方法区与元数据相关实体,方法区(Method Area): 方法区是用于存储类信息、常量、静态变量等数据的区域,用途关系,使用ThreadLocal,JVM.txt,0.83,relation_disambiguation_normalized
+线程,is_a,Native 方法,线程与私有性相关实体,线程与私有性相关实体,"如果线程执行的是 Native 方法,计数器值为 null",上下位关系,全文,JVM.txt,0.83,relation_disambiguation_normalized
+方法区,is_a,常量,内存区域实体,方法区与元数据相关实体,方法区(Method Area): 方法区是用于存储类信息、常量、静态变量等数据的区域,上下位关系,使用ThreadLocal,JVM.txt,0.826,relation_disambiguation_normalized
+Java 堆,is_a,本地内存,内存区域实体,内存区域实体,"元空间并不在Java堆中,而是使用本地内存,这解决了永久代容易出现的内存溢出问题",上下位关系,全文,JVM.txt,0.824,relation_disambiguation_normalized
+ParNew,is_a,垃圾回收,垃圾回收器实体,领域实体,标记-复制算法应用在CMS新生代(ParNew是CMS默认的新生代垃圾回收器)和G1垃圾回收器中,上下位关系,使用ThreadLocal,JVM.txt,0.82,relation_disambiguation_normalized
+直接引用,is_a,指针,方法区与元数据相关实体,栈与栈帧相关实体,"直接引用可以是直接指向目标的指针、相对偏移量或是一个能间接定位到目标的句柄,直接引用是和虚拟机实现的内存布局相关的",上下位关系,使用ThreadLocal,JVM.txt,0.82,relation_disambiguation_normalized
+元空间,used_for,类的元数据信息,内存区域实体,方法区与元数据相关实体,"元空间(Metaspace):从Java 8开始,永久代(Permanent Generation)被元空间取代,用于存储类的元数据信息,如类的结构信息(如字段、方法信息等)",用途关系,全文,JVM.txt,0.818,relation_disambiguation_normalized
+双亲委派模型,is_a,类加载,领域实体,领域实体,"再来谈谈双亲委派模型,简单说就是当类加载器(Class-Loader)试图加载某个类型的时候,除非父加载器找不到相应类型,否则尽量将这个任务代理给当前加载器的父加载器去做",上下位关系,使用ThreadLocal,JVM.txt,0.818,relation_disambiguation_normalized
+深度递归,causes,栈溢出,场景与问题实体,场景与问题实体,递归调用:深度递归导致栈溢出,因果关系,全文,JVM.txt,0.818,relation_disambiguation_normalized
+类加载,is_a,扩展类加载器,领域实体,领域实体,系统类加载器的父加载器是扩展类加载器,上下位关系,使用ThreadLocal,JVM.txt,0.818,relation_disambiguation_normalized
+堆溢出,is_a,大对象,内存区域实体,对象与字符串相关实体,堆溢出通常是由于创建了太多的大对象或未能及时回收不再使用的对象,上下位关系,全文,JVM.txt,0.814,relation_disambiguation_normalized
+浮动垃圾,is_a,垃圾回收,垃圾回收核心概念实体,领域实体,"而G1没有浮动垃圾,G1的筛选回收是多个垃圾回收线程并行gc的,没有浮动垃圾的回收,在执行‘并发清理’步骤时,用户线程也会同时产生一部分可回收对象,但是这部分可回收对象只能在下次执行清理是才会被回收",上下位关系,使用ThreadLocal,JVM.txt,0.814,relation_disambiguation_normalized
+类加载,causes,元空间,领域实体,内存区域实体,"出现这个异常的问题的原因是系统的代码非常多或引用的第三方包非常多或者通过动态代码生成类加载等方法,导致元空间的内存占用很大",因果关系,全文,JVM.txt,0.814,relation_disambiguation_normalized
+类加载,is_a,加载,领域实体,类加载过程实体,"这些类加载器之间的关系形成了双亲委派模型,其核心思想是当一个类加载器收到类加载的请求时,首先不会自己去尝试加载这个类,而是把这个请求委派给父类加载器去完成,每一层次的类加载器都是如此,因此所有的加载请求最终都应该传送到顶层的启动类加载器中",上下位关系,使用ThreadLocal,JVM.txt,0.814,relation_disambiguation_normalized
+新生代,is_a,Java 堆,堆结构实体,内存区域实体,"此外,G1收集器不同于之前的收集器的一个重要特点是:G1回收的范围是整个Java堆(包括新生代,老年代),而前六种收集器回收的范围仅限于新生代或老年代",上位包含关系,使用ThreadLocal,JVM.txt,0.812,relation_disambiguation_normalized
+直接内存,is_a,本地内存,内存区域实体,内存区域实体,"还有一部分内存叫直接内存,属于操作系统的本地内存,也是可以直接操作的",上下位关系,全文,JVM.txt,0.812,relation_disambiguation_normalized
+栈帧,used_for,局部变量表,栈与栈帧相关实体,栈与栈帧相关实体,"每个方法在执行时都会创建一个栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.81,relation_disambiguation_normalized
+G1,is_a,新生代,垃圾回收器实体,堆结构实体,G1收集器收集范围是老年代和新生代,上下位关系,使用ThreadLocal,JVM.txt,0.808,relation_disambiguation_normalized
+G1,is_a,线程,垃圾回收器实体,线程与私有性相关实体,"而G1没有浮动垃圾,G1的筛选回收是多个垃圾回收线程并行gc的,没有浮动垃圾的回收,在执行‘并发清理’步骤时,用户线程也会同时产生一部分可回收对象,但是这部分可回收对象只能在下次执行清理是才会被回收",上下位关系,使用ThreadLocal,JVM.txt,0.808,relation_disambiguation_normalized
+元空间,is_a,使用,内存区域实体,类加载过程实体,"元空间并不在Java堆中,而是使用本地内存,这解决了永久代容易出现的内存溢出问题",上下位关系,全文,JVM.txt,0.808,relation_disambiguation_normalized
+内存泄漏,is_a,使用,领域实体,类加载过程实体,"内存泄露:内存泄漏是指程序在运行过程中不再使用的对象仍然被引用,而无法被垃圾收集器回收,从而导致可用内存逐渐减少",上下位关系,全文,JVM.txt,0.808,relation_disambiguation_normalized
+内存碎片,causes,大对象,场景与问题实体,对象与字符串相关实体,"大对象通常需要连续的内存空间,如果在新生代中频繁分配和回收大对象,容易产生内存碎片,导致后续分配大对象时可能因为内存不连续而失败",因果关系,全文,JVM.txt,0.808,relation_disambiguation_normalized
+方法区,is_a,静态变量,内存区域实体,方法区与元数据相关实体,方法区(Method Area): 方法区是用于存储类信息、常量、静态变量等数据的区域,上下位关系,使用ThreadLocal,JVM.txt,0.808,relation_disambiguation_normalized
+栈溢出,is_a,局部变量,场景与问题实体,栈与栈帧相关实体,"当栈溢出时,通常是因为递归过深或局部变量过大",上下位关系,全文,JVM.txt,0.808,relation_disambiguation_normalized
+符号引用,is_a,解析,方法区与元数据相关实体,类加载过程实体,"类加载检查:虚拟机遇到一条 new 指令时,首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用,并且检查这个符号引用代表的类是否已被加载过、解析和初始化过",上下位关系,使用ThreadLocal,JVM.txt,0.808,relation_disambiguation_normalized
+类加载,is_a,Class 对象,领域实体,类加载过程实体,"一个类由哪个类加载器加载,这个信息是存储在Class对象里的",上下位关系,使用ThreadLocal,JVM.txt,0.808,relation_disambiguation_normalized
+解析,is_a,符号引用,类加载过程实体,方法区与元数据相关实体,解析:解析阶段是虚拟机将常量池的「符号引用」直接替换为「直接引用」的过程,上下位关系,使用ThreadLocal,JVM.txt,0.808,relation_disambiguation_normalized
+加载,is_a,Class 对象,类加载过程实体,类加载过程实体,"一个类由哪个类加载器加载,这个信息是存储在Class对象里的",上下位关系,使用ThreadLocal,JVM.txt,0.806,relation_disambiguation_normalized
+方法区,used_for,常量,内存区域实体,方法区与元数据相关实体,方法区(Method Area): 方法区是用于存储类信息、常量、静态变量等数据的区域,用途关系,使用ThreadLocal,JVM.txt,0.806,relation_disambiguation_normalized
+ThreadLocal,used_for,key,代码与容器实体,代码与容器实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.804,relation_disambiguation_normalized
+对象头,has_part,初始化零值,对象与字符串相关实体,类加载过程实体,"进行必要设置,比如对象头:初始化零值完成之后,虚拟机要对对象进行必要的设置,例如这个对象是哪个类的实例、如何才能找到类的元数据信息、对象的哈希码、对象的 GC 分代年龄等信息",枚举结构关系,使用ThreadLocal,JVM.txt,0.804,relation_disambiguation_normalized
+静态集合,has_part,使用,场景与问题实体,类加载过程实体,"静态集合:使用静态数据结构(如HashMap或ArrayList)存储对象,且未清理",枚举结构关系,全文,JVM.txt,0.804,relation_disambiguation_normalized
+分代回收,is_a,新生代,垃圾回收核心概念实体,堆结构实体,分代回收算法:分代收集是将内存划分成了新生代和老年代,上下位关系,使用ThreadLocal,JVM.txt,0.802,relation_disambiguation_normalized
+加载阶段,is_a,自定义类加载器,类加载过程实体,领域实体,"加载阶段是用户参与的阶段,我们可以自定义类加载器,去实现自己的类加载过程",上下位关系,使用ThreadLocal,JVM.txt,0.802,relation_disambiguation_normalized
+虚拟机栈,causes,栈溢出,内存区域实体,场景与问题实体,"如果递归没有正确的终止条件,栈帧会不断累积,最终超过虚拟机栈的最大容量,导致栈溢出",因果关系,全文,JVM.txt,0.802,relation_disambiguation_normalized
+弱引用可,used_for,使用,引用类型实体,类加载过程实体,"对象池:在对象池中,弱引用可以用来管理那些暂时不使用的对象",用途关系,全文,JVM.txt,0.8,relation_disambiguation_normalized
+new 指令,is_a,加载,对象与字符串相关实体,类加载过程实体,"首先,我们看到这个代码中有一个new关键字,我们知道new指令是创建一个类的实例对象并完成加载初始化的,因此这个字符串对象是在运行期才能确定的,创建的字符串对象是在堆内存上",上下位关系,全文,JVM.txt,0.796,relation_disambiguation_normalized
+value,causes,内存泄漏,代码与容器实体,领域实体,"如果当前线程迟迟不结束的话,这些key为null的Entry的value就会一直存在一条强引用链:Thread Ref -> Thread -> ThreaLocalMap -> Entry -> value永远无法回收,造成内存泄漏",因果关系,使用ThreadLocal,JVM.txt,0.796,relation_disambiguation_normalized
+指令地址,is_a,线程,线程与私有性相关实体,线程与私有性相关实体,"每个线程都有自己的程序计数器,因为它们各自执行的代码的指令地址是不一样的呀,所以每个线程都应该有自己的程序计数器",上下位关系,全文,JVM.txt,0.794,relation_disambiguation_normalized
+Java 堆,has_part,JVM,内存区域实体,领域实体,"Java 堆:是 JVM 中最大的一块内存区域,被所有线程共享,在虚拟机启动时创建,用于存放对象实例",枚举结构关系,全文,JVM.txt,0.792,relation_disambiguation_normalized
+Java 堆,has_part,新生代,内存区域实体,堆结构实体,"此外,G1收集器不同于之前的收集器的一个重要特点是:G1回收的范围是整个Java堆(包括新生代,老年代),而前六种收集器回收的范围仅限于新生代或老年代",整体部分关系,使用ThreadLocal,JVM.txt,0.792,relation_disambiguation_normalized
+Java 虚拟机栈,has_part,线程,领域实体,线程与私有性相关实体,"Java 虚拟机栈:每个线程都有自己独立的 Java 虚拟机栈,生命周期与线程相同",枚举结构关系,全文,JVM.txt,0.792,relation_disambiguation_normalized
+内存泄漏,has_part,静态集合,领域实体,场景与问题实体,如果是内存泄漏:比如静态集合无意识地缓存了大量对象、长生命周期对象持有短生命周期对象的引用(如单例类持有业务对象)等,枚举结构关系,全文,JVM.txt,0.792,relation_disambiguation_normalized
+内存碎片,has_part,G1,场景与问题实体,垃圾回收器实体,"对内存碎片敏感:G1通过紧凑整理来减少内存碎片,降低了碎片化对性能的影响",枚举结构关系,使用ThreadLocal,JVM.txt,0.792,relation_disambiguation_normalized
+复制算法,has_part,新生代,垃圾回收算法实体,堆结构实体,"Serial收集器(复制算法): 新生代单线程收集器,标记和清理都是单线程,优点是简单高效",枚举结构关系,使用ThreadLocal,JVM.txt,0.792,relation_disambiguation_normalized
+本地方法栈,has_part,Java 虚拟机栈,内存区域实体,领域实体,"本地方法栈:与 Java 虚拟机栈类似,主要为虚拟机使用到的 Native 方法服务,在 HotSpot 虚拟机中和 Java 虚拟机栈合二为一",枚举结构关系,全文,JVM.txt,0.792,relation_disambiguation_normalized
+标记-整理算法,has_part,Java 堆,垃圾回收算法实体,内存区域实体,"G1(Garbage First)收集器 (标记-整理算法): Java堆并行收集器,G1收集器是JDK1.7提供的一个新收集器,G1收集器基于“标记-整理”算法实现,也就是说不会产生内存碎片",枚举结构关系,使用ThreadLocal,JVM.txt,0.792,relation_disambiguation_normalized
+标记-整理算法,has_part,老年代,垃圾回收算法实体,堆结构实体,"Serial Old收集器 (标记-整理算法): 老年代单线程收集器,Serial收集器的老年代版本",枚举结构关系,使用ThreadLocal,JVM.txt,0.792,relation_disambiguation_normalized
+标记-清除算法,has_part,老年代,垃圾回收算法实体,堆结构实体,"CMS(Concurrent Mark Sweep)收集器(标记-清除算法): 老年代并行收集器,以获取最短回收停顿时间为目标的收集器,具有高并发、低停顿的特点,追求最短GC回收停顿时间",枚举结构关系,使用ThreadLocal,JVM.txt,0.792,relation_disambiguation_normalized
+加载,is_a,类加载,类加载过程实体,领域实体,"这些类加载器之间的关系形成了双亲委派模型,其核心思想是当一个类加载器收到类加载的请求时,首先不会自己去尝试加载这个类,而是把这个请求委派给父类加载器去完成,每一层次的类加载器都是如此,因此所有的加载请求最终都应该传送到顶层的启动类加载器中",上下位关系,使用ThreadLocal,JVM.txt,0.79,relation_disambiguation_normalized
+弱引用,is_a,对象引用,引用类型实体,栈与栈帧相关实体,"弱引用的一个主要用途是创建非强制性的对象引用,这些引用可以在内存压力大时被垃圾回收器清理,从而避免内存泄露",上下位关系,全文,JVM.txt,0.79,relation_disambiguation_normalized
+新生代,is_a,线程,堆结构实体,线程与私有性相关实体,"Serial收集器(复制算法): 新生代单线程收集器,标记和清理都是单线程,优点是简单高效",上下位关系,使用ThreadLocal,JVM.txt,0.79,relation_disambiguation_normalized
+浮动垃圾,is_a,线程,垃圾回收核心概念实体,线程与私有性相关实体,"而G1没有浮动垃圾,G1的筛选回收是多个垃圾回收线程并行gc的,没有浮动垃圾的回收,在执行‘并发清理’步骤时,用户线程也会同时产生一部分可回收对象,但是这部分可回收对象只能在下次执行清理是才会被回收",上下位关系,使用ThreadLocal,JVM.txt,0.79,relation_disambiguation_normalized
+符号引用,is_a,初始化,方法区与元数据相关实体,类加载过程实体,"类加载检查:虚拟机遇到一条 new 指令时,首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用,并且检查这个符号引用代表的类是否已被加载过、解析和初始化过",上下位关系,使用ThreadLocal,JVM.txt,0.79,relation_disambiguation_normalized
+使用,used_for,JVM,类加载过程实体,领域实体,"使用弱引用来维护缓存,可以让JVM在需要更多内存时自动清理这些缓存对象",用途关系,全文,JVM.txt,0.788,relation_disambiguation_normalized
+使用,is_a,加载,类加载过程实体,类加载过程实体,使用委派模型的目的是避免重复加载 Java 类型,上下位关系,使用ThreadLocal,JVM.txt,0.788,relation_disambiguation_normalized
+对象头,is_a,初始化,对象与字符串相关实体,类加载过程实体,"初始化零值:内存分配完成后,虚拟机需要将分配到的内存空间都初始化为零值(不包括对象头),这一步操作保证了对象的实例字段在 Java 代码中可以不赋初始值就直接使用,程序能访问到这些字段的数据类型所对应的零值",上位包含关系,使用ThreadLocal,JVM.txt,0.788,relation_disambiguation_normalized
+方法区,used_for,静态变量,内存区域实体,方法区与元数据相关实体,方法区(Method Area): 方法区是用于存储类信息、常量、静态变量等数据的区域,用途关系,使用ThreadLocal,JVM.txt,0.788,relation_disambiguation_normalized
+老年代,is_a,Java 堆,堆结构实体,内存区域实体,"此外,G1收集器不同于之前的收集器的一个重要特点是:G1回收的范围是整个Java堆(包括新生代,老年代),而前六种收集器回收的范围仅限于新生代或老年代",上位包含关系,使用ThreadLocal,JVM.txt,0.788,relation_disambiguation_normalized
+Eden 区,is_a,新生代,堆结构实体,堆结构实体,"从内存回收角度,堆被划分为新生代和老年代,新生代又分为 Eden 区和两个 Survivor 区(From Survivor 和 To Survivor)",上位包含关系,全文,JVM.txt,0.786,relation_disambiguation_normalized
+CMS,is_a,新生代,垃圾回收器实体,堆结构实体,"CMS收集器是老年代的收集器,可以配合新生代的Serial和ParNew收集器一起使用",上下位关系,使用ThreadLocal,JVM.txt,0.784,relation_disambiguation_normalized
+OutOfMemoryError,has_part,Java heap space,异常与错误实体,异常与错误实体,"堆内存溢出:当出现Java.lang.OutOfMemoryError:Java heap space异常时,就是堆内存溢出了",枚举结构关系,全文,JVM.txt,0.784,relation_disambiguation_normalized
+new 指令,is_a,初始化,对象与字符串相关实体,类加载过程实体,"首先,我们看到这个代码中有一个new关键字,我们知道new指令是创建一个类的实例对象并完成加载初始化的,因此这个字符串对象是在运行期才能确定的,创建的字符串对象是在堆内存上",上下位关系,全文,JVM.txt,0.784,relation_disambiguation_normalized
+标记-整理算法,has_part,复制算法,垃圾回收算法实体,垃圾回收算法实体,"标记-整理算法:复制算法在 GC 之后存活对象较少的情况下效率比较高,但如果存活对象比较多时,会执行较多的复制操作,效率就会下降",枚举结构关系,使用ThreadLocal,JVM.txt,0.784,relation_disambiguation_normalized
+连接,has_part,验证,类加载过程实体,类加载过程实体,连接:验证、准备、解析 3 个阶段统称为连接,枚举结构关系,使用ThreadLocal,JVM.txt,0.784,relation_disambiguation_normalized
+JVM,is_a,Java 虚拟机,领域实体,领域实体,"验证(Verification),这是虚拟机安全的重要保障,JVM 需要核验字节信息是符合 Java 虚拟机规范的,否则就被认为是 VerifyError,这样就防止了恶意信息或者不合规的信息危害 JVM 的运行,验证阶段有可能触发更多 class 的加载",上下位关系,使用ThreadLocal,JVM.txt,0.782,relation_disambiguation_normalized
+GC Roots,has_part,虚拟机栈,垃圾回收核心概念实体,内存区域实体,GC Roots对象包括:虚拟机栈(栈帧中的本地变量表)中引用的对象、方法区中类静态属性引用的对象、本地方法栈中JNI(Java Native Interface)引用的对象、活跃线程的引用等,枚举结构关系,使用ThreadLocal,JVM.txt,0.78,relation_disambiguation_normalized
+Humongous Objects,has_part,JVM,堆结构实体,领域实体,"大对象区(Large Object Space / Humongous Objects):在某些JVM实现中(如G1垃圾收集器),为大对象分配了专门的区域,称为大对象区或Humongous Objects区域",枚举结构关系,全文,JVM.txt,0.78,relation_disambiguation_normalized
+常量池缓存,has_part,类加载,方法区与元数据相关实体,领域实体,"常量池缓存:用于提升类加载的效率,将常用的常量缓存起来方便使用",枚举结构关系,全文,JVM.txt,0.78,relation_disambiguation_normalized
+直接内存,has_part,JVM,内存区域实体,领域实体,"直接内存:不属于 JVM 运行时数据区的一部分,通过 NIO 类引入,是一种堆外内存,可以显著提高 I/O 性能",枚举结构关系,全文,JVM.txt,0.78,relation_disambiguation_normalized
+CMS,is_a,垃圾回收,垃圾回收器实体,领域实体,"CMS产生浮动垃圾过多时会退化为serial old,效率低,因为在上图的第四阶段,CMS清除垃圾时是并发清除的,这个时候,垃圾回收线程和用户线程同时工作会产生浮动垃圾,也就意味着CMS垃圾回收器必须预留一部分内存空间用于存放浮动垃圾",上下位关系,使用ThreadLocal,JVM.txt,0.778,relation_disambiguation_normalized
+G1,is_a,转移阶段,垃圾回收器实体,垃圾回收算法实体,"因此,G1停顿时间的瓶颈主要是标记-复制中的转移阶段STW",上下位关系,使用ThreadLocal,JVM.txt,0.778,relation_disambiguation_normalized
+分代回收,is_a,老年代,垃圾回收核心概念实体,堆结构实体,分代回收算法:分代收集是将内存划分成了新生代和老年代,上下位关系,使用ThreadLocal,JVM.txt,0.778,relation_disambiguation_normalized
+垃圾回收,is_a,使用,领域实体,类加载过程实体,"垃圾回收机制的主要目标是自动检测和回收不再使用的对象,从而释放它们所占用的内存空间",上下位关系,使用ThreadLocal,JVM.txt,0.778,relation_disambiguation_normalized
+新生代,is_a,垃圾回收,堆结构实体,领域实体,标记-复制算法应用在CMS新生代(ParNew是CMS默认的新生代垃圾回收器)和G1垃圾回收器中,上下位关系,使用ThreadLocal,JVM.txt,0.778,relation_disambiguation_normalized
+运行时常量池,has_part,方法区,内存区域实体,内存区域实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",枚举结构关系,全文,JVM.txt,0.778,relation_disambiguation_normalized
+元空间,is_a,本地内存,内存区域实体,内存区域实体,"元空间并不在Java堆中,而是使用本地内存,这解决了永久代容易出现的内存溢出问题",上下位关系,全文,JVM.txt,0.776,relation_disambiguation_normalized
+卸载,has_part,JVM,类加载过程实体,领域实体,"卸载:一个类要被JVM卸载,条件非常苛刻,需要同时满足以下三点:",枚举结构关系,使用ThreadLocal,JVM.txt,0.774,relation_disambiguation_normalized
+垃圾回收,has_part,引用计数法,领域实体,垃圾回收核心概念实体,"在Java中,判断对象是否为垃圾(即不再被使用,可以被垃圾回收器回收)主要依据两种主流的垃圾回收算法来实现:引用计数法和可达性分析算法",枚举结构关系,使用ThreadLocal,JVM.txt,0.774,relation_disambiguation_normalized
+栈帧,used_for,操作数栈,栈与栈帧相关实体,栈与栈帧相关实体,"每个方法在执行时都会创建一个栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.774,relation_disambiguation_normalized
+弱引用,is_a,垃圾回收,引用类型实体,领域实体,"Java中的弱引用是一种引用类型,它不会阻止一个对象被垃圾回收",上下位关系,全文,JVM.txt,0.772,relation_disambiguation_normalized
+类加载机制,is_a,类加载,领域实体,领域实体,"Java 中的 “双亲委派” 是类加载机制的核心原则,简单说就是 「一个类加载器要加载类时,先让父加载器去尝试加载,只有父加载器加载不了,自己才会去加载」",上下位关系,使用ThreadLocal,JVM.txt,0.77,relation_disambiguation_normalized
+线程共享,used_for,对象实例,线程与私有性相关实体,对象与字符串相关实体,"Java 堆:是 JVM 中最大的一块内存区域,被所有线程共享,在虚拟机启动时创建,用于存放对象实例",用途关系,全文,JVM.txt,0.77,relation_disambiguation_normalized
+Java 堆,has_part,老年代,内存区域实体,堆结构实体,"此外,G1收集器不同于之前的收集器的一个重要特点是:G1回收的范围是整个Java堆(包括新生代,老年代),而前六种收集器回收的范围仅限于新生代或老年代",整体部分关系,使用ThreadLocal,JVM.txt,0.768,relation_disambiguation_normalized
+ThreadLocalMap,implements,ThreadLocal,代码与容器实体,代码与容器实体,"ThreadLocal的实现中,每个Thread维护一个ThreadLocalMap映射表,key是ThreadLocal实例本身,value是真正需要存储的Object",实现关系,使用ThreadLocal,JVM.txt,0.768,relation_disambiguation_normalized
+gc,has_part,Minor GC,领域实体,垃圾回收核心概念实体,"根据其作用范围和触发条件的不同,可以将GC分为三种类型:Minor GC(也称为Young GC)、Major GC(有时也称为Old GC)、以及Full GC",枚举结构关系,使用ThreadLocal,JVM.txt,0.768,relation_disambiguation_normalized
+初始化,has_part,对象头,类加载过程实体,对象与字符串相关实体,"初始化零值:内存分配完成后,虚拟机需要将分配到的内存空间都初始化为零值(不包括对象头),这一步操作保证了对象的实例字段在 Java 代码中可以不赋初始值就直接使用,程序能访问到这些字段的数据类型所对应的零值",整体部分关系,使用ThreadLocal,JVM.txt,0.768,relation_disambiguation_normalized
+初始化,has_part,类加载过程,类加载过程实体,领域实体,"初始化:初始化是整个类加载过程的最后一个阶段,初始化阶段简单来说就是执行类的构造器方法(() ),要注意的是这里的构造器方法()并不是开发者写的,而是编译器自动生成的",枚举结构关系,使用ThreadLocal,JVM.txt,0.768,relation_disambiguation_normalized
+复制算法,has_part,线程,垃圾回收算法实体,线程与私有性相关实体,"Serial收集器(复制算法): 新生代单线程收集器,标记和清理都是单线程,优点是简单高效",枚举结构关系,使用ThreadLocal,JVM.txt,0.768,relation_disambiguation_normalized
+对象池,has_part,弱引用可,场景与问题实体,引用类型实体,"对象池:在对象池中,弱引用可以用来管理那些暂时不使用的对象",枚举结构关系,全文,JVM.txt,0.768,relation_disambiguation_normalized
+标记-整理算法,has_part,gc,垃圾回收算法实体,领域实体,"标记-整理算法:复制算法在 GC 之后存活对象较少的情况下效率比较高,但如果存活对象比较多时,会执行较多的复制操作,效率就会下降",枚举结构关系,使用ThreadLocal,JVM.txt,0.768,relation_disambiguation_normalized
+标记-整理算法,has_part,线程,垃圾回收算法实体,线程与私有性相关实体,"Serial Old收集器 (标记-整理算法): 老年代单线程收集器,Serial收集器的老年代版本",枚举结构关系,使用ThreadLocal,JVM.txt,0.768,relation_disambiguation_normalized
+List,causes,堆溢出,代码与容器实体,内存区域实体,"举个例子:曾遇到过一个批量处理任务,代码中把所有处理结果都存到了一个静态 List 里,导致对象越积越多,最终堆溢出",因果关系,全文,JVM.txt,0.766,relation_disambiguation_normalized
+gc,is_a,可达性分析,领域实体,垃圾回收核心概念实体,"总的来说,GC 机制的核心是 「自动管理内存」,通过可达性分析判断垃圾,结合分代思想和不同算法,再由具体的回收器实现,最终目的是在保证程序正常运行的前提下,高效释放内存,减少对用户线程的影响",上下位关系,使用ThreadLocal,JVM.txt,0.766,relation_disambiguation_normalized
+new 指令,is_a,常量池,对象与字符串相关实体,方法区与元数据相关实体,"类加载检查:虚拟机遇到一条 new 指令时,首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用,并且检查这个符号引用代表的类是否已被加载过、解析和初始化过",上下位关系,使用ThreadLocal,JVM.txt,0.766,relation_disambiguation_normalized
+value,is_a,线程,代码与容器实体,线程与私有性相关实体,"第二,不要使用ThreadLocal.set(null) 的方式清除value,它实际上并没有清除值,而是查找与当前线程关联的Map并将键值对分别设置为当前线程和null",上下位关系,使用ThreadLocal,JVM.txt,0.766,relation_disambiguation_normalized
+可达性分析,has_part,GC Roots,垃圾回收核心概念实体,垃圾回收核心概念实体,"最经典的是 「可达性分析」:以 GC Roots(比如虚拟机栈里的局部变量、静态变量、常量等)为起点,遍历对象的引用链,如果某个对象从 GC Roots 出发不可达,就会被标记为可回收对象",枚举结构关系,使用ThreadLocal,JVM.txt,0.766,relation_disambiguation_normalized
+垃圾回收,is_a,常量,领域实体,方法区与元数据相关实体,"虽然方法区中的垃圾回收与堆有所不同,但是同样存在对不再需要的常量、无用的类信息等进行清理的过程",上下位关系,使用ThreadLocal,JVM.txt,0.766,relation_disambiguation_normalized
+大对象,causes,新生代,对象与字符串相关实体,堆结构实体,"如果将大对象分配到新生代,可能会很快导致新生代空间不足,从而频繁触发 Minor GC",因果关系,全文,JVM.txt,0.766,relation_disambiguation_normalized
+连接,has_part,准备,类加载过程实体,类加载过程实体,连接:验证、准备、解析 3 个阶段统称为连接,枚举结构关系,使用ThreadLocal,JVM.txt,0.766,relation_disambiguation_normalized
+JVM内存模型,used_for,线程,领域实体,线程与私有性相关实体,"在JVM内存模型中,栈(Stack)主要用于管理线程的局部变量和方法调用的上下文,而堆(Heap)则是用于存储所有类的实例和数组",用途关系,全文,JVM.txt,0.764,relation_disambiguation_normalized
+ThreadLocal,used_for,gc,代码与容器实体,领域实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.764,relation_disambiguation_normalized
+垃圾回收,used_for,浮动垃圾,领域实体,垃圾回收核心概念实体,"CMS产生浮动垃圾过多时会退化为serial old,效率低,因为在上图的第四阶段,CMS清除垃圾时是并发清除的,这个时候,垃圾回收线程和用户线程同时工作会产生浮动垃圾,也就意味着CMS垃圾回收器必须预留一部分内存空间用于存放浮动垃圾",用途关系,使用ThreadLocal,JVM.txt,0.764,relation_disambiguation_normalized
+对象池,used_for,使用,场景与问题实体,类加载过程实体,"对象池:在对象池中,弱引用可以用来管理那些暂时不使用的对象",用途关系,全文,JVM.txt,0.764,relation_disambiguation_normalized
+Eden 区,is_a,老年代,堆结构实体,堆结构实体,"从内存回收角度,堆被划分为新生代和老年代,新生代又分为 Eden 区和两个 Survivor 区(From Survivor 和 To Survivor)",上位包含关系,全文,JVM.txt,0.762,relation_disambiguation_normalized
+程序计数器,has_part,线程,内存区域实体,线程与私有性相关实体,"程序计数器:可以看作是当前线程所执行的字节码的行号指示器,用于存储当前线程正在执行的 Java 方法的 JVM 指令地址",枚举结构关系,全文,JVM.txt,0.762,relation_disambiguation_normalized
+Full GC,is_a,线程,垃圾回收核心概念实体,线程与私有性相关实体,"特点:Full GC是最昂贵的操作,因为它需要停止所有的工作线程(Stop The World),遍历整个堆内存来查找和回收不再使用的对象,因此应尽量减少Full GC的触发",上下位关系,使用ThreadLocal,JVM.txt,0.76,relation_disambiguation_normalized
+StackOverFlowError,is_a,堆溢出,异常与错误实体,内存区域实体,"栈溢出(java.lang.StackOverflowError)是 JVM 中另一种常见的内存错误,和堆溢出的原理与场景截然不同",上下位关系,全文,JVM.txt,0.76,relation_disambiguation_normalized
+加载,has_part,全限定名,类加载过程实体,类加载过程实体,"加载:通过类的全限定名(包名 + 类名),获取到该类的.class文件的二进制字节流,将二进制字节流所代表的静态存储结构,转化为方法区运行时的数据结构,在内存中生成一个代表该类的Java.lang.Class对象,作为方法区这个类的各种数据的访问入口",枚举结构关系,使用ThreadLocal,JVM.txt,0.76,relation_disambiguation_normalized
+指令地址,is_a,程序计数器,线程与私有性相关实体,内存区域实体,"每个线程都有自己的程序计数器,因为它们各自执行的代码的指令地址是不一样的呀,所以每个线程都应该有自己的程序计数器",上下位关系,全文,JVM.txt,0.76,relation_disambiguation_normalized
+类加载机制,is_a,加载,领域实体,类加载过程实体,"Java 中的 “双亲委派” 是类加载机制的核心原则,简单说就是 「一个类加载器要加载类时,先让父加载器去尝试加载,只有父加载器加载不了,自己才会去加载」",上下位关系,使用ThreadLocal,JVM.txt,0.76,relation_disambiguation_normalized
+使用,used_for,key,类加载过程实体,代码与容器实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.758,relation_disambiguation_normalized
+方法区,used_for,字面量,内存区域实体,对象与字符串相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",用途关系,全文,JVM.txt,0.758,relation_disambiguation_normalized
+符号引用,is_a,常量,方法区与元数据相关实体,方法区与元数据相关实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",上位包含关系,全文,JVM.txt,0.756,relation_disambiguation_normalized
+类加载检查,has_part,new 指令,领域实体,对象与字符串相关实体,"类加载检查:虚拟机遇到一条 new 指令时,首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用,并且检查这个符号引用代表的类是否已被加载过、解析和初始化过",枚举结构关系,使用ThreadLocal,JVM.txt,0.756,relation_disambiguation_normalized
+CMS,is_a,线程,垃圾回收器实体,线程与私有性相关实体,"CMS产生浮动垃圾过多时会退化为serial old,效率低,因为在上图的第四阶段,CMS清除垃圾时是并发清除的,这个时候,垃圾回收线程和用户线程同时工作会产生浮动垃圾,也就意味着CMS垃圾回收器必须预留一部分内存空间用于存放浮动垃圾",上下位关系,使用ThreadLocal,JVM.txt,0.754,relation_disambiguation_normalized
+Java 堆,is_a,线程共享,内存区域实体,线程与私有性相关实体,"Java 堆:是 JVM 中最大的一块内存区域,被所有线程共享,在虚拟机启动时创建,用于存放对象实例",上下位关系,全文,JVM.txt,0.754,relation_disambiguation_normalized
+优化方法栈帧,has_part,局部变量,栈与栈帧相关实体,栈与栈帧相关实体,"优化方法栈帧:减少方法内局部变量的数量,避免在方法中创建过大的对象或数组,将大对象的创建移到堆中(通过 new 关键字),降低单个栈帧的内存占用",枚举结构关系,全文,JVM.txt,0.754,relation_disambiguation_normalized
+复制算法,is_a,使用,垃圾回收算法实体,类加载过程实体,"复制算法的原理是,将内存分成两块,每次申请内存时都使用其中的一块,当内存不够时,将这一块内存中所有存活的复制到另一块上",上下位关系,使用ThreadLocal,JVM.txt,0.754,relation_disambiguation_normalized
+复制算法,is_a,线程,垃圾回收算法实体,线程与私有性相关实体,"Serial收集器(复制算法): 新生代单线程收集器,标记和清理都是单线程,优点是简单高效",上下位关系,使用ThreadLocal,JVM.txt,0.754,relation_disambiguation_normalized
+Java 虚拟机栈,used_for,局部变量表,领域实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.752,relation_disambiguation_normalized
+大对象,is_a,数组,对象与字符串相关实体,对象与字符串相关实体,"大对象是指需要大量连续内存空间的对象,如大数组",上下位关系,全文,JVM.txt,0.752,relation_disambiguation_normalized
+扩展类加载器,is_a,启动类加载器,领域实体,领域实体,"扩展类加载器由启动类加载器加载,并且父加载器就是启动类加载器",上下位关系,使用ThreadLocal,JVM.txt,0.752,relation_disambiguation_normalized
+GC Roots,has_part,栈帧,垃圾回收核心概念实体,栈与栈帧相关实体,GC Roots对象包括:虚拟机栈(栈帧中的本地变量表)中引用的对象、方法区中类静态属性引用的对象、本地方法栈中JNI(Java Native Interface)引用的对象、活跃线程的引用等,枚举结构关系,使用ThreadLocal,JVM.txt,0.75,relation_disambiguation_normalized
+Tenured Generation,has_part,Minor GC,堆结构实体,垃圾回收核心概念实体,老年代(Old Generation/Tenured Generation):存放过一次或多次Minor GC仍存活的对象会被移动到老年代,枚举结构关系,全文,JVM.txt,0.75,relation_disambiguation_normalized
+初始标记阶段,has_part,GC Roots,垃圾回收算法实体,垃圾回收核心概念实体,"初始标记阶段:初始标记阶段是指从GC Roots出发标记全部直接子节点的过程,该阶段是STW的",枚举结构关系,使用ThreadLocal,JVM.txt,0.75,relation_disambiguation_normalized
+栈帧创建,has_part,JVM,栈与栈帧相关实体,领域实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",枚举结构关系,全文,JVM.txt,0.75,relation_disambiguation_normalized
+运行时常量池,has_part,常量池,内存区域实体,方法区与元数据相关实体,"运行时常量池:存储着在类文件中的常量池数据,在类加载后在方法区生成该运行时常量池",枚举结构关系,全文,JVM.txt,0.75,relation_disambiguation_normalized
+G1,is_a,浮动垃圾,垃圾回收器实体,垃圾回收核心概念实体,"而G1没有浮动垃圾,G1的筛选回收是多个垃圾回收线程并行gc的,没有浮动垃圾的回收,在执行‘并发清理’步骤时,用户线程也会同时产生一部分可回收对象,但是这部分可回收对象只能在下次执行清理是才会被回收",上下位关系,使用ThreadLocal,JVM.txt,0.748,relation_disambiguation_normalized
+OutOfMemoryError,is_a,堆内存溢,异常与错误实体,内存区域实体,"堆内存溢出:当出现Java.lang.OutOfMemoryError:Java heap space异常时,就是堆内存溢出了",上下位关系,全文,JVM.txt,0.748,relation_disambiguation_normalized
+gc,is_a,使用,领域实体,类加载过程实体,"Java 的 GC(垃圾回收)简单说就是 「自动识别并回收不再使用的对象,释放内存空间」,避免内存泄漏",上下位关系,使用ThreadLocal,JVM.txt,0.748,relation_disambiguation_normalized
+内存溢出,has_part,Java 虚拟机,领域实体,领域实体,"内存溢出:内存溢出是指Java虚拟机(JVM)在申请内存时,无法找到足够的内存,最终引发OutOfMemoryError",枚举结构关系,全文,JVM.txt,0.748,relation_disambiguation_normalized
+并发标记,is_a,可达性分析,垃圾回收算法实体,垃圾回收核心概念实体,"并发标记阶段:并发标记阶段是指从GC Roots开始对堆中对象进行可达性分析,找出存活对象",上下位关系,使用ThreadLocal,JVM.txt,0.748,relation_disambiguation_normalized
+指针,is_a,直接引用,栈与栈帧相关实体,方法区与元数据相关实体,"直接引用可以是直接指向目标的指针、相对偏移量或是一个能间接定位到目标的句柄,直接引用是和虚拟机实现的内存布局相关的",上下位关系,使用ThreadLocal,JVM.txt,0.748,relation_disambiguation_normalized
+老年代,causes,内存碎片,堆结构实体,场景与问题实体,"这类对象直接分配在老年代,以避免因频繁的年轻代晋升而导致的内存碎片化问题",因果关系,全文,JVM.txt,0.748,relation_disambiguation_normalized
+运行时常量池,is_a,字面量,内存区域实体,对象与字符串相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",上下位关系,全文,JVM.txt,0.748,relation_disambiguation_normalized
+连接,has_part,解析,类加载过程实体,类加载过程实体,连接:验证、准备、解析 3 个阶段统称为连接,枚举结构关系,使用ThreadLocal,JVM.txt,0.748,relation_disambiguation_normalized
+JVM内存模型,used_for,局部变量,领域实体,栈与栈帧相关实体,"在JVM内存模型中,栈(Stack)主要用于管理线程的局部变量和方法调用的上下文,而堆(Heap)则是用于存储所有类的实例和数组",用途关系,全文,JVM.txt,0.746,relation_disambiguation_normalized
+常量池缓存,used_for,常量,方法区与元数据相关实体,方法区与元数据相关实体,"常量池缓存:用于提升类加载的效率,将常用的常量缓存起来方便使用",用途关系,全文,JVM.txt,0.744,relation_disambiguation_normalized
+栈帧,used_for,动态链接,栈与栈帧相关实体,栈与栈帧相关实体,"每个方法在执行时都会创建一个栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.744,relation_disambiguation_normalized
+线程,has_part,对象引用,线程与私有性相关实体,栈与栈帧相关实体,"线程:未停止的线程可能持有对象引用,无法被回收",枚举结构关系,全文,JVM.txt,0.744,relation_disambiguation_normalized
+静态集合,has_part,HashMap,场景与问题实体,代码与容器实体,"静态集合:使用静态数据结构(如HashMap或ArrayList)存储对象,且未清理",枚举结构关系,全文,JVM.txt,0.744,relation_disambiguation_normalized
+Entry,causes,内存泄漏,代码与容器实体,领域实体,"如果当前线程迟迟不结束的话,这些key为null的Entry的value就会一直存在一条强引用链:Thread Ref -> Thread -> ThreaLocalMap -> Entry -> value永远无法回收,造成内存泄漏",因果关系,使用ThreadLocal,JVM.txt,0.742,relation_disambiguation_normalized
+Java 堆,is_a,内存溢出,内存区域实体,领域实体,"元空间并不在Java堆中,而是使用本地内存,这解决了永久代容易出现的内存溢出问题",上下位关系,全文,JVM.txt,0.742,relation_disambiguation_normalized
+堆溢出,is_a,使用,内存区域实体,类加载过程实体,堆溢出通常是由于创建了太多的大对象或未能及时回收不再使用的对象,上下位关系,全文,JVM.txt,0.742,relation_disambiguation_normalized
+复制算法,is_a,新生代,垃圾回收算法实体,堆结构实体,标记-复制算法应用在CMS新生代(ParNew是CMS默认的新生代垃圾回收器)和G1垃圾回收器中,上下位关系,使用ThreadLocal,JVM.txt,0.742,relation_disambiguation_normalized
+大对象,causes,gc,对象与字符串相关实体,领域实体,"原因是代码中可能存在大对象分配,或者发生了内存泄露,导致在多次GC之后,还是无法找到一块足够大的内存容纳当前对象",因果关系,全文,JVM.txt,0.742,relation_disambiguation_normalized
+解析,is_a,直接引用,类加载过程实体,方法区与元数据相关实体,解析:解析阶段是虚拟机将常量池的「符号引用」直接替换为「直接引用」的过程,上下位关系,使用ThreadLocal,JVM.txt,0.742,relation_disambiguation_normalized
+CMS,used_for,浮动垃圾,垃圾回收器实体,垃圾回收核心概念实体,"CMS产生浮动垃圾过多时会退化为serial old,效率低,因为在上图的第四阶段,CMS清除垃圾时是并发清除的,这个时候,垃圾回收线程和用户线程同时工作会产生浮动垃圾,也就意味着CMS垃圾回收器必须预留一部分内存空间用于存放浮动垃圾",用途关系,使用ThreadLocal,JVM.txt,0.74,relation_disambiguation_normalized
+JVM,used_for,对象实例,领域实体,对象与字符串相关实体,"Java堆(Heap)是Java虚拟机(JVM)中内存管理的一个重要区域,主要用于存放对象实例和数组",用途关系,全文,JVM.txt,0.74,relation_disambiguation_normalized
+内存碎片,implements,G1,场景与问题实体,垃圾回收器实体,"G1(Garbage First)收集器 (标记-整理算法): Java堆并行收集器,G1收集器是JDK1.7提供的一个新收集器,G1收集器基于“标记-整理”算法实现,也就是说不会产生内存碎片",实现关系,使用ThreadLocal,JVM.txt,0.74,relation_disambiguation_normalized
+垃圾回收,has_part,可达性分析,领域实体,垃圾回收核心概念实体,"在Java中,判断对象是否为垃圾(即不再被使用,可以被垃圾回收器回收)主要依据两种主流的垃圾回收算法来实现:引用计数法和可达性分析算法",枚举结构关系,使用ThreadLocal,JVM.txt,0.738,relation_disambiguation_normalized
+并发标记,has_part,GC Roots,垃圾回收算法实体,垃圾回收核心概念实体,"并发标记阶段:并发标记阶段是指从GC Roots开始对堆中对象进行可达性分析,找出存活对象",枚举结构关系,使用ThreadLocal,JVM.txt,0.738,relation_disambiguation_normalized
+标记-整理算法,has_part,存活对象,垃圾回收算法实体,垃圾回收核心概念实体,"标记-整理算法:复制算法在 GC 之后存活对象较少的情况下效率比较高,但如果存活对象比较多时,会执行较多的复制操作,效率就会下降",枚举结构关系,使用ThreadLocal,JVM.txt,0.738,relation_disambiguation_normalized
+常量,has_part,符号引用,方法区与元数据相关实体,方法区与元数据相关实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",整体部分关系,全文,JVM.txt,0.736,relation_disambiguation_normalized
+常量池,has_part,常量,方法区与元数据相关实体,方法区与元数据相关实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",枚举结构关系,全文,JVM.txt,0.736,relation_disambiguation_normalized
+方法区,used_for,符号引用,内存区域实体,方法区与元数据相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",用途关系,全文,JVM.txt,0.734,relation_disambiguation_normalized
+运行时常量池,is_a,常量,内存区域实体,方法区与元数据相关实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",上位包含关系,全文,JVM.txt,0.734,relation_disambiguation_normalized
+Humongous Objects,has_part,G1,堆结构实体,垃圾回收器实体,"大对象区(Large Object Space / Humongous Objects):在某些JVM实现中(如G1垃圾收集器),为大对象分配了专门的区域,称为大对象区或Humongous Objects区域",枚举结构关系,全文,JVM.txt,0.732,relation_disambiguation_normalized
+分代回收,has_part,新生代,垃圾回收核心概念实体,堆结构实体,分代回收算法:分代收集是将内存划分成了新生代和老年代,枚举结构关系,使用ThreadLocal,JVM.txt,0.732,relation_disambiguation_normalized
+标记-整理算法,has_part,Serial,垃圾回收算法实体,垃圾回收器实体,"Serial Old收集器 (标记-整理算法): 老年代单线程收集器,Serial收集器的老年代版本",枚举结构关系,使用ThreadLocal,JVM.txt,0.732,relation_disambiguation_normalized
+G1,is_a,内存碎片,垃圾回收器实体,场景与问题实体,"G1(Garbage First)收集器 (标记-整理算法): Java堆并行收集器,G1收集器是JDK1.7提供的一个新收集器,G1收集器基于“标记-整理”算法实现,也就是说不会产生内存碎片",上下位关系,使用ThreadLocal,JVM.txt,0.73,relation_disambiguation_normalized
+ThreadLocal,is_a,线程,代码与容器实体,线程与私有性相关实体,"ThreadLocal提供了线程本地变量,它可以保证访问到的变量属于当前线程,每个线程都保存有一个变量副本,每个线程的变量都不同",上下位关系,使用ThreadLocal,JVM.txt,0.73,relation_disambiguation_normalized
+初始化,is_a,字符串对象,类加载过程实体,对象与字符串相关实体,"首先,我们看到这个代码中有一个new关键字,我们知道new指令是创建一个类的实例对象并完成加载初始化的,因此这个字符串对象是在运行期才能确定的,创建的字符串对象是在堆内存上",上下位关系,全文,JVM.txt,0.73,relation_disambiguation_normalized
+垃圾回收,is_a,类信息,领域实体,方法区与元数据相关实体,"虽然方法区中的垃圾回收与堆有所不同,但是同样存在对不再需要的常量、无用的类信息等进行清理的过程",上下位关系,使用ThreadLocal,JVM.txt,0.73,relation_disambiguation_normalized
+运行时常量池,used_for,字面量,内存区域实体,对象与字符串相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",用途关系,全文,JVM.txt,0.728,relation_disambiguation_normalized
+Survivor 区,is_a,新生代,堆结构实体,堆结构实体,"从内存回收角度,堆被划分为新生代和老年代,新生代又分为 Eden 区和两个 Survivor 区(From Survivor 和 To Survivor)",上位包含关系,全文,JVM.txt,0.726,relation_disambiguation_normalized
+ThreadLocalMap,used_for,key,代码与容器实体,代码与容器实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.726,relation_disambiguation_normalized
+标记-整理算法,has_part,G1,垃圾回收算法实体,垃圾回收器实体,"G1(Garbage First)收集器 (标记-整理算法): Java堆并行收集器,G1收集器是JDK1.7提供的一个新收集器,G1收集器基于“标记-整理”算法实现,也就是说不会产生内存碎片",枚举结构关系,使用ThreadLocal,JVM.txt,0.726,relation_disambiguation_normalized
+JVM,is_a,堆外内存,领域实体,内存区域实体,"直接内存:不属于 JVM 运行时数据区的一部分,通过 NIO 类引入,是一种堆外内存,可以显著提高 I/O 性能",上下位关系,全文,JVM.txt,0.724,relation_disambiguation_normalized
+复制算法,is_a,垃圾回收,垃圾回收算法实体,领域实体,标记-复制算法应用在CMS新生代(ParNew是CMS默认的新生代垃圾回收器)和G1垃圾回收器中,上下位关系,使用ThreadLocal,JVM.txt,0.724,relation_disambiguation_normalized
+方法调用,is_a,数组,栈与栈帧相关实体,对象与字符串相关实体,"在JVM内存模型中,栈(Stack)主要用于管理线程的局部变量和方法调用的上下文,而堆(Heap)则是用于存储所有类的实例和数组",上下位关系,全文,JVM.txt,0.724,relation_disambiguation_normalized
+符号引用,is_a,字面量,方法区与元数据相关实体,对象与字符串相关实体,"符号引用是以一组符号来描述所引用的目标,符号可以是任何形式的字面量,只要使用的时候可以无歧义地定位到目标即可",上下位关系,使用ThreadLocal,JVM.txt,0.724,relation_disambiguation_normalized
+运行时常量池,is_a,符号引用,内存区域实体,方法区与元数据相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",上下位关系,全文,JVM.txt,0.724,relation_disambiguation_normalized
+双亲委派,is_a,类加载,领域实体,领域实体,"Java 中的 “双亲委派” 是类加载机制的核心原则,简单说就是 「一个类加载器要加载类时,先让父加载器去尝试加载,只有父加载器加载不了,自己才会去加载」",上下位关系,使用ThreadLocal,JVM.txt,0.722,relation_disambiguation_normalized
+G1,depends_on,内存碎片,垃圾回收器实体,场景与问题实体,"G1(Garbage First)收集器 (标记-整理算法): Java堆并行收集器,G1收集器是JDK1.7提供的一个新收集器,G1收集器基于“标记-整理”算法实现,也就是说不会产生内存碎片",依赖关系,使用ThreadLocal,JVM.txt,0.72,relation_disambiguation_normalized
+G1,depends_on,大对象,垃圾回收器实体,对象与字符串相关实体,"算法: G1 基于标记--整理算法, 不会产生空间碎片,在分配大对象时,不会因无法得到连续的空间,而提前触发一次 FULL GC",依赖关系,使用ThreadLocal,JVM.txt,0.72,relation_disambiguation_normalized
+可达性分析,has_part,虚拟机栈,垃圾回收核心概念实体,内存区域实体,"最经典的是 「可达性分析」:以 GC Roots(比如虚拟机栈里的局部变量、静态变量、常量等)为起点,遍历对象的引用链,如果某个对象从 GC Roots 出发不可达,就会被标记为可回收对象",枚举结构关系,使用ThreadLocal,JVM.txt,0.72,relation_disambiguation_normalized
+静态变量,has_part,类初始化,方法区与元数据相关实体,类加载过程实体,"静态变量:存储类的静态变量,这些变量在类初始化的时候被赋值",枚举结构关系,全文,JVM.txt,0.72,relation_disambiguation_normalized
+CMS,is_a,内存碎片,垃圾回收器实体,场景与问题实体,"CMS收集器是使用“标记-清除”算法进行的垃圾回收,容易产生内存碎片",上下位关系,使用ThreadLocal,JVM.txt,0.718,relation_disambiguation_normalized
+String,is_a,扩展类加载器,对象与字符串相关实体,领域实体,"具体来说,Java 的类加载器有一套默认的层级结构:最顶层是Bootstrap ClassLoader(启动类加载器,负责加载 JDK 核心类,如java.lang.String),往下是Extension ClassLoader(扩展类加载器,加载 JDK 扩展目录的类),再往下是AppClassLoader(应用类加载器,加载我们自己写的类和第三方 jar 包),我们也可以自定义类加载器,放在最下层",上下位关系,使用ThreadLocal,JVM.txt,0.718,relation_disambiguation_normalized
+使用,causes,OutOfMemoryError,类加载过程实体,异常与错误实体,"直接内存的使用受到本机总内存的限制,若分配不当,可能导致 OutOfMemoryError 异常",因果关系,全文,JVM.txt,0.718,relation_disambiguation_normalized
+加载阶段,is_a,类加载过程,类加载过程实体,领域实体,"加载阶段是用户参与的阶段,我们可以自定义类加载器,去实现自己的类加载过程",上下位关系,使用ThreadLocal,JVM.txt,0.718,relation_disambiguation_normalized
+双亲委派模型,is_a,加载,领域实体,类加载过程实体,"再来谈谈双亲委派模型,简单说就是当类加载器(Class-Loader)试图加载某个类型的时候,除非父加载器找不到相应类型,否则尽量将这个任务代理给当前加载器的父加载器去做",上下位关系,使用ThreadLocal,JVM.txt,0.718,relation_disambiguation_normalized
+栈帧,causes,栈溢出,栈与栈帧相关实体,场景与问题实体,"如果递归没有正确的终止条件,栈帧会不断累积,最终超过虚拟机栈的最大容量,导致栈溢出",因果关系,全文,JVM.txt,0.718,relation_disambiguation_normalized
+运行时常量池,part_of,字面量,内存区域实体,对象与字符串相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",部分整体关系,全文,JVM.txt,0.718,relation_disambiguation_normalized
+连接,causes,OutOfMemoryError,类加载过程实体,异常与错误实体,"这些未正常关闭的连接,如果不进行处理,轻则影响程序性能,重则导致OutOfMemoryError异常发生",因果关系,未关闭的资源,JVM.txt,0.718,relation_disambiguation_normalized
+JVM内存模型,used_for,方法调用,领域实体,栈与栈帧相关实体,"在JVM内存模型中,栈(Stack)主要用于管理线程的局部变量和方法调用的上下文,而堆(Heap)则是用于存储所有类的实例和数组",用途关系,全文,JVM.txt,0.716,relation_disambiguation_normalized
+Java 虚拟机,used_for,对象实例,领域实体,对象与字符串相关实体,"Java堆(Heap)是Java虚拟机(JVM)中内存管理的一个重要区域,主要用于存放对象实例和数组",用途关系,全文,JVM.txt,0.716,relation_disambiguation_normalized
+Java 虚拟机栈,used_for,操作数栈,领域实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.716,relation_disambiguation_normalized
+常量池缓存,used_for,使用,方法区与元数据相关实体,类加载过程实体,"常量池缓存:用于提升类加载的效率,将常用的常量缓存起来方便使用",用途关系,全文,JVM.txt,0.716,relation_disambiguation_normalized
+G1,has_part,新生代,垃圾回收器实体,堆结构实体,"此外,G1收集器不同于之前的收集器的一个重要特点是:G1回收的范围是整个Java堆(包括新生代,老年代),而前六种收集器回收的范围仅限于新生代或老年代",整体部分关系,使用ThreadLocal,JVM.txt,0.714,relation_disambiguation_normalized
+复制算法,has_part,Serial,垃圾回收算法实体,垃圾回收器实体,"ParNew收集器 (复制算法): 新生代收并行集器,实际上是Serial收集器的多线程版本,在多核CPU环境下有着比Serial更好的表现",枚举结构关系,使用ThreadLocal,JVM.txt,0.714,relation_disambiguation_normalized
+常量,has_part,运行时常量池,方法区与元数据相关实体,内存区域实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",整体部分关系,全文,JVM.txt,0.714,relation_disambiguation_normalized
+栈帧,used_for,方法出口,栈与栈帧相关实体,栈与栈帧相关实体,"每个方法在执行时都会创建一个栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.714,relation_disambiguation_normalized
+简化了加载流程,has_part,类加载,类加载过程实体,领域实体,"简化了加载流程:通过委派,大部分类能够被正确的类加载器加载,减少了每个加载器需要处理的类的数量,简化了类的加载过程,提高了加载效率",枚举结构关系,使用ThreadLocal,JVM.txt,0.714,relation_disambiguation_normalized
+类加载,has_part,Bootstrap ClassLoader,领域实体,类加载器实体,"具体来说,Java 的类加载器有一套默认的层级结构:最顶层是Bootstrap ClassLoader(启动类加载器,负责加载 JDK 核心类,如java.lang.String),往下是Extension ClassLoader(扩展类加载器,加载 JDK 扩展目录的类),再往下是AppClassLoader(应用类加载器,加载我们自己写的类和第三方 jar 包),我们也可以自定义类加载器,放在最下层",枚举结构关系,使用ThreadLocal,JVM.txt,0.714,relation_disambiguation_normalized
+JProfiler,is_a,内存泄漏,工具与排查实体,领域实体,"分析快照文件:使用 MAT(Memory Analyzer Tool)或 JProfiler 等工具分析快照,重点看哪些对象占用了大量内存、是否存在内存泄漏(如对象长期被无用引用持有,无法回收)",上下位关系,全文,JVM.txt,0.712,relation_disambiguation_normalized
+加载,is_a,字符串对象,类加载过程实体,对象与字符串相关实体,"首先,我们看到这个代码中有一个new关键字,我们知道new指令是创建一个类的实例对象并完成加载初始化的,因此这个字符串对象是在运行期才能确定的,创建的字符串对象是在堆内存上",上下位关系,全文,JVM.txt,0.712,relation_disambiguation_normalized
+双亲委派,is_a,加载,领域实体,类加载过程实体,"Java 中的 “双亲委派” 是类加载机制的核心原则,简单说就是 「一个类加载器要加载类时,先让父加载器去尝试加载,只有父加载器加载不了,自己才会去加载」",上下位关系,使用ThreadLocal,JVM.txt,0.712,relation_disambiguation_normalized
+新生代,causes,Minor GC,堆结构实体,垃圾回收核心概念实体,"如果将大对象分配到新生代,可能会很快导致新生代空间不足,从而频繁触发 Minor GC",因果关系,全文,JVM.txt,0.712,relation_disambiguation_normalized
+JVM,used_for,数组,领域实体,对象与字符串相关实体,"Java堆(Heap)是Java虚拟机(JVM)中内存管理的一个重要区域,主要用于存放对象实例和数组",用途关系,全文,JVM.txt,0.71,relation_disambiguation_normalized
+new 指令,is_a,字符串对象,对象与字符串相关实体,对象与字符串相关实体,"首先,我们看到这个代码中有一个new关键字,我们知道new指令是创建一个类的实例对象并完成加载初始化的,因此这个字符串对象是在运行期才能确定的,创建的字符串对象是在堆内存上",上下位关系,全文,JVM.txt,0.71,relation_disambiguation_normalized
+使用,used_for,ThreadLocal,类加载过程实体,代码与容器实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.71,relation_disambiguation_normalized
+可达性分析,is_a,标记-清除算法,垃圾回收核心概念实体,垃圾回收算法实体,"标记-清除算法:标记-清除算法分为“标记”和“清除”两个阶段,首先通过可达性分析,标记出所有需要回收的对象,然后统一回收所有被标记的对象",上位包含关系,使用ThreadLocal,JVM.txt,0.71,relation_disambiguation_normalized
+分代回收,has_part,老年代,垃圾回收核心概念实体,堆结构实体,分代回收算法:分代收集是将内存划分成了新生代和老年代,枚举结构关系,使用ThreadLocal,JVM.txt,0.708,relation_disambiguation_normalized
+常量,is_a,常量池,方法区与元数据相关实体,方法区与元数据相关实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",上位包含关系,全文,JVM.txt,0.708,relation_disambiguation_normalized
+栈帧创建,has_part,线程,栈与栈帧相关实体,线程与私有性相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",枚举结构关系,全文,JVM.txt,0.708,relation_disambiguation_normalized
+运行时常量池,has_part,类加载,内存区域实体,领域实体,"运行时常量池:存储着在类文件中的常量池数据,在类加载后在方法区生成该运行时常量池",枚举结构关系,全文,JVM.txt,0.708,relation_disambiguation_normalized
+方法调用,used_for,数组,栈与栈帧相关实体,对象与字符串相关实体,"在JVM内存模型中,栈(Stack)主要用于管理线程的局部变量和方法调用的上下文,而堆(Heap)则是用于存储所有类的实例和数组",用途关系,全文,JVM.txt,0.704,relation_disambiguation_normalized
+类加载,is_a,启动类加载器,领域实体,领域实体,"这些类加载器之间的关系形成了双亲委派模型,其核心思想是当一个类加载器收到类加载的请求时,首先不会自己去尝试加载这个类,而是把这个请求委派给父类加载器去完成,每一层次的类加载器都是如此,因此所有的加载请求最终都应该传送到顶层的启动类加载器中",上下位关系,使用ThreadLocal,JVM.txt,0.704,relation_disambiguation_normalized
+运行时常量池,used_for,符号引用,内存区域实体,方法区与元数据相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",用途关系,全文,JVM.txt,0.704,relation_disambiguation_normalized
+Survivor 区,is_a,老年代,堆结构实体,堆结构实体,"从内存回收角度,堆被划分为新生代和老年代,新生代又分为 Eden 区和两个 Survivor 区(From Survivor 和 To Survivor)",上位包含关系,全文,JVM.txt,0.702,relation_disambiguation_normalized
+标记-整理算法,has_part,Parallel Scavenge,垃圾回收算法实体,垃圾回收器实体,"Parallel Old收集器 (标记-整理算法): 老年代并行收集器,吞吐量优先,Parallel Scavenge收集器的老年代版本",枚举结构关系,使用ThreadLocal,JVM.txt,0.702,relation_disambiguation_normalized
+new 指令,is_a,符号引用,对象与字符串相关实体,方法区与元数据相关实体,"类加载检查:虚拟机遇到一条 new 指令时,首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用,并且检查这个符号引用代表的类是否已被加载过、解析和初始化过",上下位关系,使用ThreadLocal,JVM.txt,0.7,relation_disambiguation_normalized
+内存溢出,has_part,JVM,领域实体,领域实体,"内存溢出:内存溢出是指Java虚拟机(JVM)在申请内存时,无法找到足够的内存,最终引发OutOfMemoryError",枚举结构关系,全文,JVM.txt,0.7,relation_disambiguation_normalized
+并发标记,is_a,存活对象,垃圾回收算法实体,垃圾回收核心概念实体,"并发标记阶段:并发标记阶段是指从GC Roots开始对堆中对象进行可达性分析,找出存活对象",上下位关系,使用ThreadLocal,JVM.txt,0.7,relation_disambiguation_normalized
+直接内存,causes,OutOfMemoryError,内存区域实体,异常与错误实体,"直接内存的使用受到本机总内存的限制,若分配不当,可能导致 OutOfMemoryError 异常",因果关系,全文,JVM.txt,0.7,relation_disambiguation_normalized
+线程,is_a,程序计数器,线程与私有性相关实体,内存区域实体,"我们考虑一下,如果在线程切换的过程中,下一条指令执行到哪里了,是不是还是会用到我们的程序计数器啊",上下位关系,全文,JVM.txt,0.7,relation_disambiguation_normalized
+线程,used_for,局部变量表,线程与私有性相关实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.698,relation_disambiguation_normalized
+gc,has_part,Young GC,领域实体,垃圾回收核心概念实体,"根据其作用范围和触发条件的不同,可以将GC分为三种类型:Minor GC(也称为Young GC)、Major GC(有时也称为Old GC)、以及Full GC",枚举结构关系,使用ThreadLocal,JVM.txt,0.696,relation_disambiguation_normalized
+静态集合,has_part,ArrayList,场景与问题实体,代码与容器实体,"静态集合:使用静态数据结构(如HashMap或ArrayList)存储对象,且未清理",枚举结构关系,全文,JVM.txt,0.696,relation_disambiguation_normalized
+元空间,is_a,内存溢出,内存区域实体,领域实体,"元空间并不在Java堆中,而是使用本地内存,这解决了永久代容易出现的内存溢出问题",上下位关系,全文,JVM.txt,0.694,relation_disambiguation_normalized
+局部变量,is_a,数组,栈与栈帧相关实体,对象与字符串相关实体,"在JVM内存模型中,栈(Stack)主要用于管理线程的局部变量和方法调用的上下文,而堆(Heap)则是用于存储所有类的实例和数组",上下位关系,全文,JVM.txt,0.694,relation_disambiguation_normalized
+常量池,is_a,加载,方法区与元数据相关实体,类加载过程实体,"类加载检查:虚拟机遇到一条 new 指令时,首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用,并且检查这个符号引用代表的类是否已被加载过、解析和初始化过",上下位关系,使用ThreadLocal,JVM.txt,0.694,relation_disambiguation_normalized
+常量池缓存,has_part,常量,方法区与元数据相关实体,方法区与元数据相关实体,"常量池缓存:用于提升类加载的效率,将常用的常量缓存起来方便使用",枚举结构关系,全文,JVM.txt,0.694,relation_disambiguation_normalized
+符号引用,has_part,直接引用,方法区与元数据相关实体,方法区与元数据相关实体,"符号引用:存储类和方法的符号引用,是一种直接引用不同于直接引用的引用类型",枚举结构关系,全文,JVM.txt,0.694,relation_disambiguation_normalized
+运行时常量池,part_of,符号引用,内存区域实体,方法区与元数据相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",部分整体关系,全文,JVM.txt,0.694,relation_disambiguation_normalized
+G1,has_part,老年代,垃圾回收器实体,堆结构实体,"此外,G1收集器不同于之前的收集器的一个重要特点是:G1回收的范围是整个Java堆(包括新生代,老年代),而前六种收集器回收的范围仅限于新生代或老年代",整体部分关系,使用ThreadLocal,JVM.txt,0.69,relation_disambiguation_normalized
+栈帧创建,has_part,Java 虚拟机栈,栈与栈帧相关实体,领域实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",枚举结构关系,全文,JVM.txt,0.69,relation_disambiguation_normalized
+栈溢出,implements,树形结构遍历,场景与问题实体,场景与问题实体,"举个实际例子:曾遇到一个树形结构遍历的方法,因节点层级极深(超过 10 万层)且用递归实现,导致栈溢出",实现关系,全文,JVM.txt,0.69,relation_disambiguation_normalized
+符号引用,is_a,常量池,方法区与元数据相关实体,方法区与元数据相关实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",上位包含关系,全文,JVM.txt,0.69,relation_disambiguation_normalized
+新生代,causes,大对象,堆结构实体,对象与字符串相关实体,"大对象通常需要连续的内存空间,如果在新生代中频繁分配和回收大对象,容易产生内存碎片,导致后续分配大对象时可能因为内存不连续而失败",因果关系,全文,JVM.txt,0.688,relation_disambiguation_normalized
+符号引用,is_a,使用,方法区与元数据相关实体,类加载过程实体,"符号引用是以一组符号来描述所引用的目标,符号可以是任何形式的字面量,只要使用的时候可以无歧义地定位到目标即可",上下位关系,使用ThreadLocal,JVM.txt,0.688,relation_disambiguation_normalized
+Java 虚拟机,used_for,数组,领域实体,对象与字符串相关实体,"Java堆(Heap)是Java虚拟机(JVM)中内存管理的一个重要区域,主要用于存放对象实例和数组",用途关系,全文,JVM.txt,0.686,relation_disambiguation_normalized
+Java 虚拟机栈,used_for,动态链接,领域实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.686,relation_disambiguation_normalized
+ThreadLocal,used_for,强引用,代码与容器实体,引用类型实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.686,relation_disambiguation_normalized
+Java 堆,has_part,线程共享,内存区域实体,线程与私有性相关实体,"Java 堆:是 JVM 中最大的一块内存区域,被所有线程共享,在虚拟机启动时创建,用于存放对象实例",枚举结构关系,全文,JVM.txt,0.684,relation_disambiguation_normalized
+可达性分析,has_part,局部变量,垃圾回收核心概念实体,栈与栈帧相关实体,"最经典的是 「可达性分析」:以 GC Roots(比如虚拟机栈里的局部变量、静态变量、常量等)为起点,遍历对象的引用链,如果某个对象从 GC Roots 出发不可达,就会被标记为可回收对象",枚举结构关系,使用ThreadLocal,JVM.txt,0.684,relation_disambiguation_normalized
+对象池,has_part,使用,场景与问题实体,类加载过程实体,"对象池:在对象池中,弱引用可以用来管理那些暂时不使用的对象",枚举结构关系,全文,JVM.txt,0.684,relation_disambiguation_normalized
+本地方法栈,has_part,使用,内存区域实体,类加载过程实体,"本地方法栈:与 Java 虚拟机栈类似,主要为虚拟机使用到的 Native 方法服务,在 HotSpot 虚拟机中和 Java 虚拟机栈合二为一",枚举结构关系,全文,JVM.txt,0.684,relation_disambiguation_normalized
+CMS,is_a,浮动垃圾,垃圾回收器实体,垃圾回收核心概念实体,"CMS产生浮动垃圾过多时会退化为serial old,效率低,因为在上图的第四阶段,CMS清除垃圾时是并发清除的,这个时候,垃圾回收线程和用户线程同时工作会产生浮动垃圾,也就意味着CMS垃圾回收器必须预留一部分内存空间用于存放浮动垃圾",上下位关系,使用ThreadLocal,JVM.txt,0.68,relation_disambiguation_normalized
+ParNew,is_a,线程,垃圾回收器实体,线程与私有性相关实体,"ParNew收集器 (复制算法): 新生代收并行集器,实际上是Serial收集器的多线程版本,在多核CPU环境下有着比Serial更好的表现",上下位关系,使用ThreadLocal,JVM.txt,0.68,relation_disambiguation_normalized
+String,is_a,加载,对象与字符串相关实体,类加载过程实体,"具体来说,Java 的类加载器有一套默认的层级结构:最顶层是Bootstrap ClassLoader(启动类加载器,负责加载 JDK 核心类,如java.lang.String),往下是Extension ClassLoader(扩展类加载器,加载 JDK 扩展目录的类),再往下是AppClassLoader(应用类加载器,加载我们自己写的类和第三方 jar 包),我们也可以自定义类加载器,放在最下层",上下位关系,使用ThreadLocal,JVM.txt,0.68,relation_disambiguation_normalized
+常量池,is_a,解析,方法区与元数据相关实体,类加载过程实体,"类加载检查:虚拟机遇到一条 new 指令时,首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用,并且检查这个符号引用代表的类是否已被加载过、解析和初始化过",上下位关系,使用ThreadLocal,JVM.txt,0.68,relation_disambiguation_normalized
+程序计数器,used_for,线程,内存区域实体,线程与私有性相关实体,"程序计数器:可以看作是当前线程所执行的字节码的行号指示器,用于存储当前线程正在执行的 Java 方法的 JVM 指令地址",用途关系,全文,JVM.txt,0.68,relation_disambiguation_normalized
+类加载检查,is_a,常量池,领域实体,方法区与元数据相关实体,"类加载检查:虚拟机遇到一条 new 指令时,首先将去检查这个指令的参数是否能在常量池中定位到一个类的符号引用,并且检查这个符号引用代表的类是否已被加载过、解析和初始化过",上下位关系,使用ThreadLocal,JVM.txt,0.68,relation_disambiguation_normalized
+线程,is_a,数组,线程与私有性相关实体,对象与字符串相关实体,"在JVM内存模型中,栈(Stack)主要用于管理线程的局部变量和方法调用的上下文,而堆(Heap)则是用于存储所有类的实例和数组",上下位关系,全文,JVM.txt,0.68,relation_disambiguation_normalized
+OutOfMemoryError,has_part,堆内存溢,异常与错误实体,内存区域实体,"堆内存溢出:当出现Java.lang.OutOfMemoryError:Java heap space异常时,就是堆内存溢出了",枚举结构关系,全文,JVM.txt,0.678,relation_disambiguation_normalized
+ThreadLocalMap,used_for,ThreadLocal,代码与容器实体,代码与容器实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.678,relation_disambiguation_normalized
+运行时常量池,has_part,字面量,内存区域实体,对象与字符串相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",枚举结构关系,全文,JVM.txt,0.678,relation_disambiguation_normalized
+大对象,causes,Minor GC,对象与字符串相关实体,垃圾回收核心概念实体,"如果将大对象分配到新生代,可能会很快导致新生代空间不足,从而频繁触发 Minor GC",因果关系,全文,JVM.txt,0.676,relation_disambiguation_normalized
+启动类加载器,is_a,类加载,领域实体,领域实体,"启动类加载器(Bootstrap Class Loader):这是最顶层的类加载器,负责加载Java的核心库(如位于jre/lib/rt.jar中的类),它是用C++编写的,是JVM的一部分",上下位关系,使用ThreadLocal,JVM.txt,0.674,relation_disambiguation_normalized
+局部变量,used_for,数组,栈与栈帧相关实体,对象与字符串相关实体,"在JVM内存模型中,栈(Stack)主要用于管理线程的局部变量和方法调用的上下文,而堆(Heap)则是用于存储所有类的实例和数组",用途关系,全文,JVM.txt,0.674,relation_disambiguation_normalized
+Humongous Objects,has_part,大对象,堆结构实体,对象与字符串相关实体,"大对象区(Large Object Space / Humongous Objects):在某些JVM实现中(如G1垃圾收集器),为大对象分配了专门的区域,称为大对象区或Humongous Objects区域",枚举结构关系,全文,JVM.txt,0.672,relation_disambiguation_normalized
+方法区,has_part,类信息,内存区域实体,方法区与元数据相关实体,方法区(Method Area): 方法区是用于存储类信息、常量、静态变量等数据的区域,枚举结构关系,使用ThreadLocal,JVM.txt,0.672,relation_disambiguation_normalized
+直接内存,has_part,NIO,内存区域实体,工具与排查实体,"直接内存:不属于 JVM 运行时数据区的一部分,通过 NIO 类引入,是一种堆外内存,可以显著提高 I/O 性能",枚举结构关系,全文,JVM.txt,0.672,relation_disambiguation_normalized
+key,implements,ThreadLocal,代码与容器实体,代码与容器实体,"ThreadLocal的实现中,每个Thread维护一个ThreadLocalMap映射表,key是ThreadLocal实例本身,value是真正需要存储的Object",实现关系,使用ThreadLocal,JVM.txt,0.67,relation_disambiguation_normalized
+元空间,has_part,方法区,内存区域实体,内存区域实体,"方法区(元空间):在 JDK 1.8 及以后的版本中,方法区被元空间取代,使用本地内存",枚举结构关系,全文,JVM.txt,0.67,relation_disambiguation_normalized
+大对象区,implements,Humongous Objects,堆结构实体,堆结构实体,"大对象区(Large Object Space / Humongous Objects):在某些JVM实现中(如G1垃圾收集器),为大对象分配了专门的区域,称为大对象区或Humongous Objects区域",实现关系,全文,JVM.txt,0.67,relation_disambiguation_normalized
+常量池,has_part,符号引用,方法区与元数据相关实体,方法区与元数据相关实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",枚举结构关系,全文,JVM.txt,0.67,relation_disambiguation_normalized
+简化了加载流程,has_part,加载,类加载过程实体,类加载过程实体,"简化了加载流程:通过委派,大部分类能够被正确的类加载器加载,减少了每个加载器需要处理的类的数量,简化了类的加载过程,提高了加载效率",枚举结构关系,使用ThreadLocal,JVM.txt,0.67,relation_disambiguation_normalized
+key,used_for,gc,代码与容器实体,领域实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.668,relation_disambiguation_normalized
+方法区,used_for,加载,内存区域实体,类加载过程实体,《深入理解Java虚拟机》书中对方法区(Method Area)存储内容描述如下:它用于存储已被虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存等,用途关系,全文,JVM.txt,0.668,relation_disambiguation_normalized
+运行时常量池,is_a,常量池,内存区域实体,方法区与元数据相关实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",上位包含关系,全文,JVM.txt,0.668,relation_disambiguation_normalized
+常量池缓存,has_part,使用,方法区与元数据相关实体,类加载过程实体,"常量池缓存:用于提升类加载的效率,将常用的常量缓存起来方便使用",枚举结构关系,全文,JVM.txt,0.666,relation_disambiguation_normalized
+JVM,used_for,局部变量表,领域实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.662,relation_disambiguation_normalized
+垃圾回收,is_a,内存泄漏,领域实体,领域实体,"Java 的 GC(垃圾回收)简单说就是 「自动识别并回收不再使用的对象,释放内存空间」,避免内存泄漏",上下位关系,使用ThreadLocal,JVM.txt,0.662,relation_disambiguation_normalized
+线程,used_for,操作数栈,线程与私有性相关实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.662,relation_disambiguation_normalized
+From Survivor,is_a,新生代,堆结构实体,堆结构实体,"从内存回收角度,堆被划分为新生代和老年代,新生代又分为 Eden 区和两个 Survivor 区(From Survivor 和 To Survivor)",上位包含关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+JVM,used_for,动态链接,领域实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+JVM,used_for,操作数栈,领域实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+Java 堆,used_for,对象实例,内存区域实体,对象与字符串相关实体,"Java 堆:是 JVM 中最大的一块内存区域,被所有线程共享,在虚拟机启动时创建,用于存放对象实例",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+Java 堆,used_for,数组,内存区域实体,对象与字符串相关实体,"Java堆(Heap)是Java虚拟机(JVM)中内存管理的一个重要区域,主要用于存放对象实例和数组",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+Java 虚拟机,used_for,加载,领域实体,类加载过程实体,《深入理解Java虚拟机》书中对方法区(Method Area)存储内容描述如下:它用于存储已被虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存等,用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+Java 虚拟机,used_for,常量,领域实体,方法区与元数据相关实体,《深入理解Java虚拟机》书中对方法区(Method Area)存储内容描述如下:它用于存储已被虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存等,用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+Java 虚拟机,used_for,类型信息,领域实体,方法区与元数据相关实体,《深入理解Java虚拟机》书中对方法区(Method Area)存储内容描述如下:它用于存储已被虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存等,用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+Java 虚拟机栈,used_for,方法出口,领域实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+Metaspace,used_for,类的元数据信息,异常与错误实体,方法区与元数据相关实体,"元空间(Metaspace):从Java 8开始,永久代(Permanent Generation)被元空间取代,用于存储类的元数据信息,如类的结构信息(如字段、方法信息等)",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+ThreadLocalMap,used_for,强引用,代码与容器实体,引用类型实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.66,relation_disambiguation_normalized
+使用,used_for,强引用,类加载过程实体,引用类型实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.66,relation_disambiguation_normalized
+弱引用,used_for,ThreadLocal,引用类型实体,代码与容器实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.66,relation_disambiguation_normalized
+弱引用,used_for,gc,引用类型实体,领域实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.66,relation_disambiguation_normalized
+方法区,used_for,即时编译器编译后的代码缓存,内存区域实体,方法区与元数据相关实体,《深入理解Java虚拟机》书中对方法区(Method Area)存储内容描述如下:它用于存储已被虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存等,用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+方法区,used_for,类型信息,内存区域实体,方法区与元数据相关实体,《深入理解Java虚拟机》书中对方法区(Method Area)存储内容描述如下:它用于存储已被虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存等,用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+直接内存,is_a,堆外内存,内存区域实体,内存区域实体,"直接内存:不属于 JVM 运行时数据区的一部分,通过 NIO 类引入,是一种堆外内存,可以显著提高 I/O 性能",上下位关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+程序计数器,used_for,JVM,内存区域实体,领域实体,"程序计数器:可以看作是当前线程所执行的字节码的行号指示器,用于存储当前线程正在执行的 Java 方法的 JVM 指令地址",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+线程,used_for,JVM,线程与私有性相关实体,领域实体,"程序计数器:可以看作是当前线程所执行的字节码的行号指示器,用于存储当前线程正在执行的 Java 方法的 JVM 指令地址",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+线程,used_for,动态链接,线程与私有性相关实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+线程,used_for,数组,线程与私有性相关实体,对象与字符串相关实体,"在JVM内存模型中,栈(Stack)主要用于管理线程的局部变量和方法调用的上下文,而堆(Heap)则是用于存储所有类的实例和数组",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+线程,used_for,方法出口,线程与私有性相关实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+线程,used_for,浮动垃圾,线程与私有性相关实体,垃圾回收核心概念实体,"CMS产生浮动垃圾过多时会退化为serial old,效率低,因为在上图的第四阶段,CMS清除垃圾时是并发清除的,这个时候,垃圾回收线程和用户线程同时工作会产生浮动垃圾,也就意味着CMS垃圾回收器必须预留一部分内存空间用于存放浮动垃圾",用途关系,使用ThreadLocal,JVM.txt,0.66,relation_disambiguation_normalized
+运行时常量池,used_for,常量,内存区域实体,方法区与元数据相关实体,"运行时常量池:是方法区的一部分,用于存放编译期生成的各种字面量和符号引用,具有动态性,运行时也可将新的常量放入池中",用途关系,全文,JVM.txt,0.66,relation_disambiguation_normalized
+批量处理任务,causes,堆溢出,场景与问题实体,内存区域实体,"举个例子:曾遇到过一个批量处理任务,代码中把所有处理结果都存到了一个静态 List 里,导致对象越积越多,最终堆溢出",因果关系,全文,JVM.txt,0.65,relation_disambiguation_normalized
+树形结构遍历,causes,栈溢出,场景与问题实体,场景与问题实体,"举个实际例子:曾遇到一个树形结构遍历的方法,因节点层级极深(超过 10 万层)且用递归实现,导致栈溢出",因果关系,全文,JVM.txt,0.65,relation_disambiguation_normalized
+重定位阶段,causes,指针,垃圾回收算法实体,栈与栈帧相关实体,"重定位阶段,因为转移导致对象的地址发生了变化,在重定位阶段,所有指向对象旧地址的指针都要调整到对象新的地址上",因果关系,使用ThreadLocal,JVM.txt,0.65,relation_disambiguation_normalized
+GC Roots,has_part,方法区,垃圾回收核心概念实体,内存区域实体,GC Roots对象包括:虚拟机栈(栈帧中的本地变量表)中引用的对象、方法区中类静态属性引用的对象、本地方法栈中JNI(Java Native Interface)引用的对象、活跃线程的引用等,整体部分关系,使用ThreadLocal,JVM.txt,0.648,relation_disambiguation_normalized
+常量池,has_part,运行时常量池,方法区与元数据相关实体,内存区域实体,"常量池:存储类和接口中的常量,包括字面值常量、符号引用,以及运行时常量池",整体部分关系,全文,JVM.txt,0.648,relation_disambiguation_normalized
+初始化零值,has_part,初始化,类加载过程实体,类加载过程实体,"初始化零值:内存分配完成后,虚拟机需要将分配到的内存空间都初始化为零值(不包括对象头),这一步操作保证了对象的实例字段在 Java 代码中可以不赋初始值就直接使用,程序能访问到这些字段的数据类型所对应的零值",枚举结构关系,使用ThreadLocal,JVM.txt,0.646,relation_disambiguation_normalized
+ThreadLocal,used_for,ThreadLocalMap,代码与容器实体,代码与容器实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.64,relation_disambiguation_normalized
+key,used_for,ThreadLocal,代码与容器实体,代码与容器实体,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",用途关系,使用ThreadLocal,JVM.txt,0.64,relation_disambiguation_normalized
+栈帧创建,used_for,局部变量表,栈与栈帧相关实体,栈与栈帧相关实体,"栈帧创建:在调用一个方法前,JVM会在当前线程的Java虚拟机栈中为该方法分配一个新的栈帧,用于存储局部变量表、操作数栈、动态链接、方法出口等信息",用途关系,全文,JVM.txt,0.64,relation_disambiguation_normalized
+线程,used_for,指令地址,线程与私有性相关实体,线程与私有性相关实体,"程序计数器:可以看作是当前线程所执行的字节码的行号指示器,用于存储当前线程正在执行的 Java 方法的 JVM 指令地址",用途关系,全文,JVM.txt,0.64,relation_disambiguation_normalized
+From Survivor,is_a,老年代,堆结构实体,堆结构实体,"从内存回收角度,堆被划分为新生代和老年代,新生代又分为 Eden 区和两个 Survivor 区(From Survivor 和 To Survivor)",上位包含关系,全文,JVM.txt,0.636,relation_disambiguation_normalized
+初始化,is_a,类初始化,类加载过程实体,类加载过程实体,"最后是初始化阶段(initialization),这一步真正去执行类初始化的代码逻辑,包括静态字段赋值的动作,以及执行类定义中的静态初始化块内的逻辑,编译器在编译阶段就会把这部分逻辑整理好,父类型的初始化逻辑优先于当前类型的逻辑",上位包含关系,使用ThreadLocal,JVM.txt,0.636,relation_disambiguation_normalized
+对象头,is_a,初始化零值,对象与字符串相关实体,类加载过程实体,"初始化零值:内存分配完成后,虚拟机需要将分配到的内存空间都初始化为零值(不包括对象头),这一步操作保证了对象的实例字段在 Java 代码中可以不赋初始值就直接使用,程序能访问到这些字段的数据类型所对应的零值",上位包含关系,使用ThreadLocal,JVM.txt,0.63,relation_disambiguation_normalized
+类初始化,has_part,初始化,类加载过程实体,类加载过程实体,"最后是初始化阶段(initialization),这一步真正去执行类初始化的代码逻辑,包括静态字段赋值的动作,以及执行类定义中的静态初始化块内的逻辑,编译器在编译阶段就会把这部分逻辑整理好,父类型的初始化逻辑优先于当前类型的逻辑",整体部分关系,使用ThreadLocal,JVM.txt,0.616,relation_disambiguation_normalized
+GC Roots,has_part,本地方法栈,垃圾回收核心概念实体,内存区域实体,GC Roots对象包括:虚拟机栈(栈帧中的本地变量表)中引用的对象、方法区中类静态属性引用的对象、本地方法栈中JNI(Java Native Interface)引用的对象、活跃线程的引用等,整体部分关系,使用ThreadLocal,JVM.txt,0.61,relation_disambiguation_normalized
+To Survivor,is_a,新生代,堆结构实体,堆结构实体,"从内存回收角度,堆被划分为新生代和老年代,新生代又分为 Eden 区和两个 Survivor 区(From Survivor 和 To Survivor)",上位包含关系,全文,JVM.txt,0.61,relation_disambiguation_normalized
+To Survivor,is_a,老年代,堆结构实体,堆结构实体,"从内存回收角度,堆被划分为新生代和老年代,新生代又分为 Eden 区和两个 Survivor 区(From Survivor 和 To Survivor)",上位包含关系,全文,JVM.txt,0.61,relation_disambiguation_normalized
+使用,is_a,初始化,类加载过程实体,类加载过程实体,"初始化零值:内存分配完成后,虚拟机需要将分配到的内存空间都初始化为零值(不包括对象头),这一步操作保证了对象的实例字段在 Java 代码中可以不赋初始值就直接使用,程序能访问到这些字段的数据类型所对应的零值",上位包含关系,使用ThreadLocal,JVM.txt,0.61,relation_disambiguation_normalized
+初始化零值,has_part,对象头,类加载过程实体,对象与字符串相关实体,"初始化零值:内存分配完成后,虚拟机需要将分配到的内存空间都初始化为零值(不包括对象头),这一步操作保证了对象的实例字段在 Java 代码中可以不赋初始值就直接使用,程序能访问到这些字段的数据类型所对应的零值",整体部分关系,使用ThreadLocal,JVM.txt,0.61,relation_disambiguation_normalized
+加载,is_a,验证,类加载过程实体,类加载过程实体,"验证:确保class文件中的字节流包含的信息,符合当前虚拟机的要求,保证这个被加载的class类的正确性,不会危害到虚拟机的安全",上位包含关系,使用ThreadLocal,JVM.txt,0.61,relation_disambiguation_normalized
+初始化,has_part,使用,类加载过程实体,类加载过程实体,"初始化零值:内存分配完成后,虚拟机需要将分配到的内存空间都初始化为零值(不包括对象头),这一步操作保证了对象的实例字段在 Java 代码中可以不赋初始值就直接使用,程序能访问到这些字段的数据类型所对应的零值",整体部分关系,使用ThreadLocal,JVM.txt,0.59,relation_disambiguation_normalized
+验证,has_part,加载,类加载过程实体,类加载过程实体,"验证:确保class文件中的字节流包含的信息,符合当前虚拟机的要求,保证这个被加载的class类的正确性,不会危害到虚拟机的安全",整体部分关系,使用ThreadLocal,JVM.txt,0.59,relation_disambiguation_normalized

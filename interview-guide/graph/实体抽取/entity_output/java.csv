@@ -1,0 +1,209 @@
+﻿main_entity,entity_type,mention_count,mentions,source_file
+数据类型,数据类型实体,6,数据类型,java.txt
+类,数据类型实体,49,类,java.txt
+Java,领域实体,3,Java,java.txt
+基本数据类型,数据类型实体,2,基本数据类型,java.txt
+引用数据类型,数据类型实体,2,引用数据类型,java.txt
+byte,数据类型实体,1,byte,java.txt
+short,数据类型实体,1,short,java.txt
+int,数据类型实体,8,int,java.txt
+long,数据类型实体,1,long,java.txt
+float,数据类型实体,1,float,java.txt
+double,数据类型实体,1,double,java.txt
+char,数据类型实体,2,char,java.txt
+boolean,数据类型实体,1,boolean,java.txt
+接口,数据类型实体,15,接口,java.txt
+数组,数据类型实体,6,数组,java.txt
+枚举,数据类型实体,1,枚举,java.txt
+注解,领域实体,8,注解,java.txt
+变量,变量与成员实体,11,变量,java.txt
+局部变量,变量与成员实体,2,局部变量,java.txt
+成员变量,变量与成员实体,2,成员变量,java.txt
+实例,面向对象核心实体,6,实例,java.txt
+实例变量,变量与成员实体,2,实例变量,java.txt
+静态变量,变量与成员实体,2,静态变量,java.txt
+类变量,数据类型实体,1,类变量,java.txt
+算术运算符,运算符实体,1,算术运算符,java.txt
+关系运算符,运算符实体,1,关系运算符,java.txt
+逻辑运算符,运算符实体,1,逻辑运算符,java.txt
+位运算符,运算符实体,1,位运算符,java.txt
+赋值运算符,运算符实体,1,赋值运算符,java.txt
+三元运算符,运算符实体,1,三元运算符,java.txt
+条件分支,流程控制实体,1,条件分支,java.txt
+if-else,流程控制实体,1,if-else,java.txt
+switch-case,流程控制实体,1,switch-case,java.txt
+循环结构,流程控制实体,1,循环结构,java.txt
+for,流程控制实体,2,for,java.txt
+while,流程控制实体,2,while,java.txt
+do-while,流程控制实体,1,do-while,java.txt
+跳转语句,流程控制实体,1,跳转语句,java.txt
+break,流程控制实体,1,break,java.txt
+continue,流程控制实体,1,continue,java.txt
+return,流程控制实体,1,return,java.txt
+面向对象,领域实体,1,面向对象,java.txt
+对象,面向对象核心实体,12,对象,java.txt
+封装,面向对象核心实体,1,封装,java.txt
+继承,面向对象核心实体,6,继承,java.txt
+多态,面向对象核心实体,3,多态,java.txt
+Class,面向对象核心实体,10,Class | class,java.txt
+Object,面向对象核心实体,1,Object,java.txt
+构造方法,面向对象核心实体,1,构造方法,java.txt
+初始化,JVM 与内存管理实体,2,初始化,java.txt
+方法重载,面向对象核心实体,1,方法重载,java.txt
+Overloading,面向对象核心实体,1,Overloading,java.txt
+方法重写,面向对象核心实体,1,方法重写,java.txt
+Overriding,面向对象核心实体,1,Overriding,java.txt
+子类,数据类型实体,3,子类,java.txt
+父类,数据类型实体,5,父类,java.txt
+访问控制修饰符,关键字与修饰符实体,1,访问控制修饰符,java.txt
+private,关键字与修饰符实体,2,private,java.txt
+default,关键字与修饰符实体,1,default,java.txt
+protected,关键字与修饰符实体,1,protected,java.txt
+public,关键字与修饰符实体,4,public,java.txt
+static,关键字与修饰符实体,2,static,java.txt
+final,关键字与修饰符实体,4,final,java.txt
+abstract,关键字与修饰符实体,3,abstract,java.txt
+interface,关键字与修饰符实体,3,interface,java.txt
+extends,关键字与修饰符实体,3,extends,java.txt
+implements,关键字与修饰符实体,2,implements,java.txt
+this,关键字与修饰符实体,1,this,java.txt
+super,关键字与修饰符实体,2,super,java.txt
+new,关键字与修饰符实体,2,new,java.txt
+instanceof,关键字与修饰符实体,1,instanceof,java.txt
+单继承,面向对象核心实体,1,单继承,java.txt
+多态的表现形式,面向对象核心实体,1,多态的表现形式,java.txt
+父类引用,数据类型实体,1,父类引用,java.txt
+子类对象,数据类型实体,1,子类对象,java.txt
+接口引用,数据类型实体,1,接口引用,java.txt
+实现类对象,数据类型实体,1,实现类对象,java.txt
+向上转型,继承与类型转换实体,1,向上转型,java.txt
+向下转型,继承与类型转换实体,1,向下转型,java.txt
+抽象类,数据类型实体,5,抽象类,java.txt
+抽象类与接口,数据类型实体,1,抽象类与接口,java.txt
+抽象方法,抽象类与接口实体,1,抽象方法,java.txt
+具体方法,抽象类与接口实体,1,具体方法,java.txt
+默认方法,抽象类与接口实体,1,默认方法,java.txt
+静态方法,抽象类与接口实体,3,静态方法,java.txt
+int[] arr,数组与字符串实体,1,int[] arr,java.txt
+数组的创建,数据类型实体,1,数组的创建,java.txt
+多维数组,数据类型实体,1,多维数组,java.txt
+int[][] matrix,数组与字符串实体,1,int[][] matrix,java.txt
+String,数组与字符串实体,3,String,java.txt
+immutable,数组与字符串实体,1,immutable,java.txt
+StringBuilder,数组与字符串实体,1,StringBuilder,java.txt
+线程,线程与并发实体,8,线程,java.txt
+StringBuffer,数组与字符串实体,1,StringBuffer,java.txt
+length,领域实体,1,length,java.txt
+charAt,领域实体,1,charAt,java.txt
+substring,领域实体,1,substring,java.txt
+equals,领域实体,1,equals,java.txt
+indexOf,领域实体,1,indexOf,java.txt
+异常处理,领域实体,1,异常处理,java.txt
+Throwable,异常处理实体,1,Throwable,java.txt
+Error,异常处理实体,1,Error,java.txt
+Exception,异常处理实体,4,Exception,java.txt
+Checked Exception,异常处理实体,1,Checked Exception,java.txt
+Unchecked Exception,异常处理实体,1,Unchecked Exception,java.txt
+运行,线程状态实体,4,运行,java.txt
+try,异常处理实体,2,try,java.txt
+catch,异常处理实体,1,catch,java.txt
+finally,异常处理实体,2,finally,java.txt
+throw,异常处理实体,2,throw,java.txt
+throws,异常处理实体,1,throws,java.txt
+JVM,领域实体,2,JVM,java.txt
+JVM退出,异常处理实体,1,JVM退出,java.txt
+集合框架,领域实体,1,集合框架,java.txt
+Collection,集合框架实体,2,Collection,java.txt
+List,集合框架实体,4,List,java.txt
+Set,集合框架实体,5,Set,java.txt
+Queue,集合框架实体,1,Queue,java.txt
+Map,集合框架实体,6,Map,java.txt
+键值对,集合框架实体,1,键值对,java.txt
+ArrayList,集合框架实体,1,ArrayList,java.txt
+LinkedList,集合框架实体,1,LinkedList,java.txt
+Vector,集合框架实体,1,Vector,java.txt
+HashSet,集合框架实体,2,HashSet,java.txt
+HashMap,集合框架实体,3,HashMap,java.txt
+LinkedHashSet,集合框架实体,1,LinkedHashSet,java.txt
+TreeSet,集合框架实体,1,TreeSet,java.txt
+红黑树,集合框架实体,1,红黑树,java.txt
+Hashtable,集合框架实体,1,Hashtable,java.txt
+TreeMap,集合框架实体,1,TreeMap,java.txt
+LinkedHashMap,集合框架实体,1,LinkedHashMap,java.txt
+插入顺序,集合框架实体,1,插入顺序,java.txt
+Collections,集合框架实体,1,Collections,java.txt
+泛型,领域实体,6,泛型,java.txt
+泛型类,领域实体,1,泛型类,java.txt
+Box<T>,泛型实体,1,Box<T>,java.txt
+泛型方法,领域实体,1,泛型方法,java.txt
+通配符,泛型实体,1,通配符,java.txt
+类型擦除,数据类型实体,1,类型擦除,java.txt
+反射,领域实体,3,反射,java.txt
+核心类,数据类型实体,1,核心类,java.txt
+Method,反射实体,1,Method,java.txt
+Field,反射实体,1,Field,java.txt
+Constructor,反射实体,1,Constructor,java.txt
+类名.class,数据类型实体,1,类名.class,java.txt
+getClass,领域实体,1,getClass,java.txt
+Class.forName,领域实体,1,Class.forName,java.txt
+全限定名,反射实体,1,全限定名,java.txt
+Annotation,注解实体,1,Annotation,java.txt
+解析,JVM 与内存管理实体,2,解析,java.txt
+@Override,注解实体,1,@Override,java.txt
+@Deprecated,注解实体,1,@Deprecated,java.txt
+@SuppressWarnings,注解实体,1,@SuppressWarnings,java.txt
+@FunctionalInterface,注解实体,1,@FunctionalInterface,java.txt
+元注解,领域实体,1,元注解,java.txt
+@Retention,注解实体,1,@Retention,java.txt
+@Target,注解实体,1,@Target,java.txt
+@Documented,注解实体,1,@Documented,java.txt
+@Inherited,注解实体,1,@Inherited,java.txt
+自定义注解,领域实体,1,自定义注解,java.txt
+@interface,注解实体,1,@interface,java.txt
+线程与并发,领域实体,1,线程与并发,java.txt
+并发,线程与并发实体,1,并发,java.txt
+创建线程的方式,线程与并发实体,1,创建线程的方式,java.txt
+Thread,线程与并发实体,2,Thread,java.txt
+Runnable,线程与并发实体,1,Runnable,java.txt
+Callable,线程与并发实体,1,Callable,java.txt
+FutureTask,线程与并发实体,1,FutureTask,java.txt
+线程状态,线程与并发实体,1,线程状态,java.txt
+新建,线程状态实体,1,新建,java.txt
+就绪,线程状态实体,1,就绪,java.txt
+阻塞,线程状态实体,1,阻塞,java.txt
+等待,线程状态实体,2,等待,java.txt
+超时等待,线程状态实体,1,超时等待,java.txt
+终止,线程状态实体,1,终止,java.txt
+synchronized,线程与并发实体,1,synchronized,java.txt
+互斥锁,线程与并发实体,1,互斥锁,java.txt
+Lock,线程与并发实体,3,Lock,java.txt
+ReentrantLock,线程与并发实体,1,ReentrantLock,java.txt
+tryLock,线程与并发实体,1,tryLock,java.txt
+lockInterruptibly,线程与并发实体,1,lockInterruptibly,java.txt
+volatile,线程与并发实体,1,volatile,java.txt
+可见性,线程与并发实体,1,可见性,java.txt
+指令重排序,线程与并发实体,1,指令重排序,java.txt
+原子性,线程与并发实体,1,原子性,java.txt
+线程池,线程与并发实体,1,线程池,java.txt
+Executor,线程与并发实体,2,Executor,java.txt
+ThreadPoolExecutor,线程与并发实体,1,ThreadPoolExecutor,java.txt
+堆,JVM 与内存管理实体,2,堆,java.txt
+栈,JVM 与内存管理实体,2,栈,java.txt
+方法区,JVM 与内存管理实体,1,方法区,java.txt
+程序计数器,JVM 与内存管理实体,1,程序计数器,java.txt
+本地方法栈,JVM 与内存管理实体,1,本地方法栈,java.txt
+垃圾回收,JVM 与内存管理实体,1,垃圾回收,java.txt
+GC,JVM 与内存管理实体,1,GC,java.txt
+标记-清除,JVM 与内存管理实体,1,标记-清除,java.txt
+复制,JVM 与内存管理实体,1,复制,java.txt
+标记-整理,JVM 与内存管理实体,1,标记-整理,java.txt
+分代收集,JVM 与内存管理实体,1,分代收集,java.txt
+类加载机制,数据类型实体,1,类加载机制,java.txt
+加载,JVM 与内存管理实体,3,加载,java.txt
+验证,JVM 与内存管理实体,1,验证,java.txt
+准备,JVM 与内存管理实体,1,准备,java.txt
+类加载器,数据类型实体,1,类加载器,java.txt
+Bootstrap ClassLoader,JVM 与内存管理实体,1,Bootstrap ClassLoader,java.txt
+Extension ClassLoader,JVM 与内存管理实体,1,Extension ClassLoader,java.txt
+Application ClassLoader,JVM 与内存管理实体,1,Application ClassLoader,java.txt
+双亲委派模型,JVM 与内存管理实体,1,双亲委派模型,java.txt

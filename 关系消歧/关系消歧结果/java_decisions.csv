@@ -1,0 +1,196 @@
+﻿input_file,input_row_id,original_head,original_relation,original_tail,canonical_head,canonical_relation,canonical_tail,kept_relation,decision,canonicalization_actions,candidate_relations,winner_score,runner_up_score,score_margin,basis,evidence
+java.csv,0,Throwable,is_a,父类,Throwable,is_a,父类,is_a,kept,,is_a,0.8237,,,"is_a: score=0.824, conf=0.862, support=1, cues=上下位","Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)"
+java.csv,1,Runnable,implemented_by,Thread,Runnable,implemented_by,Thread,implemented_by,kept,,implemented_by,0.8279,,,"implemented_by: score=0.828, conf=0.846, support=1, cues=实现关系,实现",创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask)
+java.csv,2,对象,is_a,实例,对象,is_a,实例,is_a,kept,,is_a,0.8113,,,"is_a: score=0.811, conf=0.842, support=1, cues=上下位","类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例"
+java.csv,3,ArrayList,implemented_by,List,ArrayList,implemented_by,List,implemented_by,kept,,implemented_by,0.8402,,,"implemented_by: score=0.840, conf=0.840, support=1, cues=实现关系,实现类,实现","List的实现类:ArrayList(数组结构,查询快增删慢)、LinkedList(链表结构,增删快查询慢)、Vector(线程安全,较少用)"
+java.csv,4,Callable,implemented_by,Runnable,Callable,implemented_by,Runnable,implemented_by,kept,,implemented_by,0.8241,,,"implemented_by: score=0.824, conf=0.840, support=1, cues=实现关系,实现",创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask)
+java.csv,5,HashMap,implemented_by,Map,HashMap,implemented_by,Map,implemented_by,kept,,implemented_by,0.8402,,,"implemented_by: score=0.840, conf=0.840, support=1, cues=实现关系,实现类,实现","Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)"
+java.csv,6,HashSet,implemented_by,Set,HashSet,implemented_by,Set,implemented_by,kept,,implemented_by,0.8126,,,"implemented_by: score=0.813, conf=0.840, support=1, cues=实现关系,实现类,实现,!基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,7,接口,is_a,public,接口,is_a,public,is_a,kept,,is_a | has_part,0.8051,0.7577,0.0474,"is_a: score=0.805, conf=0.832, support=1, cues=上下位；has_part: score=0.758, conf=0.762, support=1, cues=枚举结构","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,8,Runnable,implemented_by,继承,Runnable,implemented_by,继承,implemented_by,kept,,implemented_by,0.8179,,,"implemented_by: score=0.818, conf=0.830, support=1, cues=实现关系,实现",创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask)
+java.csv,9,extends,is_a,单继承,extends,is_a,单继承,is_a,kept,,is_a,0.8014,,,"is_a: score=0.801, conf=0.826, support=1, cues=上下位","继承使用extends关键字,Java是单继承,一个类只能有一个直接父类"
+java.csv,10,元注解,used_for,注解,元注解,used_for,注解,used_for,kept,,used_for,0.8050,,,"used_for: score=0.805, conf=0.822, support=1, cues=用途,用于",元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited
+java.csv,11,接口,implemented_by,抽象类,接口,implemented_by,抽象类,implemented_by,kept,,implemented_by | has_part,0.8130,0.7602,0.0528,"implemented_by: score=0.813, conf=0.822, support=1, cues=实现关系,实现；has_part: score=0.760, conf=0.766, support=1, cues=枚举结构","一个类只能继承一个抽象类,但可以实现多个接口"
+java.csv,12,Object,is_a,对象,Object,is_a,对象,is_a,kept,,is_a | has_part,0.7964,0.7490,0.0474,"is_a: score=0.796, conf=0.818, support=1, cues=上下位；has_part: score=0.749, conf=0.748, support=1, cues=枚举结构","类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例"
+java.csv,13,String,is_a,immutable,String,is_a,immutable,is_a,kept,,is_a,0.7964,,,"is_a: score=0.796, conf=0.818, support=1, cues=上下位","String类是不可变的(immutable),任何修改都会产生新对象"
+java.csv,14,HashSet,depends_on,HashMap,HashSet,depends_on,HashMap,depends_on,kept,,depends_on,0.8020,,,"depends_on: score=0.802, conf=0.814, support=1, cues=依赖,基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,15,TreeSet,depends_on,红黑树,TreeSet,depends_on,红黑树,depends_on,kept,,depends_on,0.8020,,,"depends_on: score=0.802, conf=0.814, support=1, cues=依赖,基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,16,多态的表现形式,has_part,父类引用,多态的表现形式,has_part,父类引用,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",多态的表现形式:父类引用指向子类对象、接口引用指向实现类对象
+java.csv,17,接口,has_part,List,接口,has_part,List,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列)
+java.csv,18,接口,has_part,ReentrantLock,接口,has_part,ReentrantLock,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","Lock接口:ReentrantLock,提供更灵活的锁操作(tryLock、lockInterruptibly等)"
+java.csv,19,数组的创建,has_part,new,数组的创建,has_part,new,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","数组的创建:new int[10] 或 {1,2,3}"
+java.csv,20,核心类,has_part,Class,核心类,has_part,Class,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",核心类:Class、Method、Field、Constructor
+java.csv,21,注解,has_part,@Override,注解,has_part,@Override,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",内置注解:@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface
+java.csv,22,类加载器,has_part,Bootstrap ClassLoader,类加载器,has_part,Bootstrap ClassLoader,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","类加载器:Bootstrap ClassLoader、Extension ClassLoader、Application ClassLoader,双亲委派模型"
+java.csv,23,类加载机制,has_part,加载,类加载机制,has_part,加载,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",类加载机制:加载、验证、准备、解析、初始化
+java.csv,24,类型擦除,has_part,泛型,类型擦除,has_part,泛型,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","类型擦除:泛型信息在编译后被移除,运行时没有泛型"
+java.csv,25,线程状态,has_part,新建,线程状态,has_part,新建,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止
+java.csv,26,Error,is_a,父类,Error,is_a,父类,is_a,kept,,is_a,0.6564,,,"is_a: score=0.656, conf=0.800, support=1, cues=!包含","Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)"
+java.csv,27,Throwable,is_a,Error,Throwable,is_a,Error,is_a,kept,,is_a,0.7852,,,"is_a: score=0.785, conf=0.800, support=1, cues=上下位","Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)"
+java.csv,28,元注解,used_for,@Retention,元注解,used_for,@Retention,used_for,kept,,used_for,0.7913,,,"used_for: score=0.791, conf=0.800, support=1, cues=用途,用于",元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited
+java.csv,29,局部变量,is_a,变量,局部变量,is_a,变量,is_a,kept,,is_a,0.6552,,,"is_a: score=0.655, conf=0.798, support=1, cues=!包含",变量分为局部变量、成员变量(实例变量)和静态变量(类变量)
+java.csv,30,注解,has_part,@Retention,注解,has_part,@Retention,has_part,kept,,has_part,0.7524,,,"has_part: score=0.752, conf=0.798, support=1, cues=枚举结构,!用于",元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited
+java.csv,31,Checked Exception,is_a,Exception,Checked Exception,is_a,Exception,is_a,kept,,is_a,0.6515,,,"is_a: score=0.651, conf=0.792, support=1, cues=!包含","Exception分为:Checked Exception(编译时异常,必须处理)和Unchecked Exception(运行时异常,不强制处理)"
+java.csv,32,byte,is_a,基本数据类型,byte,is_a,基本数据类型,is_a,kept,,is_a,0.6239,,,"is_a: score=0.624, conf=0.792, support=1, cues=!包含,!包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,33,抽象类,has_part,abstract,抽象类,has_part,abstract,has_part,kept,,has_part,0.7924,,,"has_part: score=0.792, conf=0.792, support=1, cues=枚举结构,包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,34,Java,is_a,父类,Java,is_a,父类,is_a,kept,,is_a,0.7790,,,"is_a: score=0.779, conf=0.790, support=1, cues=上下位","继承使用extends关键字,Java是单继承,一个类只能有一个直接父类"
+java.csv,35,接口,is_a,abstract,接口,is_a,abstract,is_a,kept,,is_a | has_part,0.7790,0.7316,0.0474,"is_a: score=0.779, conf=0.790, support=1, cues=上下位；has_part: score=0.732, conf=0.720, support=1, cues=枚举结构","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,36,抽象方法,is_a,abstract,抽象方法,is_a,abstract,is_a,kept,,is_a,0.6490,,,"is_a: score=0.649, conf=0.788, support=1, cues=!包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,37,对象,has_part,类名.class,对象,has_part,类名.class,has_part,kept,,has_part,0.7726,,,"has_part: score=0.773, conf=0.786, support=1, cues=枚举结构","获取Class对象的方式:类名.class、对象.getClass()、Class.forName(""全限定名"")"
+java.csv,38,类加载机制,has_part,验证,类加载机制,has_part,验证,has_part,kept,,has_part,0.7726,,,"has_part: score=0.773, conf=0.786, support=1, cues=枚举结构",类加载机制:加载、验证、准备、解析、初始化
+java.csv,39,线程状态,has_part,就绪,线程状态,has_part,就绪,has_part,kept,,has_part,0.7726,,,"has_part: score=0.773, conf=0.786, support=1, cues=枚举结构",线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止
+java.csv,40,循环结构,has_part,for,循环结构,has_part,for,has_part,kept,,has_part,0.7713,,,"has_part: score=0.771, conf=0.784, support=1, cues=枚举结构",循环结构:for、while、do-while
+java.csv,41,数据类型,has_part,基本数据类型,数据类型,has_part,基本数据类型,has_part,kept,,has_part,0.7713,,,"has_part: score=0.771, conf=0.784, support=1, cues=枚举结构",Java有两种数据类型:基本数据类型和引用数据类型
+java.csv,42,条件分支,has_part,if-else,条件分支,has_part,if-else,has_part,kept,,has_part,0.7713,,,"has_part: score=0.771, conf=0.784, support=1, cues=枚举结构",条件分支:if-else、switch-case
+java.csv,43,线程池,has_part,Executor,线程池,has_part,Executor,has_part,kept,,has_part,0.7713,,,"has_part: score=0.771, conf=0.784, support=1, cues=枚举结构","线程池:Executor框架,常用类ThreadPoolExecutor"
+java.csv,44,访问控制修饰符,has_part,private,访问控制修饰符,has_part,private,has_part,kept,,has_part,0.7713,,,"has_part: score=0.771, conf=0.784, support=1, cues=枚举结构",访问控制修饰符:private、default(无修饰符)、protected、public
+java.csv,45,跳转语句,has_part,break,跳转语句,has_part,break,has_part,kept,,has_part,0.7713,,,"has_part: score=0.771, conf=0.784, support=1, cues=枚举结构",跳转语句:break、continue、return
+java.csv,46,接口,is_a,引用数据类型,接口,is_a,引用数据类型,is_a,kept,,is_a,0.6164,,,"is_a: score=0.616, conf=0.780, support=1, cues=!包含,!包括",引用数据类型包括:类、接口、数组、枚举、注解
+java.csv,47,构造方法,used_for,初始化,构造方法,used_for,初始化,used_for,kept,,used_for,0.7765,,,"used_for: score=0.776, conf=0.776, support=1, cues=用途,用于","构造方法:与类同名,没有返回值,用于初始化对象"
+java.csv,48,implements,implemented_by,interface,implements,implemented_by,interface,implemented_by,kept,,implemented_by,0.7993,,,"implemented_by: score=0.799, conf=0.774, support=1, cues=实现关系,实现,\bimplements\b","接口使用interface关键字,一个类可以实现多个接口(implements)"
+java.csv,49,synchronized,has_part,实例,synchronized,has_part,实例,has_part,kept,,has_part,0.7651,,,"has_part: score=0.765, conf=0.774, support=1, cues=枚举结构","synchronized关键字:修饰实例方法、静态方法、代码块,实现互斥锁"
+java.csv,50,Exception,has_part,Checked Exception,Exception,has_part,Checked Exception,has_part,kept,,has_part,0.7800,,,"has_part: score=0.780, conf=0.772, support=1, cues=枚举结构,分为","Exception分为:Checked Exception(编译时异常,必须处理)和Unchecked Exception(运行时异常,不强制处理)"
+java.csv,51,基本数据类型,has_part,byte,基本数据类型,has_part,byte,has_part,kept,,has_part,0.7800,,,"has_part: score=0.780, conf=0.772, support=1, cues=枚举结构,包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,52,Callable,implemented_by,Thread,Callable,implemented_by,Thread,implemented_by,kept,,implemented_by,0.7795,,,"implemented_by: score=0.779, conf=0.768, support=1, cues=实现关系,实现",创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask)
+java.csv,53,abstract,has_part,抽象方法,abstract,has_part,抽象方法,has_part,kept,,has_part,0.7775,,,"has_part: score=0.777, conf=0.768, support=1, cues=整体部分,包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,54,多态的表现形式,has_part,子类对象,多态的表现形式,has_part,子类对象,has_part,kept,,has_part,0.7614,,,"has_part: score=0.761, conf=0.768, support=1, cues=枚举结构",多态的表现形式:父类引用指向子类对象、接口引用指向实现类对象
+java.csv,55,成员变量,is_a,变量,成员变量,is_a,变量,is_a,kept,,is_a,0.6366,,,"is_a: score=0.637, conf=0.768, support=1, cues=!包含",变量分为局部变量、成员变量(实例变量)和静态变量(类变量)
+java.csv,56,核心类,has_part,Method,核心类,has_part,Method,has_part,kept,,has_part,0.7614,,,"has_part: score=0.761, conf=0.768, support=1, cues=枚举结构",核心类:Class、Method、Field、Constructor
+java.csv,57,类加载机制,has_part,准备,类加载机制,has_part,准备,has_part,kept,,has_part,0.7614,,,"has_part: score=0.761, conf=0.768, support=1, cues=枚举结构",类加载机制:加载、验证、准备、解析、初始化
+java.csv,58,线程状态,has_part,运行,线程状态,has_part,运行,has_part,kept,,has_part,0.7614,,,"has_part: score=0.761, conf=0.768, support=1, cues=枚举结构",线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止
+java.csv,59,接口,has_part,抽象类,接口,has_part,抽象类,implemented_by,relation_conflict_resolved,,implemented_by | has_part,0.8130,0.7602,0.0528,"implemented_by: score=0.813, conf=0.822, support=1, cues=实现关系,实现；has_part: score=0.760, conf=0.766, support=1, cues=枚举结构","抽象类和接口的区别:抽象类可以有状态(成员变量),接口不能有实例变量"
+java.csv,60,FutureTask,implemented_by,Runnable,FutureTask,implemented_by,Runnable,implemented_by,kept,,implemented_by,0.7758,,,"implemented_by: score=0.776, conf=0.762, support=1, cues=实现关系,实现",创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask)
+java.csv,61,HashMap,implemented_by,Set,HashMap,implemented_by,Set,implemented_by,kept,,implemented_by,0.7643,,,"implemented_by: score=0.764, conf=0.762, support=1, cues=实现关系,实现类,实现,!基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,62,short,is_a,基本数据类型,short,is_a,基本数据类型,is_a,kept,,is_a,0.6053,,,"is_a: score=0.605, conf=0.762, support=1, cues=!包含,!包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,63,接口,has_part,public,接口,has_part,public,is_a,relation_conflict_resolved,,is_a | has_part,0.8051,0.7577,0.0474,"is_a: score=0.805, conf=0.832, support=1, cues=上下位；has_part: score=0.758, conf=0.762, support=1, cues=枚举结构","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,64,数组,is_a,引用数据类型,数组,is_a,引用数据类型,is_a,kept,,is_a,0.6053,,,"is_a: score=0.605, conf=0.762, support=1, cues=!包含,!包括",引用数据类型包括:类、接口、数组、枚举、注解
+java.csv,65,HashSet,depends_on,LinkedHashSet,HashSet,depends_on,LinkedHashSet,depends_on,kept,,depends_on,0.7685,,,"depends_on: score=0.769, conf=0.760, support=1, cues=依赖,基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,66,List,has_part,ArrayList,List,has_part,ArrayList,has_part,kept,,has_part,0.7564,,,"has_part: score=0.756, conf=0.760, support=1, cues=枚举结构","List的实现类:ArrayList(数组结构,查询快增删慢)、LinkedList(链表结构,增删快查询慢)、Vector(线程安全,较少用)"
+java.csv,67,Map,has_part,HashMap,Map,has_part,HashMap,has_part,kept,,has_part,0.7564,,,"has_part: score=0.756, conf=0.760, support=1, cues=枚举结构","Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)"
+java.csv,68,Set,has_part,HashSet,Set,has_part,HashSet,has_part,kept,,has_part,0.7288,,,"has_part: score=0.729, conf=0.760, support=1, cues=枚举结构,!基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,69,引用数据类型,has_part,接口,引用数据类型,has_part,接口,has_part,kept,,has_part,0.7725,,,"has_part: score=0.773, conf=0.760, support=1, cues=枚举结构,包括",引用数据类型包括:类、接口、数组、枚举、注解
+java.csv,70,循环结构,has_part,while,循环结构,has_part,while,has_part,kept,,has_part,0.7564,,,"has_part: score=0.756, conf=0.760, support=1, cues=枚举结构",循环结构:for、while、do-while
+java.csv,71,数组的创建,has_part,int,数组的创建,has_part,int,has_part,kept,,has_part,0.7564,,,"has_part: score=0.756, conf=0.760, support=1, cues=枚举结构","数组的创建:new int[10] 或 {1,2,3}"
+java.csv,72,具体方法,is_a,abstract,具体方法,is_a,abstract,is_a,kept,,is_a,0.6304,,,"is_a: score=0.630, conf=0.758, support=1, cues=!包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,73,volatile,has_part,可见性,volatile,has_part,可见性,has_part,kept,,has_part,0.7527,,,"has_part: score=0.753, conf=0.754, support=1, cues=枚举结构","volatile关键字:保证可见性,禁止指令重排序,但不保证原子性"
+java.csv,74,Class,is_a,对象,Class,is_a,对象,is_a,kept,,is_a,0.7555,,,"is_a: score=0.755, conf=0.752, support=1, cues=上下位","类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例"
+java.csv,75,Object,is_a,实例,Object,is_a,实例,is_a,kept,,is_a | has_part,0.7555,0.7081,0.0474,"is_a: score=0.755, conf=0.752, support=1, cues=上下位；has_part: score=0.708, conf=0.682, support=1, cues=枚举结构","类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例"
+java.csv,76,继承,is_a,单继承,继承,is_a,单继承,is_a,kept,,is_a,0.7555,,,"is_a: score=0.755, conf=0.752, support=1, cues=上下位","继承使用extends关键字,Java是单继承,一个类只能有一个直接父类"
+java.csv,77,Error,is_a,Throwable,Error,is_a,Throwable,is_a,kept,,is_a,0.6254,,,"is_a: score=0.625, conf=0.750, support=1, cues=!包含","Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)"
+java.csv,78,类加载机制,has_part,解析,类加载机制,has_part,解析,has_part,kept,,has_part,0.7502,,,"has_part: score=0.750, conf=0.750, support=1, cues=枚举结构",类加载机制:加载、验证、准备、解析、初始化
+java.csv,79,线程状态,has_part,阻塞,线程状态,has_part,阻塞,has_part,kept,,has_part,0.7502,,,"has_part: score=0.750, conf=0.750, support=1, cues=枚举结构",线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止
+java.csv,80,Java,is_a,public,Java,is_a,public,is_a,kept,,is_a,0.7530,,,"is_a: score=0.753, conf=0.748, support=1, cues=上下位","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,81,Object,has_part,对象,Object,has_part,对象,is_a,relation_conflict_resolved,,is_a | has_part,0.7964,0.7490,0.0474,"is_a: score=0.796, conf=0.818, support=1, cues=上下位；has_part: score=0.749, conf=0.748, support=1, cues=枚举结构","类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例"
+java.csv,82,跳转语句,has_part,continue,跳转语句,has_part,continue,has_part,kept,,has_part,0.7490,,,"has_part: score=0.749, conf=0.748, support=1, cues=枚举结构",跳转语句:break、continue、return
+java.csv,83,注解,is_a,引用数据类型,注解,is_a,引用数据类型,is_a,kept,,is_a,0.5954,,,"is_a: score=0.595, conf=0.746, support=1, cues=!包含,!包括",引用数据类型包括:类、接口、数组、枚举、注解
+java.csv,84,synchronized,has_part,静态方法,synchronized,has_part,静态方法,has_part,kept,,has_part,0.7465,,,"has_part: score=0.747, conf=0.744, support=1, cues=枚举结构","synchronized关键字:修饰实例方法、静态方法、代码块,实现互斥锁"
+java.csv,85,枚举,is_a,引用数据类型,枚举,is_a,引用数据类型,is_a,kept,,is_a,0.5941,,,"is_a: score=0.594, conf=0.744, support=1, cues=!包含,!包括",引用数据类型包括:类、接口、数组、枚举、注解
+java.csv,86,注解,has_part,@Deprecated,注解,has_part,@Deprecated,has_part,kept,,has_part,0.7465,,,"has_part: score=0.747, conf=0.744, support=1, cues=枚举结构",内置注解:@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface
+java.csv,87,LinkedHashSet,depends_on,红黑树,LinkedHashSet,depends_on,红黑树,depends_on,kept,,depends_on,0.7574,,,"depends_on: score=0.757, conf=0.742, support=1, cues=依赖,基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,88,Set,depends_on,HashMap,Set,depends_on,HashMap,depends_on,kept,,depends_on | has_part,0.7574,0.6805,0.0769,"depends_on: score=0.757, conf=0.742, support=1, cues=依赖,基于；has_part: score=0.680, conf=0.682, support=1, cues=枚举结构,!基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,89,extends,is_a,父类,extends,is_a,父类,is_a,kept,,is_a,0.7493,,,"is_a: score=0.749, conf=0.742, support=1, cues=上下位","继承使用extends关键字,Java是单继承,一个类只能有一个直接父类"
+java.csv,90,基本数据类型,has_part,short,基本数据类型,has_part,short,has_part,kept,,has_part,0.7614,,,"has_part: score=0.761, conf=0.742, support=1, cues=枚举结构,包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,91,引用数据类型,has_part,数组,引用数据类型,has_part,数组,has_part,kept,,has_part,0.7614,,,"has_part: score=0.761, conf=0.742, support=1, cues=枚举结构,包括",引用数据类型包括:类、接口、数组、枚举、注解
+java.csv,92,数据类型,has_part,引用数据类型,数据类型,has_part,引用数据类型,has_part,kept,,has_part,0.7453,,,"has_part: score=0.745, conf=0.742, support=1, cues=枚举结构",Java有两种数据类型:基本数据类型和引用数据类型
+java.csv,93,abstract,has_part,具体方法,abstract,has_part,具体方法,has_part,kept,,has_part,0.7589,,,"has_part: score=0.759, conf=0.738, support=1, cues=整体部分,包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,94,互斥锁,implemented_by,synchronized,互斥锁,implemented_by,synchronized,implemented_by,kept,,implemented_by,0.7609,,,"implemented_by: score=0.761, conf=0.738, support=1, cues=实现关系,实现","synchronized关键字:修饰实例方法、静态方法、代码块,实现互斥锁"
+java.csv,95,多态的表现形式,has_part,接口引用,多态的表现形式,has_part,接口引用,has_part,kept,,has_part,0.7428,,,"has_part: score=0.743, conf=0.738, support=1, cues=枚举结构",多态的表现形式:父类引用指向子类对象、接口引用指向实现类对象
+java.csv,96,实例变量,is_a,变量,实例变量,is_a,变量,is_a,kept,,is_a,0.6180,,,"is_a: score=0.618, conf=0.738, support=1, cues=!包含",变量分为局部变量、成员变量(实例变量)和静态变量(类变量)
+java.csv,97,构造方法,used_for,对象,构造方法,used_for,对象,used_for,kept,,used_for,0.7529,,,"used_for: score=0.753, conf=0.738, support=1, cues=用途,用于","构造方法:与类同名,没有返回值,用于初始化对象"
+java.csv,98,接口,is_a,Java,接口,is_a,Java,is_a,kept,,is_a | has_part,0.7456,0.6982,0.0474,"is_a: score=0.746, conf=0.736, support=1, cues=上下位；has_part: score=0.698, conf=0.666, support=1, cues=枚举结构","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,99,条件分支,has_part,switch-case,条件分支,has_part,switch-case,has_part,kept,,has_part,0.7416,,,"has_part: score=0.742, conf=0.736, support=1, cues=枚举结构",条件分支:if-else、switch-case
+java.csv,100,访问控制修饰符,has_part,default,访问控制修饰符,has_part,default,has_part,kept,,has_part,0.7416,,,"has_part: score=0.742, conf=0.736, support=1, cues=枚举结构",访问控制修饰符:private、default(无修饰符)、protected、public
+java.csv,101,元注解,used_for,@Target,元注解,used_for,@Target,used_for,kept,,used_for,0.7504,,,"used_for: score=0.750, conf=0.734, support=1, cues=用途,用于",元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited
+java.csv,102,接口,has_part,Set,接口,has_part,Set,has_part,kept,,has_part,0.7391,,,"has_part: score=0.739, conf=0.732, support=1, cues=枚举结构",Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列)
+java.csv,103,接口,has_part,成员变量,接口,has_part,成员变量,has_part,kept,,has_part,0.7391,,,"has_part: score=0.739, conf=0.732, support=1, cues=枚举结构","抽象类和接口的区别:抽象类可以有状态(成员变量),接口不能有实例变量"
+java.csv,104,注解,has_part,@Target,注解,has_part,@Target,has_part,kept,,has_part,0.7115,,,"has_part: score=0.711, conf=0.732, support=1, cues=枚举结构,!用于",元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited
+java.csv,105,类加载机制,has_part,初始化,类加载机制,has_part,初始化,has_part,kept,,has_part,0.7391,,,"has_part: score=0.739, conf=0.732, support=1, cues=枚举结构",类加载机制:加载、验证、准备、解析、初始化
+java.csv,106,类型擦除,has_part,运行,类型擦除,has_part,运行,has_part,kept,,has_part,0.7391,,,"has_part: score=0.739, conf=0.732, support=1, cues=枚举结构","类型擦除:泛型信息在编译后被移除,运行时没有泛型"
+java.csv,107,线程状态,has_part,等待,线程状态,has_part,等待,has_part,kept,,has_part,0.7391,,,"has_part: score=0.739, conf=0.732, support=1, cues=枚举结构",线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止
+java.csv,108,int,is_a,基本数据类型,int,is_a,基本数据类型,is_a,kept,,is_a,0.5830,,,"is_a: score=0.583, conf=0.726, support=1, cues=!包含,!包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,109,引用数据类型,has_part,注解,引用数据类型,has_part,注解,has_part,kept,,has_part,0.7515,,,"has_part: score=0.751, conf=0.726, support=1, cues=枚举结构,包括",引用数据类型包括:类、接口、数组、枚举、注解
+java.csv,110,标记-清除,is_a,GC,标记-清除,is_a,GC,is_a,kept,,is_a,0.5830,,,"is_a: score=0.583, conf=0.726, support=1, cues=!包含,!包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,111,核心类,has_part,Field,核心类,has_part,Field,has_part,kept,,has_part,0.7354,,,"has_part: score=0.735, conf=0.726, support=1, cues=枚举结构",核心类:Class、Method、Field、Constructor
+java.csv,112,引用数据类型,has_part,枚举,引用数据类型,has_part,枚举,has_part,kept,,has_part,0.7502,,,"has_part: score=0.750, conf=0.724, support=1, cues=枚举结构,包括",引用数据类型包括:类、接口、数组、枚举、注解
+java.csv,113,循环结构,has_part,do-while,循环结构,has_part,do-while,has_part,kept,,has_part,0.7341,,,"has_part: score=0.734, conf=0.724, support=1, cues=枚举结构",循环结构:for、while、do-while
+java.csv,114,抽象方法,is_a,抽象类,抽象方法,is_a,抽象类,is_a,kept,,is_a,0.6081,,,"is_a: score=0.608, conf=0.722, support=1, cues=!包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,115,List,has_part,数组,List,has_part,数组,has_part,kept,,has_part,0.7316,,,"has_part: score=0.732, conf=0.720, support=1, cues=枚举结构","List的实现类:ArrayList(数组结构,查询快增删慢)、LinkedList(链表结构,增删快查询慢)、Vector(线程安全,较少用)"
+java.csv,116,接口,has_part,abstract,接口,has_part,abstract,is_a,relation_conflict_resolved,,is_a | has_part,0.7790,0.7316,0.0474,"is_a: score=0.779, conf=0.790, support=1, cues=上下位；has_part: score=0.732, conf=0.720, support=1, cues=枚举结构","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,117,Annotation,is_a,解析,Annotation,is_a,解析,is_a,kept,,is_a,0.7505,,,"is_a: score=0.750, conf=0.718, support=1, cues=上下位,是一种","注解(Annotation)是一种元数据,不直接影响代码逻辑,但可以被工具或框架解析"
+java.csv,118,String,is_a,对象,String,is_a,对象,is_a,kept,,is_a,0.7344,,,"is_a: score=0.734, conf=0.718, support=1, cues=上下位","String类是不可变的(immutable),任何修改都会产生新对象"
+java.csv,119,volatile,has_part,指令重排序,volatile,has_part,指令重排序,has_part,kept,,has_part,0.7304,,,"has_part: score=0.730, conf=0.718, support=1, cues=枚举结构","volatile关键字:保证可见性,禁止指令重排序,但不保证原子性"
+java.csv,120,实例,is_a,abstract,实例,is_a,abstract,is_a,kept,,is_a,0.6044,,,"is_a: score=0.604, conf=0.716, support=1, cues=!包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,121,Hashtable,implemented_by,Map,Hashtable,implemented_by,Map,implemented_by,kept,,implemented_by,0.7621,,,"implemented_by: score=0.762, conf=0.714, support=1, cues=实现关系,实现类,实现","Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)"
+java.csv,122,对象,has_part,getClass,对象,has_part,getClass,has_part,kept,,has_part,0.7279,,,"has_part: score=0.728, conf=0.714, support=1, cues=枚举结构","获取Class对象的方式:类名.class、对象.getClass()、Class.forName(""全限定名"")"
+java.csv,123,线程状态,has_part,超时等待,线程状态,has_part,超时等待,has_part,kept,,has_part,0.7279,,,"has_part: score=0.728, conf=0.714, support=1, cues=枚举结构",线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止
+java.csv,124,finally,is_a,JVM退出,finally,is_a,JVM退出,used_for,relation_conflict_resolved,,used_for | is_a,0.7392,0.7018,0.0374,"used_for: score=0.739, conf=0.690, support=1, cues=用途,用于,常用于；is_a: score=0.702, conf=0.710, support=1, cues=上下位,!用于","finally块通常用于释放资源,无论是否发生异常都会执行(除非JVM退出)"
+java.csv,125,LinkedHashSet,implemented_by,Set,LinkedHashSet,implemented_by,Set,implemented_by,kept,,implemented_by,0.7308,,,"implemented_by: score=0.731, conf=0.708, support=1, cues=实现关系,实现类,实现,!基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,126,标记-清除,is_a,垃圾回收,标记-清除,is_a,垃圾回收,is_a,kept,,is_a,0.5718,,,"is_a: score=0.572, conf=0.708, support=1, cues=!包含,!包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,127,GC,has_part,标记-清除,GC,has_part,标记-清除,has_part,kept,,has_part,0.7391,,,"has_part: score=0.739, conf=0.706, support=1, cues=枚举结构,包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,128,Java,is_a,static,Java,is_a,static,is_a,kept,,is_a,0.7270,,,"is_a: score=0.727, conf=0.706, support=1, cues=上下位","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,129,基本数据类型,has_part,int,基本数据类型,has_part,int,has_part,kept,,has_part,0.7391,,,"has_part: score=0.739, conf=0.706, support=1, cues=枚举结构,包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,130,LinkedList,implemented_by,List,LinkedList,implemented_by,List,implemented_by,kept,,implemented_by,0.7547,,,"implemented_by: score=0.755, conf=0.702, support=1, cues=实现关系,实现类,实现","List的实现类:ArrayList(数组结构,查询快增删慢)、LinkedList(链表结构,增删快查询慢)、Vector(线程安全,较少用)"
+java.csv,131,long,is_a,基本数据类型,long,is_a,基本数据类型,is_a,kept,,is_a,0.5681,,,"is_a: score=0.568, conf=0.702, support=1, cues=!包含,!包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,132,多态的表现形式,has_part,实现类对象,多态的表现形式,has_part,实现类对象,has_part,kept,,has_part,0.7205,,,"has_part: score=0.720, conf=0.702, support=1, cues=枚举结构",多态的表现形式:父类引用指向子类对象、接口引用指向实现类对象
+java.csv,133,抽象类,has_part,抽象方法,抽象类,has_part,抽象方法,has_part,kept,,has_part,0.7366,,,"has_part: score=0.737, conf=0.702, support=1, cues=枚举结构,包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,134,静态变量,is_a,变量,静态变量,is_a,变量,is_a,kept,,is_a,0.5957,,,"is_a: score=0.596, conf=0.702, support=1, cues=!包含",变量分为局部变量、成员变量(实例变量)和静态变量(类变量)
+java.csv,135,线程池,has_part,ThreadPoolExecutor,线程池,has_part,ThreadPoolExecutor,has_part,kept,,has_part,0.7192,,,"has_part: score=0.719, conf=0.700, support=1, cues=枚举结构","线程池:Executor框架,常用类ThreadPoolExecutor"
+java.csv,136,Exception,is_a,父类,Exception,is_a,父类,is_a,kept,,is_a,0.5932,,,"is_a: score=0.593, conf=0.698, support=1, cues=!包含","Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)"
+java.csv,137,Throwable,is_a,Exception,Throwable,is_a,Exception,is_a,kept,,is_a,0.7220,,,"is_a: score=0.722, conf=0.698, support=1, cues=上下位","Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)"
+java.csv,138,abstract,is_a,public,abstract,is_a,public,is_a,kept,,is_a,0.7220,,,"is_a: score=0.722, conf=0.698, support=1, cues=上下位","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,139,abstract,has_part,实例,abstract,has_part,实例,has_part,kept,,has_part,0.7329,,,"has_part: score=0.733, conf=0.696, support=1, cues=整体部分,包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,140,跳转语句,has_part,return,跳转语句,has_part,return,has_part,kept,,has_part,0.7155,,,"has_part: score=0.716, conf=0.694, support=1, cues=枚举结构",跳转语句:break、continue、return
+java.csv,141,具体方法,is_a,抽象类,具体方法,is_a,抽象类,is_a,kept,,is_a,0.5895,,,"is_a: score=0.589, conf=0.692, support=1, cues=!包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,142,类变量,is_a,变量,类变量,is_a,变量,is_a,kept,,is_a,0.5895,,,"is_a: score=0.589, conf=0.692, support=1, cues=!包含",变量分为局部变量、成员变量(实例变量)和静态变量(类变量)
+java.csv,143,FutureTask,implemented_by,Thread,FutureTask,implemented_by,Thread,implemented_by,kept,,implemented_by,0.7311,,,"implemented_by: score=0.731, conf=0.690, support=1, cues=实现关系,实现",创建线程的方式:继承Thread类、实现Runnable接口、实现Callable接口(配合FutureTask)
+java.csv,144,finally,used_for,JVM退出,finally,used_for,JVM退出,used_for,kept,,used_for | is_a,0.7392,0.7018,0.0374,"used_for: score=0.739, conf=0.690, support=1, cues=用途,用于,常用于；is_a: score=0.702, conf=0.710, support=1, cues=上下位,!用于","finally块通常用于释放资源,无论是否发生异常都会执行(除非JVM退出)"
+java.csv,145,复制,is_a,GC,复制,is_a,GC,is_a,kept,,is_a,0.5606,,,"is_a: score=0.561, conf=0.690, support=1, cues=!包含,!包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,146,核心类,has_part,Constructor,核心类,has_part,Constructor,has_part,kept,,has_part,0.7130,,,"has_part: score=0.713, conf=0.690, support=1, cues=枚举结构",核心类:Class、Method、Field、Constructor
+java.csv,147,Set,depends_on,LinkedHashSet,Set,depends_on,LinkedHashSet,depends_on,kept,,depends_on,0.7239,,,"depends_on: score=0.724, conf=0.688, support=1, cues=依赖,基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,148,垃圾回收,has_part,标记-清除,垃圾回收,has_part,标记-清除,has_part,kept,,has_part,0.7279,,,"has_part: score=0.728, conf=0.688, support=1, cues=整体部分,包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,149,继承,is_a,父类,继承,is_a,父类,is_a,kept,,is_a,0.7158,,,"is_a: score=0.716, conf=0.688, support=1, cues=上下位","继承使用extends关键字,Java是单继承,一个类只能有一个直接父类"
+java.csv,150,Class,is_a,实例,Class,is_a,实例,is_a,kept,,is_a,0.7146,,,"is_a: score=0.715, conf=0.686, support=1, cues=上下位","类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例"
+java.csv,151,元注解,used_for,@Documented,元注解,used_for,@Documented,used_for,kept,,used_for,0.7207,,,"used_for: score=0.721, conf=0.686, support=1, cues=用途,用于",元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited
+java.csv,152,注解,has_part,@Documented,注解,has_part,@Documented,has_part,kept,,has_part,0.6817,,,"has_part: score=0.682, conf=0.684, support=1, cues=枚举结构,!用于",元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited
+java.csv,153,线程状态,has_part,终止,线程状态,has_part,终止,has_part,kept,,has_part,0.7093,,,"has_part: score=0.709, conf=0.684, support=1, cues=枚举结构",线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止
+java.csv,154,Object,has_part,实例,Object,has_part,实例,is_a,relation_conflict_resolved,,is_a | has_part,0.7555,0.7081,0.0474,"is_a: score=0.755, conf=0.752, support=1, cues=上下位；has_part: score=0.708, conf=0.682, support=1, cues=枚举结构","类(Class)和对象(Object)的关系:类是对象的模板,对象是类的实例"
+java.csv,155,Set,has_part,HashMap,Set,has_part,HashMap,depends_on,relation_conflict_resolved,,depends_on | has_part,0.7574,0.6805,0.0769,"depends_on: score=0.757, conf=0.742, support=1, cues=依赖,基于；has_part: score=0.680, conf=0.682, support=1, cues=枚举结构,!基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,156,基本数据类型,has_part,long,基本数据类型,has_part,long,has_part,kept,,has_part,0.7242,,,"has_part: score=0.724, conf=0.682, support=1, cues=枚举结构,包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,157,Java,is_a,final,Java,is_a,final,is_a,kept,,is_a,0.7108,,,"is_a: score=0.711, conf=0.680, support=1, cues=上下位","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,158,接口,is_a,默认方法,接口,is_a,默认方法,is_a,kept,,is_a,0.7108,,,"is_a: score=0.711, conf=0.680, support=1, cues=上下位","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,159,float,is_a,基本数据类型,float,is_a,基本数据类型,is_a,kept,,is_a,0.5495,,,"is_a: score=0.549, conf=0.672, support=1, cues=!包含,!包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,160,复制,is_a,垃圾回收,复制,is_a,垃圾回收,is_a,kept,,is_a,0.5495,,,"is_a: score=0.549, conf=0.672, support=1, cues=!包含,!包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,161,抽象类,has_part,具体方法,抽象类,has_part,具体方法,has_part,kept,,has_part,0.7180,,,"has_part: score=0.718, conf=0.672, support=1, cues=枚举结构,包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,162,标记-整理,is_a,GC,标记-整理,is_a,GC,is_a,kept,,is_a,0.5495,,,"is_a: score=0.549, conf=0.672, support=1, cues=!包含,!包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,163,注解,has_part,@SuppressWarnings,注解,has_part,@SuppressWarnings,has_part,kept,,has_part,0.7019,,,"has_part: score=0.702, conf=0.672, support=1, cues=枚举结构",内置注解:@Override、@Deprecated、@SuppressWarnings、@FunctionalInterface
+java.csv,164,类加载器,has_part,Extension ClassLoader,类加载器,has_part,Extension ClassLoader,has_part,kept,,has_part,0.7019,,,"has_part: score=0.702, conf=0.672, support=1, cues=枚举结构","类加载器:Bootstrap ClassLoader、Extension ClassLoader、Application ClassLoader,双亲委派模型"
+java.csv,165,GC,has_part,复制,GC,has_part,复制,has_part,kept,,has_part,0.7167,,,"has_part: score=0.717, conf=0.670, support=1, cues=枚举结构,包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,166,接口,has_part,Java,接口,has_part,Java,is_a,relation_conflict_resolved,,is_a | has_part,0.7456,0.6982,0.0474,"is_a: score=0.746, conf=0.736, support=1, cues=上下位；has_part: score=0.698, conf=0.666, support=1, cues=枚举结构","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,167,接口,has_part,Queue,接口,has_part,Queue,has_part,kept,,has_part,0.6982,,,"has_part: score=0.698, conf=0.666, support=1, cues=枚举结构",Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列)
+java.csv,168,接口,has_part,实例变量,接口,has_part,实例变量,has_part,kept,,has_part,0.6982,,,"has_part: score=0.698, conf=0.666, support=1, cues=枚举结构","抽象类和接口的区别:抽象类可以有状态(成员变量),接口不能有实例变量"
+java.csv,169,abstract,is_a,static,abstract,is_a,static,is_a,kept,,is_a,0.6984,,,"is_a: score=0.698, conf=0.660, support=1, cues=上下位","接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final"
+java.csv,170,元注解,used_for,@Inherited,元注解,used_for,@Inherited,used_for,kept,,used_for,0.7045,,,"used_for: score=0.705, conf=0.660, support=1, cues=用途,用于",元注解(用于注解的注解):@Retention、@Target、@Documented、@Inherited
+java.csv,171,synchronized,has_part,互斥锁,synchronized,has_part,互斥锁,has_part,kept,,has_part,0.6932,,,"has_part: score=0.693, conf=0.658, support=1, cues=枚举结构","synchronized关键字:修饰实例方法、静态方法、代码块,实现互斥锁"
+java.csv,172,volatile,has_part,原子性,volatile,has_part,原子性,has_part,kept,,has_part,0.6932,,,"has_part: score=0.693, conf=0.658, support=1, cues=枚举结构","volatile关键字:保证可见性,禁止指令重排序,但不保证原子性"
+java.csv,173,标记-整理,is_a,垃圾回收,标记-整理,is_a,垃圾回收,is_a,kept,,is_a,0.5383,,,"is_a: score=0.538, conf=0.654, support=1, cues=!包含,!包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,174,GC,has_part,标记-整理,GC,has_part,标记-整理,has_part,kept,,has_part,0.7056,,,"has_part: score=0.706, conf=0.652, support=1, cues=枚举结构,包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,175,HashMap,depends_on,红黑树,HashMap,depends_on,红黑树,depends_on,kept,,depends_on,0.7016,,,"depends_on: score=0.702, conf=0.652, support=1, cues=依赖,基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,176,HashSet,depends_on,TreeSet,HashSet,depends_on,TreeSet,depends_on,kept,,depends_on,0.7016,,,"depends_on: score=0.702, conf=0.652, support=1, cues=依赖,基于","Set的实现类:HashSet(无序,基于HashMap)、LinkedHashSet(有序)、TreeSet(排序,基于红黑树)"
+java.csv,177,垃圾回收,has_part,复制,垃圾回收,has_part,复制,has_part,kept,,has_part,0.7056,,,"has_part: score=0.706, conf=0.652, support=1, cues=整体部分,包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,178,基本数据类型,has_part,float,基本数据类型,has_part,float,has_part,kept,,has_part,0.7056,,,"has_part: score=0.706, conf=0.652, support=1, cues=枚举结构,包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,179,访问控制修饰符,has_part,protected,访问控制修饰符,has_part,protected,has_part,kept,,has_part,0.6895,,,"has_part: score=0.689, conf=0.652, support=1, cues=枚举结构",访问控制修饰符:private、default(无修饰符)、protected、public
+java.csv,180,实例,is_a,抽象类,实例,is_a,抽象类,is_a,kept,,is_a,0.5634,,,"is_a: score=0.563, conf=0.650, support=1, cues=!包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,181,Exception,is_a,Throwable,Exception,is_a,Throwable,is_a,kept,,is_a,0.5622,,,"is_a: score=0.562, conf=0.648, support=1, cues=!包含","Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)"
+java.csv,182,double,is_a,基本数据类型,double,is_a,基本数据类型,is_a,kept,,is_a,0.5272,,,"is_a: score=0.527, conf=0.636, support=1, cues=!包含,!包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,183,分代收集,is_a,GC,分代收集,is_a,GC,is_a,kept,,is_a,0.5272,,,"is_a: score=0.527, conf=0.636, support=1, cues=!包含,!包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,184,垃圾回收,has_part,标记-整理,垃圾回收,has_part,标记-整理,has_part,kept,,has_part,0.6944,,,"has_part: score=0.694, conf=0.634, support=1, cues=整体部分,包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,185,抽象类,has_part,实例,抽象类,has_part,实例,has_part,kept,,has_part,0.6919,,,"has_part: score=0.692, conf=0.630, support=1, cues=整体部分,包含","抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化"
+java.csv,186,分代收集,is_a,垃圾回收,分代收集,is_a,垃圾回收,is_a,kept,,is_a,0.5160,,,"is_a: score=0.516, conf=0.618, support=1, cues=!包含,!包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,187,GC,has_part,分代收集,GC,has_part,分代收集,has_part,kept,,has_part,0.6833,,,"has_part: score=0.683, conf=0.616, support=1, cues=整体部分,包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,188,基本数据类型,has_part,double,基本数据类型,has_part,double,has_part,kept,,has_part,0.6833,,,"has_part: score=0.683, conf=0.616, support=1, cues=整体部分,包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,189,Unchecked Exception,is_a,Exception,Unchecked Exception,is_a,Exception,is_a,kept,,is_a,0.5399,,,"is_a: score=0.540, conf=0.612, support=1, cues=!包含","Exception分为:Checked Exception(编译时异常,必须处理)和Unchecked Exception(运行时异常,不强制处理)"
+java.csv,190,boolean,is_a,基本数据类型,boolean,is_a,基本数据类型,is_a,kept,,is_a,0.5110,,,"is_a: score=0.511, conf=0.610, support=1, cues=!包含,!包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,191,char,is_a,基本数据类型,char,is_a,基本数据类型,is_a,kept,,is_a,0.5110,,,"is_a: score=0.511, conf=0.610, support=1, cues=!包含,!包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,192,垃圾回收,has_part,分代收集,垃圾回收,has_part,分代收集,has_part,kept,,has_part,0.6721,,,"has_part: score=0.672, conf=0.598, support=1, cues=整体部分,包括","垃圾回收(GC):主要回收堆内存,算法包括标记-清除、复制、标记-整理、分代收集"
+java.csv,193,基本数据类型,has_part,boolean,基本数据类型,has_part,boolean,has_part,kept,,has_part,0.6671,,,"has_part: score=0.667, conf=0.590, support=1, cues=整体部分,包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean
+java.csv,194,基本数据类型,has_part,char,基本数据类型,has_part,char,has_part,kept,,has_part,0.6671,,,"has_part: score=0.667, conf=0.590, support=1, cues=整体部分,包括",基本数据类型包括:byte、short、int、long、float、double、char、boolean

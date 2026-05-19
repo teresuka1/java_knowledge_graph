@@ -1,0 +1,216 @@
+﻿main_entity,entity_type,mention_count,mentions,source_file,normalized_entity,aliases,section_titles,merged_entities,disambiguation_confidence,disambiguation_method,disambiguation_basis
+加载,类加载过程实体,146,加载,JVM.txt,加载,加载,全文 | 静态属性导致内存泄露 | 使用ThreadLocal,加载,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=加载；章节=全文|静态属性导致内存泄露|使用ThreadLocal
+gc,领域实体,85,gc | GC,JVM.txt,gc,gc | GC,全文 | 未关闭的资源 | 使用ThreadLocal,gc,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=gc；章节=全文|未关闭的资源|使用ThreadLocal
+堆,内存区域实体,71,堆,JVM.txt,堆,堆,全文 | 静态属性导致内存泄露 | 使用ThreadLocal,堆,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=堆；章节=全文|静态属性导致内存泄露|使用ThreadLocal
+类加载,领域实体,63,类加载,JVM.txt,类加载,类加载,全文 | 使用ThreadLocal,类加载,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类加载；章节=全文|使用ThreadLocal
+线程,线程与私有性相关实体,62,线程,JVM.txt,线程,线程,全文 | 使用ThreadLocal,线程,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=线程；章节=全文|使用ThreadLocal
+使用,类加载过程实体,60,使用,JVM.txt,使用,使用,全文 | 静态属性导致内存泄露 | 未关闭的资源 | 使用ThreadLocal,使用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=使用；章节=全文|静态属性导致内存泄露|未关闭的资源|使用ThreadLocal
+垃圾回收,领域实体,58,垃圾回收,JVM.txt,垃圾回收,垃圾回收,全文 | 静态属性导致内存泄露 | 使用ThreadLocal,垃圾回收,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=垃圾回收；章节=全文|静态属性导致内存泄露|使用ThreadLocal
+JVM,领域实体,46,JVM | jvm,JVM.txt,JVM,JVM | jvm,全文 | 未关闭的资源 | 使用ThreadLocal,JVM,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=JVM；章节=全文|未关闭的资源|使用ThreadLocal
+老年代,堆结构实体,36,老年代,JVM.txt,老年代,老年代,全文 | 使用ThreadLocal,老年代,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=老年代；章节=全文|使用ThreadLocal
+G1,垃圾回收器实体,32,G1,JVM.txt,G1,G1,全文 | 使用ThreadLocal,G1,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=G1；章节=全文|使用ThreadLocal
+新生代,堆结构实体,27,新生代,JVM.txt,新生代,新生代,全文 | 使用ThreadLocal,新生代,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=新生代；章节=全文|使用ThreadLocal
+常量,方法区与元数据相关实体,26,常量,JVM.txt,常量,常量,全文 | 使用ThreadLocal,常量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=常量；章节=全文|使用ThreadLocal
+初始化,类加载过程实体,20,初始化,JVM.txt,初始化,初始化,全文 | 使用ThreadLocal,初始化,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=初始化；章节=全文|使用ThreadLocal
+大对象,对象与字符串相关实体,18,大对象,JVM.txt,大对象,大对象,全文 | 使用ThreadLocal,大对象,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=大对象；章节=全文|使用ThreadLocal
+方法区,内存区域实体,18,方法区,JVM.txt,方法区,方法区,全文 | 使用ThreadLocal,方法区,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=方法区；章节=全文|使用ThreadLocal
+栈帧,栈与栈帧相关实体,18,栈帧,JVM.txt,栈帧,栈帧,全文 | 使用ThreadLocal,栈帧,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=栈帧；章节=全文|使用ThreadLocal
+CMS,垃圾回收器实体,17,CMS,JVM.txt,CMS,CMS,使用ThreadLocal,CMS,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=CMS；章节=使用ThreadLocal
+内存溢出,领域实体,17,内存溢出,JVM.txt,内存溢出,内存溢出,全文 | 使用ThreadLocal,内存溢出,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=内存溢出；章节=全文|使用ThreadLocal
+String,对象与字符串相关实体,16,String,JVM.txt,String,String,全文 | 静态属性导致内存泄露 | 使用ThreadLocal,String,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=String；章节=全文|静态属性导致内存泄露|使用ThreadLocal
+复制算法,垃圾回收算法实体,16,复制算法,JVM.txt,复制算法,复制算法,使用ThreadLocal,复制算法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=复制算法；章节=使用ThreadLocal
+OutOfMemoryError,异常与错误实体,15,OutOfMemoryError,JVM.txt,OutOfMemoryError,OutOfMemoryError,全文 | 未关闭的资源,OutOfMemoryError,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=OutOfMemoryError；章节=全文|未关闭的资源
+Minor GC,垃圾回收核心概念实体,14,Minor GC | minorGC,JVM.txt,Minor GC,Minor GC | minorGC,全文 | 使用ThreadLocal,Minor GC,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Minor GC；章节=全文|使用ThreadLocal
+ThreadLocal,代码与容器实体,14,ThreadLocal,JVM.txt,ThreadLocal,ThreadLocal,使用ThreadLocal,ThreadLocal,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ThreadLocal；章节=使用ThreadLocal
+启动类加载器,领域实体,14,启动类加载器,JVM.txt,启动类加载器,启动类加载器,使用ThreadLocal,启动类加载器,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=启动类加载器；章节=使用ThreadLocal
+存活对象,垃圾回收核心概念实体,14,存活对象,JVM.txt,存活对象,存活对象,全文 | 使用ThreadLocal,存活对象,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=存活对象；章节=全文|使用ThreadLocal
+常量池,方法区与元数据相关实体,14,常量池,JVM.txt,常量池,常量池,全文 | 使用ThreadLocal,常量池,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=常量池；章节=全文|使用ThreadLocal
+弱引用,引用类型实体,14,弱引用,JVM.txt,弱引用,弱引用,全文 | 使用ThreadLocal,弱引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=弱引用；章节=全文|使用ThreadLocal
+List,代码与容器实体,13,List | list,JVM.txt,List,List | list,全文 | 静态属性导致内存泄露,List,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=List；章节=全文|静态属性导致内存泄露
+局部变量,栈与栈帧相关实体,13,局部变量,JVM.txt,局部变量,局部变量,全文 | 使用ThreadLocal,局部变量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=局部变量；章节=全文|使用ThreadLocal
+Java 虚拟机,领域实体,12,Java 虚拟机 | Java虚拟机,JVM.txt,Java 虚拟机,Java 虚拟机 | Java虚拟机,全文 | 使用ThreadLocal,Java 虚拟机,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Java 虚拟机；章节=全文|使用ThreadLocal
+元空间,内存区域实体,12,元空间,JVM.txt,元空间,元空间,全文 | 使用ThreadLocal,元空间,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=元空间；章节=全文|使用ThreadLocal
+栈溢出,场景与问题实体,12,栈溢出,JVM.txt,栈溢出,栈溢出,全文,栈溢出,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=栈溢出；章节=全文
+符号引用,方法区与元数据相关实体,12,符号引用,JVM.txt,符号引用,符号引用,全文 | 使用ThreadLocal,符号引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=符号引用；章节=全文|使用ThreadLocal
+静态变量,方法区与元数据相关实体,12,静态变量,JVM.txt,静态变量,静态变量,全文 | 静态属性导致内存泄露 | 使用ThreadLocal,静态变量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=静态变量；章节=全文|静态属性导致内存泄露|使用ThreadLocal
+ClassLoader,类加载器实体,11,ClassLoader,JVM.txt,ClassLoader,ClassLoader,静态属性导致内存泄露 | 使用ThreadLocal,ClassLoader,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ClassLoader；章节=静态属性导致内存泄露|使用ThreadLocal
+GC Roots,垃圾回收核心概念实体,11,GC Roots,JVM.txt,GC Roots,GC Roots,使用ThreadLocal,GC Roots,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=GC Roots；章节=使用ThreadLocal
+内存泄漏,领域实体,10,内存泄漏,JVM.txt,内存泄漏,内存泄漏,全文 | 使用ThreadLocal,内存泄漏,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=内存泄漏；章节=全文|使用ThreadLocal
+内存碎片,场景与问题实体,10,内存碎片,JVM.txt,内存碎片,内存碎片,全文 | 使用ThreadLocal,内存碎片,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=内存碎片；章节=全文|使用ThreadLocal
+标记阶段,垃圾回收算法实体,10,标记阶段,JVM.txt,标记阶段,标记阶段,使用ThreadLocal,标记阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=标记阶段；章节=使用ThreadLocal
+虚拟机栈,内存区域实体,10,虚拟机栈,JVM.txt,虚拟机栈,虚拟机栈,全文 | 使用ThreadLocal,虚拟机栈,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=虚拟机栈；章节=全文|使用ThreadLocal
+验证,类加载过程实体,9,验证,JVM.txt,验证,验证,使用ThreadLocal,验证,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=验证；章节=使用ThreadLocal
+Full GC,垃圾回收核心概念实体,8,Full GC,JVM.txt,Full GC,Full GC,全文 | 使用ThreadLocal,Full GC,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Full GC；章节=全文|使用ThreadLocal
+STW,垃圾回收核心概念实体,8,STW,JVM.txt,STW,STW,使用ThreadLocal,STW,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=STW；章节=使用ThreadLocal
+Serial,垃圾回收器实体,8,Serial,JVM.txt,Serial,Serial,使用ThreadLocal,Serial,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Serial；章节=使用ThreadLocal
+卸载,类加载过程实体,8,卸载,JVM.txt,卸载,卸载,使用ThreadLocal,卸载,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=卸载；章节=使用ThreadLocal
+双亲委派,领域实体,8,双亲委派,JVM.txt,双亲委派,双亲委派,使用ThreadLocal,双亲委派,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=双亲委派；章节=使用ThreadLocal
+方法调用,栈与栈帧相关实体,8,方法调用,JVM.txt,方法调用,方法调用,全文,方法调用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=方法调用；章节=全文
+直接引用,方法区与元数据相关实体,8,直接引用,JVM.txt,直接引用,直接引用,全文 | 使用ThreadLocal,直接引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=直接引用；章节=全文|使用ThreadLocal
+解析,类加载过程实体,8,解析,JVM.txt,解析,解析,全文 | 使用ThreadLocal,解析,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=解析；章节=全文|使用ThreadLocal
+Class 对象,类加载过程实体,7,Class 对象 | Class对象,JVM.txt,Class 对象,Class 对象 | Class对象,使用ThreadLocal,Class 对象,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Class 对象；章节=使用ThreadLocal
+Eden 区,堆结构实体,7,Eden 区 | Eden区,JVM.txt,Eden 区,Eden 区 | Eden区,全文 | 使用ThreadLocal,Eden 区,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Eden 区；章节=全文|使用ThreadLocal
+static,代码与容器实体,7,static,JVM.txt,static,static,全文 | 静态属性导致内存泄露 | 使用ThreadLocal,static,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=static；章节=全文|静态属性导致内存泄露|使用ThreadLocal
+堆溢出,内存区域实体,7,堆溢出,JVM.txt,堆溢出,堆溢出,全文,堆溢出,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=堆溢出；章节=全文
+连接,类加载过程实体,7,连接,JVM.txt,连接,连接,全文 | 未关闭的资源 | 使用ThreadLocal,连接,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=连接；章节=全文|未关闭的资源|使用ThreadLocal
+Java 堆,内存区域实体,6,Java 堆 | Java堆,JVM.txt,Java 堆,Java 堆 | Java堆,全文 | 使用ThreadLocal,Java 堆,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Java 堆；章节=全文|使用ThreadLocal
+Java 虚拟机栈,领域实体,6,Java 虚拟机栈 | Java虚拟机栈,JVM.txt,Java 虚拟机栈,Java 虚拟机栈 | Java虚拟机栈,全文,Java 虚拟机栈,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Java 虚拟机栈；章节=全文
+Major GC,垃圾回收核心概念实体,6,Major GC | majorGC,JVM.txt,Major GC,Major GC | majorGC,全文 | 使用ThreadLocal,Major GC,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Major GC；章节=全文|使用ThreadLocal
+value,代码与容器实体,6,value,JVM.txt,value,value,使用ThreadLocal,value,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=value；章节=使用ThreadLocal
+可达性分析,垃圾回收核心概念实体,6,可达性分析,JVM.txt,可达性分析,可达性分析,使用ThreadLocal,可达性分析,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=可达性分析；章节=使用ThreadLocal
+对象引用,栈与栈帧相关实体,6,对象引用,JVM.txt,对象引用,对象引用,全文 | 使用ThreadLocal,对象引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=对象引用；章节=全文|使用ThreadLocal
+强引用,引用类型实体,6,强引用,JVM.txt,强引用,强引用,全文 | 使用ThreadLocal,强引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=强引用；章节=全文|使用ThreadLocal
+数组,对象与字符串相关实体,6,数组,JVM.txt,数组,数组,全文,数组,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=数组；章节=全文
+标记-整理算法,垃圾回收算法实体,6,标记-整理算法,JVM.txt,标记-整理算法,标记-整理算法,使用ThreadLocal,标记-整理算法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=标记-整理算法；章节=使用ThreadLocal
+浮动垃圾,垃圾回收核心概念实体,6,浮动垃圾,JVM.txt,浮动垃圾,浮动垃圾,使用ThreadLocal,浮动垃圾,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=浮动垃圾；章节=使用ThreadLocal
+直接内存,内存区域实体,6,直接内存,JVM.txt,直接内存,直接内存,全文,直接内存,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=直接内存；章节=全文
+程序计数器,内存区域实体,6,程序计数器,JVM.txt,程序计数器,程序计数器,全文,程序计数器,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=程序计数器；章节=全文
+类加载过程,领域实体,6,类加载过程,JVM.txt,类加载过程,类加载过程,使用ThreadLocal,类加载过程,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类加载过程；章节=使用ThreadLocal
+转移阶段,垃圾回收算法实体,6,转移阶段,JVM.txt,转移阶段,转移阶段,使用ThreadLocal,转移阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=转移阶段；章节=使用ThreadLocal
+StackOverFlowError,异常与错误实体,5,StackOverFlowError | StackOverflowError,JVM.txt,StackOverFlowError,StackOverFlowError | StackOverflowError,全文,StackOverFlowError,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=StackOverFlowError；章节=全文
+Survivor 区,堆结构实体,5,Survivor 区 | Survivor区,JVM.txt,Survivor 区,Survivor 区 | Survivor区,全文 | 使用ThreadLocal,Survivor 区,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Survivor 区；章节=全文|使用ThreadLocal
+key,代码与容器实体,5,key,JVM.txt,key,key,全文 | 使用ThreadLocal,key,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=key；章节=全文|使用ThreadLocal
+对象头,对象与字符串相关实体,5,对象头,JVM.txt,对象头,对象头,使用ThreadLocal,对象头,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=对象头；章节=使用ThreadLocal
+并发标记,垃圾回收算法实体,5,并发标记,JVM.txt,并发标记,并发标记,使用ThreadLocal,并发标记,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=并发标记；章节=使用ThreadLocal
+扩展类加载器,领域实体,5,扩展类加载器,JVM.txt,扩展类加载器,扩展类加载器,使用ThreadLocal,扩展类加载器,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=扩展类加载器；章节=使用ThreadLocal
+标记-清除算法,垃圾回收算法实体,5,标记-清除算法,JVM.txt,标记-清除算法,标记-清除算法,使用ThreadLocal,标记-清除算法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=标记-清除算法；章节=使用ThreadLocal
+清理阶段,垃圾回收算法实体,5,清理阶段,JVM.txt,清理阶段,清理阶段,使用ThreadLocal,清理阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=清理阶段；章节=使用ThreadLocal
+类信息,方法区与元数据相关实体,5,类信息,JVM.txt,类信息,类信息,全文 | 使用ThreadLocal,类信息,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类信息；章节=全文|使用ThreadLocal
+Entry,代码与容器实体,4,Entry,JVM.txt,Entry,Entry,使用ThreadLocal,Entry,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Entry；章节=使用ThreadLocal
+finally,代码与容器实体,4,finally,JVM.txt,finally,finally,未关闭的资源 | 使用ThreadLocal,finally,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=finally；章节=未关闭的资源|使用ThreadLocal
+准备,类加载过程实体,4,准备,JVM.txt,准备,准备,使用ThreadLocal,准备,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=准备；章节=使用ThreadLocal
+初始标记,垃圾回收算法实体,4,初始标记,JVM.txt,初始标记,初始标记,使用ThreadLocal,初始标记,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=初始标记；章节=使用ThreadLocal
+双亲委派模型,领域实体,4,双亲委派模型,JVM.txt,双亲委派模型,双亲委派模型,使用ThreadLocal,双亲委派模型,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=双亲委派模型；章节=使用ThreadLocal
+对象实例,对象与字符串相关实体,4,对象实例,JVM.txt,对象实例,对象实例,全文 | 使用ThreadLocal,对象实例,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=对象实例；章节=全文|使用ThreadLocal
+操作数栈,栈与栈帧相关实体,4,操作数栈,JVM.txt,操作数栈,操作数栈,全文,操作数栈,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=操作数栈；章节=全文
+时间片,线程与私有性相关实体,4,时间片,JVM.txt,时间片,时间片,全文,时间片,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=时间片；章节=全文
+本地方法栈,内存区域实体,4,本地方法栈,JVM.txt,本地方法栈,本地方法栈,全文 | 使用ThreadLocal,本地方法栈,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=本地方法栈；章节=全文|使用ThreadLocal
+自定义类加载器,领域实体,4,自定义类加载器,JVM.txt,自定义类加载器,自定义类加载器,使用ThreadLocal,自定义类加载器,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=自定义类加载器；章节=使用ThreadLocal
+运行时常量池,内存区域实体,4,运行时常量池,JVM.txt,运行时常量池,运行时常量池,全文,运行时常量池,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=运行时常量池；章节=全文
+静态集合,场景与问题实体,4,静态集合,JVM.txt,静态集合,静态集合,全文,静态集合,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=静态集合；章节=全文
+ParNew,垃圾回收器实体,3,ParNew,JVM.txt,ParNew,ParNew,使用ThreadLocal,ParNew,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ParNew；章节=使用ThreadLocal
+ThreadLocalMap,代码与容器实体,3,ThreadLocalMap,JVM.txt,ThreadLocalMap,ThreadLocalMap,使用ThreadLocal,ThreadLocalMap,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ThreadLocalMap；章节=使用ThreadLocal
+Young GC,垃圾回收核心概念实体,3,Young GC,JVM.txt,Young GC,Young GC,使用ThreadLocal,Young GC,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Young GC；章节=使用ThreadLocal
+new 指令,对象与字符串相关实体,3,new 指令 | new指令,JVM.txt,new 指令,new 指令 | new指令,全文 | 使用ThreadLocal,new 指令,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=new 指令；章节=全文|使用ThreadLocal
+分代回收,垃圾回收核心概念实体,3,分代回收 | 分代回收算法,JVM.txt,分代回收,分代回收 | 分代回收算法,使用ThreadLocal,分代回收 | 分代回收算法,0.7611,实体标准化 + 候选召回 + LocalCrossEncoder上下文重排 + 类型/章节约束 + 共现图一致性,名称相似=0.59；上下文相似=0.96；章节重叠=1.00；存在可接受标准化变体
+大堆内存,内存区域实体,3,大堆内存,JVM.txt,大堆内存,大堆内存,全文 | 使用ThreadLocal,大堆内存,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=大堆内存；章节=全文|使用ThreadLocal
+大对象区,堆结构实体,3,大对象区,JVM.txt,大对象区,大对象区,全文,大对象区,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=大对象区；章节=全文
+字符串常量池,对象与字符串相关实体,3,字符串常量池,JVM.txt,字符串常量池,字符串常量池,全文,字符串常量池,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=字符串常量池；章节=全文
+字面量,对象与字符串相关实体,3,字面量,JVM.txt,字面量,字面量,全文 | 使用ThreadLocal,字面量,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=字面量；章节=全文|使用ThreadLocal
+对象池,场景与问题实体,3,对象池,JVM.txt,对象池,对象池,全文,对象池,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=对象池；章节=全文
+指针,栈与栈帧相关实体,3,指针,JVM.txt,指针,指针,全文 | 使用ThreadLocal,指针,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=指针；章节=全文|使用ThreadLocal
+无限递归,场景与问题实体,3,无限递归,JVM.txt,无限递归,无限递归,全文,无限递归,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=无限递归；章节=全文
+本地内存,内存区域实体,3,本地内存,JVM.txt,本地内存,本地内存,全文,本地内存,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=本地内存；章节=全文
+类初始化,类加载过程实体,3,类初始化,JVM.txt,类初始化,类初始化,全文 | 使用ThreadLocal,类初始化,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类初始化；章节=全文|使用ThreadLocal
+虚引用,引用类型实体,3,虚引用,JVM.txt,虚引用,虚引用,全文,虚引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=虚引用；章节=全文
+-Xms,JVM参数与配置实体,2,-Xms,JVM.txt,-Xms,-Xms,全文 | 使用ThreadLocal,-Xms,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=-Xms；章节=全文|使用ThreadLocal
+-Xmx,JVM参数与配置实体,2,-Xmx,JVM.txt,-Xmx,-Xmx,全文 | 使用ThreadLocal,-Xmx,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=-Xmx；章节=全文|使用ThreadLocal
+-Xss,JVM参数与配置实体,2,-Xss,JVM.txt,-Xss,-Xss,全文,-Xss,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=-Xss；章节=全文
+ArrayList,代码与容器实体,2,ArrayList,JVM.txt,ArrayList,ArrayList,全文 | 静态属性导致内存泄露,ArrayList,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ArrayList；章节=全文|静态属性导致内存泄露
+Bootstrap ClassLoader,类加载器实体,2,Bootstrap ClassLoader,JVM.txt,Bootstrap ClassLoader,Bootstrap ClassLoader,使用ThreadLocal,Bootstrap ClassLoader,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Bootstrap ClassLoader；章节=使用ThreadLocal
+Extension ClassLoader,类加载器实体,2,Extension ClassLoader,JVM.txt,Extension ClassLoader,Extension ClassLoader,使用ThreadLocal,Extension ClassLoader,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Extension ClassLoader；章节=使用ThreadLocal
+Garbage Collection,垃圾回收核心概念实体,2,Garbage Collection,JVM.txt,Garbage Collection,Garbage Collection,全文 | 使用ThreadLocal,Garbage Collection,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Garbage Collection；章节=全文|使用ThreadLocal
+Humongous Objects,堆结构实体,2,Humongous Objects,JVM.txt,Humongous Objects,Humongous Objects,全文,Humongous Objects,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Humongous Objects；章节=全文
+JVM内存模型,领域实体,2,JVM内存模型,JVM.txt,JVM内存模型,JVM内存模型,全文,JVM内存模型,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=JVM内存模型；章节=全文
+Java heap space,异常与错误实体,2,Java heap space,JVM.txt,Java heap space,Java heap space,全文,Java heap space,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Java heap space；章节=全文
+Metaspace,异常与错误实体,2,Metaspace,JVM.txt,Metaspace,Metaspace,全文,Metaspace,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Metaspace；章节=全文
+NIO,工具与排查实体,2,NIO,JVM.txt,NIO,NIO,全文,NIO,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=NIO；章节=全文
+Native 方法,线程与私有性相关实体,2,Native 方法,JVM.txt,Native 方法,Native 方法,全文,Native 方法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Native 方法；章节=全文
+Old Generation,堆结构实体,2,Old Generation,JVM.txt,Old Generation,Old Generation,全文 | 使用ThreadLocal,Old Generation,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Old Generation；章节=全文|使用ThreadLocal
+Parallel Scavenge,垃圾回收器实体,2,Parallel Scavenge,JVM.txt,Parallel Scavenge,Parallel Scavenge,使用ThreadLocal,Parallel Scavenge,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Parallel Scavenge；章节=使用ThreadLocal
+S0,堆结构实体,2,S0,JVM.txt,S0,S0,全文 | 使用ThreadLocal,S0,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=S0；章节=全文|使用ThreadLocal
+S1,堆结构实体,2,S1,JVM.txt,S1,S1,全文 | 使用ThreadLocal,S1,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=S1；章节=全文|使用ThreadLocal
+System.gc,领域实体,2,System.gc,JVM.txt,System.gc,System.gc,使用ThreadLocal,System.gc,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=System.gc；章节=使用ThreadLocal
+WeakReference,引用类型实体,2,WeakReference,JVM.txt,WeakReference,WeakReference,全文,WeakReference,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=WeakReference；章节=全文
+事件监听,场景与问题实体,2,事件监听,JVM.txt,事件监听,事件监听,全文,事件监听,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=事件监听；章节=全文
+二进制字节流,类加载过程实体,2,二进制字节流,JVM.txt,二进制字节流,二进制字节流,使用ThreadLocal,二进制字节流,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=二进制字节流；章节=使用ThreadLocal
+再标记,垃圾回收算法实体,2,再标记,JVM.txt,再标记,再标记,使用ThreadLocal,再标记,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=再标记；章节=使用ThreadLocal
+初始化零值,类加载过程实体,2,初始化零值,JVM.txt,初始化零值,初始化零值,使用ThreadLocal,初始化零值,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=初始化零值；章节=使用ThreadLocal
+初始标记阶段,垃圾回收算法实体,2,初始标记阶段,JVM.txt,初始标记阶段,初始标记阶段,使用ThreadLocal,初始标记阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=初始标记阶段；章节=使用ThreadLocal
+动态链接,栈与栈帧相关实体,2,动态链接,JVM.txt,动态链接,动态链接,全文,动态链接,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=动态链接；章节=全文
+单例,代码与容器实体,2,单例,JVM.txt,单例,单例,全文 | 静态属性导致内存泄露,单例,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=单例；章节=全文|静态属性导致内存泄露
+堆外内存,内存区域实体,2,堆外内存,JVM.txt,堆外内存,堆外内存,全文,堆外内存,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=堆外内存；章节=全文
+复制阶段,垃圾回收算法实体,2,复制阶段,JVM.txt,复制阶段,复制阶段,使用ThreadLocal,复制阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=复制阶段；章节=使用ThreadLocal
+大对象通,对象与字符串相关实体,2,大对象通,JVM.txt,大对象通,大对象通,全文,大对象通,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=大对象通；章节=全文
+字符串对象,对象与字符串相关实体,2,字符串对象,JVM.txt,字符串对象,字符串对象,全文,字符串对象,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=字符串对象；章节=全文
+局部变量表,栈与栈帧相关实体,2,局部变量表,JVM.txt,局部变量表,局部变量表,全文,局部变量表,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=局部变量表；章节=全文
+常量池缓存,方法区与元数据相关实体,2,常量池缓 | 常量池缓存,JVM.txt,常量池缓存,常量池缓 | 常量池缓存,全文,常量池缓 | 常量池缓存,0.7676,实体标准化 + 候选召回 + LocalCrossEncoder上下文重排 + 类型/章节约束 + 共现图一致性,名称相似=0.62；上下文相似=0.96；章节重叠=1.00；存在可接受标准化变体
+应用程序类加载器,领域实体,2,应用程序类加载器,JVM.txt,应用程序类加载器,应用程序类加载器,使用ThreadLocal,应用程序类加载器,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=应用程序类加载器；章节=使用ThreadLocal
+引用计数法,垃圾回收核心概念实体,2,引用计数法,JVM.txt,引用计数法,引用计数法,使用ThreadLocal,引用计数法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=引用计数法；章节=使用ThreadLocal
+指令地址,线程与私有性相关实体,2,指令地址,JVM.txt,指令地址,指令地址,全文,指令地址,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=指令地址；章节=全文
+方法出口,栈与栈帧相关实体,2,方法出口,JVM.txt,方法出口,方法出口,全文,方法出口,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=方法出口；章节=全文
+方法字节码,方法区与元数据相关实体,2,方法字节码,JVM.txt,方法字节码,方法字节码,全文,方法字节码,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=方法字节码；章节=全文
+方法返回地址,栈与栈帧相关实体,2,方法返回地址,JVM.txt,方法返回地址,方法返回地址,全文,方法返回地址,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=方法返回地址；章节=全文
+栈帧创建,栈与栈帧相关实体,2,栈帧创建,JVM.txt,栈帧创建,栈帧创建,全文,栈帧创建,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=栈帧创建；章节=全文
+类加载检查,领域实体,2,类加载检查,JVM.txt,类加载检查,类加载检查,使用ThreadLocal,类加载检查,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类加载检查；章节=使用ThreadLocal
+类的元数据信息,方法区与元数据相关实体,2,类的元数据信息,JVM.txt,类的元数据信息,类的元数据信息,全文 | 使用ThreadLocal,类的元数据信息,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类的元数据信息；章节=全文|使用ThreadLocal
+缓存系统,场景与问题实体,2,缓存系统,JVM.txt,缓存系统,缓存系统,全文,缓存系统,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=缓存系统；章节=全文
+软引用,引用类型实体,2,软引用,JVM.txt,软引用,软引用,全文,软引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=软引用；章节=全文
+重定位阶段,垃圾回收算法实体,2,重定位阶段,JVM.txt,重定位阶段,重定位阶段,使用ThreadLocal,重定位阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=重定位阶段；章节=使用ThreadLocal
+-XX:+HeapDumpOnOutOfMemoryError,JVM参数与配置实体,1,-XX:+HeapDumpOnOutOfMemoryError,JVM.txt,-XX:+HeapDumpOnOutOfMemoryError,-XX:+HeapDumpOnOutOfMemoryError,全文,-XX:+HeapDumpOnOutOfMemoryError,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=-XX:+HeapDumpOnOutOfMemoryError；章节=全文
+-XX:HeapDumpPath,JVM参数与配置实体,1,-XX:HeapDumpPath,JVM.txt,-XX:HeapDumpPath,-XX:HeapDumpPath,全文,-XX:HeapDumpPath,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=-XX:HeapDumpPath；章节=全文
+-XX:MaxTenuringThreshold,JVM参数与配置实体,1,-XX:MaxTenuringThreshold,JVM.txt,-XX:MaxTenuringThreshold,-XX:MaxTenuringThreshold,使用ThreadLocal,-XX:MaxTenuringThreshold,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=-XX:MaxTenuringThreshold；章节=使用ThreadLocal
+.class文件,类加载过程实体,1,.class文件,JVM.txt,.class文件,.class文件,使用ThreadLocal,.class文件,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=.class文件；章节=使用ThreadLocal
+ClassFormatError,异常与错误实体,1,ClassFormatError,JVM.txt,ClassFormatError,ClassFormatError,使用ThreadLocal,ClassFormatError,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ClassFormatError；章节=使用ThreadLocal
+Concurrent Mark Sweep,垃圾回收器实体,1,Concurrent Mark Sweep,JVM.txt,Concurrent Mark Sweep,Concurrent Mark Sweep,使用ThreadLocal,Concurrent Mark Sweep,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Concurrent Mark Sweep；章节=使用ThreadLocal
+Concurrent Mode Failure,异常与错误实体,1,Concurrent Mode Failure,JVM.txt,Concurrent Mode Failure,Concurrent Mode Failure,使用ThreadLocal,Concurrent Mode Failure,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Concurrent Mode Failure；章节=使用ThreadLocal
+Direct buffer memory,异常与错误实体,1,Direct buffer memory,JVM.txt,Direct buffer memory,Direct buffer memory,全文,Direct buffer memory,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Direct buffer memory；章节=全文
+From Survivor,堆结构实体,1,From Survivor,JVM.txt,From Survivor,From Survivor,全文,From Survivor,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=From Survivor；章节=全文
+GC 分代年龄,对象与字符串相关实体,1,GC 分代年龄,JVM.txt,GC 分代年龄,GC 分代年龄,使用ThreadLocal,GC 分代年龄,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=GC 分代年龄；章节=使用ThreadLocal
+Garbage First,垃圾回收器实体,1,Garbage First,JVM.txt,Garbage First,Garbage First,使用ThreadLocal,Garbage First,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Garbage First；章节=使用ThreadLocal
+HashMap,代码与容器实体,1,HashMap,JVM.txt,HashMap,HashMap,全文,HashMap,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=HashMap；章节=全文
+HeapDumpOnOutOfMemoryError,工具与排查实体,1,HeapDumpOnOutOfMemoryError,JVM.txt,HeapDumpOnOutOfMemoryError,HeapDumpOnOutOfMemoryError,全文,HeapDumpOnOutOfMemoryError,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=HeapDumpOnOutOfMemoryError；章节=全文
+HeapDumpPath,工具与排查实体,1,HeapDumpPath,JVM.txt,HeapDumpPath,HeapDumpPath,全文,HeapDumpPath,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=HeapDumpPath；章节=全文
+JProfiler,工具与排查实体,1,JProfiler,JVM.txt,JProfiler,JProfiler,全文,JProfiler,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=JProfiler；章节=全文
+JavaNIO,工具与排查实体,1,JavaNIO,JVM.txt,JavaNIO,JavaNIO,全文,JavaNIO,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=JavaNIO；章节=全文
+MAT,工具与排查实体,1,MAT,JVM.txt,MAT,MAT,全文 | 使用ThreadLocal,MAT,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=MAT；章节=全文|使用ThreadLocal
+Memory Analyzer Tool,工具与排查实体,1,Memory Analyzer Tool,JVM.txt,Memory Analyzer Tool,Memory Analyzer Tool,全文,Memory Analyzer Tool,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Memory Analyzer Tool；章节=全文
+Parallel Old,垃圾回收器实体,1,Parallel Old,JVM.txt,Parallel Old,Parallel Old,使用ThreadLocal,Parallel Old,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Parallel Old；章节=使用ThreadLocal
+PhantomReference,引用类型实体,1,PhantomReference,JVM.txt,PhantomReference,PhantomReference,全文,PhantomReference,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=PhantomReference；章节=全文
+Reachability Analysis,垃圾回收核心概念实体,1,Reachability Analysis,JVM.txt,Reachability Analysis,Reachability Analysis,使用ThreadLocal,Reachability Analysis,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Reachability Analysis；章节=使用ThreadLocal
+ReferenceQueue,引用类型实体,1,ReferenceQueue,JVM.txt,ReferenceQueue,ReferenceQueue,全文,ReferenceQueue,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ReferenceQueue；章节=全文
+Serial Old,垃圾回收器实体,1,Serial Old,JVM.txt,Serial Old,Serial Old,使用ThreadLocal,Serial Old,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Serial Old；章节=使用ThreadLocal
+Shenandoah,垃圾回收器实体,1,Shenandoah,JVM.txt,Shenandoah,Shenandoah,使用ThreadLocal,Shenandoah,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Shenandoah；章节=使用ThreadLocal
+SoftReference,引用类型实体,1,SoftReference,JVM.txt,SoftReference,SoftReference,全文,SoftReference,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=SoftReference；章节=全文
+Stop The World,垃圾回收核心概念实体,1,Stop The World,JVM.txt,Stop The World,Stop The World,使用ThreadLocal,Stop The World,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Stop The World；章节=使用ThreadLocal
+Tenured Generation,堆结构实体,1,Tenured Generation,JVM.txt,Tenured Generation,Tenured Generation,全文,Tenured Generation,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Tenured Generation；章节=全文
+To Survivor,堆结构实体,1,To Survivor,JVM.txt,To Survivor,To Survivor,全文,To Survivor,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=To Survivor；章节=全文
+VerifyError,异常与错误实体,1,VerifyError,JVM.txt,VerifyError,VerifyError,使用ThreadLocal,VerifyError,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=VerifyError；章节=使用ThreadLocal
+VisualVM,工具与排查实体,1,VisualVM,JVM.txt,VisualVM,VisualVM,静态属性导致内存泄露,VisualVM,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=VisualVM；章节=静态属性导致内存泄露
+Young Generation,堆结构实体,1,Young Generation,JVM.txt,Young Generation,Young Generation,全文,Young Generation,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=Young Generation；章节=全文
+ZGC,垃圾回收器实体,1,ZGC,JVM.txt,ZGC,ZGC,使用ThreadLocal,ZGC,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=ZGC；章节=使用ThreadLocal
+heapdump.hprof,工具与排查实体,1,heapdump.hprof,JVM.txt,heapdump.hprof,heapdump.hprof,全文,heapdump.hprof,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=heapdump.hprof；章节=全文
+netty,工具与排查实体,1,netty,JVM.txt,netty,netty,全文,netty,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=netty；章节=全文
+try-with-resources,代码与容器实体,1,try-with-resources,JVM.txt,try-with-resources,try-with-resources,未关闭的资源,try-with-resources,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=try-with-resources；章节=未关闭的资源
+临时数据,栈与栈帧相关实体,1,临时数据,JVM.txt,临时数据,临时数据,全文,临时数据,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=临时数据；章节=全文
+优化方法栈帧,栈与栈帧相关实体,1,优化方法栈帧,JVM.txt,优化方法栈帧,优化方法栈帧,全文,优化方法栈帧,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=优化方法栈帧；章节=全文
+元空间溢出,内存区域实体,1,元空间溢出,JVM.txt,元空间溢出,元空间溢出,全文,元空间溢出,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=元空间溢出；章节=全文
+全限定名,类加载过程实体,1,全限定名,JVM.txt,全限定名,全限定名,使用ThreadLocal,全限定名,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=全限定名；章节=使用ThreadLocal
+再标记阶段,垃圾回收算法实体,1,再标记阶段,JVM.txt,再标记阶段,再标记阶段,使用ThreadLocal,再标记阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=再标记阶段；章节=使用ThreadLocal
+分批处理,场景与问题实体,1,分批处理,JVM.txt,分批处理,分批处理,全文,分批处理,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=分批处理；章节=全文
+加载该类,类加载过程实体,1,加载该类,JVM.txt,加载该类,加载该类,使用ThreadLocal,加载该类,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=加载该类；章节=使用ThreadLocal
+加载阶段,类加载过程实体,1,加载阶段,JVM.txt,加载阶段,加载阶段,使用ThreadLocal,加载阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=加载阶段；章节=使用ThreadLocal
+即时编译器编译后的代码缓存,方法区与元数据相关实体,1,即时编译器编译后的代码缓存,JVM.txt,即时编译器编译后的代码缓存,即时编译器编译后的代码缓存,全文,即时编译器编译后的代码缓存,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=即时编译器编译后的代码缓存；章节=全文
+垃圾对象,垃圾回收核心概念实体,1,垃圾对象,JVM.txt,垃圾对象,垃圾对象,使用ThreadLocal,垃圾对象,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=垃圾对象；章节=使用ThreadLocal
+堆内存溢,内存区域实体,1,堆内存溢,JVM.txt,堆内存溢,堆内存溢,全文,堆内存溢,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=堆内存溢；章节=全文
+幻影引用,引用类型实体,1,幻影引用,JVM.txt,幻影引用,幻影引用,全文,幻影引用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=幻影引用；章节=全文
+弱引用可,引用类型实体,1,弱引用可,JVM.txt,弱引用可,弱引用可,全文,弱引用可,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=弱引用可；章节=全文
+弱引用的使用场景,引用类型实体,1,弱引用的使用场景,JVM.txt,弱引用的使用场景,弱引用的使用场景,全文,弱引用的使用场景,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=弱引用的使用场景；章节=全文
+强引用指,引用类型实体,1,强引用指,JVM.txt,强引用指,强引用指,全文,强引用指,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=强引用指；章节=全文
+懒加载,类加载过程实体,1,懒加载,JVM.txt,懒加载,懒加载,静态属性导致内存泄露,懒加载,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=懒加载；章节=静态属性导致内存泄露
+批量处理任务,场景与问题实体,1,批量处理任务,JVM.txt,批量处理任务,批量处理任务,全文,批量处理任务,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=批量处理任务；章节=全文
+方法区运行时的数据结构,内存区域实体,1,方法区运行时的数据结构,JVM.txt,方法区运行时的数据结构,方法区运行时的数据结构,使用ThreadLocal,方法区运行时的数据结构,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=方法区运行时的数据结构；章节=使用ThreadLocal
+最后是初始化阶段,类加载过程实体,1,最后是初始化阶段,JVM.txt,最后是初始化阶段,最后是初始化阶段,使用ThreadLocal,最后是初始化阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=最后是初始化阶段；章节=使用ThreadLocal
+树形结构遍历,场景与问题实体,1,树形结构遍历,JVM.txt,树形结构遍历,树形结构遍历,全文,树形结构遍历,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=树形结构遍历；章节=全文
+深度递归,场景与问题实体,1,深度递归,JVM.txt,深度递归,深度递归,全文,深度递归,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=深度递归；章节=全文
+简化了加载流程,类加载过程实体,1,简化了加载流程,JVM.txt,简化了加载流程,简化了加载流程,使用ThreadLocal,简化了加载流程,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=简化了加载流程；章节=使用ThreadLocal
+类加载机制,领域实体,1,类加载机制,JVM.txt,类加载机制,类加载机制,使用ThreadLocal,类加载机制,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类加载机制；章节=使用ThreadLocal
+类型信息,方法区与元数据相关实体,1,类型信息,JVM.txt,类型信息,类型信息,全文,类型信息,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=类型信息；章节=全文
+线程共享,线程与私有性相关实体,1,线程共享,JVM.txt,线程共享,线程共享,全文,线程共享,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=线程共享；章节=全文
+虚引用也,引用类型实体,1,虚引用也,JVM.txt,虚引用也,虚引用也,全文,虚引用也,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=虚引用也；章节=全文
+解析方法,类加载过程实体,1,解析方法,JVM.txt,解析方法,解析方法,全文,解析方法,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=解析方法；章节=全文
+解析方法调用,栈与栈帧相关实体,1,解析方法调用,JVM.txt,解析方法调用,解析方法调用,全文,解析方法调用,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=解析方法调用；章节=全文
+软引用可,引用类型实体,1,软引用可,JVM.txt,软引用可,软引用可,全文,软引用可,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=软引用可；章节=全文
+遇到堆溢,内存区域实体,1,遇到堆溢,JVM.txt,遇到堆溢,遇到堆溢,全文,遇到堆溢,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=遇到堆溢；章节=全文
+静态存储结构,类加载过程实体,1,静态存储结构,JVM.txt,静态存储结构,静态存储结构,使用ThreadLocal,静态存储结构,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=静态存储结构；章节=使用ThreadLocal
+首先是加载阶段,类加载过程实体,1,首先是加载阶段,JVM.txt,首先是加载阶段,首先是加载阶段,使用ThreadLocal,首先是加载阶段,1.0,实体标准化 + 候选召回（未发现需合并候选）,保留单实体=首先是加载阶段；章节=使用ThreadLocal

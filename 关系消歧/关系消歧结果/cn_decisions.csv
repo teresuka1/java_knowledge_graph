@@ -1,0 +1,91 @@
+﻿input_file,input_row_id,original_head,original_relation,original_tail,canonical_head,canonical_relation,canonical_tail,kept_relation,decision,canonicalization_actions,candidate_relations,winner_score,runner_up_score,score_margin,basis,evidence
+cn.csv,0,HTTPS,depends_on,SSL/TLS,HTTPS,depends_on,SSL/TLS,depends_on,kept,,depends_on,0.8219,,,"depends_on: score=0.822, conf=0.846, support=1, cues=依赖,基于","HTTPS 基于 SSL/TLS 加密,防窃听、篡改、冒充"
+cn.csv,1,HTTP/3,depends_on,QUIC,HTTP/3,depends_on,QUIC,depends_on,kept,,depends_on,0.8095,,,"depends_on: score=0.809, conf=0.826, support=1, cues=依赖,基于",HTTP/3(基于 QUIC):新一代网页传输
+cn.csv,2,Proxy Protocol,used_for,TCP,Proxy Protocol,used_for,TCP,used_for,kept,,used_for,0.8186,,,"used_for: score=0.819, conf=0.818, support=1, cues=用途,用于,适用于","传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造"
+cn.csv,3,DHCP,has_part,客户端,DHCP,has_part,客户端,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","DHCP:客户端无 IP,无法建立 TCP 连接,且需广播"
+cn.csv,4,DNS,has_part,域名解析,DNS,has_part,域名解析,has_part,kept,,has_part,0.7561,,,"has_part: score=0.756, conf=0.804, support=1, cues=枚举结构,!基于","DNS:域名解析(默认 UDP,大包 / 区域传送用 TCP)"
+cn.csv,5,HTTP/2,has_part,传输层,HTTP/2,has_part,传输层,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","HTTP/2:传输层阻塞,TCP 要求按序交付,单个丢包阻塞整个连接的所有流"
+cn.csv,6,Host,has_part,服务器,Host,has_part,服务器,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",Host:服务器域名与端口
+cn.csv,7,TCP,has_part,可靠传输,TCP,has_part,可靠传输,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","TCP:可靠传输,通过序列号、确认应答 ACK、超时重传、流量控制、拥塞控制,保证数据无差错、不丢失、不重复、按序到达"
+cn.csv,8,TCP,has_part,有状态,TCP,has_part,有状态,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","TCP:有状态,两端需维护连接状态(序列号、窗口大小、已发送 / 已确认数据等)"
+cn.csv,9,TCP,has_part,面向字节流,TCP,has_part,面向字节流,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","TCP:面向字节流,将数据视为无结构字节流,可拆分 / 合并数据"
+cn.csv,10,TCP,has_part,面向连接,TCP,has_part,面向连接,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","TCP:面向连接,传输前必须通过三次握手建立连接,传输后通过四次挥手释放连接"
+cn.csv,11,UDP,has_part,面向报文,UDP,has_part,面向报文,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构","UDP:面向报文,保留应用层数据边界,不拆分、不合并数据块"
+cn.csv,12,传输层,has_part,TCP,传输层,has_part,TCP,has_part,kept,,has_part | used_for,0.7837,0.7206,0.0631,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构；used_for: score=0.721, conf=0.660, support=1, cues=用途,用于,适用于",传输层:TCP、UDP、SCTP
+cn.csv,13,传输层,has_part,TCP Options,传输层,has_part,TCP Options,has_part,kept,,has_part,0.7285,,,"has_part: score=0.729, conf=0.804, support=1, cues=枚举结构,!用于,!适用于","传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造"
+cn.csv,14,应用层,has_part,HTTP,应用层,has_part,HTTP,has_part,kept,,has_part | used_for,0.7837,0.7380,0.0457,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构；used_for: score=0.738, conf=0.662, support=1, cues=用途,用于,适用于,\bfor\b",应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP
+cn.csv,15,应用层,has_part,X-Forwarded-For,应用层,has_part,X-Forwarded-For,has_part,kept,,has_part,0.7285,,,"has_part: score=0.729, conf=0.804, support=1, cues=枚举结构,!用于,!适用于","应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP"
+cn.csv,16,故障排查,has_part,PING,故障排查,has_part,PING,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",网络故障排查:PING 测连通性、tracert 测路由、nslookup 测 DNS、arp 查 MAC等
+cn.csv,17,网络层,has_part,IPv4,网络层,has_part,IPv4,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP
+cn.csv,18,网络接口层,has_part,以太网,网络接口层,has_part,以太网,has_part,kept,,has_part,0.7837,,,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构",网络接口层:以太网、Wi-Fi、PPP、MAC 协议
+cn.csv,19,HTTPS,depends_on,加密,HTTPS,depends_on,加密,depends_on,kept,,depends_on,0.7921,,,"depends_on: score=0.792, conf=0.798, support=1, cues=依赖,基于","HTTPS 基于 SSL/TLS 加密,防窃听、篡改、冒充"
+cn.csv,20,数据链路层,has_part,比特流,数据链路层,has_part,比特流,has_part,kept,,has_part,0.7800,,,"has_part: score=0.780, conf=0.798, support=1, cues=枚举结构","数据链路层:将比特流封装成帧,负责帧编码、差错纠正、物理寻址(MAC 地址),控制相邻节点间的数据传输"
+cn.csv,21,BGP,used_for,自治系统,BGP,used_for,自治系统,used_for,kept,,used_for,0.7876,,,"used_for: score=0.788, conf=0.794, support=1, cues=用途,用于","BGP:边界网关协议,用于跨自治系统的路由交换"
+cn.csv,22,URL,is_a,URI,URL,is_a,URI,is_a,kept,,is_a,0.7815,,,"is_a: score=0.782, conf=0.794, support=1, cues=上下位","URL:统一资源定位符,是 URI 的子集,既标识又定位资源(指明访问路径)"
+cn.csv,23,UDP,has_part,单播,UDP,has_part,单播,has_part,kept,,has_part,0.7763,,,"has_part: score=0.776, conf=0.792, support=1, cues=枚举结构",UDP:支持单播、一对多多播、一对所有广播
+cn.csv,24,传输层,has_part,OSI,传输层,has_part,OSI,has_part,kept,,has_part,0.7763,,,"has_part: score=0.776, conf=0.792, support=1, cues=枚举结构","传输层:与 OSI 传输层一致,提供端到端传输服务"
+cn.csv,25,四次挥手,has_part,报文,四次挥手,has_part,报文,has_part,kept,,has_part,0.7763,,,"has_part: score=0.776, conf=0.792, support=1, cues=枚举结构",TCP 三次握手 / 四次挥手细节:报文标志位(SYN/ACK/FIN)、状态转换、超时处理、2MSL 等待原因
+cn.csv,26,多路复用,has_part,TCP,多路复用,has_part,TCP,has_part,kept,,has_part,0.7763,,,"has_part: score=0.776, conf=0.792, support=1, cues=枚举结构","多路复用:单 TCP 连接并发传输多请求,解决应用层队头阻塞"
+cn.csv,27,网络层,has_part,OSI,网络层,has_part,OSI,has_part,kept,,has_part,0.7763,,,"has_part: score=0.776, conf=0.792, support=1, cues=枚举结构","网络层:与 OSI 网络层一致,负责路由寻址"
+cn.csv,28,网络层,has_part,路由与寻址,网络层,has_part,路由与寻址,has_part,kept,,has_part,0.7763,,,"has_part: score=0.776, conf=0.792, support=1, cues=枚举结构","网络层:负责路由与寻址,决定数据在网络中的传输路径,实现跨网络的数据包转发"
+cn.csv,29,Host,has_part,域名,Host,has_part,域名,has_part,kept,,has_part,0.7726,,,"has_part: score=0.773, conf=0.786, support=1, cues=枚举结构",Host:服务器域名与端口
+cn.csv,30,应用层,has_part,OSI,应用层,has_part,OSI,has_part,kept,,has_part,0.7726,,,"has_part: score=0.773, conf=0.786, support=1, cues=枚举结构","应用层:对应 OSI 的应用层 + 表示层 + 会话层,实现具体的应用功能"
+cn.csv,31,网络接口层,has_part,OSI,网络接口层,has_part,OSI,has_part,kept,,has_part,0.7726,,,"has_part: score=0.773, conf=0.786, support=1, cues=枚举结构","网络接口层:对应 OSI 的数据链路层 + 物理层,负责物理传输与帧封装"
+cn.csv,32,头部压缩,has_part,QPACK,头部压缩,has_part,QPACK,has_part,kept,,has_part,0.7713,,,"has_part: score=0.771, conf=0.784, support=1, cues=枚举结构","头部压缩:QPACK 算法,比 HPACK 更高效"
+cn.csv,33,传输层,has_part,UDP,传输层,has_part,UDP,has_part,kept,,has_part,0.7688,,,"has_part: score=0.769, conf=0.780, support=1, cues=枚举结构",传输层:TCP、UDP、SCTP
+cn.csv,34,网络接口层,has_part,Wi-Fi,网络接口层,has_part,Wi-Fi,has_part,kept,,has_part,0.7688,,,"has_part: score=0.769, conf=0.780, support=1, cues=枚举结构",网络接口层:以太网、Wi-Fi、PPP、MAC 协议
+cn.csv,35,ARP,has_part,广播,ARP,has_part,广播,has_part,kept,,has_part,0.7651,,,"has_part: score=0.765, conf=0.774, support=1, cues=枚举结构",ARP 工作流程:广播请求、单播响应、ARP 缓存
+cn.csv,36,应用层,has_part,HTTPS,应用层,has_part,HTTPS,has_part,kept,,has_part,0.7651,,,"has_part: score=0.765, conf=0.774, support=1, cues=枚举结构",应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP
+cn.csv,37,网络层,has_part,IPv6,网络层,has_part,IPv6,has_part,kept,,has_part,0.7651,,,"has_part: score=0.765, conf=0.774, support=1, cues=枚举结构",网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP
+cn.csv,38,缓存机制,has_part,If-Modified-Since,缓存机制,has_part,If-Modified-Since,has_part,kept,,has_part,0.7614,,,"has_part: score=0.761, conf=0.768, support=1, cues=枚举结构",缓存机制简陋:仅支持 If-Modified-Since、Expires
+cn.csv,39,TCP,has_part,序列号,TCP,has_part,序列号,has_part,kept,,has_part,0.7577,,,"has_part: score=0.758, conf=0.762, support=1, cues=枚举结构","TCP:可靠传输,通过序列号、确认应答 ACK、超时重传、流量控制、拥塞控制,保证数据无差错、不丢失、不重复、按序到达"
+cn.csv,40,UDP,has_part,应用层,UDP,has_part,应用层,has_part,kept,,has_part,0.7577,,,"has_part: score=0.758, conf=0.762, support=1, cues=枚举结构","UDP:面向报文,保留应用层数据边界,不拆分、不合并数据块"
+cn.csv,41,X-Forwarded-For,used_for,HTTP,X-Forwarded-For,used_for,HTTP,used_for,kept,,used_for,0.7975,,,"used_for: score=0.797, conf=0.758, support=1, cues=用途,用于,适用于,\bfor\b","应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP"
+cn.csv,42,UDP,has_part,多播,UDP,has_part,多播,has_part,kept,,has_part,0.7540,,,"has_part: score=0.754, conf=0.756, support=1, cues=枚举结构",UDP:支持单播、一对多多播、一对所有广播
+cn.csv,43,传输层,has_part,SCTP,传输层,has_part,SCTP,has_part,kept,,has_part,0.7540,,,"has_part: score=0.754, conf=0.756, support=1, cues=枚举结构",传输层:TCP、UDP、SCTP
+cn.csv,44,四次挥手,has_part,SYN,四次挥手,has_part,SYN,has_part,kept,,has_part,0.7540,,,"has_part: score=0.754, conf=0.756, support=1, cues=枚举结构",TCP 三次握手 / 四次挥手细节:报文标志位(SYN/ACK/FIN)、状态转换、超时处理、2MSL 等待原因
+cn.csv,45,QUIC,has_part,RTT,QUIC,has_part,RTT,has_part,kept,,has_part,0.7502,,,"has_part: score=0.750, conf=0.750, support=1, cues=枚举结构",QUIC 协议核心优势:0-RTT、连接迁移、流间无阻塞、内置加密
+cn.csv,46,公网 IP,implemented_by,私有 IP,公网 IP,implemented_by,私有 IP,implemented_by,kept,,implemented_by,0.7683,,,"implemented_by: score=0.768, conf=0.750, support=1, cues=实现关系,实现","作用:将内网私有 IP映射为公网公有 IP,实现多设备共享一个公网 IP 上网"
+cn.csv,47,HTTP/2,has_part,TCP,HTTP/2,has_part,TCP,has_part,kept,,has_part,0.7490,,,"has_part: score=0.749, conf=0.748, support=1, cues=枚举结构","HTTP/2:传输层阻塞,TCP 要求按序交付,单个丢包阻塞整个连接的所有流"
+cn.csv,48,加密,is_a,表示层,加密,is_a,表示层,is_a,kept,,is_a,0.5954,,,"is_a: score=0.595, conf=0.746, support=1, cues=!包含,!包括","表示层:负责数据处理,包括编解码、加密解密、压缩解压缩,保证数据能被正确识别"
+cn.csv,49,ARP,has_part,单播,ARP,has_part,单播,has_part,kept,,has_part,0.7465,,,"has_part: score=0.747, conf=0.744, support=1, cues=枚举结构",ARP 工作流程:广播请求、单播响应、ARP 缓存
+cn.csv,50,故障排查,has_part,tracert,故障排查,has_part,tracert,has_part,kept,,has_part,0.7465,,,"has_part: score=0.747, conf=0.744, support=1, cues=枚举结构",网络故障排查:PING 测连通性、tracert 测路由、nslookup 测 DNS、arp 查 MAC等
+cn.csv,51,网络层,has_part,ARP,网络层,has_part,ARP,has_part,kept,,has_part,0.7465,,,"has_part: score=0.747, conf=0.744, support=1, cues=枚举结构",网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP
+cn.csv,52,网络接口层,has_part,PPP,网络接口层,has_part,PPP,has_part,kept,,has_part,0.7465,,,"has_part: score=0.747, conf=0.744, support=1, cues=枚举结构",网络接口层:以太网、Wi-Fi、PPP、MAC 协议
+cn.csv,53,TCP,has_part,确认应答 ACK,TCP,has_part,确认应答 ACK,has_part,kept,,has_part,0.7428,,,"has_part: score=0.743, conf=0.738, support=1, cues=枚举结构","TCP:可靠传输,通过序列号、确认应答 ACK、超时重传、流量控制、拥塞控制,保证数据无差错、不丢失、不重复、按序到达"
+cn.csv,54,应用层,has_part,FTP,应用层,has_part,FTP,has_part,kept,,has_part,0.7428,,,"has_part: score=0.743, conf=0.738, support=1, cues=枚举结构",应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP
+cn.csv,55,DNS,has_part,UDP,DNS,has_part,UDP,has_part,kept,,has_part,0.7140,,,"has_part: score=0.714, conf=0.736, support=1, cues=枚举结构,!基于","DNS:域名解析(默认 UDP,大包 / 区域传送用 TCP)"
+cn.csv,56,网络接口层,has_part,数据链路层,网络接口层,has_part,数据链路层,has_part,kept,,has_part,0.7416,,,"has_part: score=0.742, conf=0.736, support=1, cues=枚举结构","网络接口层:对应 OSI 的数据链路层 + 物理层,负责物理传输与帧封装"
+cn.csv,57,TCP,has_part,三次握手,TCP,has_part,三次握手,has_part,kept,,has_part,0.7391,,,"has_part: score=0.739, conf=0.732, support=1, cues=枚举结构","TCP:面向连接,传输前必须通过三次握手建立连接,传输后通过四次挥手释放连接"
+cn.csv,58,四次挥手,has_part,ACK,四次挥手,has_part,ACK,has_part,kept,,has_part,0.7391,,,"has_part: score=0.739, conf=0.732, support=1, cues=枚举结构",TCP 三次握手 / 四次挥手细节:报文标志位(SYN/ACK/FIN)、状态转换、超时处理、2MSL 等待原因
+cn.csv,59,X-Forwarded-For,used_for,SMTP,X-Forwarded-For,used_for,SMTP,used_for,kept,,used_for,0.7789,,,"used_for: score=0.779, conf=0.728, support=1, cues=用途,用于,适用于,\bfor\b","应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP"
+cn.csv,60,QUIC,has_part,连接迁移,QUIC,has_part,连接迁移,has_part,kept,,has_part,0.7354,,,"has_part: score=0.735, conf=0.726, support=1, cues=枚举结构",QUIC 协议核心优势:0-RTT、连接迁移、流间无阻塞、内置加密
+cn.csv,61,表示层,has_part,加密,表示层,has_part,加密,has_part,kept,,has_part,0.7515,,,"has_part: score=0.751, conf=0.726, support=1, cues=整体部分,包括","表示层:负责数据处理,包括编解码、加密解密、压缩解压缩,保证数据能被正确识别"
+cn.csv,62,TCP,has_part,字节流,TCP,has_part,字节流,has_part,kept,,has_part,0.7316,,,"has_part: score=0.732, conf=0.720, support=1, cues=枚举结构","TCP:面向字节流,将数据视为无结构字节流,可拆分 / 合并数据"
+cn.csv,63,网络层,has_part,ICMP,网络层,has_part,ICMP,has_part,kept,,has_part,0.7316,,,"has_part: score=0.732, conf=0.720, support=1, cues=枚举结构",网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP
+cn.csv,64,网络接口层,has_part,MAC 协议,网络接口层,has_part,MAC 协议,has_part,kept,,has_part,0.7316,,,"has_part: score=0.732, conf=0.720, support=1, cues=枚举结构",网络接口层:以太网、Wi-Fi、PPP、MAC 协议
+cn.csv,65,头部压缩,has_part,HPACK,头部压缩,has_part,HPACK,has_part,kept,,has_part,0.7304,,,"has_part: score=0.730, conf=0.718, support=1, cues=枚举结构","头部压缩:QPACK 算法,比 HPACK 更高效"
+cn.csv,66,ARP,has_part,ARP 缓存,ARP,has_part,ARP 缓存,has_part,kept,,has_part,0.7279,,,"has_part: score=0.728, conf=0.714, support=1, cues=枚举结构",ARP 工作流程:广播请求、单播响应、ARP 缓存
+cn.csv,67,UDP,has_part,广播,UDP,has_part,广播,has_part,kept,,has_part,0.7279,,,"has_part: score=0.728, conf=0.714, support=1, cues=枚举结构",UDP:支持单播、一对多多播、一对所有广播
+cn.csv,68,传输层,has_part,Proxy Protocol,传输层,has_part,Proxy Protocol,has_part,kept,,has_part,0.6727,,,"has_part: score=0.673, conf=0.714, support=1, cues=枚举结构,!用于,!适用于","传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造"
+cn.csv,69,应用层,has_part,SMTP,应用层,has_part,SMTP,used_for,relation_conflict_resolved,,used_for | has_part,0.7367,0.7279,0.0088,"used_for: score=0.737, conf=0.660, support=1, cues=用途,用于,适用于,\bfor\b；has_part: score=0.728, conf=0.714, support=1, cues=枚举结构；low_margin=0.009",应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP
+cn.csv,70,数据链路层,has_part,差错纠正,数据链路层,has_part,差错纠正,has_part,kept,,has_part,0.7279,,,"has_part: score=0.728, conf=0.714, support=1, cues=枚举结构","数据链路层:将比特流封装成帧,负责帧编码、差错纠正、物理寻址(MAC 地址),控制相邻节点间的数据传输"
+cn.csv,71,TCP Options,used_for,TCP,TCP Options,used_for,TCP,used_for,kept,,used_for,0.7516,,,"used_for: score=0.752, conf=0.710, support=1, cues=用途,用于,适用于","传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造"
+cn.csv,72,四次挥手,has_part,FIN,四次挥手,has_part,FIN,has_part,kept,,has_part,0.7242,,,"has_part: score=0.724, conf=0.708, support=1, cues=枚举结构",TCP 三次握手 / 四次挥手细节:报文标志位(SYN/ACK/FIN)、状态转换、超时处理、2MSL 等待原因
+cn.csv,73,DHCP,has_part,TCP,DHCP,has_part,TCP,has_part,kept,,has_part,0.7230,,,"has_part: score=0.723, conf=0.706, support=1, cues=枚举结构","DHCP:客户端无 IP,无法建立 TCP 连接,且需广播"
+cn.csv,74,应用层,has_part,表示层,应用层,has_part,表示层,has_part,kept,,has_part,0.7192,,,"has_part: score=0.719, conf=0.700, support=1, cues=枚举结构","应用层:对应 OSI 的应用层 + 表示层 + 会话层,实现具体的应用功能"
+cn.csv,75,多路复用,has_part,应用层,多路复用,has_part,应用层,has_part,kept,,has_part,0.7168,,,"has_part: score=0.717, conf=0.696, support=1, cues=枚举结构","多路复用:单 TCP 连接并发传输多请求,解决应用层队头阻塞"
+cn.csv,76,网络层,has_part,IGMP,网络层,has_part,IGMP,has_part,kept,,has_part,0.7130,,,"has_part: score=0.713, conf=0.690, support=1, cues=枚举结构",网络层:IPv4、IPv6、ARP、ICMP、IGMP、NAT、OSPF、RIP、BGP
+cn.csv,77,网络接口层,has_part,物理层,网络接口层,has_part,物理层,has_part,kept,,has_part,0.7118,,,"has_part: score=0.712, conf=0.688, support=1, cues=枚举结构","网络接口层:对应 OSI 的数据链路层 + 物理层,负责物理传输与帧封装"
+cn.csv,78,TCP,has_part,超时重传,TCP,has_part,超时重传,has_part,kept,,has_part,0.7093,,,"has_part: score=0.709, conf=0.684, support=1, cues=枚举结构","TCP:可靠传输,通过序列号、确认应答 ACK、超时重传、流量控制、拥塞控制,保证数据无差错、不丢失、不重复、按序到达"
+cn.csv,79,应用层,has_part,POP3,应用层,has_part,POP3,has_part,kept,,has_part,0.7093,,,"has_part: score=0.709, conf=0.684, support=1, cues=枚举结构",应用层:HTTP、HTTPS、FTP、SMTP、POP3、IMAP、Telnet、SSH、DNS、RTP、RTCP、DHCP、SNMP、NTP
+cn.csv,80,数据链路层,has_part,物理寻址,数据链路层,has_part,物理寻址,has_part,kept,,has_part,0.7093,,,"has_part: score=0.709, conf=0.684, support=1, cues=枚举结构","数据链路层:将比特流封装成帧,负责帧编码、差错纠正、物理寻址(MAC 地址),控制相邻节点间的数据传输"
+cn.csv,81,多路复用,has_part,队头阻塞,多路复用,has_part,队头阻塞,has_part,kept,,has_part,0.7056,,,"has_part: score=0.706, conf=0.678, support=1, cues=枚举结构","多路复用:单 TCP 连接并发传输多请求,解决应用层队头阻塞"
+cn.csv,82,DHCP,has_part,广播,DHCP,has_part,广播,has_part,kept,,has_part,0.7019,,,"has_part: score=0.702, conf=0.672, support=1, cues=枚举结构","DHCP:客户端无 IP,无法建立 TCP 连接,且需广播"
+cn.csv,83,故障排查,has_part,nslookup,故障排查,has_part,nslookup,has_part,kept,,has_part,0.7019,,,"has_part: score=0.702, conf=0.672, support=1, cues=枚举结构",网络故障排查:PING 测连通性、tracert 测路由、nslookup 测 DNS、arp 查 MAC等
+cn.csv,84,应用层,has_part,会话层,应用层,has_part,会话层,has_part,kept,,has_part,0.6969,,,"has_part: score=0.697, conf=0.664, support=1, cues=枚举结构","应用层:对应 OSI 的应用层 + 表示层 + 会话层,实现具体的应用功能"
+cn.csv,85,应用层,used_for,HTTP,应用层,used_for,HTTP,has_part,relation_conflict_resolved,,has_part | used_for,0.7837,0.7380,0.0457,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构；used_for: score=0.738, conf=0.662, support=1, cues=用途,用于,适用于,\bfor\b","应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP"
+cn.csv,86,传输层,used_for,TCP,传输层,used_for,TCP,has_part,relation_conflict_resolved,,has_part | used_for,0.7837,0.7206,0.0631,"has_part: score=0.784, conf=0.804, support=1, cues=枚举结构；used_for: score=0.721, conf=0.660, support=1, cues=用途,用于,适用于","传输层:TCP Options 字段、Proxy Protocol,适用于所有 TCP 协议,需双方改造"
+cn.csv,87,应用层,used_for,SMTP,应用层,used_for,SMTP,used_for,kept,,used_for | has_part,0.7367,0.7279,0.0088,"used_for: score=0.737, conf=0.660, support=1, cues=用途,用于,适用于,\bfor\b；has_part: score=0.728, conf=0.714, support=1, cues=枚举结构；low_margin=0.009","应用层:X-Forwarded-For 请求头,简单但易伪造,仅适用于 HTTP/SMTP"
+cn.csv,88,根 DNS 服务器,has_part,服务器,根 DNS 服务器,has_part,服务器,has_part,kept,,has_part,0.6932,,,"has_part: score=0.693, conf=0.658, support=1, cues=枚举结构","根 DNS 服务器:13 组 IP,对应全球 1700 + 台服务器,提供顶级域服务器 IP"
+cn.csv,89,DNS,has_part,TCP,DNS,has_part,TCP,has_part,kept,,has_part,0.6582,,,"has_part: score=0.658, conf=0.646, support=1, cues=枚举结构,!基于","DNS:域名解析(默认 UDP,大包 / 区域传送用 TCP)"
