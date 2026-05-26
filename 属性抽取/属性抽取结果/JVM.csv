@@ -5,11 +5,20 @@ String,特性,Extension ClassLoader,使用ThreadLocal,JVM.txt,"具体来说,Java
 并发标记,特性,GC Roots,使用ThreadLocal,JVM.txt,"并发标记阶段:并发标记阶段是指从GC Roots开始对堆中对象进行可达性分析,找出存活对象",0.88,relation_disambiguation_reclassified,is_a
 直接内存,特性,JVM,全文,JVM.txt,"直接内存:不属于 JVM 运行时数据区的一部分,通过 NIO 类引入,是一种堆外内存,可以显著提高 I/O 性能",0.88,relation_disambiguation_reclassified,is_a
 新生代,特性,CMS,使用ThreadLocal,JVM.txt,标记-复制算法应用在CMS新生代(ParNew是CMS默认的新生代垃圾回收器)和G1垃圾回收器中,0.862,relation_disambiguation_reclassified,is_a
+弱引用,用途,"创建非强制性的对象引用,这些引用可以在内存压力大时被垃圾回收器清理,从而避免内存泄露",全文,JVM.txt,"弱引用的一个主要用途是创建非强制性的对象引用,这些引用可以在内存压力大时被垃圾回收器清理,从而避免内存泄露",0.86,attribute_extraction_usage_pattern,
+G1,特性,"引入分区的思路,弱化了分代的概念",使用ThreadLocal,JVM.txt,"G1最大的特点是引入分区的思路,弱化了分代的概念",0.85,attribute_extraction_feature_sentence_pattern,
+Java 堆,用途,存放对象实例和数组,全文,JVM.txt,"Java堆(Heap)是Java虚拟机(JVM)中内存管理的一个重要区域,主要用于存放对象实例和数组",0.85,attribute_extraction_usage_pattern,
 新生代,特性,Serial,使用ThreadLocal,JVM.txt,"ParNew收集器 (复制算法): 新生代收并行集器,实际上是Serial收集器的多线程版本,在多核CPU环境下有着比Serial更好的表现",0.85,relation_disambiguation_reclassified,is_a
+新生代,用途,"存放生命周期较短的对象,并且其内存空间相对较小",全文,JVM.txt,"新生代主要用于存放生命周期较短的对象,并且其内存空间相对较小",0.85,attribute_extraction_usage_pattern,
 ThreadLocalMap,特性,ThreadLocal,使用ThreadLocal,JVM.txt,"ThreadLocal的实现中,每个Thread维护一个ThreadLocalMap映射表,key是ThreadLocal实例本身,value是真正需要存储的Object",0.842,relation_disambiguation_reclassified,is_a
 Java 虚拟机,特性,VerifyError,使用ThreadLocal,JVM.txt,"验证(Verification),这是虚拟机安全的重要保障,JVM 需要核验字节信息是符合 Java 虚拟机规范的,否则就被认为是 VerifyError,这样就防止了恶意信息或者不合规的信息危害 JVM 的运行,验证阶段有可能触发更多 class 的加载",0.838,relation_disambiguation_reclassified,is_a
 并发标记,特性,STW,使用ThreadLocal,JVM.txt,"并发标记耗时相对长很多,但因为不是STW,所以我们不太关心该阶段耗时的长短",0.832,relation_disambiguation_reclassified,is_a
+Serial,特性,简单高效,使用ThreadLocal,JVM.txt,"Serial收集器(复制算法): 新生代单线程收集器,标记和清理都是单线程,优点是简单高效;",0.83,attribute_extraction_feature_sentence_pattern,
+ThreadLocalMap,用途,"引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样",使用ThreadLocal,JVM.txt,"ThreadLocalMap使用ThreadLocal的弱引用作为key,如果一个ThreadLocal没有外部强引用来引用它,那么系统GC时,这个ThreadLocal势必会被回收,这样一来,ThreadLocalMap中就会出现key为null的Entry,就没有办法访问这些key为null的Entry的value",0.83,attribute_extraction_usage_pattern,
+使用,用途,"维护缓存,可以让JVM在需要更多内存时自动清理这些缓存对象",全文,JVM.txt,"使用弱引用来维护缓存,可以让JVM在需要更多内存时自动清理这些缓存对象",0.83,attribute_extraction_usage_pattern,
 内存溢出,特性,JVM,全文,JVM.txt,"内存溢出:内存溢出是指Java虚拟机(JVM)在申请内存时,无法找到足够的内存,最终引发OutOfMemoryError",0.83,relation_disambiguation_reclassified,is_a
+对象池,用途,管理那些暂时不使用的对象,全文,JVM.txt,"对象池:在对象池中,弱引用可以用来管理那些暂时不使用的对象",0.83,attribute_extraction_usage_pattern,
+自定义类加载器,用途,"扩展Java应用程序的灵活性和安全性,是Java动态性的一个重要体现",使用ThreadLocal,JVM.txt,"自定义类加载器可以用来扩展Java应用程序的灵活性和安全性,是Java动态性的一个重要体现",0.83,attribute_extraction_usage_pattern,
 虚拟机栈,特性,GC Roots,使用ThreadLocal,JVM.txt,GC Roots对象包括:虚拟机栈(栈帧中的本地变量表)中引用的对象、方法区中类静态属性引用的对象、本地方法栈中JNI(Java Native Interface)引用的对象、活跃线程的引用等,0.83,relation_disambiguation_reclassified,is_a
 Concurrent Mark Sweep,收集器(标记-清除算法,"老年代并行收集器,以获取最短回收停顿时间为目标的收集器,具有高并发、低停顿的特点,追求最短GC回收停顿时间",使用ThreadLocal,JVM.txt,"CMS(Concurrent Mark Sweep)收集器(标记-清除算法): 老年代并行收集器,以获取最短回收停顿时间为目标的收集器,具有高并发、低停顿的特点,追求最短GC回收停顿时间",0.82,attribute_extraction_colon_pattern,
 Java 堆,特性,JVM,全文,JVM.txt,"Java堆(Heap)是Java虚拟机(JVM)中内存管理的一个重要区域,主要用于存放对象实例和数组",0.82,relation_disambiguation_reclassified,is_a
@@ -32,6 +41,7 @@ Young Generation,属性,新生代分为Eden Space和Survivor Space,全文,JVM.tx
 复制算法,属性,"把内存分成两块,每次只用其中一块,回收时把存活对象复制到另一块,然后清空当前块",使用ThreadLocal,JVM.txt,"还有 “复制算法”:把内存分成两块,每次只用其中一块,回收时把存活对象复制到另一块,然后清空当前块",0.82,attribute_extraction_colon_pattern,
 复制算法,属性,"为了解决碎片空间的问题,出现了“复制算法",使用ThreadLocal,JVM.txt,"复制算法:为了解决碎片空间的问题,出现了“复制算法”",0.82,attribute_extraction_colon_pattern,
 大堆内存,属性,"适用于需要管理大内存堆的场景,能够有效处理数GB以上的堆内存",使用ThreadLocal,JVM.txt,"大堆内存:适用于需要管理大内存堆的场景,能够有效处理数GB以上的堆内存",0.82,attribute_extraction_colon_pattern,
+弱引用,用途,"实现缓存,特别是当希望缓存项能够在内存压力下自动释放时",全文,JVM.txt,"缓存系统:弱引用常用于实现缓存,特别是当希望缓存项能够在内存压力下自动释放时",0.82,attribute_extraction_usage_pattern,
 新生代,Young Generation,新生代分为Eden Space和Survivor Space,全文,JVM.txt,新生代(Young Generation):新生代分为Eden Space和Survivor Space,0.82,attribute_extraction_colon_pattern,
 方法字节码,属性,"存储类的方法字节码,即编译后的代码",全文,JVM.txt,"方法字节码:存储类的方法字节码,即编译后的代码",0.82,attribute_extraction_colon_pattern,
 标记-清除算法,属性,"标记-清除算法分为“标记”和“清除”两个阶段,首先通过可达性分析,标记出所有需要回收的对象,然后统一回收所有被标记的对象",使用ThreadLocal,JVM.txt,"标记-清除算法:标记-清除算法分为“标记”和“清除”两个阶段,首先通过可达性分析,标记出所有需要回收的对象,然后统一回收所有被标记的对象",0.82,attribute_extraction_colon_pattern,
@@ -41,6 +51,7 @@ Young Generation,属性,新生代分为Eden Space和Survivor Space,全文,JVM.tx
 类信息,属性,包括类的结构信息、类的访问修饰符、父类与接口等信息,全文,JVM.txt,类信息:包括类的结构信息、类的访问修饰符、父类与接口等信息,0.82,attribute_extraction_colon_pattern,
 线程,属性,"未停止的线程可能持有对象引用,无法被回收",全文,JVM.txt,"线程:未停止的线程可能持有对象引用,无法被回收",0.82,attribute_extraction_colon_pattern,
 缓存系统,属性,"弱引用常用于实现缓存,特别是当希望缓存项能够在内存压力下自动释放时",全文,JVM.txt,"缓存系统:弱引用常用于实现缓存,特别是当希望缓存项能够在内存压力下自动释放时",0.82,attribute_extraction_colon_pattern,
+缓存系统,用途,"实现缓存,特别是当希望缓存项能够在内存压力下自动释放时",全文,JVM.txt,"缓存系统:弱引用常用于实现缓存,特别是当希望缓存项能够在内存压力下自动释放时",0.82,attribute_extraction_usage_pattern,
 验证,属性,"确保class文件中的字节流包含的信息,符合当前虚拟机的要求,保证这个被加载的class类的正确性,不会危害到虚拟机的安全",使用ThreadLocal,JVM.txt,"验证:确保class文件中的字节流包含的信息,符合当前虚拟机的要求,保证这个被加载的class类的正确性,不会危害到虚拟机的安全",0.82,attribute_extraction_colon_pattern,
 验证,阶段大致会完成以下四个阶段的检验动作,文件格式校验、元数据验证、字节码验证、符号引用验证,使用ThreadLocal,JVM.txt,验证阶段大致会完成以下四个阶段的检验动作:文件格式校验、元数据验证、字节码验证、符号引用验证,0.82,attribute_extraction_colon_pattern,
 Minor GC,特性,gc,使用ThreadLocal,JVM.txt,"根据其作用范围和触发条件的不同,可以将GC分为三种类型:Minor GC(也称为Young GC)、Major GC(有时也称为Old GC)、以及Full GC",0.818,relation_disambiguation_reclassified,is_a
@@ -50,6 +61,8 @@ G1,特性,gc,使用ThreadLocal,JVM.txt,"而G1没有浮动垃圾,G1的筛选回�
 幻影引用,特性,PhantomReference,全文,JVM.txt,"虚引用也被称作幻影引用,是最弱的引用关系,可以用PhantomReference来描述,他必须和ReferenceQueue一起使用,同样的当发生GC的时候,虚引用也会被回收",0.812,relation_disambiguation_reclassified,is_a
 复制算法,特性,CMS,使用ThreadLocal,JVM.txt,标记-复制算法应用在CMS新生代(ParNew是CMS默认的新生代垃圾回收器)和G1垃圾回收器中,0.808,relation_disambiguation_reclassified,is_a
 虚拟机栈,特性,JVM,全文,JVM.txt,"根据 JDK 8 规范,JVM 运行时内存共分为虚拟机栈、堆、元空间、程序计数器、本地方法栈五个部分",0.806,relation_disambiguation_reclassified,is_a
+CMS,特性,高并发、低停顿的,使用ThreadLocal,JVM.txt,"CMS(Concurrent Mark Sweep)收集器(标记-清除算法): 老年代并行收集器,以获取最短回收停顿时间为目标的收集器,具有高并发、低停顿的特点,追求最短GC回收停顿时间",0.8,attribute_extraction_feature_sentence_pattern,
+Concurrent Mark Sweep,特性,高并发、低停顿的,使用ThreadLocal,JVM.txt,"CMS(Concurrent Mark Sweep)收集器(标记-清除算法): 老年代并行收集器,以获取最短回收停顿时间为目标的收集器,具有高并发、低停顿的特点,追求最短GC回收停顿时间",0.8,attribute_extraction_feature_sentence_pattern,
 垃圾回收,特性,System.gc,使用ThreadLocal,JVM.txt,"手动请求:虽然垃圾回收是自动的,开发者可以通过调用 System.gc() 或 Runtime.getRuntime().gc() 建议 JVM 进行垃圾回收",0.8,relation_disambiguation_reclassified,is_a
 栈帧,特性,GC Roots,使用ThreadLocal,JVM.txt,GC Roots对象包括:虚拟机栈(栈帧中的本地变量表)中引用的对象、方法区中类静态属性引用的对象、本地方法栈中JNI(Java Native Interface)引用的对象、活跃线程的引用等,0.8,relation_disambiguation_reclassified,is_a
 浮动垃圾,特性,gc,使用ThreadLocal,JVM.txt,"而G1没有浮动垃圾,G1的筛选回收是多个垃圾回收线程并行gc的,没有浮动垃圾的回收,在执行‘并发清理’步骤时,用户线程也会同时产生一部分可回收对象,但是这部分可回收对象只能在下次执行清理是才会被回收",0.796,relation_disambiguation_reclassified,is_a
@@ -58,13 +71,33 @@ ParNew,特性,G1,使用ThreadLocal,JVM.txt,标记-复制算法应用在CMS新生
 key,特性,value,使用ThreadLocal,JVM.txt,"ThreadLocal的实现中,每个Thread维护一个ThreadLocalMap映射表,key是ThreadLocal实例本身,value是真正需要存储的Object",0.788,relation_disambiguation_reclassified,is_a
 弱引用,特性,WeakReference,全文,JVM.txt,"在Java中,弱引用是通过Java.lang.ref.WeakReference类实现的",0.788,relation_disambiguation_reclassified,is_a
 G1,特性,STW,使用ThreadLocal,JVM.txt,"因此,G1停顿时间的瓶颈主要是标记-复制中的转移阶段STW",0.784,relation_disambiguation_reclassified,is_a
+CMS,特性,低延迟,使用ThreadLocal,JVM.txt,"CMS追求低延迟,回收时大部分工作和用户线程并发执行,减少停顿时间,但会占用更多 CPU;",0.78,attribute_extraction_feature_pattern,
 CMS,特性,高并发,使用ThreadLocal,JVM.txt,"CMS(Concurrent Mark Sweep)收集器(标记-清除算法): 老年代并行收集器,以获取最短回收停顿时间为目标的收集器,具有高并发、低停顿的特点,追求最短GC回收停顿时间",0.78,attribute_extraction_feature_pattern,
+CMS,特性,低停顿,使用ThreadLocal,JVM.txt,"CMS(Concurrent Mark Sweep)收集器(标记-清除算法): 老年代并行收集器,以获取最短回收停顿时间为目标的收集器,具有高并发、低停顿的特点,追求最短GC回收停顿时间",0.78,attribute_extraction_feature_pattern,
 Concurrent Mark Sweep,特性,高并发,使用ThreadLocal,JVM.txt,"CMS(Concurrent Mark Sweep)收集器(标记-清除算法): 老年代并行收集器,以获取最短回收停顿时间为目标的收集器,具有高并发、低停顿的特点,追求最短GC回收停顿时间",0.78,attribute_extraction_feature_pattern,
+Concurrent Mark Sweep,特性,低停顿,使用ThreadLocal,JVM.txt,"CMS(Concurrent Mark Sweep)收集器(标记-清除算法): 老年代并行收集器,以获取最短回收停顿时间为目标的收集器,具有高并发、低停顿的特点,追求最短GC回收停顿时间",0.78,attribute_extraction_feature_pattern,
+G1,特性,低停顿,使用ThreadLocal,JVM.txt,"比较平衡的性能:G1在提供较低停顿时间的同时,也保持了相对较高的吞吐量",0.78,attribute_extraction_feature_pattern,
+Java 虚拟机,特性,缓存,全文,JVM.txt,《深入理解Java虚拟机》书中对方法区(Method Area)存储内容描述如下:它用于存储已被虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存等,0.78,attribute_extraction_feature_pattern,
+Parallel Scavenge,特性,高效,使用ThreadLocal,JVM.txt,"Parallel Scavenge收集器 (复制算法): 新生代并行收集器,追求高吞吐量,高效利用 CPU",0.78,attribute_extraction_feature_pattern,
+Serial,特性,高效,使用ThreadLocal,JVM.txt,"Serial收集器(复制算法): 新生代单线程收集器,标记和清理都是单线程,优点是简单高效;",0.78,attribute_extraction_feature_pattern,
 String,特性,不可变,全文,JVM.txt,"String 保存在字符串常量池中,不同于其他对象,它的值是不可变的,且可以被多个引用共享",0.78,attribute_extraction_feature_pattern,
 String,特性,可变,全文,JVM.txt,"String 保存在字符串常量池中,不同于其他对象,它的值是不可变的,且可以被多个引用共享",0.78,attribute_extraction_feature_pattern,
 ThreadLocal,特性,线程安全,使用ThreadLocal,JVM.txt,"ThreadLocal相当于提供了一种线程隔离,将变量与线程相绑定,从而实现线程安全的特性",0.78,attribute_extraction_feature_pattern,
 ZGC,特性,高并发,使用ThreadLocal,JVM.txt,"现在新出的 ZGC、Shenandoah 更是追求微秒级停顿,适合高并发低延迟的应用",0.78,attribute_extraction_feature_pattern,
+ZGC,特性,低延迟,使用ThreadLocal,JVM.txt,"现在新出的 ZGC、Shenandoah 更是追求微秒级停顿,适合高并发低延迟的应用",0.78,attribute_extraction_feature_pattern,
+gc,特性,高效,使用ThreadLocal,JVM.txt,"总的来说,GC 机制的核心是 「自动管理内存」,通过可达性分析判断垃圾,结合分代思想和不同算法,再由具体的回收器实现,最终目的是在保证程序正常运行的前提下,高效释放内存,减少对用户线程的影响",0.78,attribute_extraction_feature_pattern,
+使用,特性,缓存,全文,JVM.txt,"在这个例子中,使用WeakReference来存储MyHeavyObject实例,当内存压力增大时,垃圾回收器可以自由地回收这些对象,而不会影响缓存的正常运行",0.78,attribute_extraction_feature_pattern,
+内存泄漏,特性,缓存,全文,JVM.txt,如果是内存泄漏:比如静态集合无意识地缓存了大量对象、长生命周期对象持有短生命周期对象的引用(如单例类持有业务对象)等,0.78,attribute_extraction_feature_pattern,
+加载,特性,双向,使用ThreadLocal,JVM.txt,类与其加载器是双向绑定的共生关系,0.78,attribute_extraction_feature_pattern,
 双亲委派,特性,有序,使用ThreadLocal,JVM.txt,"简单说,双亲委派就像 「孩子找东西先问家长,家长解决不了再自己找」,通过层级委派确保了 Java 核心类的安全和类加载的有序性,是 Java 运行时环境稳定的基础",0.78,attribute_extraction_feature_pattern,
+双亲委派,特性,有序性,使用ThreadLocal,JVM.txt,"简单说,双亲委派就像 「孩子找东西先问家长,家长解决不了再自己找」,通过层级委派确保了 Java 核心类的安全和类加载的有序性,是 Java 运行时环境稳定的基础",0.78,attribute_extraction_feature_pattern,
+双亲委派,特性,稳定,使用ThreadLocal,JVM.txt,"简单说,双亲委派就像 「孩子找东西先问家长,家长解决不了再自己找」,通过层级委派确保了 Java 核心类的安全和类加载的有序性,是 Java 运行时环境稳定的基础",0.78,attribute_extraction_feature_pattern,
+垃圾回收,特性,缓存,全文,JVM.txt,"如果一个对象被垃圾回收,下次尝试从缓存中获取时,get()方法会返回null,这时我们可以重新创建对象并将其放入缓存中",0.78,attribute_extraction_feature_pattern,
+常量池缓存,特性,缓存,全文,JVM.txt,"常量池缓存:用于提升类加载的效率,将常用的常量缓存起来方便使用",0.78,attribute_extraction_feature_pattern,
+弱引用,特性,缓存,全文,JVM.txt,"使用弱引用来维护缓存,可以让JVM在需要更多内存时自动清理这些缓存对象",0.78,attribute_extraction_feature_pattern,
+线程,特性,高效,使用ThreadLocal,JVM.txt,"吞吐量 = 用户线程时间/(用户线程时间+GC线程时间),高吞吐量可以高效率的利用CPU时间,尽快完成程序的运算任务,适合后台应用等对交互相应要求不高的场景;",0.78,attribute_extraction_feature_pattern,
+缓存系统,特性,缓存,全文,JVM.txt,"假设我们有一个缓存系统,我们使用弱引用来维护缓存中的对象:",0.78,attribute_extraction_feature_pattern,
+自定义类加载器,特性,加密,使用ThreadLocal,JVM.txt,"自定义类加载器(Custom Class Loader):开发者可以根据需求定制类的加载方式,比如从网络加载class文件、数据库、甚至是加密的文件中加载类等",0.78,attribute_extraction_feature_pattern,
 GC Roots,特性,STW,使用ThreadLocal,JVM.txt,"初始标记阶段:初始标记阶段是指从GC Roots出发标记全部直接子节点的过程,该阶段是STW的",0.776,relation_disambiguation_reclassified,is_a
 直接内存,特性,NIO,全文,JVM.txt,"直接内存:不属于 JVM 运行时数据区的一部分,通过 NIO 类引入,是一种堆外内存,可以显著提高 I/O 性能",0.772,relation_disambiguation_reclassified,is_a
 CMS,特性,Serial,使用ThreadLocal,JVM.txt,"CMS收集器是老年代的收集器,可以配合新生代的Serial和ParNew收集器一起使用",0.77,relation_disambiguation_reclassified,is_a

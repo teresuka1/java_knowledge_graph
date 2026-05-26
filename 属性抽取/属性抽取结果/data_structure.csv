@@ -1,4 +1,10 @@
 ﻿entity,attribute_name,attribute_value,section_title,source_file,evidence,confidence,method,source_relation
 队列,特性,FIFO,全文,data_structure.txt,"队列是一种先进先出(FIFO)的数据结构,常用于任务调度和缓冲区管理",0.862,relation_disambiguation_reclassified,is_a
+先进先出,用途,任务调度和缓冲区管理,全文,data_structure.txt,"队列是一种先进先出(FIFO)的数据结构,常用于任务调度和缓冲区管理",0.82,attribute_extraction_usage_pattern,
+后进先出,用途,函数调用和表达式求值,全文,data_structure.txt,"栈是一种后进先出(LIFO)的数据结构,常用于函数调用和表达式求值",0.82,attribute_extraction_usage_pattern,
+队列,用途,任务调度和缓冲区管理,全文,data_structure.txt,"队列是一种先进先出(FIFO)的数据结构,常用于任务调度和缓冲区管理",0.82,attribute_extraction_usage_pattern,
+哈希函数,特性,高效,全文,data_structure.txt,"哈希表是一种基于哈希函数的数据结构,用于实现高效的查找操作",0.78,attribute_extraction_feature_pattern,
+哈希表,特性,高效,全文,data_structure.txt,"哈希表是一种基于哈希函数的数据结构,用于实现高效的查找操作",0.78,attribute_extraction_feature_pattern,
+括号匹配问题,特性,缓存,全文,data_structure.txt,"例如,栈用于括号匹配问题,队列用于广度优先搜索,堆用于实现优先队列,图用于建模网络关系,哈希表用于缓存系统",0.78,attribute_extraction_feature_pattern,
 二叉树,定义,"一种特殊的树结构,每个节点最多有两个子节点",全文,data_structure.txt,"二叉树是一种特殊的树结构,每个节点最多有两个子节点",0.76,attribute_extraction_definition_pattern,
 数据结构,定义,"计算机科学中的基础领域,主要研究数据的组织、存储和操作方式",全文,data_structure.txt,"数据结构是计算机科学中的基础领域,主要研究数据的组织、存储和操作方式",0.76,attribute_extraction_definition_pattern,

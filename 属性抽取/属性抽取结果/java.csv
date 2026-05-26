@@ -8,9 +8,10 @@ Error,定义,父类,异常处理,java.txt,"Throwable是顶级父类,下面分为
 Throwable,特性,Error,异常处理,java.txt,"Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)",0.83,relation_disambiguation_reclassified,is_a
 Checked Exception,特性,Exception,异常处理,java.txt,"Exception分为:Checked Exception(编译时异常,必须处理)和Unchecked Exception(运行时异常,不强制处理)",0.822,relation_disambiguation_reclassified,is_a
 抽象类,修饰符,abstract,抽象类与接口,java.txt,"抽象类:使用abstract修饰,可以包含抽象方法和具体方法,不能实例化",0.822,relation_disambiguation_reclassified,has_part
-Collections,工具类,提供排序、查找、同步化等静态方法,集合框架,java.txt,Collections工具类:提供排序、查找、同步化等静态方法,0.82,attribute_extraction_colon_pattern,
+Collections,功能类型,提供排序、查找、同步化等静态方法,集合框架,java.txt,Collections工具类:提供排序、查找、同步化等静态方法,0.82,attribute_extraction_colon_pattern,
 Java,定义,父类,继承与多态,java.txt,"继承使用extends关键字,Java是单继承,一个类只能有一个直接父类",0.82,relation_disambiguation_reclassified,is_a
-Map,接口,"存储键值对,键不重复,值可重复",集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.82,attribute_extraction_colon_pattern,
+Map,接口类型,"存储键值对,键不重复,值可重复",集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.82,attribute_extraction_colon_pattern,
+finally,用途,"释放资源,无论是否发生异常都会执行(除非JVM退出",异常处理,java.txt,"finally块通常用于释放资源,无论是否发生异常都会执行(除非JVM退出)",0.82,attribute_extraction_usage_pattern,
 多维数组,属性,int[][] matrix,数组,java.txt,多维数组:int[][] matrix,0.82,attribute_extraction_colon_pattern,
 接口,修饰符,abstract,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.82,relation_disambiguation_reclassified,is_a
 接口,属性,"存储键值对,键不重复,值可重复",集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.82,attribute_extraction_colon_pattern,
@@ -30,6 +31,7 @@ Collection,特性,有序,集合框架,java.txt,Collection接口的子接口:List
 Collection,特性,无序,集合框架,java.txt,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),0.78,attribute_extraction_feature_pattern,
 Collection,特性,可重复,集合框架,java.txt,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),0.78,attribute_extraction_feature_pattern,
 Collection,特性,不重复,集合框架,java.txt,Collection接口的子接口:List(有序可重复)、Set(无序不重复)、Queue(队列),0.78,attribute_extraction_feature_pattern,
+Collections,特性,同步,集合框架,java.txt,Collections工具类:提供排序、查找、同步化等静态方法,0.78,attribute_extraction_feature_pattern,
 Error,特性,Throwable,异常处理,java.txt,"Throwable是顶级父类,下面分为Error(严重错误,不可处理)和Exception(可处理)",0.78,relation_disambiguation_reclassified,is_a
 HashMap,特性,线程安全,集合框架,java.txt,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",0.78,attribute_extraction_feature_pattern,
 HashMap,特性,有序,集合框架,java.txt,"Map的实现类:HashMap(无序,允许null键值)、Hashtable(线程安全,不允许null)、TreeMap(有序)、LinkedHashMap(保持插入顺序)",0.78,attribute_extraction_feature_pattern,
@@ -47,8 +49,14 @@ Set,特性,无序,集合框架,java.txt,"Set的实现类:HashSet(无序,基于Ha
 String,特性,不可变,字符串,java.txt,"String类是不可变的(immutable),任何修改都会产生新对象",0.78,attribute_extraction_feature_pattern,
 String,特性,可变,字符串,java.txt,"String类是不可变的(immutable),任何修改都会产生新对象",0.78,attribute_extraction_feature_pattern,
 StringBuilder,特性,线程安全,字符串,java.txt,"StringBuilder(线程不安全,效率高)和StringBuffer(线程安全,效率较低)",0.78,attribute_extraction_feature_pattern,
+StringBuilder,特性,线程不安全,字符串,java.txt,"StringBuilder(线程不安全,效率高)和StringBuffer(线程安全,效率较低)",0.78,attribute_extraction_feature_pattern,
+volatile,特性,原子性,线程与并发,java.txt,"volatile关键字:保证可见性,禁止指令重排序,但不保证原子性",0.78,attribute_extraction_feature_pattern,
+volatile,特性,可见性,线程与并发,java.txt,"volatile关键字:保证可见性,禁止指令重排序,但不保证原子性",0.78,attribute_extraction_feature_pattern,
+就绪,特性,阻塞,线程与并发,java.txt,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,0.78,attribute_extraction_feature_pattern,
 接口,特性,可重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
 接口,特性,不重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
+新建,特性,阻塞,线程与并发,java.txt,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,0.78,attribute_extraction_feature_pattern,
+线程状态,特性,阻塞,线程与并发,java.txt,线程状态:新建、就绪、运行、阻塞、等待、超时等待、终止,0.78,attribute_extraction_feature_pattern,
 键值对,特性,可重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
 键值对,特性,不重复,集合框架,java.txt,"Map接口:存储键值对,键不重复,值可重复",0.78,attribute_extraction_feature_pattern,
 Java,修饰符,public,抽象类与接口,java.txt,"接口:所有方法默认是public abstract(Java 8后可以有默认方法和静态方法),字段默认是public static final",0.778,relation_disambiguation_reclassified,is_a

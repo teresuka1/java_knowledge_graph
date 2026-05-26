@@ -9,6 +9,8 @@ START TRANSACTION,属性,开启事务,事务控制语句,mysql.txt,- START TRANS
 物理备份,属性,"直接拷贝数据文件,速度快",数据库备份,mysql.txt,"- 物理备份:直接拷贝数据文件,速度快",0.82,attribute_extraction_colon_pattern
 脏读,属性,一个事务读取到另一个事务未提交的数据,并发事务带来的问题,mysql.txt,- 脏读:一个事务读取到另一个事务未提交的数据,0.82,attribute_extraction_colon_pattern
 逻辑备份,属性,"mysqldump工具导出SQL语句,适合小数据量",数据库备份,mysql.txt,"- 逻辑备份:mysqldump工具导出SQL语句,适合小数据量",0.82,attribute_extraction_colon_pattern
+IO线程,特性,同步,主从复制核心原理,mysql.txt,"- 从库:IO线程读取主库binlog,写入relay log;SQL线程读取relay log,重放日志同步数据",0.78,attribute_extraction_feature_pattern
 READ COMMITTED,特性,可重复,事务隔离级别(从低到高),mysql.txt,"- 读已提交(READ COMMITTED):解决脏读,会出现不可重复读、幻读(Oracle默认级别)",0.78,attribute_extraction_feature_pattern
 READ UNCOMMITTED,特性,可重复,事务隔离级别(从低到高),mysql.txt,"- 读未提交(READ UNCOMMITTED):最低级别,会出现脏读、不可重复读、幻读",0.78,attribute_extraction_feature_pattern
 REPEATABLE READ,特性,可重复,事务隔离级别(从低到高),mysql.txt,"- 可重复读(REPEATABLE READ):解决脏读、不可重复读,部分解决幻读(MySQL默认级别)",0.78,attribute_extraction_feature_pattern
+从库,特性,同步,主从复制核心原理,mysql.txt,"- 从库:IO线程读取主库binlog,写入relay log;SQL线程读取relay log,重放日志同步数据",0.78,attribute_extraction_feature_pattern

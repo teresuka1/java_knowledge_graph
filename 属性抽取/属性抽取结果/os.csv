@@ -2,8 +2,23 @@
 处理器管理,特性,CPU,操作系统的主要功能,os.txt,处理器管理的核心任务是让 CPU 合理地服务多个程序,0.842,relation_disambiguation_reclassified,is_a
 操作系统,特性,Windows,操作系统的概念与地位,os.txt,"从课程学习的角度来看,操作系统并不是单纯介绍某一个具体系统,如 Windows、Linux 或 macOS,而是研究“计算机系统如何高效、安全、可靠地运行”的一般规律",0.808,relation_disambiguation_reclassified,is_a
 Thread,特性,CPU,进程与线程,os.txt,"线程(Thread)则是比进程更轻量的执行单位,通常被称为 CPU 调度的基本单位",0.784,relation_disambiguation_reclassified,is_a
+CPU,特性,同步,设备管理与输入输出系统,os.txt,"CPU 与内存的速度通常远高于外设,如果直接同步等待外设完成操作,将严重浪费处理器时间",0.78,attribute_extraction_feature_pattern,
+I/O,特性,缓存,设备管理与输入输出系统,os.txt,"为了提高 I/O 效率,操作系统还会采用缓冲、缓存、假脱机(Spooling)和 DMA(Direct Memory Access)等技术",0.78,attribute_extraction_feature_pattern,
+互斥,特性,同步,进程同步、互斥与死锁,os.txt,"为了实现互斥与同步,系统常使用锁、信号量(Semaphore)、管程(Monitor)、条件变量等机制",0.78,attribute_extraction_feature_pattern,
+内存,特性,高效,内存管理与虚拟内存,os.txt,"程序运行必须占用内存,但内存容量有限,因此操作系统必须高效地组织和利用这一资源",0.78,attribute_extraction_feature_pattern,
+内存,特性,同步,设备管理与输入输出系统,os.txt,"CPU 与内存的速度通常远高于外设,如果直接同步等待外设完成操作,将严重浪费处理器时间",0.78,attribute_extraction_feature_pattern,
+就绪状态,特性,阻塞,进程与线程,os.txt,"就绪状态表示进程具备运行条件,只等待 CPU;运行状态表示进程正在占用处理器执行;阻塞状态表示进程因等待某个事件而暂时无法运行,例如等待 I/O 完成",0.78,attribute_extraction_feature_pattern,
 操作系统,特性,有序,总结,os.txt,"总体而言,操作系统课程研究的是如何让计算机系统在多任务、多用户、多资源约束下高效、有序、安全地运行",0.78,attribute_extraction_feature_pattern,
+操作系统,特性,高效,总结,os.txt,"总体而言,操作系统课程研究的是如何让计算机系统在多任务、多用户、多资源约束下高效、有序、安全地运行",0.78,attribute_extraction_feature_pattern,
 文件系统,特性,有序,操作系统的主要功能,os.txt,"操作系统通过文件系统将数据组织为文件和目录,并提供创建、删除、读写、共享、权限控制等功能,从而使数据管理变得有序、可控",0.78,attribute_extraction_feature_pattern,
+权限,特性,稳定,操作系统的结构与运行机制,os.txt,这种权限分离机制是保障系统稳定性和安全性的基础,0.78,attribute_extraction_feature_pattern,
+缓冲,特性,缓存,设备管理与输入输出系统,os.txt,"缓冲可以缓解速度不匹配的问题;缓存通过保留近期使用的数据减少慢速设备访问次数;假脱机技术常用于打印系统,使多个任务共享独占型设备;DMA 则允许设备在不频繁打断 CPU 的情况下直接与内存交换数据,显著提升传输效率",0.78,attribute_extraction_feature_pattern,
+网络操作系统,特性,分布式,操作系统的发展历程,os.txt,"再后来,网络操作系统、分布式系统、移动操作系统、嵌入式操作系统和云计算平台不断涌现,使操作系统的应用范围远超传统桌面环境",0.78,attribute_extraction_feature_pattern,
+调度,特性,公平,处理器调度与调度算法,os.txt,调度的目标通常包括提高 CPU 利用率、增加系统吞吐量、减少周转时间、缩短响应时间和保证公平性,0.78,attribute_extraction_feature_pattern,
+进程,特性,阻塞,进程与线程,os.txt,"就绪状态表示进程具备运行条件,只等待 CPU;运行状态表示进程正在占用处理器执行;阻塞状态表示进程因等待某个事件而暂时无法运行,例如等待 I/O 完成",0.78,attribute_extraction_feature_pattern,
+进程,特性,同步,操作系统课程的学习方法,os.txt,"例如进程切换会影响调度性能,同步机制会影响并发正确性,页面置换会影响内存效率,文件系统设计又会关系到外存访问性能和可靠性",0.78,attribute_extraction_feature_pattern,
+进程与线程,特性,同步,总结,os.txt,"它通过进程与线程机制实现并发执行,通过调度算法提高处理器利用率,通过同步与互斥保证共享资源访问正确,通过内存管理和虚拟内存扩展系统能力,通过文件系统组织长期数据,通过设备管理协调各种外设工作,并通过权限控制和安全机制维护系统稳定",0.78,attribute_extraction_feature_pattern,
+进程与线程,特性,稳定,总结,os.txt,"它通过进程与线程机制实现并发执行,通过调度算法提高处理器利用率,通过同步与互斥保证共享资源访问正确,通过内存管理和虚拟内存扩展系统能力,通过文件系统组织长期数据,通过设备管理协调各种外设工作,并通过权限控制和安全机制维护系统稳定",0.78,attribute_extraction_feature_pattern,
 CPU,定义,"极其宝贵的资源,操作系统必须决定“谁先运行、运行多久、何时切换",操作系统的主要功能,os.txt,"由于 CPU 是极其宝贵的资源,操作系统必须决定“谁先运行、运行多久、何时切换”",0.76,attribute_extraction_definition_pattern,
 Deadlock,定义,"指多个进程因争夺资源而形成相互等待,从而都无法继续执行的状态",进程同步、互斥与死锁,os.txt,"死锁(Deadlock)是指多个进程因争夺资源而形成相互等待,从而都无法继续执行的状态",0.76,attribute_extraction_definition_pattern,
 Process,定义,操作系统课程中最重要的概念之一,进程与线程,os.txt,进程(Process)是操作系统课程中最重要的概念之一,0.76,attribute_extraction_definition_pattern,

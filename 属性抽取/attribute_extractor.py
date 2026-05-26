@@ -21,12 +21,42 @@ FEATURE_KEYWORDS = (
     "不可变",
     "可变",
     "线程安全",
+    "线程不安全",
     "有序",
     "无序",
     "可重复",
     "不重复",
     "高并发",
     "高可用",
+    "分布式",
+    "异步",
+    "同步",
+    "阻塞",
+    "非阻塞",
+    "持久化",
+    "自动扩容",
+    "负载均衡",
+    "原子性",
+    "可见性",
+    "有序性",
+    "幂等",
+    "无锁",
+    "自旋",
+    "公平",
+    "非公平",
+    "轻量级",
+    "重量级",
+    "双向",
+    "单向",
+    "缓存",
+    "压缩",
+    "加密",
+    "跨平台",
+    "开源",
+    "稳定",
+    "高效",
+    "低延迟",
+    "低停顿",
 )
 
 
@@ -89,6 +119,26 @@ def normalize_attribute_name(label: str) -> str:
         "概念": "定义",
         "底层结构": "底层结构",
         "数据结构": "底层结构",
+        "工具类": "功能类型",
+        "工具": "功能类型",
+        "收集器": "GC收集器",
+        "收集器类型": "GC收集器",
+        "算法": "底层算法",
+        "时间复杂度": "时间复杂度",
+        "空间复杂度": "空间复杂度",
+        "默认值": "默认值",
+        "版本": "版本信息",
+        "最新版本": "版本信息",
+        "作者": "开发者",
+        "开发者": "开发者",
+        "官网": "官方地址",
+        "官网地址": "官方地址",
+        "协议": "通信协议",
+        "通信协议": "通信协议",
+        "类型": "类型",
+        "分类": "类型",
+        "接口": "接口类型",
+        "继承特性": "继承特性",
     }
     return mapping.get(label, label or "属性")
 
@@ -165,24 +215,121 @@ def extract_from_definition_pattern(
         if start > 4:
             continue
         window = sentence[end : min(len(sentence), end + 80)]
-        match = re.search(r"^[^，,。；;]{0,8}是([^。；;]{4,80})$", window)
-        if not match:
+        
+        patterns = [
+            (r"^[^，,。；;]{0,8}是([^。；;]{4,80})$", "定义", 0.76),
+            (r"^[^，,。；;]{0,8}是指([^。；;]{4,80})$", "定义", 0.82),
+            (r"^[^，,。；;]{0,8}指的是([^。；;]{4,80})$", "定义", 0.82),
+            (r"^[^，,。；;]{0,8}被定义为([^。；;]{4,80})$", "定义", 0.84),
+            (r"^[^，,。；;]{0,8}可以定义为([^。；;]{4,80})$", "定义", 0.80),
+        ]
+        
+        for pattern, attr_name, confidence in patterns:
+            match = re.search(pattern, window)
+            if match:
+                value = normalize_name(match.group(1))
+                if value and count_entities_in_text(value, entities) <= 2:
+                    rows.append(
+                        {
+                            "entity": entity.canonical,
+                            "attribute_name": attr_name,
+                            "attribute_value": value,
+                            "section_title": section_title,
+                            "source_file": source_file,
+                            "evidence": sentence,
+                            "confidence": confidence,
+                            "method": "attribute_extraction_definition_pattern",
+                        }
+                    )
+                    break
+    return rows
+
+
+def extract_from_usage_pattern(
+    sentence: str,
+    mentions: Sequence[Tuple[EntityNode, int, int, str]],
+    section_title: str,
+    source_file: str,
+    entities: Sequence[EntityNode],
+) -> List[dict]:
+    rows: List[dict] = []
+    for entity, start, end, _ in mentions:
+        if start > 6:
             continue
-        value = normalize_name(match.group(1))
-        if not value or count_entities_in_text(value, entities) > 2:
+        window = sentence[end : min(len(sentence), end + 80)]
+        
+        patterns = [
+            (r"^[^。；;]*主要用于([^。；;]{4,80})", 0.85),
+            (r"^[^。；;]*常用于([^。；;]{4,80})", 0.82),
+            (r"^[^。；;]*可用于([^。；;]{4,80})", 0.80),
+            (r"^[^。；;]*用来([^。；;]{4,80})", 0.83),
+            (r"^[^。；;]*的作用是([^。；;]{4,80})", 0.87),
+            (r"^[^。；;]*作用是([^。；;]{4,80})", 0.85),
+            (r"^[^。；;]*用途是([^。；;]{4,80})", 0.86),
+        ]
+        
+        for pattern, confidence in patterns:
+            match = re.search(pattern, window)
+            if match:
+                value = normalize_name(match.group(1))
+                if value and count_entities_in_text(value, entities) <= 2 and len(value) <= 100:
+                    rows.append(
+                        {
+                            "entity": entity.canonical,
+                            "attribute_name": "用途",
+                            "attribute_value": value,
+                            "section_title": section_title,
+                            "source_file": source_file,
+                            "evidence": sentence,
+                            "confidence": confidence,
+                            "method": "attribute_extraction_usage_pattern",
+                        }
+                    )
+                    break
+    return rows
+
+
+def extract_from_feature_sentence_pattern(
+    sentence: str,
+    mentions: Sequence[Tuple[EntityNode, int, int, str]],
+    section_title: str,
+    source_file: str,
+    entities: Sequence[EntityNode],
+) -> List[dict]:
+    rows: List[dict] = []
+    for entity, start, end, _ in mentions:
+        if start > 8:
             continue
-        rows.append(
-            {
-                "entity": entity.canonical,
-                "attribute_name": "定义",
-                "attribute_value": value,
-                "section_title": section_title,
-                "source_file": source_file,
-                "evidence": sentence,
-                "confidence": 0.76,
-                "method": "attribute_extraction_definition_pattern",
-            }
-        )
+        window = sentence[end : min(len(sentence), end + 80)]
+        
+        patterns = [
+            (r"^[^。；;]*特点(?:是|包括|有)([^。；;]{4,80})", 0.85),
+            (r"^[^。；;]*特性(?:是|包括|有)([^。；;]{4,80})", 0.85),
+            (r"^[^。；;]*特征(?:是|包括|有)([^。；;]{4,80})", 0.84),
+            (r"^[^。；;]*优点(?:是|包括|有)([^。；;]{4,80})", 0.83),
+            (r"^[^。；;]*缺点(?:是|包括|有)([^。；;]{4,80})", 0.83),
+            (r"^[^。；;]*具有([^。；;]{4,50})特性", 0.80),
+            (r"^[^。；;]*具有([^。；;]{4,50})特点", 0.80),
+        ]
+        
+        for pattern, confidence in patterns:
+            match = re.search(pattern, window)
+            if match:
+                value = normalize_name(match.group(1))
+                if value and count_entities_in_text(value, entities) <= 2 and len(value) <= 100:
+                    rows.append(
+                        {
+                            "entity": entity.canonical,
+                            "attribute_name": "特性",
+                            "attribute_value": value,
+                            "section_title": section_title,
+                            "source_file": source_file,
+                            "evidence": sentence,
+                            "confidence": confidence,
+                            "method": "attribute_extraction_feature_sentence_pattern",
+                        }
+                    )
+                    break
     return rows
 
 
@@ -237,6 +384,8 @@ def extract_attributes(text: str, entities: Sequence[EntityNode], source_file: s
                 continue
             rows.extend(extract_from_colon_pattern(normalized_sentence, mentions, section_title, source_file, entities))
             rows.extend(extract_from_definition_pattern(normalized_sentence, mentions, section_title, source_file, entities))
+            rows.extend(extract_from_usage_pattern(normalized_sentence, mentions, section_title, source_file, entities))
+            rows.extend(extract_from_feature_sentence_pattern(normalized_sentence, mentions, section_title, source_file, entities))
             rows.extend(extract_from_feature_pattern(normalized_sentence, mentions, section_title, source_file))
     return deduplicate_rows(rows)
 
